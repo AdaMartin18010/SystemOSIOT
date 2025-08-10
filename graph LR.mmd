@@ -1,0 +1,22 @@
+graph LR
+    subgraph "感知层 / Sensing Layer"
+        A[温度传感器] --> B[压力传感器]
+        B --> C[振动传感器]
+        C --> D[图像传感器]
+    end
+    
+    subgraph "边缘层 / Edge Layer"
+        E[边缘网关] --> F[边缘计算节点]
+        F --> G[本地存储]
+        G --> H[边缘AI模型]
+    end
+    
+    subgraph "云端 / Cloud Layer"
+        I[数据湖] --> J[AI训练平台]
+        J --> K[业务应用]
+        K --> L[监控大屏]
+    end
+    
+    A --> E
+    E --> I
+    F --> K
