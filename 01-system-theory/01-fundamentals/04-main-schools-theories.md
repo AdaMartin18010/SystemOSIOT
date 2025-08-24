@@ -39,6 +39,7 @@
 $$S = (E, R, B, F)$$
 
 其中：
+
 - $E$: 要素集合
 - $R$: 关系集合
 - $B$: 边界
@@ -86,6 +87,7 @@ $$S = (E, R, B, F)$$
 **反馈定义**: 系统输出对输入的影响
 
 **反馈类型**:
+
 - **正反馈**: 放大偏差
 - **负反馈**: 减小偏差
 - **前馈**: 预测性控制
@@ -104,6 +106,7 @@ $$u(t) = K_p e(t) + K_i \int_0^t e(\tau) d\tau + K_d \frac{de(t)}{dt}$$
 #### 2.3.2 非线性控制理论
 
 处理非线性系统的控制问题，包括：
+
 - 滑模控制
 - 自适应控制
 - 鲁棒控制
@@ -465,7 +468,7 @@ $$x_{n+1} = rx_n(1-x_n)$$
 
 - **上一级**: [发展历程](03-development-history.md)
 - **下一级**: [关键问题与挑战](05-key-issues-challenges.md)
-- **相关领域**: 
+- **相关领域**:
   - [架构设计](../02-architecture/README.md)
   - [控制优化](../03-control-optimization/README.md)
-  - [建模仿真](../04-modeling-simulation/README.md) 
+  - [建模仿真](../04-modeling-simulation/README.md)
