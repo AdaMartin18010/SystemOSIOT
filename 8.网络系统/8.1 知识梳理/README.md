@@ -1,54 +1,69 @@
-# 8.1 知识梳理 Knowledge Review
+# 网络系统知识梳理
 
-## 核心概念 Core Concepts
+## 概述
 
-- **网络系统（Network System）**：
-  - 指由多个节点（Node）和连接（Link）组成，通过协议（Protocol）实现信息交换与资源共享的复杂系统。
-  - A complex system composed of multiple nodes and links, enabling information exchange and resource sharing via protocols.
+网络系统知识梳理研究网络系统的核心概念、发展历程、主要流派、关键问题和相关案例，为网络系统的深入学习和应用提供系统性的知识基础。
 
-- **节点（Node）**：
-  - 网络中的基本单元，可以是计算机、传感器、服务器等。
-  - The basic unit in a network, such as computers, sensors, or servers.
+## 目录结构
 
-- **连接（Link）**：
-  - 节点之间实现数据传输的物理或逻辑通道。
-  - The physical or logical channel for data transmission between nodes.
+- **8.1.1 核心概念** - 网络系统的基本概念和定义
+- **8.1.2 发展历程** - 网络系统的历史发展脉络
+- **8.1.3 主要流派与理论** - 网络系统的主要流派和理论体系
+- **8.1.4 关键问题与挑战** - 网络系统面临的关键问题和挑战
+- **8.1.5 相关案例** - 网络系统在实际中的应用案例
 
-- **协议（Protocol）**：
-  - 规定网络通信规则和格式的标准。
-  - The standard that defines rules and formats for network communication.
+## 核心概念
 
-- **拓扑结构（Topology）**：
-  - 网络中节点与连接的组织方式，如星型、环型、网状等。
-  - The organizational pattern of nodes and links, e.g., star, ring, mesh.
+### 基本概念
 
-- **带宽（Bandwidth）**：
-  - 网络中单位时间内可传输的数据量。
-  - The amount of data that can be transmitted per unit time in a network.
+- **网络系统定义**：网络系统的基本概念和形式化定义
+- **网络架构**：网络系统的架构模式和设计原则
+- **网络协议**：网络通信协议和标准
+- **网络拓扑**：网络拓扑结构和组织方式
+- **网络性能**：网络性能指标和优化方法
 
-- **延迟（Latency）**：
-  - 数据从源头到目的地所需的时间。
-  - The time required for data to travel from source to destination.
+### 发展历程
 
-- **吞吐量（Throughput）**：
-  - 网络在单位时间内成功传输的数据量。
-  - The amount of data successfully transmitted per unit time.
+- **早期发展**：从局域网到广域网的演进
+- **现代发展**：从互联网到物联网的发展
+- **当代发展**：从5G到6G的演进
+- **未来趋势**：网络系统的发展方向
 
-- **容错性（Fault Tolerance）**：
-  - 网络系统在部分节点或连接失效时仍能维持服务的能力。
-  - The ability of a network system to maintain service despite failures of some nodes or links.
+### 主要流派
 
-## 哲学批判性视角 Philosophical & Critical Perspective
+- **传统网络流派**：以太网、TCP/IP、OSI模型等
+- **现代网络流派**：SDN、NFV、5G/6G等
+- **新兴网络流派**：量子网络、边缘网络等
+- **应用网络流派**：物联网、车联网、工业互联网等
 
-- 网络系统不仅是技术产物，更是社会、经济、文化互动的基础设施。
-- 需警惕中心化与去中心化、隐私与安全、效率与公平等张力。
-- 反思网络系统对权力结构、知识传播、社会组织方式的深远影响。
+## 学习目标
 
-## 发展历程 Evolution
+1. **理解网络系统的基本概念和定义**
+2. **掌握网络系统的发展历程和脉络**
+3. **了解网络系统的主要流派和理论体系**
+4. **认识网络系统面临的关键问题和挑战**
+5. **通过案例分析培养应用能力**
+6. **建立网络系统思维和分析方法**
 
-- 从早期的局域网（LAN）到全球互联网（Internet），再到物联网（IoT）、5G/6G等新型网络形态。
-- 技术演进推动了社会结构与认知方式的变革。
+## 应用领域
 
----
+- **通信网络**
+- **计算机网络**
+- **物联网**
+- **5G/6G网络**
+- **边缘计算**
+- **网络安全**
 
-> 本文档持续完善，欢迎补充批判性观点与国际前沿定义。
+## 相关资源
+
+- **经典文献**：《计算机网络》、《网络系统设计》
+- **学术期刊**：IEEE Transactions on Networking、ACM Computing Surveys
+- **会议论文**：SIGCOMM、INFOCOM、NSDI等顶级会议
+- **在线资源**：网络系统教程、开源项目
+
+## 实践项目
+
+1. **网络系统概念分析**：分析实际网络系统的概念和特征
+2. **理论流派比较**：比较不同理论流派的观点
+3. **问题识别分析**：识别和分析网络系统的关键问题
+4. **案例研究应用**：应用网络系统理论分析实际案例
