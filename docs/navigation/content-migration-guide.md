@@ -7,12 +7,14 @@
 ## 🎯 迁移目标 / Migration Goals
 
 ### 主要目标
+
 1. **内容完整性**: 100%保留现有内容
 2. **结构优化**: 建立清晰的目录层次
 3. **导航完善**: 建立完整的交叉引用
 4. **格式统一**: 统一文档格式和标准
 
 ### 迁移原则
+
 - **渐进式迁移**: 分阶段进行，降低风险
 - **内容优先**: 优先保证内容完整性
 - **测试验证**: 每个阶段充分测试
@@ -283,4 +285,4 @@ cp -r "2.操作系统_backup_$(date +%Y%m%d)/"* "2.操作系统/"
 ---
 
 > 内容迁移是项目结构优化的关键步骤，需要谨慎执行，确保内容完整性和系统稳定性。
-> Content migration is a key step in project structure optimization and needs to be executed carefully to ensure content integrity and system stability. 
+> Content migration is a key step in project structure optimization and needs to be executed carefully to ensure content integrity and system stability.

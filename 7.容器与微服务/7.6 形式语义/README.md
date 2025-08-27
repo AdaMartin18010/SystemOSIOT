@@ -33,6 +33,30 @@
 - **语义组合性**：语义的组合性质
 - **语义验证**：语义的正确性验证
 
+## 语义域与语义函数（补充）
+
+- 语义域 D：包括服务状态、配置、请求/响应、拓扑与策略集合。
+- 操作语义 → 转移关系 T ⊆ S × Act × S；指称语义 ⟦·⟧: Prog → D。
+- 语义函数示例：⟦deploy(svc, topo)⟧ = 更新拓扑+约束满足后的新状态。
+- 等价性：弱/强双向模拟、观测等价；用于滚动升级/灰度的正确性论证。
+
+## 工具链与验证
+
+- 模型检测：NuSMV/PRISM/UPPAAL（时序性质：安全/活性/期限）。
+- 定理证明：Coq/Isabelle（不变式、等价性证明、编排正确性）。
+- 运行时验证：OpenTelemetry 事件流 + 时序断言（LTL/MTL）。
+
+示例（LTL 性质）：
+
+- G(request → F response)    // 请求最终有响应
+- G(circuit_open → F<=Δ half_open) // 熔断最终进入半开
+
+## 实践建议
+
+- 语义驱动 API 与策略：将 SLO/策略声明映射为可验证语义规则。
+- 分层建模：服务→编排→治理，逐层定义语义并验证组合性质。
+- 可解释报告：验证结果与观测指标对齐，形成变更安全基线。
+
 ## 学习目标
 
 1. **理解容器与微服务的形式语义理论**
@@ -55,7 +79,7 @@
 
 - **经典文献**：《Semantics of Programming Languages》、《Formal Semantics》
 - **学术期刊**：ACM Transactions on Programming Languages and Systems、Theoretical Computer Science
-- **会议论文**：POPL、ICFP、LICS等顶级会议
+- **会议论文**：POPL、ICFP、LICS 等
 - **在线资源**：语义分析工具文档、形式化语义教程
 
 ## 实践项目
