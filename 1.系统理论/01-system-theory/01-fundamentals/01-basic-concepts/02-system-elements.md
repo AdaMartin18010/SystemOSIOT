@@ -1,5 +1,58 @@
 # 系统要素 / System Elements
 
+
+<!-- TOC START -->
+
+- [系统要素 / System Elements](#系统要素-system-elements)
+  - [📚 概述 / Overview](#-概述-overview)
+  - [🎯 要素定义 / Element Definition](#-要素定义-element-definition)
+    - [1. 基本定义 / Basic Definition](#1-基本定义-basic-definition)
+      - [中文定义](#中文定义)
+      - [English Definition](#english-definition)
+    - [2. 形式化定义 / Formal Definition](#2-形式化定义-formal-definition)
+  - [📊 要素分类 / Element Classification](#-要素分类-element-classification)
+    - [1. 按功能分类 / Classification by Function](#1-按功能分类-classification-by-function)
+      - [1.1 功能要素 (Functional Elements)](#11-功能要素-functional-elements)
+      - [1.2 结构要素 (Structural Elements)](#12-结构要素-structural-elements)
+      - [1.3 控制要素 (Control Elements)](#13-控制要素-control-elements)
+    - [2. 按层次分类 / Classification by Hierarchy](#2-按层次分类-classification-by-hierarchy)
+      - [2.1 原子要素 (Atomic Elements)](#21-原子要素-atomic-elements)
+      - [2.2 复合要素 (Composite Elements)](#22-复合要素-composite-elements)
+      - [2.3 系统要素 (System Elements)](#23-系统要素-system-elements)
+    - [3. 按动态性分类 / Classification by Dynamics](#3-按动态性分类-classification-by-dynamics)
+      - [3.1 静态要素 (Static Elements)](#31-静态要素-static-elements)
+      - [3.2 动态要素 (Dynamic Elements)](#32-动态要素-dynamic-elements)
+      - [3.3 自适应要素 (Adaptive Elements)](#33-自适应要素-adaptive-elements)
+  - [🔗 要素关系矩阵 / Element Relationship Matrix](#-要素关系矩阵-element-relationship-matrix)
+    - [1. 属性关系矩阵 / Attribute Relationship Matrix](#1-属性关系矩阵-attribute-relationship-matrix)
+    - [2. 功能关系矩阵 / Function Relationship Matrix](#2-功能关系矩阵-function-relationship-matrix)
+    - [3. 状态关系矩阵 / State Relationship Matrix](#3-状态关系矩阵-state-relationship-matrix)
+  - [🔍 要素性质 / Element Properties](#-要素性质-element-properties)
+    - [1. 独立性 (Independence)](#1-独立性-independence)
+    - [2. 关联性 (Interdependence)](#2-关联性-interdependence)
+    - [3. 层次性 (Hierarchy)](#3-层次性-hierarchy)
+    - [4. 涌现性 (Emergence)](#4-涌现性-emergence)
+  - [📈 要素演化 / Element Evolution](#-要素演化-element-evolution)
+    - [1. 演化模型 / Evolution Model](#1-演化模型-evolution-model)
+    - [2. 演化类型 / Evolution Types](#2-演化类型-evolution-types)
+      - [2.1 线性演化 (Linear Evolution)](#21-线性演化-linear-evolution)
+      - [2.2 非线性演化 (Nonlinear Evolution)](#22-非线性演化-nonlinear-evolution)
+      - [2.3 随机演化 (Stochastic Evolution)](#23-随机演化-stochastic-evolution)
+  - [🔧 要素分析方法 / Element Analysis Methods](#-要素分析方法-element-analysis-methods)
+    - [1. 结构分析 / Structural Analysis](#1-结构分析-structural-analysis)
+    - [2. 功能分析 / Functional Analysis](#2-功能分析-functional-analysis)
+    - [3. 动态分析 / Dynamic Analysis](#3-动态分析-dynamic-analysis)
+  - [📚 参考文献 / References](#-参考文献-references)
+    - [经典文献 / Classical Literature](#经典文献-classical-literature)
+    - [现代文献 / Modern Literature](#现代文献-modern-literature)
+    - [中文文献 / Chinese Literature](#中文文献-chinese-literature)
+  - [🎯 实践应用 / Practical Applications](#-实践应用-practical-applications)
+    - [1. 系统设计 / System Design](#1-系统设计-system-design)
+    - [2. 系统分析 / System Analysis](#2-系统分析-system-analysis)
+    - [3. 系统优化 / System Optimization](#3-系统优化-system-optimization)
+
+<!-- TOC END -->
+
 ## 📚 概述 / Overview
 
 系统要素是构成系统的基本单元，是系统结构和功能的基础。本文档从形式化角度定义系统要素的分类、性质和相互关系，为系统分析提供理论基础。

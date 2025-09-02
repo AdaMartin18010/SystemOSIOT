@@ -1,5 +1,27 @@
 # 控制与优化 (Control and Optimization)
 
+
+<!-- TOC START -->
+
+- [控制与优化 (Control and Optimization)](#控制与优化-control-and-optimization)
+  - [概述](#概述)
+  - [目录结构](#目录结构)
+    - [01-control-theory/](#01-control-theory)
+    - [02-optimization-methods/](#02-optimization-methods)
+    - [03-system-stability/](#03-system-stability)
+    - [04-performance-optimization/](#04-performance-optimization)
+    - [05-adaptive-control/](#05-adaptive-control)
+  - [核心概念](#核心概念)
+    - [控制系统](#控制系统)
+    - [优化目标](#优化目标)
+    - [控制策略](#控制策略)
+  - [学习目标](#学习目标)
+  - [应用领域](#应用领域)
+  - [相关资源](#相关资源)
+  - [实践项目](#实践项目)
+
+<!-- TOC END -->
+
 ## 概述
 
 控制与优化是系统理论的重要组成部分，它研究如何通过控制机制和优化策略来改善系统性能、稳定性和效率。本目录涵盖了控制系统的基本原理、优化方法、自适应控制等核心内容。

@@ -1,5 +1,49 @@
 # 系统方法论 / System Methodology
 
+
+<!-- TOC START -->
+
+- [系统方法论 / System Methodology](#系统方法论-system-methodology)
+  - [📚 模块概览 / Module Overview](#-模块概览-module-overview)
+  - [🏗️ 知识结构 / Knowledge Structure](#-知识结构-knowledge-structure)
+  - [🔗 相关模块 / Related Modules](#-相关模块-related-modules)
+    - [前置知识](#前置知识)
+    - [后续学习](#后续学习)
+  - [📖 学习路径 / Learning Path](#-学习路径-learning-path)
+    - [第一阶段：思维方法 (1-2周)](#第一阶段思维方法-1-2周)
+    - [第二阶段：应用方法 (2-3周)](#第二阶段应用方法-2-3周)
+    - [第三阶段：高级方法 (3-4周)](#第三阶段高级方法-3-4周)
+  - [🎯 核心概念 / Core Concepts](#-核心概念-core-concepts)
+    - [系统思维 (Systems Thinking)](#系统思维-systems-thinking)
+      - [思维模式](#思维模式)
+      - [思维方法](#思维方法)
+    - [系统分析 (Systems Analysis)](#系统分析-systems-analysis)
+      - [分析方法](#分析方法)
+      - [分析工具](#分析工具)
+    - [系统设计 (Systems Design)](#系统设计-systems-design)
+      - [设计原则](#设计原则)
+      - [设计方法](#设计方法)
+    - [系统优化 (Systems Optimization)](#系统优化-systems-optimization)
+      - [优化目标](#优化目标)
+      - [优化方法](#优化方法)
+    - [系统集成 (Systems Integration)](#系统集成-systems-integration)
+      - [集成策略](#集成策略)
+      - [集成方法](#集成方法)
+  - [📚 推荐资源 / Recommended Resources](#-推荐资源-recommended-resources)
+    - [经典教材](#经典教材)
+    - [在线资源](#在线资源)
+  - [🔧 实践工具 / Practical Tools](#-实践工具-practical-tools)
+    - [1分析工具](#1分析工具)
+    - [优化工具](#优化工具)
+    - [集成工具](#集成工具)
+    - [练习项目](#练习项目)
+  - [📈 学习目标 / Learning Objectives](#-学习目标-learning-objectives)
+    - [知识目标](#知识目标)
+    - [能力目标](#能力目标)
+    - [应用目标](#应用目标)
+
+<!-- TOC END -->
+
 ## 📚 模块概览 / Module Overview
 
 系统方法论模块提供系统分析、设计、优化和管理的系统化方法，是系统科学的应用核心。本模块涵盖了系统思维、系统分析、系统设计、系统优化等方法论，为实际系统问题提供解决方案。

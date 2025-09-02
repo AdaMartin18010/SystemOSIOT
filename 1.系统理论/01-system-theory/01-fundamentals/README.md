@@ -1,5 +1,35 @@
 # 基础理论 / Fundamentals
 
+
+<!-- TOC START -->
+
+- [基础理论 / Fundamentals](#基础理论-fundamentals)
+  - [📚 模块概览 / Module Overview](#-模块概览-module-overview)
+  - [🏗️ 知识结构 / Knowledge Structure](#-知识结构-knowledge-structure)
+  - [🔗 相关模块 / Related Modules](#-相关模块-related-modules)
+    - [前置知识](#前置知识)
+    - [后续学习](#后续学习)
+  - [📖 学习路径 / Learning Path](#-学习路径-learning-path)
+    - [第一阶段：基本概念 (1-2周)](#第一阶段基本概念-1-2周)
+    - [第二阶段：系统性质 (2-3周)](#第二阶段系统性质-2-3周)
+    - [第三阶段：系统动力学 (3-4周)](#第三阶段系统动力学-3-4周)
+  - [🎯 核心概念 / Core Concepts](#-核心概念-core-concepts)
+    - [系统定义](#系统定义)
+    - [系统性质](#系统性质)
+    - [系统分类](#系统分类)
+  - [📚 推荐资源 / Recommended Resources](#-推荐资源-recommended-resources)
+    - [经典教材](#经典教材)
+    - [在线资源](#在线资源)
+  - [🔧 实践工具 / Practical Tools](#-实践工具-practical-tools)
+    - [分析工具](#分析工具)
+    - [练习项目](#练习项目)
+  - [📈 学习目标 / Learning Objectives](#-学习目标-learning-objectives)
+    - [知识目标](#知识目标)
+    - [能力目标](#能力目标)
+    - [应用目标](#应用目标)
+
+<!-- TOC END -->
+
 ## 📚 模块概览 / Module Overview
 
 基础理论模块是系统理论的核心，涵盖了系统科学的基本概念、原理和方法论。本模块为理解复杂系统行为、设计系统架构和解决系统问题提供理论基础。

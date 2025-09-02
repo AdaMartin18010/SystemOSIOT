@@ -1,5 +1,34 @@
 # SystemOSIOT 知识体系重构 / SystemOSIOT Knowledge System Refactoring
 
+
+<!-- TOC START -->
+
+- [SystemOSIOT 知识体系重构 / SystemOSIOT Knowledge System Refactoring](#systemosiot-知识体系重构-systemosiot-knowledge-system-refactoring)
+  - [目录结构 / Directory Structure](#目录结构-directory-structure)
+    - [1. 理论基础 / Theoretical Foundation](#1-理论基础-theoretical-foundation)
+    - [2. 系统架构 / System Architecture](#2-系统架构-system-architecture)
+    - [3. 网络与通信 / Networks and Communications](#3-网络与通信-networks-and-communications)
+    - [4. 容器与微服务 / Containers and Microservices](#4-容器与微服务-containers-and-microservices)
+    - [5. 物联网与嵌入式 / IoT and Embedded Systems](#5-物联网与嵌入式-iot-and-embedded-systems)
+    - [6. 集群系统 / Cluster Systems](#6-集群系统-cluster-systems)
+  - [重构原则 / Refactoring Principles](#重构原则-refactoring-principles)
+    - [1. 形式化规范 / Formal Specifications](#1-形式化规范-formal-specifications)
+    - [2. 多表征体系 / Multiple Representation System](#2-多表征体系-multiple-representation-system)
+    - [3. 知识关联 / Knowledge Association](#3-知识关联-knowledge-association)
+    - [4. 工程实践 / Engineering Practice](#4-工程实践-engineering-practice)
+  - [持续构建计划 / Continuous Construction Plan](#持续构建计划-continuous-construction-plan)
+    - [阶段一：基础理论重构 / Phase 1: Basic Theory Refactoring](#阶段一基础理论重构-phase-1-basic-theory-refactoring)
+    - [阶段二：系统架构重构 / Phase 2: System Architecture Refactoring](#阶段二系统架构重构-phase-2-system-architecture-refactoring)
+    - [阶段三：应用技术重构 / Phase 3: Application Technology Refactoring](#阶段三应用技术重构-phase-3-application-technology-refactoring)
+    - [阶段四：综合应用重构 / Phase 4: Comprehensive Application Refactoring](#阶段四综合应用重构-phase-4-comprehensive-application-refactoring)
+  - [质量保证 / Quality Assurance](#质量保证-quality-assurance)
+    - [1. 内容一致性 / Content Consistency](#1-内容一致性-content-consistency)
+    - [2. 逻辑一致性 / Logical Consistency](#2-逻辑一致性-logical-consistency)
+    - [3. 相关性一致性 / Relevance Consistency](#3-相关性一致性-relevance-consistency)
+    - [4. 语义一致性 / Semantic Consistency](#4-语义一致性-semantic-consistency)
+
+<!-- TOC END -->
+
 ## 目录结构 / Directory Structure
 
 ### 1. 理论基础 / Theoretical Foundation

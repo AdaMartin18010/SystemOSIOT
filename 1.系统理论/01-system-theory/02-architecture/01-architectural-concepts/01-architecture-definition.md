@@ -1,5 +1,41 @@
 # 架构定义 (Architecture Definition)
 
+
+<!-- TOC START -->
+
+- [架构定义 (Architecture Definition)](#架构定义-architecture-definition)
+  - [概述](#概述)
+  - [架构的定义](#架构的定义)
+    - [基本定义](#基本定义)
+    - [架构的本质特征](#架构的本质特征)
+      - [1. 抽象性 (Abstraction)](#1-抽象性-abstraction)
+      - [2. 层次性 (Hierarchy)](#2-层次性-hierarchy)
+      - [3. 完整性 (Completeness)](#3-完整性-completeness)
+      - [4. 一致性 (Consistency)](#4-一致性-consistency)
+  - [架构与设计的区别](#架构与设计的区别)
+    - [架构 (Architecture)](#架构-architecture)
+    - [设计 (Design)](#设计-design)
+    - [关系](#关系)
+  - [架构的层次性](#架构的层次性)
+    - [企业架构 (Enterprise Architecture)](#企业架构-enterprise-architecture)
+    - [系统架构 (System Architecture)](#系统架构-system-architecture)
+    - [组件架构 (Component Architecture)](#组件架构-component-architecture)
+  - [架构的抽象性](#架构的抽象性)
+    - [抽象层次](#抽象层次)
+    - [抽象原则](#抽象原则)
+  - [架构的重要性](#架构的重要性)
+    - [1. 指导系统开发](#1-指导系统开发)
+    - [2. 支持系统分析](#2-支持系统分析)
+    - [3. 促进团队协作](#3-促进团队协作)
+    - [4. 支持系统演进](#4-支持系统演进)
+  - [架构决策](#架构决策)
+    - [决策类型](#决策类型)
+    - [决策原则](#决策原则)
+  - [总结](#总结)
+  - [相关概念](#相关概念)
+
+<!-- TOC END -->
+
 ## 概述
 
 架构定义是理解系统架构的基础，它明确了什么是架构、架构的本质特征以及架构在系统开发中的重要作用。

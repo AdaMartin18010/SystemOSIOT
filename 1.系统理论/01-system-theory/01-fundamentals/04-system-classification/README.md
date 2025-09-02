@@ -1,5 +1,48 @@
 # 系统分类 / System Classification
 
+
+<!-- TOC START -->
+
+- [系统分类 / System Classification](#系统分类-system-classification)
+  - [📚 模块概览 / Module Overview](#-模块概览-module-overview)
+  - [🏗️ 知识结构 / Knowledge Structure](#-知识结构-knowledge-structure)
+  - [🔗 相关模块 / Related Modules](#-相关模块-related-modules)
+    - [前置知识](#前置知识)
+    - [后续学习](#后续学习)
+  - [📖 学习路径 / Learning Path](#-学习路径-learning-path)
+    - [第一阶段：基本分类 (1-2周)](#第一阶段基本分类-1-2周)
+    - [第二阶段：扩展分类 (2-3周)](#第二阶段扩展分类-2-3周)
+    - [第三阶段：应用分类 (3-4周)](#第三阶段应用分类-3-4周)
+  - [🎯 核心概念 / Core Concepts](#-核心概念-core-concepts)
+    - [按复杂度分类 (Complexity-based Classification)](#按复杂度分类-complexity-based-classification)
+      - [简单系统 (Simple Systems)](#简单系统-simple-systems)
+      - [复杂系统 (Complex Systems)](#复杂系统-complex-systems)
+      - [超复杂系统 (Ultra-complex Systems)](#超复杂系统-ultra-complex-systems)
+    - [按开放性分类 (Openness-based Classification)](#按开放性分类-openness-based-classification)
+      - [封闭系统 (Closed Systems)](#封闭系统-closed-systems)
+      - [开放系统 (Open Systems)](#开放系统-open-systems)
+      - [孤立系统 (Isolated Systems)](#孤立系统-isolated-systems)
+    - [按确定性分类 (Determinism-based Classification)](#按确定性分类-determinism-based-classification)
+      - [确定性系统 (Deterministic Systems)](#确定性系统-deterministic-systems)
+      - [随机系统 (Stochastic Systems)](#随机系统-stochastic-systems)
+      - [混沌系统 (Chaotic Systems)](#混沌系统-chaotic-systems)
+    - [按时间性分类 (Temporal-based Classification)](#按时间性分类-temporal-based-classification)
+      - [静态系统 (Static Systems)](#静态系统-static-systems)
+      - [动态系统 (Dynamic Systems)](#动态系统-dynamic-systems)
+      - [实时系统 (Real-time Systems)](#实时系统-real-time-systems)
+  - [📚 推荐资源 / Recommended Resources](#-推荐资源-recommended-resources)
+    - [经典教材](#经典教材)
+    - [在线资源](#在线资源)
+  - [🔧 实践工具 / Practical Tools](#-实践工具-practical-tools)
+    - [分析工具](#分析工具)
+    - [练习项目](#练习项目)
+  - [📈 学习目标 / Learning Objectives](#-学习目标-learning-objectives)
+    - [知识目标](#知识目标)
+    - [能力目标](#能力目标)
+    - [应用目标](#应用目标)
+
+<!-- TOC END -->
+
 ## 📚 模块概览 / Module Overview
 
 系统分类模块研究系统的分类方法和分类体系，帮助我们从不同角度理解和分析系统。本模块涵盖了按复杂度、开放性、确定性、时间性等维度的系统分类，为系统分析和设计提供分类框架。
