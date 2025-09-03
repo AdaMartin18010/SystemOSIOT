@@ -65,3 +65,36 @@ python tools/toc_generator.py --all --apply
 ## 退出码与总结
 
 执行结束会输出统计：处理文件数、变更数、未变更数、错误数，便于批量校验。
+
+## TOC 校验工具
+
+并行验证已有 TOC 的完整性与一致性：
+
+```bash
+python tools/toc_validate.py --max-level 4 --workers 12
+```
+
+说明：
+
+- 检查缺失 TOC（存在标题却无 TOC）。
+- 检查 TOC 中的锚点是否能在标题中解析。
+- 对比 TOC 内容与根据当前标题重新生成的结果是否一致。
+- 返回码非 0 表示存在问题，适合用于 CI/预提交钩子。
+
+## 在提交流程中启用校验
+
+- 预提交钩子：
+
+```bash
+# 一次性设置 hooksPath
+git config core.hooksPath .githooks
+
+# 手动触发一次（可选）
+bash .githooks/pre-commit
+```
+
+- CI（Windows 代理示例）：
+
+```powershell
+powershell -ExecutionPolicy Bypass -File tools/ci_toc_check.ps1 -MaxLevel 4 -Workers 12
+```

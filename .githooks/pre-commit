@@ -1,0 +1,20 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+# Only validate markdown files staged in this commit to keep it fast.
+changed_md=$(git diff --cached --name-only --diff-filter=ACMR | grep -E '\.(md|markdown)$' || true)
+if [ -z "$changed_md" ]; then
+  exit 0
+fi
+
+echo "[pre-commit] Validating TOC for changed markdown files..."
+
+# Run validator limited to changed files; fall back to repo roots if any path moves
+python tools/toc_validate.py --max-level 4 --workers 8 $changed_md || {
+  echo "[pre-commit] TOC validation failed. Run: python tools/toc_generator.py --apply to fix." >&2
+  exit 2
+}
+
+exit 0
+
+
