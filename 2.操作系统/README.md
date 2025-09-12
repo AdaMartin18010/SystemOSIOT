@@ -1,39 +1,40 @@
 # 操作系统基础 / Operating System Foundation
 
-
 <!-- TOC START -->
 
-- [操作系统基础 / Operating System Foundation](#操作系统基础-operating-system-foundation)
-  - [📚 领域概述 / Domain Overview](#-领域概述-domain-overview)
-    - [核心特性 / Core Characteristics](#核心特性-core-characteristics)
-    - [理论基础 / Theoretical Foundation](#理论基础-theoretical-foundation)
-  - [🔗 相关领域 / Related Domains](#-相关领域-related-domains)
-    - [理论基础 → 应用实践](#理论基础-应用实践)
-    - [技术架构 → 工程实现](#技术架构-工程实现)
-    - [系统集成 → 生态建设](#系统集成-生态建设)
-  - [📖 学习路径 / Learning Path](#-学习路径-learning-path)
-    - [🎯 初学者路径 / Beginner Path (1-2个月)](#-初学者路径-beginner-path-1-2个月)
-    - [🚀 进阶者路径 / Advanced Path (2-4个月)](#-进阶者路径-advanced-path-2-4个月)
-    - [🏆 专家路径 / Expert Path (4-6个月)](#-专家路径-expert-path-4-6个月)
-  - [🛠️ 技术栈 / Technology Stack](#-技术栈-technology-stack)
-    - [核心组件 / Core Components](#核心组件-core-components)
-    - [系统服务 / System Services](#系统服务-system-services)
-    - [安全机制 / Security Mechanisms](#安全机制-security-mechanisms)
-  - [📝 实践案例 / Practice Cases](#-实践案例-practice-cases)
-    - [基础案例 / Basic Cases](#基础案例-basic-cases)
-    - [进阶案例 / Advanced Cases](#进阶案例-advanced-cases)
-    - [高级案例 / Expert Cases](#高级案例-expert-cases)
-  - [🔍 快速导航 / Quick Navigation](#-快速导航-quick-navigation)
-    - [按主题查找 / Search by Topic](#按主题查找-search-by-topic)
-    - [按难度查找 / Search by Difficulty](#按难度查找-search-by-difficulty)
-    - [按应用场景查找 / Search by Application Scenario](#按应用场景查找-search-by-application-scenario)
-  - [📊 领域统计 / Domain Statistics](#-领域统计-domain-statistics)
-    - [内容覆盖 / Content Coverage](#内容覆盖-content-coverage)
-    - [完成状态 / Completion Status](#完成状态-completion-status)
-  - [🎯 下一步发展 / Next Steps Development](#-下一步发展-next-steps-development)
+- [操作系统基础 / Operating System Foundation](#操作系统基础--operating-system-foundation)
+  - [📚 领域概述 / Domain Overview](#-领域概述--domain-overview)
+    - [核心特性 / Core Characteristics](#核心特性--core-characteristics)
+    - [理论基础 / Theoretical Foundation](#理论基础--theoretical-foundation)
+  - [🔗 相关领域 / Related Domains](#-相关领域--related-domains)
+    - [理论基础 → 应用实践](#理论基础--应用实践)
+    - [技术架构 → 工程实现](#技术架构--工程实现)
+    - [系统集成 → 生态建设](#系统集成--生态建设)
+  - [📖 学习路径 / Learning Path](#-学习路径--learning-path)
+    - [🎯 初学者路径 / Beginner Path (1-2个月)](#-初学者路径--beginner-path-1-2个月)
+    - [🚀 进阶者路径 / Advanced Path (2-4个月)](#-进阶者路径--advanced-path-2-4个月)
+    - [🏆 专家路径 / Expert Path (4-6个月)](#-专家路径--expert-path-4-6个月)
+  - [🛠️ 技术栈 / Technology Stack](#️-技术栈--technology-stack)
+    - [核心组件 / Core Components](#核心组件--core-components)
+    - [系统服务 / System Services](#系统服务--system-services)
+    - [安全机制 / Security Mechanisms](#安全机制--security-mechanisms)
+  - [📝 实践案例 / Practice Cases](#-实践案例--practice-cases)
+    - [基础案例 / Basic Cases](#基础案例--basic-cases)
+    - [进阶案例 / Advanced Cases](#进阶案例--advanced-cases)
+    - [高级案例 / Expert Cases](#高级案例--expert-cases)
+  - [🔍 快速导航 / Quick Navigation](#-快速导航--quick-navigation)
+    - [按主题查找 / Search by Topic](#按主题查找--search-by-topic)
+    - [按难度查找 / Search by Difficulty](#按难度查找--search-by-difficulty)
+    - [按应用场景查找 / Search by Application Scenario](#按应用场景查找--search-by-application-scenario)
+  - [📊 领域统计 / Domain Statistics](#-领域统计--domain-statistics)
+    - [内容覆盖 / Content Coverage](#内容覆盖--content-coverage)
+    - [完成状态 / Completion Status](#完成状态--completion-status)
+  - [🎯 下一步发展 / Next Steps Development](#-下一步发展--next-steps-development)
     - [短期目标 (1-2个月)](#短期目标-1-2个月)
     - [中期目标 (3-6个月)](#中期目标-3-6个月)
     - [长期愿景 (6-12个月)](#长期愿景-6-12个月)
+  - [快速导航（项目级）](#快速导航项目级)
+  - [工具与校验（项目级）](#工具与校验项目级)
 
 <!-- TOC END -->
 
@@ -285,3 +286,19 @@ tags: [操作系统, 系统管理, 进程管理, 内存管理, 文件系统]
 
 > 操作系统基础为SystemOSIOT项目提供系统运行的核心知识，通过深入学习和实践，将帮助用户掌握现代计算机系统的设计原理和实现技术。
 > The Operating System Foundation provides core knowledge of system operation for the SystemOSIOT project. Through in-depth learning and practice, it will help users master the design principles and implementation technologies of modern computer systems.
+
+## 快速导航（项目级）
+
+- 返回项目总览: [../README.md](../README.md)
+- 其它主题入口: [1.系统理论](../1.系统理论/README.md) · [3.物联网嵌入式系统](../3.物联网嵌入式系统/README.md) · [4.分布式系统](../4.分布式系统/README.md) · [5.集群系统](../5.集群系统/README.md) · [6.P2P系统](../6.P2P系统/README.md) · [7.容器与微服务](../7.容器与微服务/README.md) · [8.网络系统](../8.网络系统/README.md)
+
+## 工具与校验（项目级）
+
+```bash
+python ../tools/toc_generator.py --root .. --output ../docs/toc.md
+python ../tools/toc_validate.py --root .. --toc ../docs/toc.md
+```
+
+```powershell
+powershell -ExecutionPolicy Bypass -File ../tools/ci_toc_check.ps1
+```

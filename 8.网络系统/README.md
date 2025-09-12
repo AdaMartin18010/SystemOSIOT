@@ -1,33 +1,34 @@
 # 8.网络系统 / Network Systems
 
-
 <!-- TOC START -->
 
-- [8.网络系统 / Network Systems](#8网络系统-network-systems)
-  - [目录结构规划 / Directory Structure Planning](#目录结构规划-directory-structure-planning)
-    - [8.1 知识梳理 / Knowledge Review](#81-知识梳理-knowledge-review)
-    - [8.2 批判分析 / Critical Analysis](#82-批判分析-critical-analysis)
-    - [8.3 形式化结构 / Formal Structure](#83-形式化结构-formal-structure)
-    - [8.4 形式化证明 / Formal Proof](#84-形式化证明-formal-proof)
-    - [8.5 多表征 / Multiple Representations](#85-多表征-multiple-representations)
-    - [8.6 形式语义 / Formal Semantics](#86-形式语义-formal-semantics)
-    - [8.7 系统运行时语义 / System Runtime Semantics](#87-系统运行时语义-system-runtime-semantics)
-    - [8.8 综合专题与前沿展望 / Special Topics and Prospects](#88-综合专题与前沿展望-special-topics-and-prospects)
-  - [系统化成果展示 / Systematic Achievement Display](#系统化成果展示-systematic-achievement-display)
-    - [中英双语对照 / Chinese-English Bilingual Content](#中英双语对照-chinese-english-bilingual-content)
-    - [工程论证深度 / Engineering Argumentation Depth](#工程论证深度-engineering-argumentation-depth)
-    - [知识点完备性 / Knowledge Point Completeness](#知识点完备性-knowledge-point-completeness)
-    - [结构对标国际wiki / Structure Benchmarking International Wiki](#结构对标国际wiki-structure-benchmarking-international-wiki)
-  - [递归专题与扩展案例 / Recursive Topics and Extended Cases](#递归专题与扩展案例-recursive-topics-and-extended-cases)
-    - [网络协议深度分析 / Deep Analysis of Network Protocols](#网络协议深度分析-deep-analysis-of-network-protocols)
-    - [网络性能优化专题 / Network Performance Optimization Topics](#网络性能优化专题-network-performance-optimization-topics)
-    - [网络安全前沿技术 / Network Security Frontier Technologies](#网络安全前沿技术-network-security-frontier-technologies)
-  - [规划与建议 / Planning and Recommendations](#规划与建议-planning-and-recommendations)
-    - [短期目标 / Short-term Goals](#短期目标-short-term-goals)
-    - [中期目标 / Medium-term Goals](#中期目标-medium-term-goals)
-    - [长期目标 / Long-term Goals](#长期目标-long-term-goals)
-  - [全局知识结构与批判性导图 / Global Knowledge Structure and Critical Diagram](#全局知识结构与批判性导图-global-knowledge-structure-and-critical-diagram)
-    - [哲学批判说明 / Philosophical Critique](#哲学批判说明-philosophical-critique)
+- [8.网络系统 / Network Systems](#8网络系统--network-systems)
+  - [目录结构规划 / Directory Structure Planning](#目录结构规划--directory-structure-planning)
+    - [8.1 知识梳理 / Knowledge Review](#81-知识梳理--knowledge-review)
+    - [8.2 批判分析 / Critical Analysis](#82-批判分析--critical-analysis)
+    - [8.3 形式化结构 / Formal Structure](#83-形式化结构--formal-structure)
+    - [8.4 形式化证明 / Formal Proof](#84-形式化证明--formal-proof)
+    - [8.5 多表征 / Multiple Representations](#85-多表征--multiple-representations)
+    - [8.6 形式语义 / Formal Semantics](#86-形式语义--formal-semantics)
+    - [8.7 系统运行时语义 / System Runtime Semantics](#87-系统运行时语义--system-runtime-semantics)
+    - [8.8 综合专题与前沿展望 / Special Topics and Prospects](#88-综合专题与前沿展望--special-topics-and-prospects)
+  - [系统化成果展示 / Systematic Achievement Display](#系统化成果展示--systematic-achievement-display)
+    - [中英双语对照 / Chinese-English Bilingual Content](#中英双语对照--chinese-english-bilingual-content)
+    - [工程论证深度 / Engineering Argumentation Depth](#工程论证深度--engineering-argumentation-depth)
+    - [知识点完备性 / Knowledge Point Completeness](#知识点完备性--knowledge-point-completeness)
+    - [结构对标国际wiki / Structure Benchmarking International Wiki](#结构对标国际wiki--structure-benchmarking-international-wiki)
+  - [递归专题与扩展案例 / Recursive Topics and Extended Cases](#递归专题与扩展案例--recursive-topics-and-extended-cases)
+    - [网络协议深度分析 / Deep Analysis of Network Protocols](#网络协议深度分析--deep-analysis-of-network-protocols)
+    - [网络性能优化专题 / Network Performance Optimization Topics](#网络性能优化专题--network-performance-optimization-topics)
+    - [网络安全前沿技术 / Network Security Frontier Technologies](#网络安全前沿技术--network-security-frontier-technologies)
+  - [规划与建议 / Planning and Recommendations](#规划与建议--planning-and-recommendations)
+    - [短期目标 / Short-term Goals](#短期目标--short-term-goals)
+    - [中期目标 / Medium-term Goals](#中期目标--medium-term-goals)
+    - [长期目标 / Long-term Goals](#长期目标--long-term-goals)
+  - [全局知识结构与批判性导图 / Global Knowledge Structure and Critical Diagram](#全局知识结构与批判性导图--global-knowledge-structure-and-critical-diagram)
+    - [哲学批判说明 / Philosophical Critique](#哲学批判说明--philosophical-critique)
+  - [快速导航（项目级）](#快速导航项目级)
+  - [工具与校验（项目级）](#工具与校验项目级)
 
 <!-- TOC END -->
 
@@ -246,3 +247,19 @@ graph TD;
 
 > 本README为网络系统知识体系的系统化规划，采用中英双语对照，突出工程论证与知识点完备性，结构对标国际wiki标准。
 > This README provides systematic planning for the network system knowledge system, with Chinese-English bilingual content, emphasizing engineering argumentation and comprehensive knowledge points, benchmarking international wiki standards.
+
+## 快速导航（项目级）
+
+- 返回项目总览: [../README.md](../README.md)
+- 其它主题入口: [1.系统理论](../1.系统理论/README.md) · [2.操作系统](../2.操作系统/README.md) · [3.物联网嵌入式系统](../3.物联网嵌入式系统/README.md) · [4.分布式系统](../4.分布式系统/README.md) · [5.集群系统](../5.集群系统/README.md) · [6.P2P系统](../6.P2P系统/README.md) · [7.容器与微服务](../7.容器与微服务/README.md)
+
+## 工具与校验（项目级）
+
+```bash
+python ../tools/toc_generator.py --root .. --output ../docs/toc.md
+python ../tools/toc_validate.py --root .. --toc ../docs/toc.md
+```
+
+```powershell
+powershell -ExecutionPolicy Bypass -File ../tools/ci_toc_check.ps1
+```

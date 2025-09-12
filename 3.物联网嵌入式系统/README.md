@@ -1,6 +1,5 @@
 # 3. 物联网嵌入式系统
 
-
 <!-- TOC START -->
 
 - [3. 物联网嵌入式系统](#3-物联网嵌入式系统)
@@ -20,6 +19,8 @@
     - [内容要求](#内容要求)
     - [结构要求](#结构要求)
     - [学术要求](#学术要求)
+  - [快速导航（项目级）](#快速导航项目级)
+  - [工具与校验（项目级）](#工具与校验项目级)
 
 <!-- TOC END -->
 
@@ -130,3 +131,19 @@
 
 ---
 > 本目录为递归迭代构建的起点，将持续完善所有子目录内容。
+
+## 快速导航（项目级）
+
+- 返回项目总览: [../README.md](../README.md)
+- 其它主题入口: [1.系统理论](../1.系统理论/README.md) · [2.操作系统](../2.操作系统/README.md) · [4.分布式系统](../4.分布式系统/README.md) · [5.集群系统](../5.集群系统/README.md) · [6.P2P系统](../6.P2P系统/README.md) · [7.容器与微服务](../7.容器与微服务/README.md) · [8.网络系统](../8.网络系统/README.md)
+
+## 工具与校验（项目级）
+
+```bash
+python ../tools/toc_generator.py --root .. --output ../docs/toc.md
+python ../tools/toc_validate.py --root .. --toc ../docs/toc.md
+```
+
+```powershell
+powershell -ExecutionPolicy Bypass -File ../tools/ci_toc_check.ps1
+```

@@ -1,29 +1,30 @@
 # 7.容器与微服务 主题内容与文件规划 / Container and Microservices Topic Content and File Planning
 
-
 <!-- TOC START -->
 
-- [7.容器与微服务 主题内容与文件规划 / Container and Microservices Topic Content and File Planning](#7容器与微服务-主题内容与文件规划-container-and-microservices-topic-content-and-file-planning)
-  - [目录结构与内容说明 / Directory Structure and Content Description](#目录结构与内容说明-directory-structure-and-content-description)
-    - [7.1 知识梳理 / Knowledge Organization](#71-知识梳理-knowledge-organization)
-    - [7.2 批判性分析 / Critical Analysis](#72-批判性分析-critical-analysis)
-    - [7.3 形式化结构 / Formal Structure](#73-形式化结构-formal-structure)
-    - [7.4 形式化证明 / Formal Proof](#74-形式化证明-formal-proof)
-    - [7.5 多表征 / Multiple Representations](#75-多表征-multiple-representations)
-    - [7.6 形式语义 / Formal Semantics](#76-形式语义-formal-semantics)
-    - [7.7 运行时调度语义分析 / Runtime Scheduling Semantic Analysis](#77-运行时调度语义分析-runtime-scheduling-semantic-analysis)
-    - [7.8 形式语义与递归语义分析 / Formal Semantics and Recursive Semantic Analysis](#78-形式语义与递归语义分析-formal-semantics-and-recursive-semantic-analysis)
-  - [系统化成果展示 / Systematic Achievement Display](#系统化成果展示-systematic-achievement-display)
-    - [1. 中英双语对照 / Chinese-English Bilingual Content](#1-中英双语对照-chinese-english-bilingual-content)
-    - [2. 工程论证深度 / Engineering Argumentation Depth](#2-工程论证深度-engineering-argumentation-depth)
-    - [3. 知识点完备性 / Knowledge Point Completeness](#3-知识点完备性-knowledge-point-completeness)
-    - [4. 结构对标国际wiki / Structure Benchmarking International Wiki](#4-结构对标国际wiki-structure-benchmarking-international-wiki)
-  - [递归专题与扩展案例 / Recursive Topics and Extended Cases](#递归专题与扩展案例-recursive-topics-and-extended-cases)
-    - [递归细化专题 / Recursive Refinement Topics](#递归细化专题-recursive-refinement-topics)
-    - [特色扩展案例 / Featured Extended Cases](#特色扩展案例-featured-extended-cases)
-  - [规划与建议 / Planning and Recommendations](#规划与建议-planning-and-recommendations)
-    - [内容完善策略 / Content Improvement Strategy](#内容完善策略-content-improvement-strategy)
-    - [质量保证机制 / Quality Assurance Mechanisms](#质量保证机制-quality-assurance-mechanisms)
+- [7.容器与微服务 主题内容与文件规划 / Container and Microservices Topic Content and File Planning](#7容器与微服务-主题内容与文件规划--container-and-microservices-topic-content-and-file-planning)
+  - [目录结构与内容说明 / Directory Structure and Content Description](#目录结构与内容说明--directory-structure-and-content-description)
+    - [7.1 知识梳理 / Knowledge Organization](#71-知识梳理--knowledge-organization)
+    - [7.2 批判性分析 / Critical Analysis](#72-批判性分析--critical-analysis)
+    - [7.3 形式化结构 / Formal Structure](#73-形式化结构--formal-structure)
+    - [7.4 形式化证明 / Formal Proof](#74-形式化证明--formal-proof)
+    - [7.5 多表征 / Multiple Representations](#75-多表征--multiple-representations)
+    - [7.6 形式语义 / Formal Semantics](#76-形式语义--formal-semantics)
+    - [7.7 运行时调度语义分析 / Runtime Scheduling Semantic Analysis](#77-运行时调度语义分析--runtime-scheduling-semantic-analysis)
+    - [7.8 形式语义与递归语义分析 / Formal Semantics and Recursive Semantic Analysis](#78-形式语义与递归语义分析--formal-semantics-and-recursive-semantic-analysis)
+  - [系统化成果展示 / Systematic Achievement Display](#系统化成果展示--systematic-achievement-display)
+    - [1. 中英双语对照 / Chinese-English Bilingual Content](#1-中英双语对照--chinese-english-bilingual-content)
+    - [2. 工程论证深度 / Engineering Argumentation Depth](#2-工程论证深度--engineering-argumentation-depth)
+    - [3. 知识点完备性 / Knowledge Point Completeness](#3-知识点完备性--knowledge-point-completeness)
+    - [4. 结构对标国际wiki / Structure Benchmarking International Wiki](#4-结构对标国际wiki--structure-benchmarking-international-wiki)
+  - [递归专题与扩展案例 / Recursive Topics and Extended Cases](#递归专题与扩展案例--recursive-topics-and-extended-cases)
+    - [递归细化专题 / Recursive Refinement Topics](#递归细化专题--recursive-refinement-topics)
+    - [特色扩展案例 / Featured Extended Cases](#特色扩展案例--featured-extended-cases)
+  - [规划与建议 / Planning and Recommendations](#规划与建议--planning-and-recommendations)
+    - [内容完善策略 / Content Improvement Strategy](#内容完善策略--content-improvement-strategy)
+    - [质量保证机制 / Quality Assurance Mechanisms](#质量保证机制--quality-assurance-mechanisms)
+  - [快速导航（项目级）](#快速导航项目级)
+  - [工具与校验（项目级）](#工具与校验项目级)
 
 <!-- TOC END -->
 
@@ -216,3 +217,19 @@ This topic focuses on modern system architectures such as containers, microservi
 
 如需补充具体内容或有新专题，请在本README中持续登记与说明。
 If you need to supplement specific content or have new topics, please continue to register and explain in this README.
+
+## 快速导航（项目级）
+
+- 返回项目总览: [../README.md](../README.md)
+- 其它主题入口: [1.系统理论](../1.系统理论/README.md) · [2.操作系统](../2.操作系统/README.md) · [3.物联网嵌入式系统](../3.物联网嵌入式系统/README.md) · [4.分布式系统](../4.分布式系统/README.md) · [5.集群系统](../5.集群系统/README.md) · [6.P2P系统](../6.P2P系统/README.md) · [8.网络系统](../8.网络系统/README.md)
+
+## 工具与校验（项目级）
+
+```bash
+python ../tools/toc_generator.py --root .. --output ../docs/toc.md
+python ../tools/toc_validate.py --root .. --toc ../docs/toc.md
+```
+
+```powershell
+powershell -ExecutionPolicy Bypass -File ../tools/ci_toc_check.ps1
+```
