@@ -131,6 +131,25 @@ specification-checker/
 
 ## 🚀 使用方法
 
+### 证据键一致性检查（Analysis ↔ references.md）
+
+在仓库根目录下执行：
+
+```bash
+python tools/specification-checker/algorithms/evidence_consistency.py
+```
+
+输出 JSON 包含：
+
+- `missing_in_references`: 在 `Analysis/*.md` 使用但未登记到 `docs/Refactor/references.md` 的证据键
+- `unused_in_analysis`: 在 `references.md` 登记但未在 `Analysis` 使用的证据键
+- `analysis_total`/`references_total`: 键数量统计
+
+修复方式：
+
+- 将缺失键补入 `docs/Refactor/references.md` 对应专题表格（保留占位也可）
+- 或在 Analysis 文档中移除无效键/更新为正确键
+
 ### 基本使用
 
 ```python

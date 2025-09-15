@@ -9,6 +9,7 @@
 - 证据键索引.md
   - 参考明细（docs/Refactor/references.md）
   - 证据回放用例模板（validation/verification-results/证据回放用例模板.md）
+  - 一致性检查脚本（tools/specification-checker/algorithms/evidence_consistency.py）
 
 ### 完成度与证据状态（简表）
 
