@@ -7,6 +7,7 @@
 - NSX-与-CNI-策略与微分段映射.md
 - 跨层可观测性-统一时间线指南.md
 - 证据键索引.md
+  - 参考明细（docs/Refactor/references.md）
 
 ### 完成度与证据状态（简表）
 
