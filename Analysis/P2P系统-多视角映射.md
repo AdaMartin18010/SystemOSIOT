@@ -77,6 +77,15 @@
 - 场景矩阵：对称/不对称 NAT、端口保留/重用、不同 keepalive 周期、vMotion 注入前后链路质量对比。
 - 工具与观测：iperf3/ping/自定义打洞器 + eBPF/pcap/NSX Traceflow（若在 VM 内）。
 
+### 7.2 统一时间线回放示例（E-2025-0301/0303/0304）
+
+1) 事件钉扎：T0 触发 vMotion（或模拟链路抖动），记录 vCenter 事件与时钟偏移（PTP/NTP）。
+2) 指标采集：
+   - PromQL p99：`histogram_quantile(0.99, sum by (le) (rate(p2p_rpc_latency_seconds_bucket{job="p2p-node"}[5m])))`
+   - eBPF 丢包/重传：kprobe/tcp_retransmit_skb 与 UDP 发送/接收统计。
+3) 日志与追踪：Loki 过滤 `{app="p2p", peer_id="..."} |~ "(reconnect|timeout|hole-punch)"`；Tempo 关联 session spans。
+4) 回放：对齐 [T0-Δ, T1+Δ] 时间窗，生成“连接成功率/重连时间/p99”三联图；给出结论与证据键引用。
+
 ## 8. 相关目录链接
 
 - `06-p2p-systems/` 总览与各子章节
