@@ -8,6 +8,7 @@
 - 跨层可观测性-统一时间线指南.md
 - 证据键索引.md
   - 参考明细（docs/Refactor/references.md）
+  - 证据回放用例模板（validation/verification-results/证据回放用例模板.md）
 
 ### 完成度与证据状态（简表）
 
