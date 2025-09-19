@@ -1,0 +1,344 @@
+# SystemOSIOT 标准合规映射文件
+# 版本: 1.0.0
+# 日期: 2025-01-27
+# 用途: 标准条款—形式化活动映射—可审计工件三元组
+
+metadata:
+  project: "SystemOSIOT"
+  version: "1.0.0"
+  created_date: "2025-01-27"
+  last_updated: "2025-01-27"
+  maintainer: "SystemOSIOT项目组"
+  compliance_standards:
+    - "ISO/IEC/IEEE 15288:2023"
+    - "ISO/IEC/IEEE 12207:2017"
+    - "ISO/IEC/IEEE 42010:2022"
+    - "IEC 61508"
+    - "ISO 26262:2018"
+    - "EN 50128"
+    - "EN 50657"
+    - "DO-178C"
+    - "DO-333"
+    - "NIST SP 800-218 Rev.1"
+    - "NIST AI RMF 1.0"
+
+# 标准条款映射三元组
+standard_mappings:
+  
+  # ISO/IEC/IEEE 15288:2023 - 系统生命周期过程
+  iso_15288_2023:
+    standard_name: "ISO/IEC/IEEE 15288:2023"
+    standard_title: "Systems and software engineering — System life cycle processes"
+    official_link: "https://www.iso.org/standard/77393.html"
+    access_date: "2025-01-27"
+    
+    clauses:
+      - clause_id: "6.4.2.1"
+        clause_title: "System Design Process"
+        formal_activities:
+          - activity: "Design by Contract (DbC)"
+            description: "不变量/契约驱动设计"
+            tools: ["Coq", "Isabelle", "TLA+"]
+            artifacts:
+              - "requirements/formal_contracts.v"
+              - "requirements/invariants.md"
+              - "design/contract_specifications.tla"
+        
+      - clause_id: "6.4.2.2"
+        clause_title: "System Verification Process"
+        formal_activities:
+          - activity: "Formal Requirements and Properties"
+            description: "形式化需求与特性"
+            tools: ["TLA+", "Coq", "Isabelle"]
+            artifacts:
+              - "specifications/formal_requirements.tla"
+              - "specifications/system_properties.v"
+              - "verification/requirement_traceability.csv"
+        
+      - clause_id: "6.4.2.3"
+        clause_title: "System Validation Process"
+        formal_activities:
+          - activity: "Proof Obligation Decomposition and Checking"
+            description: "证明义务分解与检查"
+            tools: ["SMT", "Model Checking", "Theorem Provers"]
+            artifacts:
+              - "proofs/obligation_decomposition.md"
+              - "verification/proof_scripts/*.v"
+              - "verification/model_checking/*.tla"
+              - "reports/verification_report.pdf"
+              - "traceability/requirement_matrix.csv"
+
+  # ISO/IEC/IEEE 12207:2017 - 软件生命周期过程
+  iso_12207_2017:
+    standard_name: "ISO/IEC/IEEE 12207:2017"
+    standard_title: "Systems and software engineering — Software life cycle processes"
+    official_link: "https://www.iso.org/standard/63712.html"
+    access_date: "2025-01-27"
+    
+    clauses:
+      - clause_id: "7.2.2.1"
+        clause_title: "Software Implementation Process"
+        formal_activities:
+          - activity: "Specification to Implementation Semantic Alignment"
+            description: "规范→实现语义对齐"
+            tools: ["Hoare Logic", "Separation Logic", "Refinement"]
+            artifacts:
+              - "implementation/hoare_annotations.h"
+              - "implementation/separation_logic.c"
+              - "verification/refinement_proofs.v"
+        
+      - clause_id: "7.2.2.2"
+        clause_title: "Software Unit and Integration Verification"
+        formal_activities:
+          - activity: "Unit-level Contract Verification"
+            description: "单元级契约验证"
+            tools: ["Frama-C", "Why3", "Kani", "CBMC", "Prusti"]
+            artifacts:
+              - "contracts/unit_contracts/*.h"
+              - "contracts/unit_contracts/*.c"
+              - "verification/vc_output.log"
+              - "ci/proof_pipeline.yml"
+              - "metrics/coverage_obligation_completion.csv"
+
+  # ISO/IEC/IEEE 42010:2022 - 体系结构描述
+  iso_42010_2022:
+    standard_name: "ISO/IEC/IEEE 42010:2022"
+    standard_title: "Systems and software engineering — Architecture description"
+    official_link: "https://www.iso.org/standard/77394.html"
+    access_date: "2025-01-27"
+    
+    clauses:
+      - clause_id: "6.3.1"
+        clause_title: "Architecture View Consistency"
+        formal_activities:
+          - activity: "Architecture View Consistency Checking"
+            description: "体系结构视图一致性检查"
+            tools: ["Alloy", "nuXmv"]
+            artifacts:
+              - "architecture/views/*.adoc"
+              - "verification/consistency_proof_report.md"
+              - "models/alloy_models/*.als"
+              - "verification/counterexample_traces.vcd"
+        
+      - clause_id: "6.3.2"
+        clause_title: "Risk and Assumption Formalization"
+        formal_activities:
+          - activity: "Risk and Assumption Formalization"
+            description: "风险与假设形式化"
+            tools: ["TLA+", "Alloy"]
+            artifacts:
+              - "risk/formal_risk_models.tla"
+              - "assumptions/formal_assumptions.als"
+              - "verification/risk_verification_report.md"
+
+  # IEC 61508 - 功能安全
+  iec_61508:
+    standard_name: "IEC 61508"
+    standard_title: "Functional safety of electrical/electronic/programmable electronic safety-related systems"
+    official_link: "https://www.iec.ch/standardsdev/publications/iec61508.htm"
+    access_date: "2025-01-27"
+    
+    clauses:
+      - clause_id: "7.4.2.1"
+        clause_title: "SIL Target Decomposition"
+        formal_activities:
+          - activity: "SIL Target Decomposition"
+            description: "SIL目标分解"
+            tools: ["Fault Tree Analysis", "Event Tree Analysis"]
+            artifacts:
+              - "safety/sil_target_decomposition.xlsx"
+              - "safety/fault_tree_analysis.md"
+              - "safety/event_tree_analysis.md"
+        
+      - clause_id: "7.4.2.2"
+        clause_title: "Formal Requirements and Evidence Chain"
+        formal_activities:
+          - activity: "Formal Requirements and Evidence Chain"
+            description: "形式化需求与证据链"
+            tools: ["TLA+", "Coq", "Isabelle"]
+            artifacts:
+              - "requirements/formal_safety_requirements.tla"
+              - "evidence/safety_evidence_chain.md"
+              - "verification/safety_proof_obligations.md"
+
+  # ISO 26262:2018 - 道路车辆功能安全
+  iso_26262_2018:
+    standard_name: "ISO 26262:2018"
+    standard_title: "Road vehicles — Functional safety"
+    official_link: "https://www.iso.org/standard/68383.html"
+    access_date: "2025-01-27"
+    
+    clauses:
+      - clause_id: "6.4.2.1"
+        clause_title: "ASIL Target Decomposition"
+        formal_activities:
+          - activity: "ASIL Target Decomposition"
+            description: "ASIL目标分解"
+            tools: ["Fault Tree Analysis", "Hazard Analysis"]
+            artifacts:
+              - "safety/asil_target_decomposition.xlsx"
+              - "safety/hazard_analysis.md"
+              - "safety/risk_assessment.md"
+        
+      - clause_id: "6.4.2.2"
+        clause_title: "Code-level and Model-level Proof and Model Checking"
+        formal_activities:
+          - activity: "Code-level and Model-level Proof and Model Checking"
+            description: "代码级/模型级证明与模型检测"
+            tools: ["IC3", "PDR", "k-induction"]
+            artifacts:
+              - "models/safety_models/*.smv"
+              - "proofs/code_level_proofs.v"
+              - "verification/model_checking_results.md"
+              - "evidence/evidence_inventory.sarif"
+
+  # EN 50128 - 铁路软件
+  en_50128:
+    standard_name: "EN 50128"
+    standard_title: "Railway applications — Communication, signalling and processing systems — Software for railway control and protection systems"
+    official_link: "https://standards.iteh.ai/catalog/standards/cen/8b5b5b5b-5b5b-5b5b-5b5b-5b5b5b5b5b5b/en-50128-2023"
+    access_date: "2025-01-27"
+    
+    clauses:
+      - clause_id: "7.4.2.1"
+        clause_title: "Software Safety Integrity Level (SIL) Requirements"
+        formal_activities:
+          - activity: "Software SIL Requirements Formalization"
+            description: "软件SIL需求形式化"
+            tools: ["TLA+", "Coq", "Isabelle"]
+            artifacts:
+              - "requirements/software_sil_requirements.tla"
+              - "verification/sil_verification_proofs.v"
+              - "evidence/sil_evidence_chain.md"
+
+  # DO-178C + DO-333 - 航空软件认证
+  do_178c_do_333:
+    standard_name: "DO-178C + DO-333"
+    standard_title: "Software Considerations in Airborne Systems and Equipment Certification — Formal Methods Supplement"
+    official_link: "https://www.rtca.org/store/do-178c-software-considerations-in-airborne-systems-and-equipment-certification/"
+    access_date: "2025-01-27"
+    
+    clauses:
+      - clause_id: "6.4.2.1"
+        clause_title: "Requirements to Code Semantic Fidelity Proof"
+        formal_activities:
+          - activity: "Requirements to Code Semantic Fidelity Proof"
+            description: "需求到代码的语义保真证明"
+            tools: ["Refinement", "Compilation Correctness"]
+            artifacts:
+              - "verification/requirements_to_code_fidelity.v"
+              - "compilation/correctness_proofs.md"
+              - "evidence/semantic_fidelity_evidence.md"
+        
+      - clause_id: "6.4.2.2"
+        clause_title: "Formal Methods Compliance Evidence"
+        formal_activities:
+          - activity: "Formal Methods Compliance Evidence"
+            description: "形式方法替代测试的合规证据"
+            tools: ["Coq", "Isabelle", "TLA+"]
+            artifacts:
+              - "compliance/formal_methods_mapping_table.xlsx"
+              - "evidence/generator_trustworthiness_proof.md"
+              - "references/compcert_translation_correctness.md"
+
+  # NIST SP 800-218 Rev.1 - 安全软件开发框架
+  nist_sp_800_218:
+    standard_name: "NIST SP 800-218 Rev.1"
+    standard_title: "Secure Software Development Framework (SSDF) Version 1.1"
+    official_link: "https://csrc.nist.gov/pubs/sp/800/218/final"
+    access_date: "2025-01-27"
+    
+    clauses:
+      - clause_id: "PO.3.1"
+        clause_title: "Verify and Integrity Domain"
+        formal_activities:
+          - activity: "Formal Verification Gate and Mandatory CI Checks"
+            description: "形式化验证门禁与强制性CI检查"
+            tools: ["CI/CD", "Formal Verification", "Static Analysis"]
+            artifacts:
+              - "compliance/ssdf_alignment_table.md"
+              - "ci/ci_strategy_gates.yml"
+              - "risk/risk_exception_approval_records.pdf"
+
+  # NIST AI RMF 1.0 - AI风险管理框架
+  nist_ai_rmf:
+    standard_name: "NIST AI RMF 1.0"
+    standard_title: "Artificial Intelligence Risk Management Framework"
+    official_link: "https://www.nist.gov/itl/ai-risk-management-framework"
+    access_date: "2025-01-27"
+    
+    clauses:
+      - clause_id: "6.4.2.1"
+        clause_title: "Explainability, Robustness, and Safety"
+        formal_activities:
+          - activity: "Verifiable Constraints, Counterfactuals, and Adversarial Robustness Formal Verification"
+            description: "可验证约束、反事实与对抗鲁棒性形式检验"
+            tools: ["SMT", "Model Checking", "Formal Verification"]
+            artifacts:
+              - "ai/risk_registry.md"
+              - "constraints/formal_constraints/*.smt2"
+              - "verification/robustness_verification_report.pdf"
+
+# 可审计工件模板
+auditable_artifacts:
+  templates:
+    - artifact_type: "Formal Specification"
+      template_path: "templates/formal_specification.tla"
+      description: "TLA+形式化规范模板"
+    
+    - artifact_type: "Proof Script"
+      template_path: "templates/proof_script.v"
+      description: "Coq证明脚本模板"
+    
+    - artifact_type: "Verification Report"
+      template_path: "templates/verification_report.md"
+      description: "验证报告模板"
+    
+    - artifact_type: "Traceability Matrix"
+      template_path: "templates/traceability_matrix.csv"
+      description: "可追溯性矩阵模板"
+    
+    - artifact_type: "Evidence Inventory"
+      template_path: "templates/evidence_inventory.sarif"
+      description: "证据清单模板"
+
+# 合规性检查清单
+compliance_checklist:
+  mandatory_checks:
+    - check: "所有标准条款都有对应的形式化活动"
+      status: "PENDING"
+      evidence: "standard_mappings.yaml"
+    
+    - check: "所有形式化活动都有对应的可审计工件"
+      status: "PENDING"
+      evidence: "artifacts/目录"
+    
+    - check: "所有工件都有版本控制和访问控制"
+      status: "PENDING"
+      evidence: "git历史记录"
+    
+    - check: "所有引用都有访问日期和快照链接"
+      status: "PENDING"
+      evidence: "引用列表"
+
+  recommended_checks:
+    - check: "定期更新标准版本和链接"
+      status: "PENDING"
+      evidence: "更新日志"
+    
+    - check: "验证工具链版本兼容性"
+      status: "PENDING"
+      evidence: "env.lock文件"
+    
+    - check: "执行可复现性验证"
+      status: "PENDING"
+      evidence: "repro-checklist.md"
+
+# 审计轨迹
+audit_trail:
+  creation_date: "2025-01-27"
+  last_review_date: "2025-01-27"
+  next_review_date: "2025-02-27"
+  review_cycle: "monthly"
+  responsible_party: "SystemOSIOT项目组"
+  approval_authority: "技术委员会"

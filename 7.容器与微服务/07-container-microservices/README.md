@@ -1,6 +1,5 @@
 # 容器与微服务 / Container & Microservices
 
-
 <!-- TOC START -->
 
 - [容器与微服务 / Container & Microservices](#容器与微服务-container-microservices)
@@ -27,7 +26,8 @@
 
 ## 📚 领域概览 / Domain Overview
 
-容器与微服务是SystemOSIOT项目的核心领域，专注于现代应用架构、容器化技术和微服务设计模式。本领域涵盖了从容器基础到大规模微服务架构的完整技术栈。
+容器与微服务是SystemOSIOT项目的核心领域，专注于现代应用架构、容器化技术和微服务设计模式。
+本领域涵盖了从容器基础到大规模微服务架构的完整技术栈。
 
 ## 🏗️ 领域架构 / Domain Architecture
 
