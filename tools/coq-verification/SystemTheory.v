@@ -1,36 +1,124 @@
 (* SystemOSIOT System Theory Coq Formalization *)
-(* 系统理论Coq形式化验证 *)
+(* 系统理论Coq形式化验证 - 2025年增强版 *)
 
 Require Import Coq.Lists.List.
 Require Import Coq.Sets.Ensembles.
 Require Import Coq.Logic.Classical.
 Require Import Coq.Arith.PeanoNat.
+Require Import Coq.Logic.FunctionalExtensionality.
+Require Import Coq.Logic.ProofIrrelevance.
+Require Import Coq.Program.Equality.
+Require Import Coq.Logic.Eqdep_dec.
+
+(* 引入现代数学库 *)
+Require Import Coq.Classes.Morphisms.
+Require Import Coq.Classes.RelationClasses.
+Require Import Coq.Classes.Equivalence.
+Require Import Coq.Classes.OrderedType.
+Require Import Coq.Classes.OrderedTypeEx.
 
 (* 系统理论的基本定义 *)
 Module SystemTheory.
 
-(* 系统要素类型 *)
+(* 系统要素类型 - 增强版 *)
 Inductive Element : Type :=
-  | element : nat -> Element.
+  | element : nat -> Element
+  | composite_element : list Element -> Element.
 
-(* 系统关系类型 *)
+(* 要素相等性 *)
+Definition Element_eq (e1 e2 : Element) : bool :=
+  match e1, e2 with
+  | element n1, element n2 => Nat.eqb n1 n2
+  | composite_element l1, composite_element l2 => 
+    List.forall2 Element_eq l1 l2
+  | _, _ => false
+  end.
+
+(* 系统关系类型 - 增强版 *)
 Inductive Relation : Type :=
-  | relation : Element -> Element -> Relation.
+  | relation : Element -> Element -> Relation
+  | reflexive_relation : Element -> Relation
+  | transitive_relation : Element -> Element -> Element -> Relation
+  | symmetric_relation : Element -> Element -> Relation.
 
-(* 系统边界函数类型 *)
+(* 关系性质 *)
+Definition is_reflexive (r : Relation) : Prop :=
+  match r with
+  | reflexive_relation _ => True
+  | relation e1 e2 => e1 = e2
+  | _ => False
+  end.
+
+Definition is_symmetric (r : Relation) : Prop :=
+  match r with
+  | symmetric_relation e1 e2 => True
+  | relation e1 e2 => exists r', r' = relation e2 e1
+  | _ => False
+  end.
+
+Definition is_transitive (r : Relation) : Prop :=
+  match r with
+  | transitive_relation e1 e2 e3 => True
+  | _ => False
+  end.
+
+(* 系统边界函数类型 - 增强版 *)
 Definition Boundary := Element -> bool.
 
-(* 系统功能类型 *)
-Inductive Function : Type :=
-  | function : nat -> Function.
+(* 边界性质 *)
+Definition is_well_defined_boundary (b : Boundary) : Prop :=
+  forall e : Element, b e = true \/ b e = false.
 
-(* 系统定义 *)
+(* 系统功能类型 - 增强版 *)
+Inductive Function : Type :=
+  | function : nat -> Function
+  | composite_function : list Function -> Function
+  | identity_function : Function
+  | composition_function : Function -> Function -> Function.
+
+(* 功能性质 *)
+Definition is_identity (f : Function) : Prop :=
+  match f with
+  | identity_function => True
+  | _ => False
+  end.
+
+(* 系统定义 - 增强版 *)
 Record System : Type := {
   elements : list Element;
   relations : list Relation;
   boundary : Boundary;
   functions : list Function;
+  system_properties : list (System -> Prop);
 }.
+
+(* 系统构造器 *)
+Definition mkSystem (e : list Element) (r : list Relation) 
+                   (b : Boundary) (f : list Function) : System :=
+  {| elements := e;
+     relations := r;
+     boundary := b;
+     functions := f;
+     system_properties := nil |}.
+
+(* 系统相等性 *)
+Definition System_eq (s1 s2 : System) : Prop :=
+  elements s1 = elements s2 /\
+  relations s1 = relations s2 /\
+  boundary s1 = boundary s2 /\
+  functions s1 = functions s2.
+
+(* 系统同构 *)
+Definition SystemIsomorphism (s1 s2 : System) : Prop :=
+  exists f : Element -> Element,
+    (forall e : Element, In e (elements s1) -> In (f e) (elements s2)) /\
+    (forall e : Element, In e (elements s2) -> exists e', In e' (elements s1) /\ f e' = e) /\
+    (forall r : Relation, In r (relations s1) -> 
+      exists r' : Relation, In r' (relations s2) /\ 
+      match r with
+      | relation e1 e2 => r' = relation (f e1) (f e2)
+      | _ => True
+      end).
 
 (* 系统存在性公理 *)
 Axiom system_existence : exists S : System, True.
