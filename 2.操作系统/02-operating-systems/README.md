@@ -3,25 +3,25 @@
 
 <!-- TOC START -->
 
-- [操作系统 / Operating Systems](#操作系统-operating-systems)
-  - [📚 领域概览 / Domain Overview](#-领域概览-domain-overview)
-  - [🏗️ 领域架构 / Domain Architecture](#-领域架构-domain-architecture)
+- [操作系统 / Operating Systems](#操作系统--operating-systems)
+  - [📚 领域概览 / Domain Overview](#-领域概览--domain-overview)
+  - [🏗️ 领域架构 / Domain Architecture](#️-领域架构--domain-architecture)
     - [核心子领域](#核心子领域)
-  - [🔗 技术关联 / Technical Relationships](#-技术关联-technical-relationships)
+  - [🔗 技术关联 / Technical Relationships](#-技术关联--technical-relationships)
     - [前置知识](#前置知识)
     - [相关技术](#相关技术)
     - [应用场景](#应用场景)
-  - [📖 学习路径 / Learning Path](#-学习路径-learning-path)
+  - [📖 学习路径 / Learning Path](#-学习路径--learning-path)
     - [初级 (Beginner)](#初级-beginner)
     - [中级 (Intermediate)](#中级-intermediate)
     - [高级 (Advanced)](#高级-advanced)
-  - [🛠️ 实践项目 / Practical Projects](#-实践项目-practical-projects)
+  - [🛠️ 实践项目 / Practical Projects](#️-实践项目--practical-projects)
     - [推荐项目](#推荐项目)
     - [开发环境](#开发环境)
-  - [📚 推荐资源 / Recommended Resources](#-推荐资源-recommended-resources)
+  - [📚 推荐资源 / Recommended Resources](#-推荐资源--recommended-resources)
     - [经典教材](#经典教材)
     - [在线资源](#在线资源)
-  - [🔄 更新日志 / Update Log](#-更新日志-update-log)
+  - [🔄 更新日志 / Update Log](#-更新日志--update-log)
 
 <!-- TOC END -->
 

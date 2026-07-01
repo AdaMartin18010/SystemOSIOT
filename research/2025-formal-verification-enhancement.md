@@ -94,7 +94,7 @@ Definition AutomatedProofGeneration : Type :=
 
 (* 基于LLM的证明生成 *)
 Definition LLMBasedProofGeneration : Type :=
-  forall (phi : SystemFormula) (context : ProofContext), 
+  forall (phi : SystemFormula) (context : ProofContext),
     option (Proof phi).
 
 (* 检索增强证明生成 *)

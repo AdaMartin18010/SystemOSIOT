@@ -314,7 +314,7 @@ Definition SystemExistence : Existence :=
 (* 系统同一性 *)
 Definition SystemIdentity : Identity :=
   forall (S1 S2 : System),
-    S1 = S2 <-> 
+    S1 = S2 <->
     elements S1 = elements S2 /\
     relations S1 = relations S2 /\
     functions S1 = functions S2.
@@ -357,7 +357,7 @@ Record SystemEpistemology : Type := {
 (* 系统知识 *)
 Definition SystemKnowledge : Knowledge :=
   forall (P : SystemProperty),
-    Knowledge P <-> 
+    Knowledge P <->
     Belief P /\
     Justified P /\
     True P.
@@ -365,7 +365,7 @@ Definition SystemKnowledge : Knowledge :=
 (* 系统知识辩护 *)
 Definition SystemJustification : Justification :=
   forall (P : SystemProperty),
-    Justified P <-> 
+    Justified P <->
     exists (evidence : Evidence),
       EvidenceSupports evidence P /\
       EvidenceReliable evidence.
@@ -373,7 +373,7 @@ Definition SystemJustification : Justification :=
 (* 系统真理 *)
 Definition SystemTruth : Truth :=
   forall (P : SystemProperty),
-    True P <-> 
+    True P <->
     SystemSatisfies P /\
     SystemConsistent P /\
     SystemCoherent P.
@@ -381,7 +381,7 @@ Definition SystemTruth : Truth :=
 (* 系统信念 *)
 Definition SystemBelief : Belief :=
   forall (P : SystemProperty),
-    Belief P <-> 
+    Belief P <->
     AgentBelieves P /\
     BeliefConsistent P /\
     BeliefCoherent P.
@@ -472,7 +472,7 @@ Definition SystemTheoryArgumentStructure : ArgumentStructure := {
 (* 论证有效性 *)
 Definition ArgumentValidity : Validity :=
   forall (A : Argument),
-    Valid A <-> 
+    Valid A <->
     forall (premises : list Premise),
       AllPremisesTrue premises ->
       ConclusionNecessarilyTrue (conclusion A).
@@ -480,14 +480,14 @@ Definition ArgumentValidity : Validity :=
 (* 论证可靠性 *)
 Definition ArgumentSoundness : Soundness :=
   forall (A : Argument),
-    Sound A <-> 
+    Sound A <->
     Valid A /\
     AllPremisesTrue (premises A).
 
 (* 论证强度 *)
 Definition ArgumentStrength : Strength :=
   forall (A : Argument),
-    Strong A <-> 
+    Strong A <->
     HighProbability (conclusion A) given (premises A).
 ```
 
@@ -607,7 +607,7 @@ Proof.
   unfold SystemWholeness.
   (* 系统整体性 = 系统具有其组成部分所不具备的涌现属性 *)
   apply concept_clarification_system_wholeness.
-  
+
   (* 步骤2: 逻辑分析 - 验证论证结构的有效性 *)
   apply logical_analysis_system_wholeness.
   - (* 前提1: 系统由相互关联的要素组成 *)
@@ -616,33 +616,33 @@ Proof.
     apply system_functionality_premise.
   - (* 前提3: 系统功能不能完全归约为要素功能 *)
     apply system_irreducibility_premise.
-  
+
   (* 步骤3: 语义分析 - 确定真值条件 *)
   apply semantic_analysis_system_wholeness.
   - (* 真值条件: 系统满足整体性当且仅当存在涌现属性 *)
     apply emergence_truth_condition.
-  
+
   (* 步骤4: 论证结构验证 *)
   apply argument_structure_validation.
   - (* 有效性检查 *)
     apply validity_check_system_wholeness.
   - (* 可靠性检查 *)
     apply soundness_check_system_wholeness.
-  
+
   (* 步骤5: 推理规则应用 *)
   apply inference_rules_system_wholeness.
   - (* 假言推理 *)
     apply modus_ponens_system_wholeness.
   - (* 归纳推理 *)
     apply induction_system_wholeness.
-  
+
   (* 步骤6: 论证评估 *)
   apply argument_evaluation_system_wholeness.
   - (* 相关性评估 *)
     apply relevance_assessment_system_wholeness.
   - (* 完整性评估 *)
     apply completeness_assessment_system_wholeness.
-  
+
   (* 步骤7: 哲学验证 *)
   apply philosophical_verification_system_wholeness.
   - (* 本体论验证 *)
@@ -655,7 +655,7 @@ Qed.
 
 (* 辅助引理: 系统整体性概念澄清 *)
 Lemma concept_clarification_system_wholeness : forall S : System,
-  SystemWholeness S <-> 
+  SystemWholeness S <->
   exists (P : SystemProperty),
     EmergentProperty S P /\
     ~(exists (e : Element), In e (elements S) -> ElementHasProperty e P).
@@ -700,7 +700,7 @@ Proof.
   unfold SystemEmergence.
   (* 涌现性 = 系统属性不能从组成部分属性中预测或推导 *)
   apply concept_clarification_emergence.
-  
+
   (* 步骤2: 涌现性逻辑分析 *)
   apply logical_analysis_emergence.
   - (* 前提1: 系统具有属性P *)
@@ -709,33 +709,33 @@ Proof.
     apply components_lack_property_premise.
   - (* 前提3: 属性P不能从组成部分属性推导 *)
     apply property_not_derivable_premise.
-  
+
   (* 步骤3: 涌现性语义分析 *)
   apply semantic_analysis_emergence.
   - (* 真值条件: 涌现性当且仅当存在不可预测的系统属性 *)
     apply emergence_truth_condition.
-  
+
   (* 步骤4: 涌现性论证结构验证 *)
   apply argument_structure_validation_emergence.
   - (* 有效性检查 *)
     apply validity_check_emergence.
   - (* 可靠性检查 *)
     apply soundness_check_emergence.
-  
+
   (* 步骤5: 涌现性推理规则应用 *)
   apply inference_rules_emergence.
   - (* 否定后件推理 *)
     apply modus_tollens_emergence.
   - (* 析取三段论 *)
     apply disjunctive_syllogism_emergence.
-  
+
   (* 步骤6: 涌现性论证评估 *)
   apply argument_evaluation_emergence.
   - (* 相关性评估 *)
     apply relevance_assessment_emergence.
   - (* 完整性评估 *)
     apply completeness_assessment_emergence.
-  
+
   (* 步骤7: 涌现性哲学验证 *)
   apply philosophical_verification_emergence.
   - (* 本体论验证 *)
@@ -744,7 +744,7 @@ Proof.
     apply epistemological_verification_emergence.
   - (* 方法论验证 *)
     apply methodological_verification_emergence.
-  
+
   (* 步骤8: 经验验证 *)
   apply empirical_verification_emergence.
   - (* 可观察性验证 *)
@@ -757,7 +757,7 @@ Qed.
 
 (* 辅助引理: 涌现性概念澄清 *)
 Lemma concept_clarification_emergence : forall S : System, forall P : SystemProperty,
-  SystemEmergence S P <-> 
+  SystemEmergence S P <->
   SystemHasProperty S P /\
   (forall (e : Element), In e (elements S) -> ~ElementHasProperty e P) /\
   ~PropertyDerivableFromComponents S P.

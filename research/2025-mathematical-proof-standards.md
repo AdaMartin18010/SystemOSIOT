@@ -104,7 +104,7 @@ Definition SystemExistenceAxiom : Axiom :=
 (* 系统同一性公理 *)
 Definition SystemIdentityAxiom : Axiom :=
   forall (S1 S2 : System),
-    S1 = S2 <-> 
+    S1 = S2 <->
     elements S1 = elements S2 /\
     relations S1 = relations S2 /\
     functions S1 = functions S2.
@@ -133,14 +133,14 @@ Definition SystemTransformationAxiom : Axiom :=
 (* 系统等价公理 *)
 Definition SystemEquivalenceAxiom : Axiom :=
   forall (S1 S2 : System),
-    SystemEquivalence S1 S2 <-> 
+    SystemEquivalence S1 S2 <->
     SystemIsomorphic S1 S2 /\
     SystemFunctionallyEquivalent S1 S2.
 
 (* 系统同构公理 *)
 Definition SystemIsomorphismAxiom : Axiom :=
   forall (S1 S2 : System),
-    SystemIsomorphic S1 S2 <-> 
+    SystemIsomorphic S1 S2 <->
     exists (f : SystemIsomorphism),
       f S1 = S2 /\
       f (S1) = S2.
@@ -148,7 +148,7 @@ Definition SystemIsomorphismAxiom : Axiom :=
 (* 系统同态公理 *)
 Definition SystemHomomorphismAxiom : Axiom :=
   forall (S1 S2 : System),
-    SystemHomomorphic S1 S2 <-> 
+    SystemHomomorphic S1 S2 <->
     exists (f : SystemHomomorphism),
       f S1 = S2 /\
       f (S1) = S2.
@@ -403,7 +403,7 @@ Definition SubobjectClassifier : Type :=
 
 (* 系统子对象分类器 *)
 Definition SystemSubobjectClassifier : SubobjectClassifier :=
-  fun (A : System) (sub : SystemSubobject A) => 
+  fun (A : System) (sub : SystemSubobject A) =>
     {| elements := sub.elements;
        relations := sub.relations;
        functions := sub.functions;
@@ -493,9 +493,9 @@ Definition SystemTheoryDirectProof (P : SystemProperty) : Type :=
 Definition SystemWholenessDirectProof (S : System) : DirectProof (SystemWholeness S) :=
   {| premises := [SystemHasElements S; SystemHasRelations S; SystemHasFunctions S];
      conclusion := SystemWholeness S;
-     proof := fun premises H => 
+     proof := fun premises H =>
        match H with
-       | conj H1 (conj H2 H3) => 
+       | conj H1 (conj H2 H3) =>
          SystemWholenessFromComponents S H1 H2 H3
        end;
      validity := system_wholeness_direct_proof_validity;
@@ -505,9 +505,9 @@ Definition SystemWholenessDirectProof (S : System) : DirectProof (SystemWholenes
 Definition SystemEmergenceDirectProof (S : System) (P : SystemProperty) : DirectProof (SystemEmergence S P) :=
   {| premises := [SystemHasElements S; SystemHasRelations S; SystemHasFunctions S; P S; forall e, In e (elements S) -> ~P (singleton e)];
      conclusion := SystemEmergence S P;
-     proof := fun premises H => 
+     proof := fun premises H =>
        match H with
-       | conj H1 (conj H2 (conj H3 (conj H4 H5))) => 
+       | conj H1 (conj H2 (conj H3 (conj H4 H5))) =>
          SystemEmergenceFromComponents S P H1 H2 H3 H4 H5
        end;
      validity := system_emergence_direct_proof_validity;
@@ -542,7 +542,7 @@ Definition SystemTheoryProofByContradiction (P : SystemProperty) : Type :=
 Definition SystemWholenessProofByContradiction (S : System) : ProofByContradiction (SystemWholeness S) :=
   {| assumption := ~SystemWholeness S;
      contradiction := False;
-     proof := fun H => 
+     proof := fun H =>
        SystemWholenessContradiction S H;
      validity := system_wholeness_contradiction_proof_validity;
   |}.
@@ -551,7 +551,7 @@ Definition SystemWholenessProofByContradiction (S : System) : ProofByContradicti
 Definition SystemEmergenceProofByContradiction (S : System) (P : SystemProperty) : ProofByContradiction (SystemEmergence S P) :=
   {| assumption := ~SystemEmergence S P;
      contradiction := False;
-     proof := fun H => 
+     proof := fun H =>
        SystemEmergenceContradiction S P H;
      validity := system_emergence_contradiction_proof_validity;
   |}.
@@ -586,11 +586,11 @@ Definition SystemTheoryProofByInduction (P : System -> Prop) : Type :=
 (* 系统性质归纳证明 *)
 Definition SystemPropertyProofByInduction (P : System -> Prop) : SystemTheoryProofByInduction P :=
   {| base_case := P EmptySystem;
-     inductive_step := fun S H e => 
+     inductive_step := fun S H e =>
        SystemPropertyInductiveStep S P H e;
-     conclusion := fun S => 
+     conclusion := fun S =>
        SystemPropertyInduction S P;
-     proof := fun base step S => 
+     proof := fun base step S =>
        SystemPropertyInductionProof S P base step;
      validity := system_property_induction_proof_validity;
   |}.
@@ -612,14 +612,14 @@ Definition ProofChecker : Type :=
 
 (* 系统理论证明检查器 *)
 Definition SystemTheoryProofChecker : ProofChecker :=
-  fun (proof : Proof) => 
+  fun (proof : Proof) =>
     ProofValid proof /\
     SystemTheoryValid proof /\
     WellFormed proof.
 
 (* 证明有效性检查 *)
 Definition ProofValidityCheck (proof : Proof) : bool :=
-  forallb (fun step => 
+  forallb (fun step =>
     match step with
     | axiom_step phi => In phi SystemTheoryAxioms
     | rule_step rule premises => ValidRuleApplication rule premises
@@ -627,7 +627,7 @@ Definition ProofValidityCheck (proof : Proof) : bool :=
 
 (* 系统理论有效性检查 *)
 Definition SystemTheoryValidityCheck (proof : Proof) : bool :=
-  forallb (fun step => 
+  forallb (fun step =>
     match step with
     | axiom_step phi => SystemTheoryAxiom phi
     | rule_step rule premises => SystemTheoryRuleApplication rule premises
@@ -656,7 +656,7 @@ Definition ProofVerification (proof : Proof) : Prop :=
 
 (* 证明正确性 *)
 Definition ProofCorrectness (proof : Proof) : Prop :=
-  forall (phi : Prop), conclusion proof = phi -> 
+  forall (phi : Prop), conclusion proof = phi ->
     SystemTheoryAxioms ⊢ phi.
 
 (* 证明完备性 *)
@@ -677,7 +677,7 @@ Definition SystemTheoryProofVerification (proof : Proof) : Prop :=
 
 (* 系统理论证明正确性 *)
 Definition SystemTheoryProofCorrectness (proof : Proof) : Prop :=
-  forall (phi : SystemProperty), conclusion proof = phi -> 
+  forall (phi : SystemProperty), conclusion proof = phi ->
     SystemTheoryAxioms ⊢ phi.
 
 (* 系统理论证明完备性 *)

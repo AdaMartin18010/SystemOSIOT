@@ -41,20 +41,20 @@ import os
 
 class CoqIntegration:
     """Coq验证工具集成"""
-    
+
     def __init__(self, coq_path: str = "coqc"):
         self.coq_path = coq_path
-    
+
     def verify_specification(self, spec_dict: Dict[str, Any]) -> Dict[str, Any]:
         """验证规范"""
         # 生成Coq代码
         coq_code = self._generate_coq_code(spec_dict)
-        
+
         # 写入临时文件
         with tempfile.NamedTemporaryFile(mode='w', suffix='.v', delete=False) as f:
             f.write(coq_code)
             temp_file = f.name
-        
+
         try:
             # 执行Coq验证
             result = subprocess.run(
@@ -63,18 +63,18 @@ class CoqIntegration:
                 text=True,
                 timeout=30
             )
-            
+
             return {
                 "success": result.returncode == 0,
                 "output": result.stdout,
                 "errors": result.stderr,
                 "coq_code": coq_code
             }
-        
+
         finally:
             # 清理临时文件
             os.unlink(temp_file)
-    
+
     def _generate_coq_code(self, spec_dict: Dict[str, Any]) -> str:
         """生成Coq代码"""
         coq_code = """
@@ -85,79 +85,79 @@ Require Import Coq.Logic.Classical.
 
 Module SystemSpecification.
 """
-        
+
         # 生成系统定义
         for system in spec_dict.get("systems", []):
             coq_code += self._generate_system_coq(system)
-        
+
         # 生成公理
         for axiom in spec_dict.get("axioms", []):
             coq_code += self._generate_axiom_coq(axiom)
-        
+
         # 生成定理
         for theorem in spec_dict.get("theorems", []):
             coq_code += self._generate_theorem_coq(theorem)
-        
+
         coq_code += "\nEnd SystemSpecification.\n"
         return coq_code
-    
+
     def _generate_system_coq(self, system: Dict[str, Any]) -> str:
         """生成系统Coq代码"""
         name = system.get("name", "System")
         elements = system.get("elements", [])
-        
+
         coq_code = f"""
 (* System: {name} *)
 Inductive {name}_Element : Type :=
 """
-        
+
         for element in elements:
             coq_code += f"  | {element} : {name}_Element\n"
-        
+
         coq_code += ".\n\n"
         return coq_code
-    
+
     def _generate_axiom_coq(self, axiom: Dict[str, Any]) -> str:
         """生成公理Coq代码"""
         name = axiom.get("name", "axiom")
         formula = axiom.get("formula", {})
-        
+
         coq_code = f"Axiom {name} : "
         coq_code += self._formula_to_coq(formula)
         coq_code += ".\n\n"
-        
+
         return coq_code
-    
+
     def _generate_theorem_coq(self, theorem: Dict[str, Any]) -> str:
         """生成定理Coq代码"""
         name = theorem.get("name", "theorem")
         formula = theorem.get("formula", {})
         proof = theorem.get("proof", [])
-        
+
         coq_code = f"Theorem {name} : "
         coq_code += self._formula_to_coq(formula)
         coq_code += ".\n"
-        
+
         # 生成证明
         for step in proof:
             coq_code += self._proof_step_to_coq(step)
-        
+
         coq_code += "Qed.\n\n"
         return coq_code
-    
+
     def _formula_to_coq(self, formula: Dict[str, Any]) -> str:
         """将公式转换为Coq格式"""
         formula_type = formula.get("type", "atomic")
-        
+
         if formula_type == "atomic":
             predicate = formula.get("predicate", "P")
             return f"{predicate}"
-        
+
         elif formula_type == "binary":
             operator = formula.get("operator", "and")
             left = self._formula_to_coq(formula.get("left", {}))
             right = self._formula_to_coq(formula.get("right", {}))
-            
+
             if operator == "and":
                 return f"({left} /\\ {right})"
             elif operator == "or":
@@ -166,22 +166,22 @@ Inductive {name}_Element : Type :=
                 return f"({left} -> {right})"
             else:
                 return f"({left} {operator} {right})"
-        
+
         elif formula_type == "quantifier":
             quantifier = formula.get("quantifier", "forall")
             variable = formula.get("variable", "x")
             body = self._formula_to_coq(formula.get("body", {}))
-            
+
             if quantifier == "forall":
                 return f"(forall {variable}, {body})"
             elif quantifier == "exists":
                 return f"(exists {variable}, {body})"
             else:
                 return f"({quantifier} {variable}, {body})"
-        
+
         else:
             return "True"
-    
+
     def _proof_step_to_coq(self, step: Dict[str, Any]) -> str:
         """将证明步骤转换为Coq格式"""
         rule = step.get("rule", "auto")
@@ -199,11 +199,11 @@ import requests
 
 class AutoProofIntegration:
     """自动证明工具集成"""
-    
+
     def __init__(self, api_endpoint: str = "http://localhost:8000"):
         self.api_endpoint = api_endpoint
-    
-    def prove_theorem(self, theorem: Dict[str, Any], 
+
+    def prove_theorem(self, theorem: Dict[str, Any],
                      axioms: List[Dict[str, Any]]) -> Dict[str, Any]:
         """证明定理"""
         # 构建证明请求
@@ -213,7 +213,7 @@ class AutoProofIntegration:
             "strategy": "auto",
             "timeout": 30
         }
-        
+
         try:
             # 发送证明请求
             response = requests.post(
@@ -221,7 +221,7 @@ class AutoProofIntegration:
                 json=proof_request,
                 timeout=35
             )
-            
+
             if response.status_code == 200:
                 return response.json()
             else:
@@ -229,27 +229,27 @@ class AutoProofIntegration:
                     "success": False,
                     "error": f"HTTP {response.status_code}: {response.text}"
                 }
-        
+
         except requests.exceptions.RequestException as e:
             return {
                 "success": False,
                 "error": f"请求失败: {str(e)}"
             }
-    
+
     def verify_proof(self, proof: List[Dict[str, Any]]) -> Dict[str, Any]:
         """验证证明"""
         verification_request = {
             "proof": proof,
             "verification_level": "strict"
         }
-        
+
         try:
             response = requests.post(
                 f"{self.api_endpoint}/verify",
                 json=verification_request,
                 timeout=30
             )
-            
+
             if response.status_code == 200:
                 return response.json()
             else:
@@ -257,7 +257,7 @@ class AutoProofIntegration:
                     "success": False,
                     "error": f"HTTP {response.status_code}: {response.text}"
                 }
-        
+
         except requests.exceptions.RequestException as e:
             return {
                 "success": False,
@@ -276,29 +276,29 @@ import os
 
 class IDEIntegration:
     """IDE集成接口"""
-    
+
     def __init__(self):
         self.language_server = None
-    
-    def provide_diagnostics(self, document_uri: str, 
+
+    def provide_diagnostics(self, document_uri: str,
                           document_content: str) -> List[Dict[str, Any]]:
         """提供诊断信息"""
         from ..core.checker import SpecificationChecker
-        
+
         checker = SpecificationChecker()
-        
+
         # 创建临时文件
         temp_file = f"/tmp/temp_spec_{hash(document_uri)}.spec"
         with open(temp_file, 'w') as f:
             f.write(document_content)
-        
+
         try:
             # 执行检查
             result = checker.check_specification(temp_file)
-            
+
             # 转换为LSP诊断格式
             diagnostics = []
-            
+
             for error in result.errors:
                 diagnostics.append({
                     "range": {"start": {"line": 0, "character": 0},
@@ -306,7 +306,7 @@ class IDEIntegration:
                     "message": error,
                     "severity": 1  # Error
                 })
-            
+
             for warning in result.warnings:
                 diagnostics.append({
                     "range": {"start": {"line": 0, "character": 0},
@@ -314,15 +314,15 @@ class IDEIntegration:
                     "message": warning,
                     "severity": 2  # Warning
                 })
-            
+
             return diagnostics
-        
+
         finally:
             # 清理临时文件
             if os.path.exists(temp_file):
                 os.unlink(temp_file)
-    
-    def provide_completion(self, document_uri: str, 
+
+    def provide_completion(self, document_uri: str,
                           position: Dict[str, int]) -> List[Dict[str, Any]]:
         """提供自动补全"""
         completions = [
@@ -357,10 +357,10 @@ class IDEIntegration:
                 "documentation": "定义定理"
             }
         ]
-        
+
         return completions
-    
-    def provide_hover(self, document_uri: str, 
+
+    def provide_hover(self, document_uri: str,
                      position: Dict[str, int]) -> Dict[str, Any]:
         """提供悬停信息"""
         return {
@@ -427,19 +427,19 @@ from typing import Dict, Any
 
 class ConfigLoader:
     """配置加载器"""
-    
+
     def __init__(self, config_path: str = "toolchain_config.json"):
         self.config_path = Path(config_path)
         self.config = self._load_config()
-    
+
     def _load_config(self) -> Dict[str, Any]:
         """加载配置"""
         if not self.config_path.exists():
             return self._get_default_config()
-        
+
         with open(self.config_path, 'r', encoding='utf-8') as f:
             return json.load(f)
-    
+
     def _get_default_config(self) -> Dict[str, Any]:
         """获取默认配置"""
         return {
@@ -464,19 +464,19 @@ class ConfigLoader:
                 }
             }
         }
-    
+
     def get_tool_config(self, tool_name: str) -> Dict[str, Any]:
         """获取工具配置"""
         return self.config.get("toolchain", {}).get("tools", {}).get(tool_name, {})
-    
+
     def is_tool_enabled(self, tool_name: str) -> bool:
         """检查工具是否启用"""
         return self.get_tool_config(tool_name).get("enabled", False)
-    
+
     def get_checking_config(self) -> Dict[str, Any]:
         """获取检查配置"""
         return self.config.get("toolchain", {}).get("checking", {})
-    
+
     def get_reporting_config(self) -> Dict[str, Any]:
         """获取报告配置"""
         return self.config.get("toolchain", {}).get("reporting", {})
@@ -496,20 +496,20 @@ from tools.specification_checker.config.config_loader import ConfigLoader
 
 def main():
     """完整工具链使用示例"""
-    
+
     # 加载配置
     config = ConfigLoader()
-    
+
     # 创建检查器
     checker = SpecificationChecker()
-    
+
     # 检查规范
     spec_file = "example.spec"
     result = checker.check_specification(spec_file)
-    
+
     print("=== 规范检查结果 ===")
     print(f"检查成功: {'是' if result.success else '否'}")
-    
+
     # 如果检查通过，进行进一步验证
     if result.success and config.is_tool_enabled("coq"):
         print("\n=== Coq验证 ===")
@@ -518,20 +518,20 @@ def main():
             checker._parse_to_dict(result.ast)
         )
         print(f"Coq验证: {'成功' if coq_result['success'] else '失败'}")
-    
+
     if result.success and config.is_tool_enabled("auto_proof"):
         print("\n=== 自动证明 ===")
         auto_proof = AutoProofIntegration()
-        
+
         # 对每个定理进行自动证明
         for theorem in result.theorems:
             proof_result = auto_proof.prove_theorem(theorem, result.axioms)
             print(f"定理 {theorem['name']}: {'可证明' if proof_result['success'] else '不可证明'}")
-    
+
     # 生成报告
     reporting_config = config.get_reporting_config()
     output_dir = reporting_config.get("output_dir", "./reports")
-    
+
     checker.generate_report(result, f"{output_dir}/check_report")
 
 if __name__ == "__main__":
@@ -548,10 +548,10 @@ from tools.specification_checker.integrations.ide_integration import IDEIntegrat
 
 class SystemTheoryLanguageServer:
     """系统理论语言服务器"""
-    
+
     def __init__(self):
         self.ide_integration = IDEIntegration()
-    
+
     def handle_request(self, method: str, params: Dict[str, Any]) -> Dict[str, Any]:
         """处理LSP请求"""
         if method == "textDocument/diagnostic":
@@ -562,16 +562,16 @@ class SystemTheoryLanguageServer:
             return self._handle_hover(params)
         else:
             return {"error": f"未知方法: {method}"}
-    
+
     def _handle_diagnostic(self, params: Dict[str, Any]) -> Dict[str, Any]:
         """处理诊断请求"""
         document_uri = params["textDocument"]["uri"]
         document_content = params["textDocument"]["content"]
-        
+
         diagnostics = self.ide_integration.provide_diagnostics(
             document_uri, document_content
         )
-        
+
         return {
             "jsonrpc": "2.0",
             "id": params.get("id"),
@@ -579,16 +579,16 @@ class SystemTheoryLanguageServer:
                 "diagnostics": diagnostics
             }
         }
-    
+
     def _handle_completion(self, params: Dict[str, Any]) -> Dict[str, Any]:
         """处理补全请求"""
         document_uri = params["textDocument"]["uri"]
         position = params["position"]
-        
+
         completions = self.ide_integration.provide_completion(
             document_uri, position
         )
-        
+
         return {
             "jsonrpc": "2.0",
             "id": params.get("id"),
@@ -597,16 +597,16 @@ class SystemTheoryLanguageServer:
                 "items": completions
             }
         }
-    
+
     def _handle_hover(self, params: Dict[str, Any]) -> Dict[str, Any]:
         """处理悬停请求"""
         document_uri = params["textDocument"]["uri"]
         position = params["position"]
-        
+
         hover_info = self.ide_integration.provide_hover(
             document_uri, position
         )
-        
+
         return {
             "jsonrpc": "2.0",
             "id": params.get("id"),
@@ -616,7 +616,7 @@ class SystemTheoryLanguageServer:
 # 启动语言服务器
 if __name__ == "__main__":
     server = SystemTheoryLanguageServer()
-    
+
     # 模拟LSP请求
     diagnostic_request = {
         "jsonrpc": "2.0",
@@ -629,12 +629,12 @@ if __name__ == "__main__":
             }
         }
     }
-    
+
     response = server.handle_request(
         diagnostic_request["method"],
         diagnostic_request["params"]
     )
-    
+
     print("LSP响应:", json.dumps(response, indent=2))
 ```
 
@@ -750,6 +750,6 @@ result = checker.check_specification("debug.spec")
 
 ---
 
-**版本**: 1.0.0  
-**最后更新**: 2024年12月  
+**版本**: 1.0.0
+**最后更新**: 2024年12月
 **维护者**: SystemOSIOT开发团队

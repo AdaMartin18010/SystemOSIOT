@@ -30,37 +30,37 @@ graph TB
     ST --> P2P[P2P系统<br/>P2P Systems]
     ST --> CMS[容器微服务<br/>Containers & Microservices]
     ST --> NS[网络系统<br/>Network Systems]
-    
+
     %% 基础支撑层
     OS --> DS
     OS --> CS
     OS --> IoT
-    
+
     NS --> DS
     NS --> CS
     NS --> P2P
     NS --> IoT
-    
+
     %% 技术应用层
     DS --> CS
     DS --> P2P
     DS --> CMS
-    
+
     CS --> CMS
-    
+
     IoT --> DS
     IoT --> CS
-    
+
     %% 高级特性
     CMS --> DS
     CMS --> CS
-    
+
     %% 样式定义
     classDef theory fill:#e1f5fe,stroke:#01579b,stroke-width:2px
     classDef foundation fill:#f3e5f5,stroke:#4a148c,stroke-width:2px
     classDef technology fill:#e8f5e8,stroke:#1b5e20,stroke-width:2px
     classDef application fill:#fff3e0,stroke:#e65100,stroke-width:2px
-    
+
     class ST theory
     class OS,NS foundation
     class DS,CS,P2P,IoT technology

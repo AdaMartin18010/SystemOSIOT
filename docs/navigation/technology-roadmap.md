@@ -198,18 +198,18 @@ graph LR
     C --> D[云原生架构]
     D --> E[智能化系统]
     E --> F[量子系统]
-    
+
     G[单体应用] --> H[模块化设计]
     H --> I[服务化架构]
     I --> J[容器化部署]
     J --> K[自动化运维]
     K --> L[智能运维]
-    
+
     M[传统网络] --> N[软件定义网络]
     N --> O[网络虚拟化]
     O --> P[边缘网络]
     P --> Q[量子网络]
-    
+
     style A fill:#ffebee
     style B fill:#e3f2fd
     style C fill:#e8f5e8

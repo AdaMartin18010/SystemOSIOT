@@ -113,13 +113,13 @@ def controlled_experiment(system, elements):
     """控制实验设计"""
     # 实验组：完整系统
     system_properties = measure_system_properties(system)
-    
+
     # 对照组：分离要素
     element_properties = measure_element_properties(elements)
-    
+
     # 对比分析
     comparison = compare_properties(system_properties, element_properties)
-    
+
     return comparison
 ```
 
@@ -142,7 +142,7 @@ class SystemSimulation:
     def __init__(self, system_model, parameters):
         self.model = system_model
         self.params = parameters
-    
+
     def run_simulation(self, duration):
         """运行模拟实验"""
         results = []
@@ -150,7 +150,7 @@ class SystemSimulation:
             state = self.model.update_state(t)
             results.append(state)
         return results
-    
+
     def analyze_results(self, results):
         """分析模拟结果"""
         return analyze_system_properties(results)
@@ -176,11 +176,11 @@ class NaturalObservation:
     def __init__(self, target_system):
         self.system = target_system
         self.observers = []
-    
+
     def add_observer(self, observer):
         """添加观察者"""
         self.observers.append(observer)
-    
+
     def observe(self, duration):
         """执行观察"""
         observations = []
@@ -209,13 +209,13 @@ class CaseStudy:
     def __init__(self, case_system):
         self.system = case_system
         self.data = {}
-    
+
     def collect_data(self, data_sources):
         """收集案例数据"""
         for source in data_sources:
             data = source.get_data(self.system)
             self.data[source.name] = data
-    
+
     def analyze_case(self):
         """分析案例"""
         return analyze_case_data(self.data)
@@ -240,7 +240,7 @@ class CaseStudy:
 class DescriptiveStatistics:
     def __init__(self, data):
         self.data = data
-    
+
     def central_tendency(self):
         """计算集中趋势"""
         return {
@@ -248,7 +248,7 @@ class DescriptiveStatistics:
             'median': np.median(self.data),
             'mode': stats.mode(self.data)
         }
-    
+
     def dispersion(self):
         """计算离散程度"""
         return {
@@ -276,15 +276,15 @@ class DescriptiveStatistics:
 class HypothesisTesting:
     def __init__(self, data):
         self.data = data
-    
+
     def t_test(self, group1, group2):
         """t检验"""
         return stats.ttest_ind(group1, group2)
-    
+
     def anova(self, groups):
         """方差分析"""
         return stats.f_oneway(*groups)
-    
+
     def regression(self, x, y):
         """回归分析"""
         return stats.linregress(x, y)
@@ -330,7 +330,7 @@ def check_accuracy(data, validation_rules):
     for rule in validation_rules:
         errors = rule.validate(data)
         error_count += len(errors)
-    
+
     accuracy = 1 - error_count / len(data)
     return accuracy >= 0.99
 ```
@@ -352,7 +352,7 @@ def check_consistency(data, consistency_rules):
     for rule in consistency_rules:
         if rule.check(data):
             consistent_count += 1
-    
+
     consistency = consistent_count / len(consistency_rules)
     return consistency >= 0.98
 ```
@@ -376,11 +376,11 @@ def check_consistency(data, consistency_rules):
 class DirectMeasurement:
     def __init__(self, measurement_device):
         self.device = measurement_device
-    
+
     def measure(self, target, property_name):
         """直接测量"""
         return self.device.measure(target, property_name)
-    
+
     def calibrate(self, standard):
         """校准设备"""
         self.device.calibrate(standard)
@@ -403,7 +403,7 @@ class DirectMeasurement:
 class IndirectMeasurement:
     def __init__(self, measurement_model):
         self.model = measurement_model
-    
+
     def measure_indirect(self, target, indicators):
         """间接测量"""
         measurements = {}
@@ -433,7 +433,7 @@ class IndirectMeasurement:
 class DataStorage:
     def __init__(self, format_type):
         self.format = format_type
-    
+
     def save_data(self, data, filename):
         """保存数据"""
         if self.format == 'csv':
@@ -464,7 +464,7 @@ class Metadata:
         self.description = {}
         self.variables = {}
         self.quality = {}
-    
+
     def add_description(self, source, time, method):
         """添加数据描述"""
         self.description = {
@@ -472,7 +472,7 @@ class Metadata:
             'time': time,
             'method': method
         }
-    
+
     def add_variable(self, name, unit, range):
         """添加变量定义"""
         self.variables[name] = {
@@ -503,7 +503,7 @@ class ExploratoryResearch:
     def __init__(self, research_area):
         self.area = research_area
         self.hypotheses = []
-    
+
     def explore(self, methods):
         """探索性研究"""
         findings = []
@@ -530,7 +530,7 @@ class ExploratoryResearch:
 class ConfirmatoryResearch:
     def __init__(self, hypothesis):
         self.hypothesis = hypothesis
-    
+
     def test(self, data):
         """验证性研究"""
         result = self.hypothesis.test(data)
@@ -562,7 +562,7 @@ class CrossSectionalStudy:
     def __init__(self, time_point, sample_size):
         self.time_point = time_point
         self.sample_size = sample_size
-    
+
     def collect_data(self, population):
         """收集横断面数据"""
         sample = random.sample(population, self.sample_size)
@@ -591,7 +591,7 @@ class LongitudinalStudy:
     def __init__(self, time_points, sample_size):
         self.time_points = time_points
         self.sample_size = sample_size
-    
+
     def collect_data(self, population):
         """收集纵向数据"""
         sample = random.sample(population, self.sample_size)

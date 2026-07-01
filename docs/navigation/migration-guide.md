@@ -126,7 +126,7 @@
    ```bash
    # 迁移主目录
    cp -r "1.系统理论/"* "01-system-theory/"
-   
+
    # 创建新的子目录结构
    mkdir -p 01-system-theory/01-fundamentals
    mkdir -p 01-system-theory/02-architecture

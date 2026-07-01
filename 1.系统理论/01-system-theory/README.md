@@ -3,20 +3,20 @@
 
 <!-- TOC START -->
 
-- [系统理论 / System Theory](#系统理论-system-theory)
-  - [📚 领域概览 / Domain Overview](#-领域概览-domain-overview)
-  - [🏗️ 知识架构 / Knowledge Architecture](#-知识架构-knowledge-architecture)
-  - [🔗 相关领域 / Related Domains](#-相关领域-related-domains)
-  - [📖 学习路径 / Learning Path](#-学习路径-learning-path)
+- [系统理论 / System Theory](#系统理论--system-theory)
+  - [📚 领域概览 / Domain Overview](#-领域概览--domain-overview)
+  - [🏗️ 知识架构 / Knowledge Architecture](#️-知识架构--knowledge-architecture)
+  - [🔗 相关领域 / Related Domains](#-相关领域--related-domains)
+  - [📖 学习路径 / Learning Path](#-学习路径--learning-path)
     - [入门级 (Beginner)](#入门级-beginner)
     - [进阶级 (Intermediate)](#进阶级-intermediate)
     - [高级级 (Advanced)](#高级级-advanced)
-  - [🎯 核心概念 / Core Concepts](#-核心概念-core-concepts)
-  - [📚 推荐阅读 / Recommended Reading](#-推荐阅读-recommended-reading)
+  - [🎯 核心概念 / Core Concepts](#-核心概念--core-concepts)
+  - [📚 推荐阅读 / Recommended Reading](#-推荐阅读--recommended-reading)
     - [基础理论](#基础理论)
     - [进阶学习](#进阶学习)
-  - [🔧 实践工具 / Practical Tools](#-实践工具-practical-tools)
-  - [📈 发展趋势 / Development Trends](#-发展趋势-development-trends)
+  - [🔧 实践工具 / Practical Tools](#-实践工具--practical-tools)
+  - [📈 发展趋势 / Development Trends](#-发展趋势--development-trends)
 
 <!-- TOC END -->
 

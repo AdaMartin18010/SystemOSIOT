@@ -99,27 +99,27 @@ Record ExperimentalDesignPrinciples : Type := {
 
 (* 随机化 *)
 Definition Randomization : Type :=
-  forall (units : list ExperimentalUnit), 
+  forall (units : list ExperimentalUnit),
     RandomAssignment units -> list TreatmentGroup.
 
 (* 控制 *)
 Definition Control : Type :=
-  forall (treatment : Treatment), 
+  forall (treatment : Treatment),
     ControlGroup treatment -> TreatmentGroup.
 
 (* 重复 *)
 Definition Replication : Type :=
-  forall (treatment : Treatment), 
+  forall (treatment : Treatment),
     ReplicateCount treatment -> nat.
 
 (* 区组 *)
 Definition Blocking : Type :=
-  forall (units : list ExperimentalUnit), 
+  forall (units : list ExperimentalUnit),
     Block units -> list Block.
 
 (* 析因设计 *)
 Definition FactorialDesign : Type :=
-  forall (factors : list Factor), 
+  forall (factors : list Factor),
     FactorialCombination factors -> list Treatment.
 ```
 
@@ -543,27 +543,27 @@ Record ResultAnalysisFramework : Type := {
 
 (* 描述性分析 *)
 Definition DescriptiveAnalysis : Type :=
-  forall (data : ExperimentalData), 
+  forall (data : ExperimentalData),
     DescriptiveStatistics data -> SummaryStatistics.
 
 (* 推断性分析 *)
 Definition InferentialAnalysis : Type :=
-  forall (data : ExperimentalData), 
+  forall (data : ExperimentalData),
     StatisticalTest data -> TestResult.
 
 (* 效应量分析 *)
 Definition EffectSizeAnalysis : Type :=
-  forall (data : ExperimentalData), 
+  forall (data : ExperimentalData),
     EffectSize data -> EffectSizeMeasure.
 
 (* 实际意义 *)
 Definition PracticalSignificance : Type :=
-  forall (result : TestResult), 
+  forall (result : TestResult),
     PracticalSignificance result -> PracticalImplication.
 
 (* 理论意义 *)
 Definition TheoreticalImplications : Type :=
-  forall (result : TestResult), 
+  forall (result : TestResult),
     TheoreticalImplication result -> TheoreticalConclusion.
 ```
 

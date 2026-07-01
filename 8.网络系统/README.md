@@ -187,42 +187,42 @@ graph TD;
   Z --> Z6
   Z --> Z7
   Z --> Z8
-  
+
   Z1 --> Z1A[基本概念 Basic Concepts]
   Z1 --> Z1B[协议栈 Protocol Stack]
   Z1 --> Z1C[性能分析 Performance Analysis]
   Z1 --> Z1D[安全防护 Security Protection]
-  
+
   Z2 --> Z2A[架构争议 Architecture Controversies]
   Z2 --> Z2B[技术优劣 Technology Pros/Cons]
   Z2 --> Z2C[安全挑战 Security Challenges]
   Z2 --> Z2D[未来展望 Future Prospects]
-  
+
   Z3 --> Z3A[拓扑结构 Topology Structure]
   Z3 --> Z3B[协议建模 Protocol Modeling]
   Z3 --> Z3C[状态机 State Machines]
   Z3 --> Z3D[资源分配 Resource Allocation]
-  
+
   Z4 --> Z4A[协议正确性 Protocol Correctness]
   Z4 --> Z4B[性能边界 Performance Boundaries]
   Z4 --> Z4C[安全验证 Security Verification]
   Z4 --> Z4D[一致性证明 Consistency Proof]
-  
+
   Z5 --> Z5A[架构对比 Architecture Comparison]
   Z5 --> Z5B[协议流程 Protocol Flow]
   Z5 --> Z5C[性能分析 Performance Analysis]
   Z5 --> Z5D[威胁模型 Threat Models]
-  
+
   Z6 --> Z6A[协议语义 Protocol Semantics]
   Z6 --> Z6B[数据流语义 Data Flow Semantics]
   Z6 --> Z6C[控制流语义 Control Flow Semantics]
   Z6 --> Z6D[QoS语义 QoS Semantics]
-  
+
   Z7 --> Z7A[动态行为 Dynamic Behavior]
   Z7 --> Z7B[异常处理 Exception Handling]
   Z7 --> Z7C[自适应机制 Adaptive Mechanisms]
   Z7 --> Z7D[性能优化 Performance Optimization]
-  
+
   Z8 --> Z8A[SDN技术 SDN Technologies]
   Z8 --> Z8B[NFV技术 NFV Technologies]
   Z8 --> Z8C[5G/6G技术 5G/6G Technologies]

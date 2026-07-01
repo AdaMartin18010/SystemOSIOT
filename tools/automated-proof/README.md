@@ -56,19 +56,19 @@ def direct_proof(goal, axioms, theorems):
     """直接证明策略"""
     # 初始化证明状态
     proof_state = ProofState(goal, axioms, theorems)
-    
+
     # 应用推理规则
     while not proof_state.is_proven():
         # 选择下一个推理步骤
         next_step = select_next_step(proof_state)
-        
+
         # 应用推理步骤
         proof_state.apply_step(next_step)
-        
+
         # 检查是否达到目标
         if proof_state.check_goal():
             return proof_state.get_proof()
-    
+
     return None  # 证明失败
 ```
 
@@ -84,13 +84,13 @@ def contradiction_proof(goal, axioms, theorems):
     """反证法策略"""
     # 假设目标不成立
     negated_goal = negate(goal)
-    
+
     # 将否定目标加入公理集
     extended_axioms = axioms + [negated_goal]
-    
+
     # 尝试推导矛盾
     contradiction = derive_contradiction(extended_axioms, theorems)
-    
+
     if contradiction:
         return construct_proof(goal, contradiction)
     else:
@@ -109,17 +109,17 @@ def inductive_proof(goal, axioms, theorems):
     """归纳证明策略"""
     # 分析目标的结构
     structure = analyze_structure(goal)
-    
+
     if is_inductive_structure(structure):
         # 基础情况
         base_case = prove_base_case(goal, axioms, theorems)
-        
+
         # 归纳步骤
         inductive_step = prove_inductive_step(goal, axioms, theorems)
-        
+
         if base_case and inductive_step:
             return combine_proofs(base_case, inductive_step)
-    
+
     return None  # 不适用归纳法
 ```
 
@@ -139,12 +139,12 @@ def constructive_proof(goal, axioms, theorems):
     if is_existential_goal(goal):
         # 尝试构造满足条件的对象
         witness = construct_witness(goal, axioms, theorems)
-        
+
         if witness:
             # 验证构造的对象满足条件
             if verify_witness(witness, goal, axioms, theorems):
                 return construct_existence_proof(goal, witness)
-    
+
     return None  # 构造失败
 ```
 
@@ -160,15 +160,15 @@ def dual_proof(goal, axioms, theorems):
     """对偶证明策略"""
     # 寻找对偶命题
     dual_goal = find_dual(goal)
-    
+
     if dual_goal:
         # 证明对偶命题
         dual_proof = prove_goal(dual_goal, axioms, theorems)
-        
+
         if dual_proof:
             # 将对偶证明转换为原命题证明
             return convert_dual_proof(dual_proof, goal)
-    
+
     return None  # 对偶证明失败
 ```
 
@@ -181,7 +181,7 @@ def dual_proof(goal, axioms, theorems):
 ```python
 class ProofState:
     """证明状态类"""
-    
+
     def __init__(self, goal, axioms, theorems):
         self.goal = goal
         self.axioms = axioms
@@ -189,16 +189,16 @@ class ProofState:
         self.proof_steps = []
         self.current_state = goal
         self.assumptions = []
-    
+
     def is_proven(self):
         """检查是否已证明"""
         return self.current_state == True
-    
+
     def apply_step(self, step):
         """应用证明步骤"""
         self.proof_steps.append(step)
         self.current_state = step.apply(self.current_state)
-    
+
     def get_proof(self):
         """获取完整证明"""
         return Proof(self.proof_steps, self.goal)
@@ -209,12 +209,12 @@ class ProofState:
 ```python
 class ProofStep:
     """证明步骤类"""
-    
+
     def __init__(self, rule, premises, conclusion):
         self.rule = rule
         self.premises = premises
         self.conclusion = conclusion
-    
+
     def apply(self, current_state):
         """应用证明步骤"""
         if self.rule.is_applicable(current_state, self.premises):
@@ -230,16 +230,16 @@ class ProofStep:
 ```python
 class InferenceRule:
     """推理规则基类"""
-    
+
     def __init__(self, name, premises, conclusion):
         self.name = name
         self.premises = premises
         self.conclusion = conclusion
-    
+
     def is_applicable(self, current_state, available_premises):
         """检查规则是否可应用"""
         return all(premise in available_premises for premise in self.premises)
-    
+
     def apply(self, current_state, available_premises):
         """应用推理规则"""
         if self.is_applicable(current_state, available_premises):
@@ -317,25 +317,25 @@ def breadth_first_proof_search(goal, axioms, theorems):
     # 初始化搜索队列
     queue = [ProofState(goal, axioms, theorems)]
     visited = set()
-    
+
     while queue:
         current_state = queue.pop(0)
-        
+
         # 检查是否已证明
         if current_state.is_proven():
             return current_state.get_proof()
-        
+
         # 生成状态哈希
         state_hash = hash(current_state)
         if state_hash in visited:
             continue
-        
+
         visited.add(state_hash)
-        
+
         # 生成下一步状态
         next_states = generate_next_states(current_state)
         queue.extend(next_states)
-    
+
     return None  # 搜索失败
 ```
 
@@ -347,20 +347,20 @@ def depth_first_proof_search(goal, axioms, theorems, max_depth=100):
     def dfs_recursive(state, depth):
         if depth > max_depth:
             return None
-        
+
         if state.is_proven():
             return state.get_proof()
-        
+
         # 生成下一步状态
         next_states = generate_next_states(state)
-        
+
         for next_state in next_states:
             result = dfs_recursive(next_state, depth + 1)
             if result:
                 return result
-        
+
         return None
-    
+
     initial_state = ProofState(goal, axioms, theorems)
     return dfs_recursive(initial_state, 0)
 ```
@@ -373,24 +373,24 @@ def a_star_proof_search(goal, axioms, theorems):
     # 初始化开放列表和关闭列表
     open_list = [ProofState(goal, axioms, theorems)]
     closed_list = set()
-    
+
     while open_list:
         # 选择f值最小的状态
         current_state = min(open_list, key=lambda s: s.f_value())
-        
+
         if current_state.is_proven():
             return current_state.get_proof()
-        
+
         open_list.remove(current_state)
         closed_list.add(hash(current_state))
-        
+
         # 生成下一步状态
         next_states = generate_next_states(current_state)
-        
+
         for next_state in next_states:
             if hash(next_state) in closed_list:
                 continue
-            
+
             if next_state not in open_list:
                 open_list.append(next_state)
             else:
@@ -398,7 +398,7 @@ def a_star_proof_search(goal, axioms, theorems):
                 existing_state = find_state(open_list, next_state)
                 if next_state.g_value() < existing_state.g_value():
                     existing_state.update_from(next_state)
-    
+
     return None  # 搜索失败
 ```
 
@@ -411,28 +411,28 @@ def a_star_proof_search(goal, axioms, theorems):
 ```python
 class TestInferenceRules(unittest.TestCase):
     """推理规则测试类"""
-    
+
     def test_system_existence_rule(self):
         """测试系统存在性规则"""
         rule = SystemExistenceRule()
         state = ProofState("exists S: System(S)", [], [])
-        
+
         result = rule.apply(state.current_state, state.axioms)
         self.assertEqual(result, "exists S: System(S)")
-    
+
     def test_element_existence_rule(self):
         """测试要素存在性规则"""
         rule = ElementExistenceRule()
         state = ProofState("exists e: Element(e, S)", ["System(S)"], [])
-        
+
         result = rule.apply(state.current_state, state.axioms)
         self.assertEqual(result, "exists e: Element(e, S)")
-    
+
     def test_relation_existence_rule(self):
         """测试关系存在性规则"""
         rule = RelationExistenceRule()
         state = ProofState("exists r: Relation(r, S)", ["System(S)"], [])
-        
+
         result = rule.apply(state.current_state, state.axioms)
         self.assertEqual(result, "exists r: Relation(r, S)")
 ```
@@ -442,33 +442,33 @@ class TestInferenceRules(unittest.TestCase):
 ```python
 class TestProofStrategies(unittest.TestCase):
     """证明策略测试类"""
-    
+
     def test_direct_proof_strategy(self):
         """测试直接证明策略"""
         goal = "System(S) -> exists e: Element(e, S)"
         axioms = ["System(S)"]
         theorems = []
-        
+
         proof = direct_proof(goal, axioms, theorems)
         self.assertIsNotNone(proof)
         self.assertTrue(proof.is_valid())
-    
+
     def test_contradiction_proof_strategy(self):
         """测试反证法策略"""
         goal = "~ (forall S: ~System(S))"
         axioms = []
         theorems = []
-        
+
         proof = contradiction_proof(goal, axioms, theorems)
         self.assertIsNotNone(proof)
         self.assertTrue(proof.is_valid())
-    
+
     def test_inductive_proof_strategy(self):
         """测试归纳证明策略"""
         goal = "forall n: n > 0 -> exists S: |elements(S)| = n"
         axioms = []
         theorems = []
-        
+
         proof = inductive_proof(goal, axioms, theorems)
         self.assertIsNotNone(proof)
         self.assertTrue(proof.is_valid())
@@ -481,35 +481,35 @@ class TestProofStrategies(unittest.TestCase):
 ```python
 class TestAutomatedProofSystem(unittest.TestCase):
     """自动证明系统集成测试类"""
-    
+
     def setUp(self):
         """设置测试环境"""
         self.proof_system = AutomatedProofSystem()
         self.proof_system.load_axioms(system_theory_axioms)
         self.proof_system.load_theorems(system_theory_theorems)
-    
+
     def test_system_wholeness_theorem(self):
         """测试系统整体性定理"""
         goal = "forall S: System(S) -> Wholeness(S)"
-        
+
         proof = self.proof_system.prove(goal)
         self.assertIsNotNone(proof)
         self.assertTrue(proof.is_valid())
         self.assertTrue(proof.is_complete())
-    
+
     def test_system_hierarchy_theorem(self):
         """测试系统层次性定理"""
         goal = "forall S: Complex(S) -> exists H: Hierarchy(H, S)"
-        
+
         proof = self.proof_system.prove(goal)
         self.assertIsNotNone(proof)
         self.assertTrue(proof.is_valid())
         self.assertTrue(proof.is_complete())
-    
+
     def test_system_emergence_theorem(self):
         """测试系统涌现性定理"""
         goal = "forall S: System(S) -> exists P: Emergent(P, S)"
-        
+
         proof = self.proof_system.prove(goal)
         self.assertIsNotNone(proof)
         self.assertTrue(proof.is_valid())
@@ -523,7 +523,7 @@ class TestAutomatedProofSystem(unittest.TestCase):
 ```python
 class TestProofPerformance(unittest.TestCase):
     """证明性能测试类"""
-    
+
     def test_proof_time_complexity(self):
         """测试证明时间复杂度"""
         goals = [
@@ -532,16 +532,16 @@ class TestProofPerformance(unittest.TestCase):
             "forall S: Complex(S) -> exists H: Hierarchy(H, S)",
             "forall S: System(S) -> exists P: Emergent(P, S)"
         ]
-        
+
         proof_times = []
         for goal in goals:
             start_time = time.time()
             proof = self.proof_system.prove(goal)
             end_time = time.time()
-            
+
             proof_times.append(end_time - start_time)
             self.assertIsNotNone(proof)
-        
+
         # 检查时间是否在合理范围内
         for proof_time in proof_times:
             self.assertLess(proof_time, 10.0)  # 10秒内完成
@@ -552,22 +552,22 @@ class TestProofPerformance(unittest.TestCase):
 ```python
 class TestMemoryUsage(unittest.TestCase):
     """内存使用测试类"""
-    
+
     def test_memory_usage(self):
         """测试内存使用"""
         import psutil
         import os
-        
+
         process = psutil.Process(os.getpid())
         initial_memory = process.memory_info().rss
-        
+
         # 执行复杂证明
         goal = "forall S: Complex(S) -> exists H: Hierarchy(H, S)"
         proof = self.proof_system.prove(goal)
-        
+
         final_memory = process.memory_info().rss
         memory_increase = final_memory - initial_memory
-        
+
         # 检查内存增长是否在合理范围内
         self.assertLess(memory_increase, 100 * 1024 * 1024)  # 100MB以内
 ```
@@ -583,16 +583,16 @@ def optimized_heuristic(state, goal):
     """优化的启发式函数"""
     # 计算状态与目标的相似度
     similarity = calculate_similarity(state, goal)
-    
+
     # 计算状态的复杂度
     complexity = calculate_complexity(state)
-    
+
     # 计算状态的深度
     depth = calculate_depth(state)
-    
+
     # 综合启发式值
     heuristic_value = similarity * 0.4 + complexity * 0.3 + depth * 0.3
-    
+
     return heuristic_value
 ```
 
@@ -601,22 +601,22 @@ def optimized_heuristic(state, goal):
 ```python
 class ProofCache:
     """证明缓存类"""
-    
+
     def __init__(self):
         self.cache = {}
         self.max_size = 10000
-    
+
     def get(self, goal_hash):
         """获取缓存的证明"""
         return self.cache.get(goal_hash)
-    
+
     def put(self, goal_hash, proof):
         """存储证明到缓存"""
         if len(self.cache) >= self.max_size:
             # 移除最旧的条目
             oldest_key = min(self.cache.keys(), key=lambda k: self.cache[k].timestamp)
             del self.cache[oldest_key]
-        
+
         self.cache[goal_hash] = proof
 ```
 
@@ -628,25 +628,25 @@ class ProofCache:
 def parallel_proof_search(goal, axioms, theorems, num_threads=4):
     """并行证明搜索"""
     from concurrent.futures import ThreadPoolExecutor
-    
+
     def search_worker(search_strategy):
         return search_strategy(goal, axioms, theorems)
-    
+
     search_strategies = [
         breadth_first_proof_search,
         depth_first_proof_search,
         a_star_proof_search,
         constructive_proof
     ]
-    
+
     with ThreadPoolExecutor(max_workers=num_threads) as executor:
         futures = [executor.submit(search_worker, strategy) for strategy in search_strategies]
-        
+
         for future in futures:
             result = future.result()
             if result:
                 return result
-    
+
     return None  # 所有策略都失败
 ```
 
@@ -695,7 +695,7 @@ else:
 class CustomProofStrategy(ProofStrategy):
     def __init__(self):
         super().__init__("CustomStrategy")
-    
+
     def prove(self, goal, axioms, theorems):
         # 实现自定义证明逻辑
         return self.custom_proof_logic(goal, axioms, theorems)
@@ -712,11 +712,11 @@ if proof:
     # 获取证明统计信息
     stats = proof.get_statistics()
     print("证明统计:", stats)
-    
+
     # 获取证明树
     proof_tree = proof.get_proof_tree()
     print("证明树:", proof_tree)
-    
+
     # 导出证明
     proof.export_to_latex("proof.tex")
     proof.export_to_coq("proof.v")

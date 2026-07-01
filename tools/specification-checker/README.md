@@ -229,7 +229,7 @@ print(f"一致性检查结果: {consistency_result.is_consistent}")
 # 检查定理完备性
 theorems = [
     "system_wholeness",
-    "system_hierarchy", 
+    "system_hierarchy",
     "system_emergence",
     "system_stability",
     "system_adaptability"
@@ -313,7 +313,7 @@ class CustomLanguage:
     def parse(self, text):
         # 实现自定义语言解析
         pass
-    
+
     def validate(self, ast):
         # 实现自定义验证逻辑
         pass
@@ -358,6 +358,6 @@ checker.register_language("custom", CustomLanguage())
 
 ---
 
-**版本**: 1.0.0  
-**最后更新**: 2024年12月  
+**版本**: 1.0.0
+**最后更新**: 2024年12月
 **维护者**: SystemOSIOT开发团队
