@@ -69,7 +69,7 @@ standard_mappings:
             artifacts:
               - "proofs/obligation_decomposition.md"
               - "verification/proof_scripts/*.v"
-              - "verification/model_checking/*.tla"
+              - "verification/model_checking/*.tla"   # 实际路径：tools/tla-specifications/Raft.tla, Kubernetes.tla
               - "reports/verification_report.pdf"
               - "traceability/requirement_matrix.csv"
 

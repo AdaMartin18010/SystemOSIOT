@@ -41,7 +41,13 @@
 4. **服务网格标准化**：增加 SMI、Istio、Linkerd、Cilium Service Mesh 对比。  
 5. **TLA+ 规范**：为 K8s Deployment 滚动更新、Pod 生命周期建立可运行模型（Phase 2）。
 
-## 5. 维护记录
+## 6. 形式化工件链接
+
+| 工件 | 路径 | 说明 |
+|---|---|---|
+| Kubernetes TLA+ 规范 | `tools/tla-specifications/Kubernetes.tla` + `Kubernetes.cfg` | Pod 生命周期与 Deployment 滚动更新 |
+
+## 7. 维护记录
 
 | 日期 | 操作 | 维护者 |
 |---|---|---|

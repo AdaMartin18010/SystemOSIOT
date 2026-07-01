@@ -38,7 +38,14 @@
 4. **新增 Raft TLA+ 规范**：与论文不变式逐项对照。  
 5. **新增 BFT 章节**：PBFT、HotStuff、Tendermint/Cosmos。
 
-## 5. 维护记录
+## 6. 形式化工件链接
+
+| 工件 | 路径 | 说明 |
+|---|---|---|
+| Raft TLA+ 规范 | `tools/tla-specifications/Raft.tla` + `Raft.cfg` | Raft 共识简化模型 |
+| FLP 草图 | `tools/coq-verification/FLP_Sketch.v` | 异步系统共识不可能性模型 |
+
+## 7. 维护记录
 
 | 日期 | 操作 | 维护者 |
 |---|---|---|

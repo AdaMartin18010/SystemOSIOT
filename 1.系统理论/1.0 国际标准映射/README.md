@@ -42,7 +42,15 @@
 2. **SysML v2 视图缺失**：当前多表征以 Mermaid 为主，需补充 SysML v2 / KerML 标准视图。
 3. **形式化深度不足**：`SystemTheory.v` 中的定理多为 trivial encoding，需引入范畴论/层论/拓扑斯进行非平凡形式化或明确标注教学级别。
 
-## 6. 维护记录
+## 6. 形式化工件链接
+
+| 工件 | 路径 | 说明 |
+|---|---|---|
+| Coq 系统理论 | `tools/coq-verification/SystemTheory.v` | 系统理论基本定义 |
+| Lean 4 类型论示例 | `tools/lean-verification/SimpleTypeTheory.lean` | 算术表达式类型安全 |
+| Isabelle/HOL 语义示例 | `tools/isabelle-verification/IMP_BigStep.thy` | IMP 大步语义 |
+
+## 7. 维护记录
 
 | 日期 | 操作 | 维护者 |
 |---|---|---|
