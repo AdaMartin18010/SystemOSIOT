@@ -2,6 +2,11 @@
 # 版本: 1.0.0
 # 日期: 2025-01-27
 # 用途: 标准条款—形式化活动映射—可审计工件三元组
+# 重要提示 (2026-07-02):
+#   本文件声明的大量可审计工件目前尚未创建。
+#   详见 validation/formal-artifacts-gap-audit.md 中的悬空审计报告。
+#   Phase 1/2 将逐步补齐 TLA+/Coq/Isabelle/Lean/模型检验/SMT 工件，
+#   并在本映射中更新存在状态 (missing -> draft -> verified)。
 
 metadata:
   project: "SystemOSIOT"
