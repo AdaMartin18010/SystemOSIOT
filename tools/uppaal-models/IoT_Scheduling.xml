@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE nta PUBLIC '-//Uppaal Team//DTD Flat System 1.1//EN' 'http://www.it.uu.se/research/group/darts/uppaal/flat-1_1.dtd'>
+<nta>
+  <declaration>
+    // SystemOSIOT IoT Real-Time Scheduling Model
+    // 目标：验证物联网传感器节点周期性采样与低功耗睡眠的实时性。
+    // 范围：一个传感器节点在采样、处理、传输、睡眠状态间切换。
+    // 验证：采样周期 deadlines 与能耗约束。
+
+    clock t;          // 全局时钟
+    clock sample_t;   // 采样阶段耗时
+    clock proc_t;     // 处理阶段耗时
+    clock tx_t;       // 传输阶段耗时
+
+    const int PERIOD = 100;    // 采样周期 100ms
+    const int SAMPLE_D = 10;   // 采样最大耗时 10ms
+    const int PROC_D = 20;     // 处理最大耗时 20ms
+    const int TX_D = 30;       // 传输最大耗时 30ms
+
+    int sample_count = 0;
+    int deadline_miss = 0;
+  </declaration>
+
+  <template>
+    <name>SensorNode</name>
+    <location id="id0" x="0" y="0">
+      <name>Idle</name>
+      <label kind="invariant">t &lt;= PERIOD</label>
+    </location>
+    <location id="id1" x="100" y="0">
+      <name>Sampling</name>
+      <label kind="invariant">sample_t &lt;= SAMPLE_D</label>
+    </location>
+    <location id="id2" x="200" y="0">
+      <name>Processing</name>
+      <label kind="invariant">proc_t &lt;= PROC_D</label>
+    </location>
+    <location id="id3" x="300" y="0">
+      <name>Transmitting</name>
+      <label kind="invariant">tx_t &lt;= TX_D</label>
+    </location>
+    <location id="id4" x="150" y="100">
+      <name>Sleep</name>
+      <label kind="invariant">t &lt;= PERIOD</label>
+    </location>
+
+    <init ref="id0"/>
+
+    <transition>
+      <source ref="id0"/>
+      <target ref="id1"/>
+      <label kind="guard">t &gt;= PERIOD</label>
+      <label kind="assignment">sample_t = 0, t = 0</label>
+    </transition>
+
+    <transition>
+      <source ref="id1"/>
+      <target ref="id2"/>
+      <label kind="assignment">proc_t = 0</label>
+    </transition>
+
+    <transition>
+      <source ref="id2"/>
+      <target ref="id3"/>
+      <label kind="assignment">tx_t = 0</label>
+    </transition>
+
+    <transition>
+      <source ref="id3"/>
+      <target ref="id4"/>
+      <label kind="assignment">sample_count++</label>
+    </transition>
+
+    <transition>
+      <source ref="id4"/>
+      <target ref="id0"/>
+    </transition>
+  </template>
+
+  <system>
+    node = SensorNode();
+    system node;
+  </system>
+
+  <queries>
+    <query>
+      <formula>A[] not deadlock</formula>
+      <comment>无死锁</comment>
+    </query>
+    <query>
+      <formula>A[] node.t &lt;= PERIOD</formula>
+      <comment>采样周期约束</comment>
+    </query>
+    <query>
+      <formula>A[] node.deadline_miss == 0</formula>
+      <comment>无 deadline 缺失</comment>
+    </query>
+  </queries>
+</nta>

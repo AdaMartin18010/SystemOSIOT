@@ -1,0 +1,49 @@
+-- SystemOSIOT NuSMV Model Checking Example
+-- 目标：验证两进程互斥算法的安全性与活性。
+-- 内容：简单互斥协议，两个进程通过请求/释放进入临界区。
+-- 验证：CTL 性质（无同时进入临界区、最终能进入临界区等）。
+
+MODULE main
+VAR
+    p1_state : {idle, waiting, critical};
+    p2_state : {idle, waiting, critical};
+    turn     : {1, 2};
+
+ASSIGN
+    init(p1_state) := idle;
+    init(p2_state) := idle;
+    init(turn)     := 1;
+
+    next(p1_state) :=
+        case
+            p1_state = idle                       : waiting;
+            p1_state = waiting & turn = 1         : critical;
+            p1_state = critical                   : idle;
+            TRUE                                  : p1_state;
+        esac;
+
+    next(p2_state) :=
+        case
+            p2_state = idle                       : waiting;
+            p2_state = waiting & turn = 2         : critical;
+            p2_state = critical                   : idle;
+            TRUE                                  : p2_state;
+        esac;
+
+    next(turn) :=
+        case
+            p1_state = critical & turn = 1 : 2;
+            p2_state = critical & turn = 2 : 1;
+            TRUE                           : turn;
+        esac;
+
+-- 安全性质：两进程不能同时处于临界区
+CTLSPEC AG !(p1_state = critical & p2_state = critical)
+
+-- 活性性质：等待中的进程最终能进入临界区
+CTLSPEC AG (p1_state = waiting -> AF p1_state = critical)
+CTLSPEC AG (p2_state = waiting -> AF p2_state = critical)
+
+-- 无饥饿：每个进程无限次进入临界区
+CTLSPEC AG AF p1_state = critical
+CTLSPEC AG AF p2_state = critical

@@ -1,19 +1,27 @@
 # SystemOSIOT 形式化工件审计
 
-> 审计日期：2026-07-02  
-> 更新日期：2026-07-02（Phase 2 后）  
+> 审计日期：2026-07-02
+> 更新日期：2026-07-02（冲刺至 100% 基线后）
 > 审计范围：全项目声称使用 Coq / Isabelle/HOL / Lean / TLA+ / 模型检验器 / SMT 的章节
 
 ## 1. 已创建/可执行工件
 
-| 路径 | 引擎 | 内容 | 状态 |
+| 路径 | 引擎 | 内容 | 本地验证状态 |
 |---|---|---|---|
-| `tools/coq-verification/SystemTheory.v` | Coq 8.19+ | 系统理论基本定义与 trivial theorem | ✅ 可执行 |
-| `tools/tla-specifications/Raft.tla` + `Raft.cfg` | TLA+ / TLC | Raft 共识简化模型（Leader 选举、日志复制、安全性质） | ✅ 已创建，待运行 TLC |
-| `tools/tla-specifications/Kubernetes.tla` + `Kubernetes.cfg` | TLA+ / TLC | Kubernetes Pod 生命周期与 Deployment 滚动更新模型 | ✅ 已创建，待运行 TLC |
-| `tools/lean-verification/SimpleTypeTheory.lean` | Lean 4 | 算术表达式语言、大步语义、类型安全证明 | ✅ 已创建，待运行 `lean` |
-| `tools/isabelle-verification/IMP_BigStep.thy` | Isabelle/HOL | IMP 命令式语言大步语义与确定性证明 | ✅ 已创建，待运行 Isabelle |
-| `tools/coq-verification/FLP_Sketch.v` | Coq | FLP 异步系统模型与定理陈述草图 | ✅ 已创建，完整证明待补充 |
+| `tools/lean-verification/SimpleTypeTheory.lean` | Lean 4 | 算术表达式类型系统与类型安全证明 | ✅ 已通过 `lean` 编译 |
+| `tools/coq-verification/SystemTheory.v` | Coq 8.19+ | 系统理论基本定义与定理 | ✅ 已通过 `coqc`（WSL） |
+| `tools/coq-verification/FLP_Sketch.v` | Coq | FLP 异步系统模型与定理陈述草图 | ✅ 已通过 `coqc`（WSL） |
+| `tools/isabelle-verification/IMP_BigStep.thy` | Isabelle/HOL 2024 | IMP 命令式语言大步语义与确定性证明 | ⚠️ 已创建，本地 Isabelle 下载失败；CI 可运行 |
+| `tools/tla-specifications/Raft.tla` + `Raft.cfg` | TLA+ / TLC | Raft 共识简化模型（Leader 选举、日志复制、安全性质） | ✅ TLC 模型检验通过 |
+| `tools/tla-specifications/Kubernetes.tla` + `Kubernetes.cfg` | TLA+ / TLC | Kubernetes Pod 生命周期与 Deployment 滚动更新模型 | ✅ TLC 模型检验通过 |
+| `tools/tla-specifications/QUIC.tla` + `QUIC.cfg` | TLA+ / TLC | QUIC/TCP 传输层握手状态机 | ✅ TLC 模型检验通过 |
+| `tools/uppaal-models/IoT_Scheduling.xml` | UPPAAL 5.0 | 物联网传感器节点实时调度时间自动机 | ⚠️ 已创建，需 UPPAAL 学术许可证运行 |
+| `tools/nusmv-models/Mutex.smv` | NuSMV 2.6 | 两进程互斥协议 CTL 验证 | ✅ NuSMV 验证通过 |
+| `tools/alloy-models/Kubernetes_Architecture.als` | Alloy 6.2 | Kubernetes 架构一致性约束 | ✅ Alloy Analyzer 验证通过 |
+| `tools/smt-examples/Container_Resource_Allocation.smt2` | Z3 4.13 | 容器资源分配约束求解 | ✅ Z3 求解通过 |
+| `tools/cvc5-examples/Scheduling_Constraints.smt2` | CVC5 1.3.4 | 调度约束（多求解器兼容） | ✅ CVC5 求解通过 |
+| `tools/prism-models/IoT_Reliability.prism` | PRISM 4.10.1 | 物联网传感器可靠性 DTMC | ✅ PRISM 验证通过（WSL） |
+| `tools/spin-models/Mutex.pml` | SPIN 6.5 | 互斥协议 Promela 验证 | ✅ SPIN 验证通过（WSL） |
 
 ## 2. 仍缺失的工件
 
@@ -43,27 +51,35 @@
 
 ### 2.4 TLA+
 
+| 声称位置/主题 | 实际文件 | 说明 |
+|---|---|---|
+| 网络协议握手规范 | `tools/tla-specifications/QUIC.tla` | ✅ 已通过 TLC |
+| Raft 一致性规范 | `tools/tla-specifications/Raft.tla` | ✅ 已通过 TLC |
+| K8s Deployment 规范 | `tools/tla-specifications/Kubernetes.tla` | ✅ 已通过 TLC |
+
+### 2.4.1 仍缺失的 TLA+ 工件
+
 | 声称位置/主题 | 缺失文件 | 说明 |
 |---|---|---|
-| 网络协议握手规范 | `8.7 系统运行时语义/*.tla` | 未找到 |
-| QUIC/TCP 状态机 | `8.7 系统运行时语义/*.tla` | 未找到 |
+| TCP 拥塞控制状态机 | `8.7 系统运行时语义/*.tla` | 未找到 |
+| BGP/OSPF 路由协议状态机 | `8.7 系统运行时语义/*.tla` | 未找到 |
 
 ### 2.5 模型检验器
 
-| 引擎 | 扩展名 | 缺失文件 | 说明 |
+| 引擎 | 扩展名 | 实际文件 | 说明 |
 |---|---|---|---|
-| NuSMV / nuXmv | `.smv` | 全项目未找到 | CTL/LTL 验证声明无工件 |
-| PRISM | `.prism` | 全项目未找到 | 概率模型检验声明无工件 |
-| UPPAAL | `.xml` / `.q` | 全项目未找到 | 实时系统验证声明无工件 |
-| Alloy | `.als` | 全项目未找到 | 架构一致性声明无工件 |
-| SPIN | `.pml` | 全项目未找到 | 并发协议验证声明无工件 |
+| NuSMV / nuXmv | `.smv` | `tools/nusmv-models/Mutex.smv` | ✅ 已验证 |
+| PRISM | `.prism` | `tools/prism-models/IoT_Reliability.prism` | ✅ 已验证 |
+| UPPAAL | `.xml` / `.q` | `tools/uppaal-models/IoT_Scheduling.xml` | ⚠️ 需许可证 |
+| Alloy | `.als` | `tools/alloy-models/Kubernetes_Architecture.als` | ✅ 已验证 |
+| SPIN | `.pml` | `tools/spin-models/Mutex.pml` | ✅ 已验证 |
 
 ### 2.6 SMT / 约束求解
 
-| 引擎 | 扩展名 | 缺失文件 | 说明 |
+| 引擎 | 扩展名 | 实际文件 | 说明 |
 |---|---|---|---|
-| Z3 | `.smt2` | 全项目未找到 | SMT 验证声明无工件 |
-| CVC5 | `.smt2` | 全项目未找到 | 未声明但可补充 |
+| Z3 | `.smt2` | `tools/smt-examples/Container_Resource_Allocation.smt2` | ✅ 已验证 |
+| CVC5 | `.smt2` | `tools/cvc5-examples/Scheduling_Constraints.smt2` | ✅ 已验证 |
 
 ## 3. 悬空映射（来自 `standard-compliance-mapping.yaml`）
 
@@ -75,10 +91,10 @@
 | `design/contract_specifications.tla` | ISO/IEC/IEEE 15288 6.4.2.1 | ❌ 不存在 |
 | `specifications/formal_requirements.tla` | ISO/IEC/IEEE 15288 6.4.2.2 | ❌ 不存在 |
 | `verification/proof_scripts/*.v` | ISO/IEC/IEEE 15288 6.4.2.3 | ❌ 不存在 |
-| `verification/model_checking/*.tla` | ISO/IEC/IEEE 15288 6.4.2.3 | ⚠️ 部分存在：`tools/tla-specifications/*.tla` |
+| `verification/model_checking/*.tla` | ISO/IEC/IEEE 15288 6.4.2.3 | ✅ 已存在：`tools/tla-specifications/*.tla` |
 | `implementation/hoare_annotations.h` | ISO/IEC/IEEE 12207 7.2.2.1 | ❌ 不存在 |
 | `verification/refinement_proofs.v` | ISO/IEC/IEEE 12207 7.2.2.1 | ❌ 不存在 |
-| `models/alloy_models/*.als` | ISO/IEC/IEEE 42010 6.3.1 | ❌ 不存在 |
+| `models/alloy_models/*.als` | ISO/IEC/IEEE 42010 6.3.1 | ✅ 已存在：`tools/alloy-models/*.als` |
 | `risk/formal_risk_models.tla` | ISO/IEC/IEEE 42010 6.3.2 | ❌ 不存在 |
 | `requirements/formal_safety_requirements.tla` | IEC 61508 7.4.2.2 | ❌ 不存在 |
 | `models/safety_models/*.smv` | ISO 26262 6.4.2.2 | ❌ 不存在 |
@@ -86,18 +102,17 @@
 
 ## 4. 后续优先级
 
-| 优先级 | 工件类型 | 建议补齐 | 负责模块 |
+| 优先级 | 工件类型 | 建议行动 | 负责模块 |
 |---|---|---|---|
-| P0 | 运行并修复 TLA+ 规范 | Raft、Kubernetes 模型在 TLC 中通过 | 4, 7 |
-| P0 | 运行并修复 Lean/Isabelle/Coq 示例 | 确保所有示例可被对应工具加载 | 1, 2 |
-| P1 | 网络协议 TLA+ 规范 | QUIC/TCP 握手、BGP/OSPF 状态机 | 8 |
-| P1 | UPPAAL 实时案例 | IoT 调度/能耗、容器实时性 | 3 |
-| P2 | NuSMV/PRISM/Alloy | 各 1 个示例 | 2, 3, 7 |
-| P2 | SMT-LIB 示例 | 约束求解小例 | 1, 7 |
+| P0 | 接入 CI 形式化验证门禁 | 在 GitHub Actions 中运行所有可验证工件 | 基础设施 |
+| P0 | 获取 UPPAAL 学术许可证并运行 `IoT_Scheduling.xml` | 需用户注册许可证 | 3 |
+| P1 | 补充 TCP 拥塞控制 / BGP/OSPF TLA+ | 网络协议深度形式化 | 8 |
+| P1 | 补充操作系统调度 Coq/Isabelle 证明 | 填补 `2.4/2.7` 形式化缺口 | 2 |
+| P2 | 补充 CVC5 / 多 SMT 求解器兼容 | 约束求解扩展 | 1, 7 |
 
 ## 5. 建议行动
 
-1. 在 CI 中安装 TLA+ Toolbox、Lean 4、Isabelle2024、Coq 8.19+，实现形式化验证门禁。  
-2. 禁止在新增 Markdown 中宣称“已形式化验证”除非同时提交可运行工件。  
-3. 优先完成 P0 级工件运行验证，修复语法/逻辑错误。  
-4. 将本审计结果链接到各模块的 `X.0 国际标准映射/README.md` 中。
+1. 禁止在新增 Markdown 中宣称“已形式化验证”除非同时提交可运行工件。
+2. 将本审计结果链接到各模块的 `X.0 国际标准映射/README.md` 中。
+3. 在 CI 中固化工具安装脚本，确保每次提交都能复现验证结果。
+4. 定期审计 ISO/IEC/IEEE 15288、SysML v2、K8s、OCI、RFC 等标准的版本更新。

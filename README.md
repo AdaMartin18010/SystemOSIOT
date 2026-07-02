@@ -188,6 +188,8 @@ SystemOSIOT/
 - **内容治理规则**: 见 `docs/content-governance-rules.md`
 - **国际标准基线**: 见 `docs/international-baseline.md`
 - **形式化工件审计**: 见 `validation/formal-artifacts-gap-audit.md`
+- **形式化工件目录**: 见 `tools/`（Lean / Coq / Isabelle / TLA+ / UPPAAL / NuSMV / Alloy / SMT-LIB）
+- **执行报告**: Phase 3 扩展报告见 `research/2026-phase3-extended-formal-artifacts-report.md`
 
 ## 内容维度
 

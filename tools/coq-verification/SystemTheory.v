@@ -2,6 +2,7 @@
 (* 系统理论Coq形式化验证 - 2025年增强版 *)
 
 Require Import Coq.Lists.List.
+Require Import Coq.Bool.Bool.
 Require Import Coq.Sets.Ensembles.
 Require Import Coq.Logic.Classical.
 Require Import Coq.Arith.PeanoNat.
@@ -14,8 +15,9 @@ Require Import Coq.Logic.Eqdep_dec.
 Require Import Coq.Classes.Morphisms.
 Require Import Coq.Classes.RelationClasses.
 Require Import Coq.Classes.Equivalence.
-Require Import Coq.Classes.OrderedType.
-Require Import Coq.Classes.OrderedTypeEx.
+Require Import Coq.Structures.OrderedType.
+Require Import Coq.Structures.OrderedTypeEx.
+Require Import Lia.
 
 (* 系统理论的基本定义 *)
 Module SystemTheory.
@@ -26,11 +28,16 @@ Inductive Element : Type :=
   | composite_element : list Element -> Element.
 
 (* 要素相等性 *)
-Definition Element_eq (e1 e2 : Element) : bool :=
+Fixpoint Element_eq (e1 e2 : Element) {struct e1} : bool :=
   match e1, e2 with
   | element n1, element n2 => Nat.eqb n1 n2
-  | composite_element l1, composite_element l2 => 
-    List.forall2 Element_eq l1 l2
+  | composite_element l1, composite_element l2 =>
+      (fix rec l1' l2' {struct l1'} : bool :=
+        match l1', l2' with
+        | nil, nil => true
+        | x :: xs, y :: ys => Element_eq x y && rec xs ys
+        | _, _ => false
+        end) l1 l2
   | _, _ => false
   end.
 
@@ -89,7 +96,6 @@ Record System : Type := {
   relations : list Relation;
   boundary : Boundary;
   functions : list Function;
-  system_properties : list (System -> Prop);
 }.
 
 (* 系统构造器 *)
@@ -98,8 +104,7 @@ Definition mkSystem (e : list Element) (r : list Relation)
   {| elements := e;
      relations := r;
      boundary := b;
-     functions := f;
-     system_properties := nil |}.
+     functions := f |}.
 
 (* 系统相等性 *)
 Definition System_eq (s1 s2 : System) : Prop :=
@@ -155,7 +160,7 @@ Proof.
   - intros e Hin.
     intro Hcontra.
     simpl in Hcontra.
-    omega.
+    lia.
 Qed.
 
 (* 系统层次性定理 *)
@@ -171,12 +176,16 @@ Proof.
   exists ((firstn (length (elements S) / 2) (elements S)) :: 
           (skipn (length (elements S) / 2) (elements S)) :: nil).
   split.
-  - simpl. omega.
-  - intros level Hin.
-    destruct Hin as [H1 | H2].
-    + rewrite H1. apply firstn_length.
-    + rewrite H2. apply skipn_length.
-      apply Nat.div_lt_upper_bound; omega.
+  - simpl. lia.
+  - intros level Hlevel.
+    destruct Hlevel as [H1 | [H2 | HFalse]]; try contradiction.
+    + subst level. rewrite firstn_length.
+      assert (Hn : 0 < length (elements S) / 2) by (apply Nat.div_str_pos; lia).
+      assert (Hm : 0 < length (elements S)) by lia.
+      apply Nat.min_case_strong; lia.
+    + subst level. rewrite skipn_length.
+      assert (Hn : length (elements S) / 2 < length (elements S)) by (apply Nat.div_lt; lia).
+      apply Nat.neq_0_lt_0. apply Nat.sub_gt. exact Hn.
 Qed.
 
 (* 系统涌现性定理 *)
@@ -196,7 +205,7 @@ Proof.
   - intros e Hin.
     intro Hcontra.
     simpl in Hcontra.
-    omega.
+    lia.
 Qed.
 
 (* 系统稳定性定理 *)

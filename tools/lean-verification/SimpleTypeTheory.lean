@@ -3,7 +3,7 @@ SystemOSIOT Lean 4 形式化示例
 目标：展示依赖类型与程序语义基础，作为项目形式化工件的起点。
 内容：简单算术表达式语言 + 大步操作语义 + 类型系统 + Progress/Preservation。
 参考：Pierce, "Types and Programming Languages"; Avigad et al., "Theorem Proving in Lean 4".
--/]
+-/
 
 -- 算术表达式：自然数、加法、条件判断（零/非零）
 inductive Expr where
@@ -37,21 +37,26 @@ inductive HasType : Expr → Ty → Prop where
   | ht_ifz : HasType e .nat → HasType e1 T → HasType e2 T
            → HasType (.ifz e e1 e2) T
 
--- 良类型表达式可求值为值
--- Progress 定理：若 ⊢ e : T，则 e 是一个值或 ∃ e', e ⟶ e'
--- 在大步语义下表述为：良类型表达式必能求值
+-- 值的类型
+inductive ValueHasType : Value → Ty → Prop where
+  | vht_num : ValueHasType (.vnum n) .nat
+
+-- Progress 定理：若 ⊢ e : T，则 e 可求值为某个值 v
 theorem progress : HasType e T → ∃ v, BigStep e v := by
   intro h
   induction h with
-  | ht_num n => exists Value.vnum n; constructor
-  | ht_add h1 h2 ih1 ih2 =>
+  | ht_num =>
+      rename_i n
+      exists Value.vnum n
+      constructor
+  | ht_add _ _ ih1 ih2 =>
       rcases ih1 with ⟨v1, h1'⟩
       rcases ih2 with ⟨v2, h2'⟩
       cases v1 <;> cases v2
       case vnum.vnum n1 n2 =>
         exists Value.vnum (n1 + n2)
         apply BigStep.bs_add h1' h2'
-  | ht_ifz h h1 h2 ih ih1 ih2 =>
+  | ht_ifz _ _ _ ih ih1 ih2 =>
       rcases ih with ⟨v, h'⟩
       cases v with
       | vnum n =>
@@ -60,16 +65,12 @@ theorem progress : HasType e T → ∃ v, BigStep e v := by
               rcases ih1 with ⟨v1, h1'⟩
               exists v1
               apply BigStep.bs_ifz_zero h' h1'
-          | succ m =>
+          | succ _ =>
               rcases ih2 with ⟨v2, h2'⟩
               exists v2
               apply BigStep.bs_ifz_succ h' h2'
 
 -- Preservation 定理：若 ⊢ e : T 且 e ⇓ v，则 v 具有类型 T
--- 对值而言，类型 T 必须满足 ValueHasType
-inductive ValueHasType : Value → Ty → Prop where
-  | vht_num : ValueHasType (.vnum n) .nat
-
 theorem preservation : HasType e T → BigStep e v → ValueHasType v T := by
   intro ht hbs
   induction hbs generalizing T with
@@ -85,12 +86,12 @@ theorem preservation : HasType e T → BigStep e v → ValueHasType v T := by
           constructor
   | bs_ifz_zero h h1 ih ih1 =>
       cases ht with
-      | ht_ifz ht ht1 ht2 =>
+      | ht_ifz ht ht1 _ =>
           have _ := ih ht
           exact ih1 ht1
   | bs_ifz_succ h h2 ih ih2 =>
       cases ht with
-      | ht_ifz ht ht1 ht2 =>
+      | ht_ifz ht _ ht2 =>
           have _ := ih ht
           exact ih2 ht2
 

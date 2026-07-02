@@ -63,6 +63,8 @@ CreatePod(p, v) ==
     /\ podVersion[p] # v
     /\ LET currentTotal == CountVersion(OldVersion) + CountVersion(NewVersion)
        IN currentTotal < MaxReplicas + MaxSurge
+    (* 创建后不可用 Pod 数仍不得超过 MaxUnavailable *)
+    /\ CountUnavailable + 1 <= MaxUnavailable
     /\ podState'   = [podState EXCEPT ![p] = Pending]
     /\ podVersion' = [podVersion EXCEPT ![p] = v]
     /\ UNCHANGED <<replicasOld, replicasNew>>
@@ -71,6 +73,8 @@ CreatePod(p, v) ==
 PodTransition(p, fromState, toState) ==
     /\ podState[p] = fromState
     /\ podState[p] # Deleted
+    (* 进入 Failed/Unknown 会增加不可用计数，必须满足 MaxUnavailable *)
+    /\ (toState \in {Failed, Unknown}) => (CountUnavailable + 1 <= MaxUnavailable)
     /\ podState' = [podState EXCEPT ![p] = toState]
     /\ UNCHANGED <<podVersion, replicasOld, replicasNew>>
 

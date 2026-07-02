@@ -12,6 +12,8 @@
 | `Raft.cfg` | Raft 模型检查配置（3 节点、2 值、最大任期 3） | `4.分布式系统` | 待 TLC 运行验证 |
 | `Kubernetes.tla` | Kubernetes Pod 生命周期与 Deployment 滚动更新模型 | `7.容器与微服务` | 待 TLC 运行验证 |
 | `Kubernetes.cfg` | Kubernetes 模型检查配置 | `7.容器与微服务` | 待 TLC 运行验证 |
+| `QUIC.tla` | QUIC/TCP 传输层握手状态机与安全性质 | `8.网络系统` | 待 TLC 运行验证 |
+| `QUIC.cfg` | QUIC 模型检查配置 | `8.网络系统` | 待 TLC 运行验证 |
 
 ## 运行方式
 

@@ -1,0 +1,40 @@
+// SystemOSIOT PRISM Model - IoT Sensor Reliability
+// 目标：验证物联网传感器节点在电池消耗与采样成功/失败重试下的可靠性。
+// 模型：离散时间马尔可夫链（DTMC）。
+
+dtmc
+
+const int MAX_BATTERY = 5;
+const double P_SUCCESS = 0.8;
+const double P_FAIL    = 0.2;
+
+// 状态编码：0=idle, 1=sampling, 2=success, 3=fail, 4=dead
+const int IDLE     = 0;
+const int SAMPLING = 1;
+const int SUCCESS  = 2;
+const int FAIL     = 3;
+const int DEAD     = 4;
+
+module Sensor
+    battery : [0..MAX_BATTERY] init MAX_BATTERY;
+    state   : [0..4] init IDLE;
+
+    // 空闲 -> 采样，每次消耗 1 单位电池
+    [sample] state=IDLE & battery>0 -> 1.0 : (state'=SAMPLING) & (battery'=battery-1);
+
+    // 采样成功 / 失败
+    [ok]     state=SAMPLING -> P_SUCCESS : (state'=SUCCESS) + P_FAIL : (state'=FAIL);
+
+    // 成功 -> 回到空闲，继续下一轮
+    [next]   state=SUCCESS -> 1.0 : (state'=IDLE);
+
+    // 失败 -> 回到空闲重试
+    [retry]  state=FAIL -> 1.0 : (state'=IDLE);
+
+    // 电池耗尽
+    [dead]   state=IDLE & battery=0 -> 1.0 : (state'=DEAD);
+endmodule
+
+// 标签：用于性质描述
+label "dead" = state=DEAD;
+label "success" = state=SUCCESS;

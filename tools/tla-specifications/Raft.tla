@@ -35,6 +35,9 @@ Follower  == "Follower"
 Candidate == "Candidate"
 Leader    == "Leader"
 
+\* 两个自然数的最小值（TLA+ 标准模块未提供 Min）
+Min(a, b) == IF a <= b THEN a ELSE b
+
 vars == <<currentTerm, role, votedFor, votesGranted, log, commitIndex>>
 
 \* 初始状态：所有节点为 Follower，任期 0，日志为空
@@ -57,17 +60,23 @@ TermAt(n, i) ==
     IF i \in 1..LogLen(n) THEN log[n][i].term ELSE -1
 
 \* 检查节点 voter 是否可以投票给候选节点 candidate
-\* 规则：任期更大，或任期相同但日志至少一样新
+\* 规则：候选人的任期不更小，且日志至少一样新（Raft 论文定义）
 CanVoteFor(voter, candidate) ==
     LET cv == currentTerm[candidate]
         vv == currentTerm[voter]
+        lastTermC == TermAt(candidate, LogLen(candidate))
+        lastLenC  == LogLen(candidate)
+        lastTermV == TermAt(voter, LogLen(voter))
+        lastLenV  == LogLen(voter)
     IN
         /\ role[candidate] = Candidate
         /\ cv >= vv
+        (* 投票人必须与候选人处于同一任期 *)
+        /\ vv = cv
         /\ votedFor[voter] \in {Nil, candidate}
         (* log[candidate] 在日志新鲜度上不落后于 log[voter] *)
-        /\ <<TermAt(candidate, LogLen(candidate)), LogLen(candidate)>>
-            >= <<TermAt(voter, LogLen(voter)), LogLen(voter)>>
+        /\ (lastTermC > lastTermV)
+            \/ ((lastTermC = lastTermV) /\ (lastLenC >= lastLenV))
 
 \* 超时：Follower 或 Candidate 增加任期并发起选举
 Timeout(n) ==
@@ -116,6 +125,8 @@ ClientRequest(leader, v) ==
 \* 简化：leader 只要发现某索引在所有节点日志中存在即可提交
 AdvanceCommitIndex(leader) ==
     /\ role[leader] = Leader
+    (* 仅当 leader 确认当前任期最大时才提交，避免旧任 leader 与现任冲突 *)
+    /\ \A n \in Nodes : currentTerm[n] <= currentTerm[leader]
     /\ commitIndex[leader] < LogLen(leader)
     /\ \E i \in (commitIndex[leader] + 1)..LogLen(leader) :
         /\ log[leader][i].term = currentTerm[leader]
@@ -163,8 +174,14 @@ LeaderCompleteness ==
 
 \* 状态机安全性：所有节点对已提交的条目达成一致
 StateMachineSafety ==
-    \A n1, n2 \in Nodes, i \in 1..Min(commitIndex[n1], commitIndex[n2]) :
-        log[n1][i] = log[n2][i]
+    \A n1 \in Nodes :
+        \A n2 \in Nodes :
+            \A i \in 1..Min(commitIndex[n1], commitIndex[n2]) :
+                log[n1][i] = log[n2][i]
+
+\* 状态约束：限制日志长度，避免模型检查状态空间爆炸
+StateConstraint ==
+    \A n \in Nodes : LogLen(n) <= 3
 
 \* 类型不变式
 TypeInvariant ==
