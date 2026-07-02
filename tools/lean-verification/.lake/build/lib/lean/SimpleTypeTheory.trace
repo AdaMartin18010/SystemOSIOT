@@ -1,0 +1,32 @@
+{"synthetic": false,
+ "schemaVersion": "2025-09-10",
+ "outputs":
+ {"o": ["529c37cbbf1646ca.olean"],
+  "m": false,
+  "i": "c72b5577237684cf.ilean",
+  "c": "1ae2f9ba966e9ca4.c"},
+ "log":
+ [{"message":
+   ".> LEAN_PATH=E:\\_src\\SystemOSIOT\\tools\\lean-verification\\.lake\\build\\lib\\lean c:\\Users\\luyan\\.elan\\toolchains\\leanprover--lean4---v4.31.0\\bin\\lean.exe E:\\_src\\SystemOSIOT\\tools\\lean-verification\\SimpleTypeTheory.lean -o E:\\_src\\SystemOSIOT\\tools\\lean-verification\\.lake\\build\\lib\\lean\\SimpleTypeTheory.olean -i E:\\_src\\SystemOSIOT\\tools\\lean-verification\\.lake\\build\\lib\\lean\\SimpleTypeTheory.ilean -c E:\\_src\\SystemOSIOT\\tools\\lean-verification\\.lake\\build\\ir\\SimpleTypeTheory.c --setup E:\\_src\\SystemOSIOT\\tools\\lean-verification\\.lake\\build\\ir\\SimpleTypeTheory.setup.json --json",
+   "level": "trace"}],
+ "inputs":
+ [["SimpleTypeTheory:deps",
+   [["deps",
+     [["SystemOSIOTLean/SystemOSIOTLean:extraDep",
+       [["@SystemOSIOTLean:extraDep", "00000000000006bb"]]],
+      ["imports", "00000000000006bb"]]],
+    ["libs",
+     [["import dynlibs", "00000000000006bb"],
+      ["package external libraries", "00000000000006bb"],
+      ["module dynlibs", "00000000000006bb"],
+      ["module plugins", "00000000000006bb"]]]]],
+  ["Lean 4.31.0, commit 68218e876d2a38b1985b8590fff244a83c321783",
+   "fc45ac412f28501c"],
+  ["E:\\_src\\SystemOSIOT\\tools\\lean-verification\\SimpleTypeTheory.lean",
+   "b2e94002a7b1916c"],
+  ["options", "00000000000006bb"],
+  ["isModule: false", "feefd2a0d3a1847e"],
+  ["Module.name: SimpleTypeTheory", "7c9589dec53763ca"],
+  ["Package.id?: (some SystemOSIOTLean)", "e0f875f4e27642a7"],
+  ["Module.leanArgs: #[]", "00000000000006bb"]],
+ "depHash": "2f5e4a617955a522"}

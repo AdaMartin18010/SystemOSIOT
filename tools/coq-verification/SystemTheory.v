@@ -418,14 +418,13 @@ Proof.
 Qed.
 
 (* 系统理论完备性证明 *)
-Theorem system_theory_completeness : forall P : System -> Prop,
-  (forall S : System, P S) ->
+Theorem system_theory_completeness : forall (P : System -> Prop) (H : forall S : System, P S),
   exists proof : forall S : System, P S,
-    proof = fun S : System => H S.
+    proof = H.
 
 Proof.
   intros P H.
-  exists (fun S : System => H S).
+  exists H.
   reflexivity.
 Qed.
 

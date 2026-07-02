@@ -79,7 +79,7 @@ Definition Consensus (C : Configuration) (S : Schedule) : Prop :=
 (* 异步假设 1：消息延迟无上限，但正确发送的消息最终可递送 *)
 Axiom async_message_delivery :
   forall (m : Message) (S : Schedule),
-    In (Deliver m) S -> True.
+    List.In (Deliver m) S -> True.
 
 (* 异步假设 2：本地步骤（超时）不依赖全局时钟 *)
 Axiom async_local_steps :
