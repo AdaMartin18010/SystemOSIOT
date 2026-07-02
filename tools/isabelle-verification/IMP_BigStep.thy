@@ -37,8 +37,8 @@ datatype com = SKIP
   | While bexp com
 
 (* 大步操作语义： (c, s) => s' *)
-inductive big_step :: "com => (string => int) => (string => int) => bool"
-  ("(_/ \<Rightarrow> _)" [60,0,60] 55) where
+inductive big_step :: "com * (string => int) => (string => int) => bool"
+  ("(_/ \<Rightarrow> _)" [60,60] 55) where
 Skip:    "(SKIP, s) \<Rightarrow> s" |
 Assign:  "(Assign x a, s) \<Rightarrow> s(x := aval a s)" |
 Seq:     "\<lbrakk> (c1, s1) \<Rightarrow> s2; (c2, s2) \<Rightarrow> s3 \<rbrakk> \<Longrightarrow> (Seq c1 c2, s1) \<Rightarrow> s3" |
@@ -53,25 +53,25 @@ theorem big_step_deterministic:
   "\<lbrakk> (c, s) \<Rightarrow> t; (c, s) \<Rightarrow> t' \<rbrakk> \<Longrightarrow> t = t'"
 proof (induction arbitrary: t' rule: big_step.induct)
   case Skip
-  then show ?case by auto
+  then show ?case by blast
 next
   case Assign
-  then show ?case by auto
+  then show ?case by blast
 next
   case (Seq c1 s1 s2 c2 s3 t')
-  then show ?case by auto
+  then show ?case by blast
 next
   case (IfTrue b s c1 t c2 t')
-  then show ?case by auto
+  then show ?case by blast
 next
   case (IfFalse b s c2 t c1 t')
-  then show ?case by auto
+  then show ?case by blast
 next
   case (WhileFalse b s c t')
-  then show ?case by auto
+  then show ?case by blast
 next
   case (WhileTrue b s1 c s2 w s3 t')
-  then show ?case by auto
+  then show ?case by blast
 qed
 
 end
