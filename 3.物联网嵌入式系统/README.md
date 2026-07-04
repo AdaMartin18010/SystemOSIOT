@@ -73,6 +73,22 @@
 - [3.6.4 语义与结构-证明的关系](3.6%20形式语义/3.6.4%20语义与结构-证明的关系.md)
 - [README](3.6%20形式语义/README.md)
 
+### 新增工程专题
+
+- [03-embedded-linux / 嵌入式 Linux 实现](./03-embedded-linux/)
+  - [嵌入式 Linux 启动流程](./03-embedded-linux/embedded-linux-bootflow.md)
+  - [Device Tree 与 U-Boot](./03-embedded-linux/device-tree-and-uboot.md)
+  - [Buildroot 与 Yocto](./03-embedded-linux/buildroot-yocto.md)
+  - [Linux PREEMPT_RT](./03-embedded-linux/preempt-rt-linux.md)
+- [04-rtos-concepts / RTOS 概念](./04-rtos-concepts/)
+  - [RTOS 概念树](./04-rtos-concepts/rtos-concept-tree.md)
+  - [FreeRTOS / Zephyr / RTEMS / VxWorks 对比映射](./04-rtos-concepts/freertos-zephyr-rtems-vxworks-map.md)
+  - [实时调度可调度性](./04-rtos-concepts/real-time-schedulability.md)
+- [05-peripheral-interface-analysis / 外设接口分析](./05-peripheral-interface-analysis/)
+  - [传感器到 OS 映射](./05-peripheral-interface-analysis/sensor-to-os-mapping.md)
+- [06-decision-trees / 决策树](./06-decision-trees/)
+  - [Linux vs RTOS 决策树](./06-decision-trees/linux-vs-rtos.md)
+
 ## 核心概念
 
 ### 3.0.1 物联网定义
