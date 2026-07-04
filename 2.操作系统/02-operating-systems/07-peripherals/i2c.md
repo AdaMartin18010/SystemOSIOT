@@ -187,3 +187,9 @@ DTS i2c 节点
 - [外设概念树](./peripheral-concept-tree.md)
 - [外设总线选择决策树](./decision-tree-peripheral-bus.md)
 - [传感器到操作系统映射](../../../3.物联网嵌入式系统/05-peripheral-interface-analysis/sensor-to-os-mapping.md)
+
+## 国际权威来源链接 / Authoritative Sources
+
+- [NXP I²C-bus Specification and User Manual UM10204 (Rev. 7, 2021)](https://www.nxp.com/docs/en/user-guide/UM10204.pdf)
+- [Linux I2C subsystem documentation](https://docs.kernel.org/i2c/)
+- [Linux Device Drivers - I2C chapter](https://static.lwn.net/images/pdf/LDD3/ch08.pdf)

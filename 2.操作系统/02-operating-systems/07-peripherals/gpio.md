@@ -132,3 +132,9 @@ gpiomon gpiochip0 3
 
 - [外设概念树](./peripheral-concept-tree.md)
 - [中断与 DMA](./interrupts-and-dma.md)
+
+## 国际权威来源链接 / Authoritative Sources
+
+- [Linux GPIO subsystem documentation](https://docs.kernel.org/driver-api/gpio/)
+- [Linux pinctrl subsystem documentation](https://docs.kernel.org/driver-api/pinctl.html)
+- [Linux Device Drivers - GPIO](https://static.lwn.net/images/pdf/LDD3/ch09.pdf)

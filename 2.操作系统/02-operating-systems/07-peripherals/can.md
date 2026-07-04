@@ -139,3 +139,10 @@ bind(s, (struct sockaddr *)&addr, sizeof(addr));
 
 - [外设概念树](./peripheral-concept-tree.md)
 - [外设总线选择决策树](./decision-tree-peripheral-bus.md)
+
+## 国际权威来源链接 / Authoritative Sources
+
+- [ISO 11898-1:2015 - CAN Data Link Layer and Physical Signaling](https://www.iso.org/standard/63648.html)
+- [Bosch CAN Specification 2.0](https://www.bosch-semiconductors.com/us/ip-modules/can-protocol/can-2-0.html)
+- [Linux SocketCAN documentation](https://docs.kernel.org/networking/can.html)
+- [CAN in Automation (CiA)](https://www.can-cia.org/)

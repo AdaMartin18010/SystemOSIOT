@@ -212,3 +212,11 @@ Physical Address
 - [外设总线选择决策树](./decision-tree-peripheral-bus.md)
 - [Linux 设备驱动](../05-linux-kernel/devices-drivers-linux.md)
 - [系统调用接口](../08-interfaces/syscall-interface.md)
+
+## 国际权威来源链接 / Authoritative Sources
+
+- [Intel 64 and IA-32 Architectures Software Developer's Manual, Vol. 3A](https://www.intel.com/content/www/us/en/developer/articles/technical/intel-sdm.html)
+- [ARM Generic Interrupt Controller (GIC) documentation](https://developer.arm.com/documentation/198123/0100)
+- [RISC-V PLIC specification](https://github.com/riscv/riscv-plic-spec)
+- [Linux DMAEngine documentation](https://docs.kernel.org/driver-api/dmaengine/)
+- [Linux IRQ subsystem documentation](https://docs.kernel.org/core-api/irq/index.html)

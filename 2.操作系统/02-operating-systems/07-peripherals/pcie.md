@@ -144,3 +144,10 @@ Root Complex
 
 - [外设概念树](./peripheral-concept-tree.md)
 - [中断与 DMA](./interrupts-and-dma.md)
+
+## 国际权威来源链接 / Authoritative Sources
+
+- [PCI-SIG Specifications (PCI Express Base Spec 6.0/7.0)](https://pcisig.com/specifications)
+- [Linux PCI subsystem documentation](https://docs.kernel.org/PCI/)
+- [PCI Express I/O Virtualization (SR-IOV)](https://pcisig.com/specifications/iov)
+- [Intel VT-d / IOMMU specification](https://www.intel.com/content/www/us/en/developer/articles/technical/intel-virtualization-technology-for-directed-io-io-virtualization-technology.html)

@@ -116,3 +116,9 @@
 - [外设概念树](./peripheral-concept-tree.md)
 - [外设总线选择决策树](./decision-tree-peripheral-bus.md)
 - [I2C](./i2c.md)
+
+## 国际权威来源链接 / Authoritative Sources
+
+- [Motorola SPI Block Guide V04.01 (NXP/Freescale S12SPIV4/D)](https://www.nxp.com/docs/en/reference-manual/S12SPIV4.pdf)
+- [Linux SPI subsystem documentation](https://docs.kernel.org/spi/)
+- [Linux Device Drivers - SPI chapter](https://static.lwn.net/images/pdf/LDD3/ch16.pdf)

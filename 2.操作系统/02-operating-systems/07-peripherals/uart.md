@@ -119,3 +119,9 @@ stty -F /dev/ttyS0 115200 cs8 -cstopb -parenb
 
 - [外设概念树](./peripheral-concept-tree.md)
 - [外设总线选择决策树](./decision-tree-peripheral-bus.md)
+
+## 国际权威来源链接 / Authoritative Sources
+
+- [16550 UART specification (National Semiconductor/Texas Instruments)](https://www.ti.com/lit/ds/symlink/pc16550d.pdf)
+- [Linux serial/UART core documentation](https://docs.kernel.org/driver-api/serial/)
+- [Linux Device Drivers - TTY layer](https://static.lwn.net/images/pdf/LDD3/ch18.pdf)

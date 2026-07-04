@@ -136,3 +136,10 @@ usb_alloc_urb()
 
 - [外设概念树](./peripheral-concept-tree.md)
 - [外设总线选择决策树](./decision-tree-peripheral-bus.md)
+
+## 国际权威来源链接 / Authoritative Sources
+
+- [USB-IF Document Library (USB 2.0/3.2/4)](https://www.usb.org/documents)
+- [Linux USB core documentation](https://docs.kernel.org/driver-api/usb/)
+- [Linux Device Drivers - USB chapter](https://static.lwn.net/images/pdf/LDD3/ch13.pdf)
+- [xHCI specification (Intel)](https://www.intel.com/content/www/us/en/products/details/io/usb/specifications.html)
