@@ -1,6 +1,6 @@
 # SystemOSIOT 国际化权威标准基线
 
-> 版本：1.1.0
+> 版本：1.1.1
 > 更新日期：2026-07-05
 > 用途：定义项目各模块必须对齐的国际权威来源，作为引用、映射与审计的基线。
 
@@ -121,6 +121,9 @@
 | RFC | Internet Protocol, Version 6 (IPv6) | RFC 8200 | <https://datatracker.ietf.org/doc/html/rfc8200> |
 | RFC | TCP/IP Host Requirements | RFC 1122/1123 | <https://datatracker.ietf.org/doc/html/rfc1122> |
 | RFC | TCP Congestion Control | RFC 5681 | <https://datatracker.ietf.org/doc/html/rfc5681> |
+| RFC | HTTP Semantics / HTTP/1.1 / HTTP/3 | RFC 9110/9112/9114 | <https://datatracker.ietf.org/doc/html/rfc9110> |
+| RFC | TLS 1.3 | RFC 8446 | <https://datatracker.ietf.org/doc/html/rfc8446> |
+| RFC | DNS Concepts / Implementation | RFC 1034/1035 | <https://datatracker.ietf.org/doc/html/rfc1034> |
 | RFC | QUIC | RFC 9000/9001/9002/9114 | DOI: 10.17487/RFC9000 |
 | RFC | BGP | RFC 4271 及扩展 | DOI: 10.17487/RFC4271 |
 | RFC | OSPF | RFC 2328/5340 | DOI: 10.17487/RFC2328 |
@@ -131,6 +134,9 @@
 | 语言 | P4 / P4Runtime | P4-16 / v1.4.1 | <https://p4.org/> |
 | 标准 | 3GPP 5G-Advanced | Release 18 | <https://www.3gpp.org/specifications> |
 | 框架 | NIST SP 800-207 | Zero Trust Architecture | <https://csrc.nist.gov/publications/detail/sp/800/207/final> |
+| 框架 | NIST Cybersecurity Framework | CSF 2.0 | <https://www.nist.gov/cyberframework> |
+| 框架 | NIST AI Risk Management Framework | AI RMF 1.0 | <https://www.nist.gov/itl/ai-risk-management-framework> |
+| 法规 | EU AI Act | 2024 | <https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32024R1689> |
 | Linux 网络文档 | netdev subsystem | 最新 | <https://docs.kernel.org/process/maintainer-netdev.html> |
 | eBPF/XDP 文档 | Linux BPF / XDP | 最新 | <https://docs.kernel.org/bpf/>, <https://docs.kernel.org/networking/xdp.html> |
 | 流量控制 | Linux tc / Traffic Control | 最新 | <https://docs.kernel.org/networking/sched/> |

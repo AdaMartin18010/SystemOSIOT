@@ -3,13 +3,13 @@
 
 <!-- TOC START -->
 
-- [8.0 网络系统 — 国际标准映射](#80-网络系统-国际标准映射)
+- [8.0 网络系统 — 国际标准映射](#80-网络系统--国际标准映射)
   - [1. 主要对标标准与 RFC](#1-主要对标标准与-rfc)
   - [2. 标准/RFC 映射表](#2-标准rfc-映射表)
   - [3. 覆盖缺口与补齐计划](#3-覆盖缺口与补齐计划)
   - [5. 形式化工件链接](#5-形式化工件链接)
   - [6. 维护记录](#6-维护记录)
-  - [国际权威来源链接 | International Authoritative Sources](#国际权威来源链接-international-authoritative-sources)
+  - [国际权威来源链接 | International Authoritative Sources](#国际权威来源链接--international-authoritative-sources)
 
 <!-- TOC END -->
 
@@ -77,6 +77,7 @@
 | 2026-07-02 | 创建映射骨架 | Kimi Code CLI |
 | 2026-07-05 | 补齐以太网/IP/TCP/UDP/HTTP/TLS/DNS/OSI/IEEE 802.3/802.1Q 权威来源与链接 | Kimi Code CLI |
 | 2026-07-05 | 向 8.1/8.6/8.7/8.8 关键章节批量追加 RFC/ISO/IEEE/NIST 权威来源链接 | Kimi Code CLI |
+| 2026-07-05 | 向 8.1–8.8 全部 154 个 Markdown 文件追加国际权威来源链接，覆盖核心概念、批判分析、形式化结构/证明/语义、运行时语义与综合专题 | Kimi Code CLI |
 
 ## 国际权威来源链接 | International Authoritative Sources
 
