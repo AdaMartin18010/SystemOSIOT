@@ -40,10 +40,13 @@ HEADING_PATTERN = re.compile(r"^(?P<indent>\s{0,3})(?P<hash>#{1,6})\s+(?P<text>.
 
 
 def slugify(text: str) -> str:
-    """Create a GitHub-like slug for Markdown anchors.
+    """Create a project-consistent slug for Markdown anchors.
 
-    We: lower-case, strip, remove punctuation except dashes and spaces,
-    replace spaces with dashes, collapse repeats. Retain CJK characters.
+    The project/VSCodium markdown toolchain removes punctuation (arrows,
+    slashes, pipes, emoji, etc.) and maps every whitespace character to a
+    single '-'.  Multiple consecutive dashes are preserved so that anchors
+    for headings such as "A / B" become "a--b" rather than "a-b".  CJK
+    characters are retained.
     """
     t = text.strip().lower()
     # Remove inline links/images markup when used as heading text
@@ -51,10 +54,10 @@ def slugify(text: str) -> str:
     t = re.sub(r"\[[^\]]*\]\([^)]*\)", lambda m: m.group(0).split("](")[0][1:], t)
     # Remove code backticks
     t = t.replace("`", "")
-    # Keep unicode letters/numbers including CJK; replace others except space and hyphen
+    # Keep unicode letters/numbers including CJK and hyphens; drop punctuation/emoji
     t = re.sub(r"[^\w\-\s\u4e00-\u9fff]", "", t, flags=re.UNICODE)
-    t = re.sub(r"\s+", "-", t)
-    t = re.sub(r"-+", "-", t)
+    # Map every whitespace character to a dash (do not collapse dashes)
+    t = re.sub(r"\s", "-", t)
     return t
 
 

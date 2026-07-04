@@ -14,7 +14,7 @@
   - [应用领域](#应用领域)
   - [相关资源](#相关资源)
   - [实践项目](#实践项目)
-  - [国际权威来源链接 | International Authoritative Sources](#国际权威来源链接-international-authoritative-sources)
+  - [国际权威来源链接 | International Authoritative Sources](#国际权威来源链接--international-authoritative-sources)
 
 <!-- TOC END -->
 
@@ -29,6 +29,14 @@
 - **8.8.3 网络系统的安全治理与多方协作** - 网络系统的安全治理和协作机制
 - **8.8.4 网络系统的伦理挑战与社会影响** - 网络系统的伦理问题和社会影响
 - **8.8.5 网络系统的未来趋势与前沿展望** - 网络系统的未来发展方向和前沿技术
+- **[8.8.25 QUIC 协议深度分析](./8.8.25%20QUIC%20协议深度分析.md)** - QUIC/HTTP/3 传输层协议权威解析
+- **[8.8.26 BGP 安全与 RPKI](./8.8.26%20BGP%20安全%20与%20RPKI.md)** - BGP 路由安全与资源公钥基础设施
+- **[8.8.27 DNS 安全：DNSSEC、DoH 与 DoT](./8.8.27%20DNS%20安全：DNSSEC、DoH%20与%20DoT.md)** - DNS 数据认证与加密传输
+- **[8.8.28 IPsec 与 IKEv2：VPN 与隧道安全](./8.8.28%20IPsec%20与%20IKEv2：VPN%20与隧道安全.md)** - 网络层 VPN 与密钥交换
+- **[8.8.29 MPLS、SRv6 与 EVPN：路由与流量工程](./8.8.29%20MPLS、SRv6%20与%20EVPN：路由与流量工程.md)** - 路由、分段路由与以太网 VPN
+- **[8.8.30 数据中心网络虚拟化：VXLAN、Geneve 与 CNI](./8.8.30%20数据中心网络虚拟化：VXLAN、Geneve%20与%20CNI.md)** - Overlay 与容器网络接口
+- **[8.8.31 可编程网络：OpenFlow 与 P4](./8.8.31%20可编程网络：OpenFlow%20与%20P4.md)** - SDN、OpenFlow 与 P4 数据平面编程
+- **[8.8.32 5G 与边缘计算：3GPP、802.11be 与 ETSI MEC](./8.8.32%205G%20与边缘计算：3GPP、802.11be%20与%20ETSI%20MEC.md)** - 5G/NR、Wi-Fi 7 与边缘计算框架
 
 ## 核心概念
 
@@ -44,6 +52,14 @@
 - **人工智能**：AI在网络系统中的应用
 - **区块链技术**：区块链在网络系统中的作用
 - **边缘计算**：边缘计算对网络系统的影响
+- **QUIC / HTTP/3**：基于 UDP 的新一代传输与 Web 协议
+- **BGP 安全与 RPKI**：互联网路由起源验证与路径安全
+- **DNS 安全（DNSSEC/DoH/DoT）**：域名系统认证与隐私保护
+- **IPsec / IKEv2**：网络层 VPN 与隧道安全
+- **MPLS / SRv6 / EVPN**：路由抽象、分段路由与二层/三层 VPN
+- **VXLAN / Geneve / CNI**：数据中心 Overlay 与容器网络接口
+- **OpenFlow / P4**：SDN 控制平面与可编程数据平面
+- **5G / Wi-Fi 7 / ETSI MEC**：移动通信、WLAN 与边缘计算
 - **量子通信**：量子通信技术的发展前景
 
 ### 社会影响

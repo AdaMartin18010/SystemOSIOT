@@ -101,7 +101,7 @@ graph TD
 
 ### 6.2 URB 生命周期
 
-```
+```text
 usb_alloc_urb()
   ↓ 填充 urb
   ↓ usb_submit_urb()      # 异步提交

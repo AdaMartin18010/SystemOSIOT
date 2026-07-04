@@ -4,15 +4,15 @@
 <!-- TOC START -->
 
 - [Linux 网络协议栈实现映射](#linux-网络协议栈实现映射)
-  - [1. OSI / TCP/IP → Linux 子系统映射](#1-osi-tcpip-linux-子系统映射)
-  - [2. 协议 → 数据结构/函数映射](#2-协议-数据结构函数映射)
-  - [3. Socket API → 内核路径](#3-socket-api-内核路径)
+  - [1. OSI / TCP/IP → Linux 子系统映射](#1-osi--tcpip--linux-子系统映射)
+  - [2. 协议 → 数据结构/函数映射](#2-协议--数据结构函数映射)
+  - [3. Socket API → 内核路径](#3-socket-api--内核路径)
   - [4. 数据包收发路径](#4-数据包收发路径)
     - [4.1 接收路径](#41-接收路径)
     - [4.2 发送路径](#42-发送路径)
   - [5. 标准映射](#5-标准映射)
   - [6. 相关文件](#6-相关文件)
-  - [国际权威来源链接 / Authoritative Sources](#国际权威来源链接-authoritative-sources)
+  - [国际权威来源链接 / Authoritative Sources](#国际权威来源链接--authoritative-sources)
 
 <!-- TOC END -->
 

@@ -3,17 +3,18 @@
 
 <!-- TOC START -->
 
-- [8.0 网络系统 — 国际标准映射](#80-网络系统-国际标准映射)
+- [8.0 网络系统 — 国际标准映射](#80-网络系统--国际标准映射)
   - [1. 主要对标标准与 RFC](#1-主要对标标准与-rfc)
   - [2. 标准/RFC 映射表](#2-标准rfc-映射表)
   - [3. 覆盖缺口与补齐计划](#3-覆盖缺口与补齐计划)
   - [5. 形式化工件链接](#5-形式化工件链接)
   - [6. 维护记录](#6-维护记录)
-  - [国际权威来源链接 | International Authoritative Sources](#国际权威来源链接-international-authoritative-sources)
+  - [国际权威来源链接 | International Authoritative Sources](#国际权威来源链接--international-authoritative-sources)
 
 <!-- TOC END -->
 
 > 详细概念 → 来源映射请见 [`source-mapping-network.md`](./source-mapping-network.md)。
+> 分层（OSI/TCP/IP）→ 来源映射请见 [`layered-source-mapping.md`](./layered-source-mapping.md)。
 > 高级协议、安全增强与新型网络标准请见 [`advanced-protocol-security-standards.md`](./advanced-protocol-security-standards.md)。
 
 ## 1. 主要对标标准与 RFC
@@ -35,7 +36,7 @@
 | IEEE 802.11 | [IEEE 802.11-2024](https://standards.ieee.org/standard/802.11-2024.html) | <https://standards.ieee.org/standard/802.11-2024.html> | 8.1, 8.5, 8.8 |
 | [OpenFlow](https://opennetworking.org/software-defined-standards/) | 1.5.1 | <https://opennetworking.org/software-defined-standards/> | 8.8 |
 | P4 / [P4Runtime](https://p4.org/) | [P4-16](https://p4.org/) / v1.4.1 | <https://p4.org/> | 8.8 |
-| [3GPP](https://www.3gpp.org/specifications) 5G-Advanced | Release 18 | <https://www.3gpp.org/specifications> | 8.8 |
+| [3GPP](https://www.3gpp.org/specifications) 5G-Advanced / IEEE 802.11be / ETSI MEC | Release 18 / 802.11be-2024 / MEC | <https://www.3gpp.org/specifications> | 8.8 |
 | [NIST SP 800-207](https://csrc.nist.gov/publications/detail/sp/800/207/final) | Zero Trust Architecture | <https://csrc.nist.gov/publications/detail/sp/800/207/final> | 8.2, 8.8 |
 
 ## 2. 标准/RFC 映射表
@@ -50,31 +51,32 @@
 | [RFC 8446](https://datatracker.ietf.org/doc/html/rfc8446) | TLS 1.3 | 8.1, 8.2, 8.8 | 8.1/1.8.22 | 已覆盖 |
 | [RFC 1034](https://datatracker.ietf.org/doc/html/rfc1034)/1035/2181 | DNS concepts / implementation / clarifications | 8.1, 8.6 | 8.1/1.8.22 | 已覆盖 |
 | [RFC 1122](https://datatracker.ietf.org/doc/html/rfc1122) | Host requirements (link, IP, TCP) | 8.1, 8.6 | 8.1/1.8.21 | 已覆盖 |
-| [RFC 9000](https://datatracker.ietf.org/doc/html/rfc9000) | QUIC transport protocol | 8.1, 8.6, 8.7 | tools/tla-specifications/QUIC.tla | 已覆盖 |
+| [RFC 9000](https://datatracker.ietf.org/doc/html/rfc9000) | QUIC transport protocol | 8.1, 8.6, 8.7, 8.8 | tools/tla-specifications/QUIC.tla, 8.8/8.8.25 | 已覆盖 |
 | [RFC 4271](https://datatracker.ietf.org/doc/html/rfc4271) | BGP-4 path selection | 8.1, 8.3 | 8.1/1.8.22 | 已覆盖 |
 | [RFC 2328](https://datatracker.ietf.org/doc/html/rfc2328) | OSPFv2 Dijkstra/LSA | 8.1, 8.3 | 8.1/1.8.22 | 已覆盖 |
 | [IEEE 802.3-2022](https://standards.ieee.org/standard/802.3-2022.html) | Ethernet MAC/PHY | 8.1, 8.5 | 8.1/1.8.21 | 已覆盖 |
 | [IEEE 802.1Q-2024](https://standards.ieee.org/standard/802.1Q-2024.html) | VLAN bridging | 8.1, 8.5 | 8.1/1.8.21 | 已覆盖 |
 | [IEEE 802.11-2024](https://standards.ieee.org/standard/802.11-2024.html) | WLAN MAC/PHY | 8.1, 8.5 | 8.5/8.5.1, advanced-protocol-security-standards.md | 已覆盖 |
-| [P4-16](https://p4.org/) Language Spec | Protocol-independent packet processing | 8.8 | 8.0 国际标准映射 | 部分覆盖 |
+| [P4-16](https://p4.org/) Language Spec | Protocol-independent packet processing | 8.8 | 8.0 国际标准映射, 8.8/8.8.31 | 已覆盖 |
+| 分层权威来源映射 | OSI/TCP/IP 各层 → 标准/RFC/工程文档 | 8.0, 8.1–8.8 | [layered-source-mapping.md](./layered-source-mapping.md) | 已覆盖 |
 | [NIST SP 800-207](https://csrc.nist.gov/publications/detail/sp/800/207/final) | Zero Trust principles | 8.2, 8.8 | 8.2/8.2.x, advanced-protocol-security-standards.md | 部分覆盖 |
-| DNSSEC / DoH / DoT | DNS security & privacy | 8.2, 8.8 | advanced-protocol-security-standards.md | 部分覆盖 |
-| RPKI / BGPsec / ROV | BGP security extensions | 8.2, 8.8 | advanced-protocol-security-standards.md | 部分覆盖 |
-| IPsec / IKEv2 | VPN / tunnel security | 8.2, 8.8 | advanced-protocol-security-standards.md | 待补齐 |
+| DNSSEC / DoH / DoT | DNS security & privacy | 8.2, 8.8 | advanced-protocol-security-standards.md, 8.8/8.8.27 | 已覆盖 |
+| RPKI / BGPsec / ROV | BGP security extensions | 8.2, 8.8 | advanced-protocol-security-standards.md, 8.8/8.8.26 | 已覆盖 |
+| IPsec / IKEv2 | VPN / tunnel security | 8.2, 8.8 | advanced-protocol-security-standards.md, 8.8/8.8.28 | 已覆盖 |
 | HTTP/2 / WebSocket | Application layer protocols | 8.1, 8.6 | 8.1/1.8.21, advanced-protocol-security-standards.md | 已覆盖 |
-| MPLS / SRv6 / EVPN | Routing & traffic engineering | 8.3, 8.8 | advanced-protocol-security-standards.md | 待补齐 |
-| VXLAN / Geneve / CNI | Data center network virtualization | 8.8 | advanced-protocol-security-standards.md | 待补齐 |
+| MPLS / SRv6 / EVPN | Routing & traffic engineering | 8.3, 8.8 | advanced-protocol-security-standards.md, 8.8/8.8.29 | 已覆盖 |
+| VXLAN / Geneve / CNI | Data center network virtualization | 8.8 | advanced-protocol-security-standards.md, 8.8/8.8.30 | 已覆盖 |
 
 ## 3. 覆盖缺口与补齐计划
 
 1. **RFC 引用规范化**：全模块知识点标注 RFC 编号/DOI/版本，删除无来源推测。
-2. **QUIC 独立专章**：按 [RFC 9000](https://datatracker.ietf.org/doc/html/rfc9000) 条款建立形式化分析。
-3. **BGP 安全**：新增 RPKI、ROV、BGPsec 章节。
-4. **可编程网络**：新增 P4/[P4Runtime](https://p4.org/)、[OpenFlow](https://opennetworking.org/software-defined-standards/) 1.5.1 形式化语义。
+2. ~~QUIC 独立专章~~：已新增 `8.8/8.8.25 QUIC 协议深度分析.md`。
+3. ~~BGP 安全~~：已新增 `8.8/8.8.26 BGP 安全与 RPKI.md`。
+4. ~~可编程网络~~：OpenFlow/P4 专题已补齐；形式化语义仍可作为后续 Phase 9 工件。
 5. **零信任架构**：增加 [NIST SP 800-207](https://csrc.nist.gov/publications/detail/sp/800/207/final) 映射。
-6. **高级安全协议**：补齐 DNSSEC/DoH/DoT、RPKI/BGPsec/ROV、IPsec/IKEv2 映射。
-7. **数据中心与可编程网络**：补齐 VXLAN/Geneve、SRv6/EVPN、[OpenFlow](https://opennetworking.org/software-defined-standards/)/P4 深度映射。
-8. **移动通信与边缘网络**：补齐 [3GPP](https://www.3gpp.org/specifications) 5G/802.11be/ETSI MEC 来源。
+6. ~~高级安全协议~~：DNSSEC/DoH/DoT、RPKI/BGPsec/ROV、IPsec/IKEv2 专题已补齐。
+7. ~~数据中心与可编程网络~~：VXLAN/Geneve/CNI/OpenFlow/P4 专题已补齐。
+8. ~~移动通信与边缘网络~~：3GPP 5G/802.11be/ETSI MEC 专题已补齐。
 
 ## 5. 形式化工件链接
 
@@ -91,6 +93,10 @@
 | 2026-07-05 | 向 8.1/8.6/8.7/8.8 关键章节批量追加 RFC/ISO/IEEE/NIST 权威来源链接 | Kimi Code CLI |
 | 2026-07-05 | 向 8.1–8.8 全部 154 个 Markdown 文件追加国际权威来源链接，覆盖核心概念、批判分析、形式化结构/证明/语义、运行时语义与综合专题 | Kimi Code CLI |
 | 2026-07-05 | 新增高级协议与安全标准映射表，覆盖 DNSSEC/DoH/DoT、RPKI/BGPsec、IPsec/IKEv2、MPLS/SRv6、VXLAN/Geneve、5G/802.11be/MEC | Kimi Code CLI |
+| 2026-07-05 | 新增 QUIC/HTTP/3 深度分析专题（8.8.25）与 BGP 安全/RPKI 专题（8.8.26），更新映射表证据与覆盖状态 | Kimi Code CLI |
+| 2026-07-05 | 新增 DNS 安全（DNSSEC/DoH/DoT，8.8.27）与 IPsec/IKEv2 VPN 安全（8.8.28）专题，更新映射表覆盖状态 | Kimi Code CLI |
+| 2026-07-05 | 新增 MPLS/SRv6/EVPN 路由专题（8.8.29）与 VXLAN/Geneve/CNI 数据中心网络专题（8.8.30），更新映射表覆盖状态 | Kimi Code CLI |
+| 2026-07-05 | 新增可编程网络 OpenFlow/P4 专题（8.8.31）与 5G/边缘计算/Wi-Fi 7 专题（8.8.32），更新映射表覆盖状态 | Kimi Code CLI |
 
 ## 国际权威来源链接 | International Authoritative Sources
 

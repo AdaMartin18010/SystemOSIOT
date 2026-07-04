@@ -142,6 +142,24 @@
 | 流量控制 | Linux tc / Traffic Control | 最新 | <https://docs.kernel.org/networking/sched/> |
 | 教材 | TCP/IP Illustrated, Vol. 1 (Stevens) | 2nd Ed. | Addison-Wesley |
 | 教材 | Linux Kernel Networking (Rami Rosen) | 最新 | Apress |
+| RFC | DNSSEC | RFC 4033/4034/4035 | <https://datatracker.ietf.org/doc/html/rfc4033> |
+| RFC | DNS over HTTPS (DoH) | RFC 8484 | <https://datatracker.ietf.org/doc/html/rfc8484> |
+| RFC | DNS over TLS (DoT) | RFC 7858 | <https://datatracker.ietf.org/doc/html/rfc7858> |
+| RFC | WebSocket | RFC 6455 | <https://datatracker.ietf.org/doc/html/rfc6455> |
+| RFC | HTTP/2 | RFC 7540/7541 | <https://datatracker.ietf.org/doc/html/rfc7540> |
+| RFC | IPsec Architecture | RFC 4301 | <https://datatracker.ietf.org/doc/html/rfc4301> |
+| RFC | IKEv2 | RFC 7296 | <https://datatracker.ietf.org/doc/html/rfc7296> |
+| RFC | BGPsec | RFC 8205 | <https://datatracker.ietf.org/doc/html/rfc8205> |
+| RFC | RPKI / ROA | RFC 6480/6482/6487 | <https://datatracker.ietf.org/doc/html/rfc6480> |
+| RFC | Route Origin Validation (ROV) | RFC 6811 | <https://datatracker.ietf.org/doc/html/rfc6811> |
+| RFC | MPLS | RFC 3031 | <https://datatracker.ietf.org/doc/html/rfc3031> |
+| RFC | SRv6 | RFC 8402/8986 | <https://datatracker.ietf.org/doc/html/rfc8402> |
+| RFC | TCP Fast Open | RFC 7413 | <https://datatracker.ietf.org/doc/html/rfc7413> |
+| RFC | BBR Congestion Control | RFC 8312 | <https://datatracker.ietf.org/doc/html/rfc8312> |
+| RFC | SCTP | RFC 4960 | <https://datatracker.ietf.org/doc/html/rfc4960> |
+| RFC | DTLS 1.3 | RFC 9147 | <https://datatracker.ietf.org/doc/html/rfc9147> |
+| 标准 | MQTT v5.0 | OASIS | <https://docs.oasis-open.org/mqtt/mqtt/v5.0/mqtt-v5.0.html> |
+| 标准 | CoAP | RFC 7252 | <https://datatracker.ietf.org/doc/html/rfc7252> |
 | 论文 | io_uring (Jens Axboe) | 2020 | <https://kernel.dk/io_uring.pdf> |
 
 ## 9. 形式化方法通用基准

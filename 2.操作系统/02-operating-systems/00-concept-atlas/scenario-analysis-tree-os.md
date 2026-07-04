@@ -3,7 +3,7 @@
 
 <!-- TOC START -->
 
-- [操作系统场景分析树 / 决策树（OS Scenario \& Decision Tree）](#操作系统场景分析树--决策树os-scenario--decision-tree)
+- [操作系统场景分析树 / 决策树（OS Scenario & Decision Tree）](#操作系统场景分析树--决策树os-scenario--decision-tree)
   - [1. 高并发 I/O 多路复用决策树](#1-高并发-io-多路复用决策树)
   - [2. 调度策略决策树](#2-调度策略决策树)
   - [3. 总线/外设选择决策树](#3-总线外设选择决策树)

@@ -26,7 +26,7 @@
   - [9. 术语表](#9-术语表)
   - [10. 国际来源映射](#10-国际来源映射)
   - [11. 相关文件](#11-相关文件)
-  - [国际权威来源链接 / Authoritative Sources](#国际权威来源链接-authoritative-sources)
+  - [国际权威来源链接 / Authoritative Sources](#国际权威来源链接--authoritative-sources)
 
 <!-- TOC END -->
 

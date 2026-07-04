@@ -3,7 +3,7 @@
 
 <!-- TOC START -->
 
-- [网络高级协议与安全标准映射 / Advanced Protocol & Security Standards Mapping](#网络高级协议与安全标准映射-advanced-protocol-security-standards-mapping)
+- [网络高级协议与安全标准映射 / Advanced Protocol \& Security Standards Mapping](#网络高级协议与安全标准映射--advanced-protocol--security-standards-mapping)
   - [1. 传输层增强与新型传输协议](#1-传输层增强与新型传输协议)
   - [2. 网络安全与隐私增强](#2-网络安全与隐私增强)
   - [3. 路由与流量工程扩展](#3-路由与流量工程扩展)
@@ -89,12 +89,14 @@
 
 ## 覆盖状态与补齐计划
 
-1. **DNSSEC / DoH / DoT**：当前 `8.1/1.8.22`、`8.2/8.2.x` 仅提及 DNS 基础安全，需补充协议细节。
-2. **RPKI / BGPsec / ROV**：`8.1/1.8.22` 已提及 RPKI，需扩展为独立小节。
-3. **IPsec / IKEv2**：`8.8` 安全专题可新增 VPN/隧道协议分析。
-4. **MPLS / SRv6 / EVPN**：`8.3` 形式化结构可新增路由抽象模型。
-5. **VXLAN / Geneve / CNI**：`8.8` 可新增数据中心网络虚拟化专题。
-6. **[3GPP](https://www.3gpp.org/specifications) / ETSI MEC**：`8.8` 未来网络专题可补充 5G/边缘架构来源。
+1. **QUIC / HTTP/3**：已新增 `8.8/8.8.25 QUIC 协议深度分析.md`，覆盖 RFC 9000/9001/9002/9114/9204。
+2. **RPKI / BGPsec / ROV**：已新增 `8.8/8.8.26 BGP 安全与 RPKI.md`，覆盖 RFC 6480/6482/6487/6811/8205。
+3. **DNSSEC / DoH / DoT**：已新增 `8.8/8.8.27 DNS 安全：DNSSEC、DoH 与 DoT.md`，覆盖 RFC 4033/4034/4035/7858/8484。
+4. **IPsec / IKEv2**：已新增 `8.8/8.8.28 IPsec 与 IKEv2：VPN 与隧道安全.md`，覆盖 RFC 4301/4302/4303/7296。
+5. **MPLS / SRv6 / EVPN**：已新增 `8.8/8.8.29 MPLS、SRv6 与 EVPN：路由与流量工程.md`，覆盖 RFC 3031/3209/8402/8986/7432/8365。
+6. **VXLAN / Geneve / CNI**：已新增 `8.8/8.8.30 数据中心网络虚拟化：VXLAN、Geneve 与 CNI.md`，覆盖 RFC 7348/8926 与 CNI Spec。
+7. **OpenFlow / P4**：已新增 `8.8/8.8.31 可编程网络：OpenFlow 与 P4.md`，覆盖 ONF OpenFlow 1.5.1、P4-16、P4Runtime。
+8. **[3GPP](https://www.3gpp.org/specifications) / IEEE 802.11be / ETSI MEC**：已新增 `8.8/8.8.32 5G 与边缘计算：3GPP、802.11be 与 ETSI MEC.md`，覆盖 TS 23.501/38.300、IEEE 802.11be-2024、ETSI MEC。
 
 ---
 
@@ -103,3 +105,7 @@
 | 日期 | 操作 | 维护者 |
 |---|---|---|
 | 2026-07-05 | 建立高级协议与安全标准映射表 | Kimi Code CLI |
+| 2026-07-05 | 补齐 QUIC / HTTP/3 深度分析专题（8.8.25）与 BGP 安全 / RPKI 专题（8.8.26） | Kimi Code CLI |
+| 2026-07-05 | 补齐 DNS 安全（DNSSEC/DoH/DoT，8.8.27）与 IPsec/IKEv2 VPN 安全（8.8.28）专题 | Kimi Code CLI |
+| 2026-07-05 | 补齐 MPLS/SRv6/EVPN 路由专题（8.8.29）与 VXLAN/Geneve/CNI 数据中心网络专题（8.8.30） | Kimi Code CLI |
+| 2026-07-05 | 补齐可编程网络 OpenFlow/P4 专题（8.8.31）与 5G/边缘计算/Wi-Fi 7 专题（8.8.32） | Kimi Code CLI |

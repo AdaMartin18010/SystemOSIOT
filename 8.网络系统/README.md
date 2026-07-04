@@ -2,36 +2,36 @@
 
 <!-- TOC START -->
 
-- [8.网络系统 / Network Systems](#8网络系统-network-systems)
-  - [目录结构规划 / Directory Structure Planning](#目录结构规划-directory-structure-planning)
-    - [8.1 知识梳理 / Knowledge Review](#81-知识梳理-knowledge-review)
+- [8.网络系统 / Network Systems](#8网络系统--network-systems)
+  - [目录结构规划 / Directory Structure Planning](#目录结构规划--directory-structure-planning)
+    - [8.1 知识梳理 / Knowledge Review](#81-知识梳理--knowledge-review)
     - [新增 OS 网络实现映射](#新增-os-网络实现映射)
-    - [8.2 批判分析 / Critical Analysis](#82-批判分析-critical-analysis)
-    - [8.3 形式化结构 / Formal Structure](#83-形式化结构-formal-structure)
-    - [8.4 形式化证明 / Formal Proof](#84-形式化证明-formal-proof)
-    - [8.5 多表征 / Multiple Representations](#85-多表征-multiple-representations)
-    - [8.6 形式语义 / Formal Semantics](#86-形式语义-formal-semantics)
-    - [8.7 系统运行时语义 / System Runtime Semantics](#87-系统运行时语义-system-runtime-semantics)
-    - [8.8 综合专题与前沿展望 / Special Topics and Prospects](#88-综合专题与前沿展望-special-topics-and-prospects)
-  - [系统化成果展示 / Systematic Achievement Display](#系统化成果展示-systematic-achievement-display)
-    - [中英双语对照 / Chinese-English Bilingual Content](#中英双语对照-chinese-english-bilingual-content)
-    - [工程论证深度 / Engineering Argumentation Depth](#工程论证深度-engineering-argumentation-depth)
-    - [知识点完备性 / Knowledge Point Completeness](#知识点完备性-knowledge-point-completeness)
-    - [结构对标国际wiki / Structure Benchmarking International Wiki](#结构对标国际wiki-structure-benchmarking-international-wiki)
-  - [递归专题与扩展案例 / Recursive Topics and Extended Cases](#递归专题与扩展案例-recursive-topics-and-extended-cases)
-    - [网络协议深度分析 / Deep Analysis of Network Protocols](#网络协议深度分析-deep-analysis-of-network-protocols)
-    - [网络性能优化专题 / Network Performance Optimization Topics](#网络性能优化专题-network-performance-optimization-topics)
-    - [网络安全前沿技术 / Network Security Frontier Technologies](#网络安全前沿技术-network-security-frontier-technologies)
-  - [规划与建议 / Planning and Recommendations](#规划与建议-planning-and-recommendations)
-    - [短期目标 / Short-term Goals](#短期目标-short-term-goals)
-    - [中期目标 / Medium-term Goals](#中期目标-medium-term-goals)
-    - [长期目标 / Long-term Goals](#长期目标-long-term-goals)
-  - [全局知识结构与批判性导图 / Global Knowledge Structure and Critical Diagram](#全局知识结构与批判性导图-global-knowledge-structure-and-critical-diagram)
-    - [哲学批判说明 / Philosophical Critique](#哲学批判说明-philosophical-critique)
-  - [权威来源总览 / Authoritative Sources Overview](#权威来源总览-authoritative-sources-overview)
+    - [8.2 批判分析 / Critical Analysis](#82-批判分析--critical-analysis)
+    - [8.3 形式化结构 / Formal Structure](#83-形式化结构--formal-structure)
+    - [8.4 形式化证明 / Formal Proof](#84-形式化证明--formal-proof)
+    - [8.5 多表征 / Multiple Representations](#85-多表征--multiple-representations)
+    - [8.6 形式语义 / Formal Semantics](#86-形式语义--formal-semantics)
+    - [8.7 系统运行时语义 / System Runtime Semantics](#87-系统运行时语义--system-runtime-semantics)
+    - [8.8 综合专题与前沿展望 / Special Topics and Prospects](#88-综合专题与前沿展望--special-topics-and-prospects)
+  - [系统化成果展示 / Systematic Achievement Display](#系统化成果展示--systematic-achievement-display)
+    - [中英双语对照 / Chinese-English Bilingual Content](#中英双语对照--chinese-english-bilingual-content)
+    - [工程论证深度 / Engineering Argumentation Depth](#工程论证深度--engineering-argumentation-depth)
+    - [知识点完备性 / Knowledge Point Completeness](#知识点完备性--knowledge-point-completeness)
+    - [结构对标国际wiki / Structure Benchmarking International Wiki](#结构对标国际wiki--structure-benchmarking-international-wiki)
+  - [递归专题与扩展案例 / Recursive Topics and Extended Cases](#递归专题与扩展案例--recursive-topics-and-extended-cases)
+    - [网络协议深度分析 / Deep Analysis of Network Protocols](#网络协议深度分析--deep-analysis-of-network-protocols)
+    - [网络性能优化专题 / Network Performance Optimization Topics](#网络性能优化专题--network-performance-optimization-topics)
+    - [网络安全前沿技术 / Network Security Frontier Technologies](#网络安全前沿技术--network-security-frontier-technologies)
+  - [规划与建议 / Planning and Recommendations](#规划与建议--planning-and-recommendations)
+    - [短期目标 / Short-term Goals](#短期目标--short-term-goals)
+    - [中期目标 / Medium-term Goals](#中期目标--medium-term-goals)
+    - [长期目标 / Long-term Goals](#长期目标--long-term-goals)
+  - [全局知识结构与批判性导图 / Global Knowledge Structure and Critical Diagram](#全局知识结构与批判性导图--global-knowledge-structure-and-critical-diagram)
+    - [哲学批判说明 / Philosophical Critique](#哲学批判说明--philosophical-critique)
+  - [权威来源总览 / Authoritative Sources Overview](#权威来源总览--authoritative-sources-overview)
   - [快速导航（项目级）](#快速导航项目级)
   - [工具与校验（项目级）](#工具与校验项目级)
-  - [国际权威来源链接 | International Authoritative Sources](#国际权威来源链接-international-authoritative-sources)
+  - [国际权威来源链接 | International Authoritative Sources](#国际权威来源链接--international-authoritative-sources)
 
 <!-- TOC END -->
 
@@ -97,6 +97,14 @@
 
 - 软件定义网络（SDN） / Software-Defined Networking (SDN)
 - 网络功能虚拟化（NFV） / Network Function Virtualization (NFV)
+- QUIC 与 HTTP/3 / QUIC and HTTP/3
+- BGP 安全与 RPKI / BGP Security and RPKI
+- DNS 安全（DNSSEC/DoH/DoT） / DNS Security (DNSSEC/DoH/DoT)
+- IPsec / IKEv2 / IPsec and IKEv2
+- MPLS / SRv6 / EVPN / MPLS, SRv6 and EVPN
+- VXLAN / Geneve / CNI / VXLAN, Geneve and CNI
+- OpenFlow / P4 / OpenFlow and P4
+- 5G / Wi-Fi 7 / ETSI MEC / 5G, Wi-Fi 7 and ETSI MEC
 - 5G/6G网络技术 / 5G/6G Network Technologies
 - 量子网络与未来网络 / Quantum Networks and Future Networks
 
@@ -133,9 +141,13 @@
 ### 网络协议深度分析 / Deep Analysis of Network Protocols
 
 - TCP/IP协议栈形式化分析 / Formal Analysis of TCP/IP Protocol Stack
+- QUIC 协议深度分析 / QUIC Protocol Deep Dive
 - HTTP/HTTPS协议语义建模 / HTTP/HTTPS Protocol Semantic Modeling
 - DNS协议安全性验证 / DNS Protocol Security Verification
 - BGP协议收敛性证明 / BGP Protocol Convergence Proof
+- BGP 安全与 RPKI / BGP Security and RPKI
+- DNS 安全（DNSSEC/DoH/DoT） / DNS Security (DNSSEC/DoH/DoT)
+- IPsec / IKEv2 / IPsec and IKEv2
 
 ### 网络性能优化专题 / Network Performance Optimization Topics
 
@@ -147,6 +159,13 @@
 ### 网络安全前沿技术 / Network Security Frontier Technologies
 
 - 零信任网络架构 / Zero Trust Network Architecture
+- BGP 安全与 RPKI / BGP Security and RPKI
+- DNS 安全（DNSSEC/DoH/DoT） / DNS Security (DNSSEC/DoH/DoT)
+- IPsec / IKEv2 / IPsec and IKEv2
+- MPLS / SRv6 / EVPN / MPLS, SRv6 and EVPN
+- VXLAN / Geneve / CNI / VXLAN, Geneve and CNI
+- OpenFlow / P4 / OpenFlow and P4
+- 5G / Wi-Fi 7 / ETSI MEC / 5G, Wi-Fi 7 and ETSI MEC
 - 网络入侵检测系统 / Network Intrusion Detection Systems
 - 网络威胁情报分析 / Network Threat Intelligence Analysis
 - 网络隐私保护技术 / Network Privacy Protection Technologies
@@ -262,6 +281,7 @@ graph TD;
 
 - [8.0 国际标准映射](8.0%20国际标准映射/README.md)
 - [网络系统概念 → 国际来源映射](8.0%20国际标准映射/source-mapping-network.md)
+- [网络分层 → 权威来源映射](8.0%20国际标准映射/layered-source-mapping.md)
 - [网络高级协议与安全标准映射](8.0%20国际标准映射/advanced-protocol-security-standards.md)
 - [项目级国际化权威标准基线](../docs/international-baseline.md)
 

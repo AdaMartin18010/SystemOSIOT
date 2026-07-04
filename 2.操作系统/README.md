@@ -14,7 +14,7 @@
     - [🎯 初学者路径 / Beginner Path (1-2个月)](#-初学者路径--beginner-path-1-2个月)
     - [🚀 进阶者路径 / Advanced Path (2-4个月)](#-进阶者路径--advanced-path-2-4个月)
     - [🏆 专家路径 / Expert Path (4-6个月)](#-专家路径--expert-path-4-6个月)
-  - [🛠️ 技术栈 / Technology Stack](#️-技术栈--technology-stack)
+  - [🛠️ 技术栈 / Technology Stack](#-技术栈--technology-stack)
     - [核心组件 / Core Components](#核心组件--core-components)
     - [系统服务 / System Services](#系统服务--system-services)
     - [安全机制 / Security Mechanisms](#安全机制--security-mechanisms)

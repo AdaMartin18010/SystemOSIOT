@@ -18,7 +18,7 @@
   - [应用领域](#应用领域)
   - [相关资源](#相关资源)
   - [实践项目](#实践项目)
-  - [国际权威来源链接 | International Authoritative Sources](#国际权威来源链接-international-authoritative-sources)
+  - [国际权威来源链接 | International Authoritative Sources](#国际权威来源链接--international-authoritative-sources)
 
 <!-- TOC END -->
 

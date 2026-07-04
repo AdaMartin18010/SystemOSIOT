@@ -33,7 +33,7 @@
   - [应用场景](#应用场景)
   - [学习目标](#学习目标)
   - [实践项目](#实践项目)
-  - [国际权威来源链接 | International Authoritative Sources](#国际权威来源链接-international-authoritative-sources)
+  - [国际权威来源链接 | International Authoritative Sources](#国际权威来源链接--international-authoritative-sources)
 
 <!-- TOC END -->
 

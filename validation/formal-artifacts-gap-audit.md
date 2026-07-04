@@ -135,6 +135,16 @@
 | 嵌入式决策树 | `06-decision-trees/*.md` (3 文件) | Markdown + Mermaid | ❌ 无 |
 | 跨域映射 | `Analysis/*跨域映射.md`, `Analysis/*决策树汇总.md` | Markdown + Mermaid | ❌ 无 |
 | OS 网络实现映射 | `8.5 多表征/8.5.1 概念图.md` 已加入 Linux 实现节点 | Markdown + Mermaid | ❌ 无 |
+| 网络权威来源分层映射 | `8.0 国际标准映射/layered-source-mapping.md` 新建分层 → 来源映射 | Markdown | ❌ 无 |
+| 网络权威基线扩展 | `docs/international-baseline.md` 补充 DNSSEC/DoH/DoT/RPKI/BGPsec/IPsec/MQTT/CoAP 等 | Markdown | ❌ 无 |
+| QUIC / HTTP/3 深度专题 | `8.8/8.8.25 QUIC 协议深度分析.md` 新建 | Markdown | ❌ 无 |
+| BGP 安全 / RPKI 深度专题 | `8.8/8.8.26 BGP 安全与 RPKI.md` 新建 | Markdown | ❌ 无 |
+| DNS 安全（DNSSEC/DoH/DoT）深度专题 | `8.8/8.8.27 DNS 安全：DNSSEC、DoH 与 DoT.md` 新建 | Markdown | ❌ 无 |
+| IPsec / IKEv2 VPN 安全深度专题 | `8.8/8.8.28 IPsec 与 IKEv2：VPN 与隧道安全.md` 新建 | Markdown | ❌ 无 |
+| MPLS / SRv6 / EVPN 路由深度专题 | `8.8/8.8.29 MPLS、SRv6 与 EVPN：路由与流量工程.md` 新建 | Markdown | ❌ 无 |
+| VXLAN / Geneve / CNI 数据中心网络专题 | `8.8/8.8.30 数据中心网络虚拟化：VXLAN、Geneve 与 CNI.md` 新建 | Markdown | ❌ 无 |
+| OpenFlow / P4 可编程网络专题 | `8.8/8.8.31 可编程网络：OpenFlow 与 P4.md` 新建 | Markdown | ❌ 无 |
+| 5G / Wi-Fi 7 / ETSI MEC 边缘计算专题 | `8.8/8.8.32 5G 与边缘计算：3GPP、802.11be 与 ETSI MEC.md` 新建 | Markdown | ❌ 无 |
 
 ### 说明
 
