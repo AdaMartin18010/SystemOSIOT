@@ -13,6 +13,9 @@
 
 <!-- TOC END -->
 
+> 详细概念 → 来源映射请见 [`source-mapping-network.md`](./source-mapping-network.md)。
+> 高级协议、安全增强与新型网络标准请见 [`advanced-protocol-security-standards.md`](./advanced-protocol-security-standards.md)。
+
 ## 1. 主要对标标准与 RFC
 
 | 标准/RFC | 版本 | DOI/链接 | 对应项目章节 |
@@ -63,6 +66,9 @@
 3. **BGP 安全**：新增 RPKI、ROV、BGPsec 章节。
 4. **可编程网络**：新增 P4/P4Runtime、OpenFlow 1.5.1 形式化语义。
 5. **零信任架构**：增加 NIST SP 800-207 映射。
+6. **高级安全协议**：补齐 DNSSEC/DoH/DoT、RPKI/BGPsec/ROV、IPsec/IKEv2 映射。
+7. **数据中心与可编程网络**：补齐 VXLAN/Geneve、SRv6/EVPN、OpenFlow/P4 深度映射。
+8. **移动通信与边缘网络**：补齐 3GPP 5G/802.11be/ETSI MEC 来源。
 
 ## 5. 形式化工件链接
 
@@ -78,6 +84,7 @@
 | 2026-07-05 | 补齐以太网/IP/TCP/UDP/HTTP/TLS/DNS/OSI/IEEE 802.3/802.1Q 权威来源与链接 | Kimi Code CLI |
 | 2026-07-05 | 向 8.1/8.6/8.7/8.8 关键章节批量追加 RFC/ISO/IEEE/NIST 权威来源链接 | Kimi Code CLI |
 | 2026-07-05 | 向 8.1–8.8 全部 154 个 Markdown 文件追加国际权威来源链接，覆盖核心概念、批判分析、形式化结构/证明/语义、运行时语义与综合专题 | Kimi Code CLI |
+| 2026-07-05 | 新增高级协议与安全标准映射表，覆盖 DNSSEC/DoH/DoT、RPKI/BGPsec、IPsec/IKEv2、MPLS/SRv6、VXLAN/Geneve、5G/802.11be/MEC | Kimi Code CLI |
 
 ## 国际权威来源链接 | International Authoritative Sources
 
