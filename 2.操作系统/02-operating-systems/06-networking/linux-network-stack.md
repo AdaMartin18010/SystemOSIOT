@@ -1,5 +1,29 @@
 # Linux 网络协议栈实现映射
 
+
+<!-- TOC START -->
+
+- [Linux 网络协议栈实现映射](#linux-网络协议栈实现映射)
+  - [1. Linux 网络栈全景](#1-linux-网络栈全景)
+  - [2. 核心数据结构](#2-核心数据结构)
+  - [3. Socket 创建与状态机](#3-socket-创建与状态机)
+    - [3.1 创建流程](#31-创建流程)
+    - [3.2 TCP 状态机](#32-tcp-状态机)
+  - [4. 数据接收路径](#4-数据接收路径)
+  - [5. 数据发送路径](#5-数据发送路径)
+  - [6. 性能优化机制](#6-性能优化机制)
+    - [6.1 NAPI（New API）](#61-napinew-api)
+    - [6.2 硬件卸载（Offload）](#62-硬件卸载offload)
+    - [6.3 多队列与 RSS/RPS/RFS/XPS](#63-多队列与-rssrpsrfsxps)
+  - [7. Netfilter 钩子点](#7-netfilter-钩子点)
+  - [8. 网络命名空间与虚拟设备](#8-网络命名空间与虚拟设备)
+  - [9. 术语表](#9-术语表)
+  - [10. 国际来源映射](#10-国际来源映射)
+  - [11. 相关文件](#11-相关文件)
+  - [国际权威来源链接 / Authoritative Sources](#国际权威来源链接--authoritative-sources)
+
+<!-- TOC END -->
+
 > **权威来源**：Linux Kernel Networking (Rami Rosen), TCP/IP Illustrated Vol. 1 (Stevens), RFC 791/793/1122, kernel.org `Documentation/networking/`, LWN.net。
 >
 > **目标**：把 OSI/TCP/IP 概念映射到 Linux `net/` 子系统的数据结构、函数与数据路径。

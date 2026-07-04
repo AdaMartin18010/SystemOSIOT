@@ -14,6 +14,7 @@
   - [应用领域](#应用领域)
   - [相关资源](#相关资源)
   - [实践项目](#实践项目)
+  - [国际权威来源链接 | International Authoritative Sources](#国际权威来源链接-international-authoritative-sources)
 
 <!-- TOC END -->
 
@@ -83,3 +84,19 @@
 2. **结构模型设计**：设计网络系统的结构模型
 3. **形式化表示**：使用数学工具表示网络系统结构
 4. **结构分析验证**：分析和验证网络系统结构的正确性
+
+## 国际权威来源链接 | International Authoritative Sources
+
+- [ISO/IEC 7498-1 — OSI Basic Reference Model](https://www.iso.org/standard/20269.html)
+- [RFC 1122 — Host Requirements](https://datatracker.ietf.org/doc/html/rfc1122)
+- [RFC 791 — Internet Protocol (IPv4)](https://datatracker.ietf.org/doc/html/rfc791)
+- [RFC 793 — Transmission Control Protocol (TCP)](https://datatracker.ietf.org/doc/html/rfc793)
+- [RFC 8200 — Internet Protocol, Version 6 (IPv6)](https://datatracker.ietf.org/doc/html/rfc8200)
+- [RFC 5681 — TCP Congestion Control](https://datatracker.ietf.org/doc/html/rfc5681)
+- [IEEE 802.3-2022 — Ethernet](https://standards.ieee.org/standard/802.3-2022.html)
+- [IEEE 802.1Q-2024 — VLAN Bridging](https://standards.ieee.org/standard/802.1Q-2024.html)
+- [Dijkstra, E. W. (1959). A note on two problems in connexion with graphs. Numerische Mathematik.](https://doi.org/10.1007/BF01386390)
+- [Ford, L. R., & Fulkerson, D. R. (1956). Maximal flow through a network. Canadian Journal of Mathematics.](https://doi.org/10.4153/CJM-1956-045-5)
+- [Newman, M. E. J. (2010). Networks: An Introduction. Oxford University Press.](https://academic.oup.com/book/5324)
+- [Lamport, L. Specifying Systems (TLA+)](https://lamport.azurewebsites.net/tla/book.html)
+- [RFC 793 — TCP Specification](https://datatracker.ietf.org/doc/html/rfc793)

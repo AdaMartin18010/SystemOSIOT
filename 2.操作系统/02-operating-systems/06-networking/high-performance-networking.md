@@ -1,5 +1,18 @@
 # 高性能网络路径选择
 
+
+<!-- TOC START -->
+
+- [高性能网络路径选择](#高性能网络路径选择)
+  - [1. 性能优化层次](#1-性能优化层次)
+  - [2. 选择决策树](#2-选择决策树)
+  - [3. 内核优化机制速查](#3-内核优化机制速查)
+  - [4. 与 8.网络系统 的衔接](#4-与-8网络系统-的衔接)
+  - [5. 相关文件](#5-相关文件)
+  - [国际权威来源链接 / Authoritative Sources](#国际权威来源链接--authoritative-sources)
+
+<!-- TOC END -->
+
 > **范围说明**：当前深度止于 Linux 内核网络优化（NAPI/GRO/GSO/RPS/RFS/XPS/epoll/io_uring/eBPF/XDP）。RDMA/DPDK/SmartNIC kernel bypass 仅在文末列出，不做深入展开，如需可单独补充。
 
 ---

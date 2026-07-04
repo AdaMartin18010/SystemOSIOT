@@ -1,5 +1,27 @@
 # 网络命名空间与虚拟网络
 
+
+<!-- TOC START -->
+
+- [网络命名空间与虚拟网络](#网络命名空间与虚拟网络)
+  - [1. Network Namespace](#1-network-namespace)
+    - [1.1 隔离资源](#11-隔离资源)
+    - [1.2 创建与管理](#12-创建与管理)
+  - [2. veth pair](#2-veth-pair)
+  - [3. Linux Bridge](#3-linux-bridge)
+  - [4. macvlan / ipvlan](#4-macvlan--ipvlan)
+    - [4.1 macvlan](#41-macvlan)
+    - [4.2 ipvlan](#42-ipvlan)
+  - [5. SR-IOV](#5-sr-iov)
+  - [6. 容器网络模型对比](#6-容器网络模型对比)
+  - [7. CNI 映射](#7-cni-映射)
+  - [8. 场景分析](#8-场景分析)
+  - [9. 术语表](#9-术语表)
+  - [10. 相关文件](#10-相关文件)
+  - [国际权威来源链接 / Authoritative Sources](#国际权威来源链接--authoritative-sources)
+
+<!-- TOC END -->
+
 > **权威来源**：Linux Kernel Networking, kernel.org `Documentation/networking/netns/`, LWN.net。
 >
 > **目标**：系统讲解 Linux network namespace、veth、bridge、macvlan/ipvlan、SR-IOV 与容器网络模型。

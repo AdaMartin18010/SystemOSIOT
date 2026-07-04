@@ -1,5 +1,32 @@
 # Netfilter / eBPF / XDP
 
+
+<!-- TOC START -->
+
+- [Netfilter / eBPF / XDP](#netfilter--ebpf--xdp)
+  - [1. Netfilter 框架](#1-netfilter-框架)
+    - [1.1 钩子点](#11-钩子点)
+    - [1.2 iptables / nftables](#12-iptables--nftables)
+    - [1.3 conntrack](#13-conntrack)
+  - [2. eBPF 架构](#2-ebpf-架构)
+    - [2.1 组件](#21-组件)
+    - [2.2 BPF 程序类型](#22-bpf-程序类型)
+    - [2.3 BPF Map 类型](#23-bpf-map-类型)
+    - [2.4 加载流程](#24-加载流程)
+  - [3. XDP（eXpress Data Path）](#3-xdpexpress-data-path)
+    - [3.1 执行位置](#31-执行位置)
+    - [3.2 XDP Action](#32-xdp-action)
+    - [3.3 XDP 模式](#33-xdp-模式)
+  - [4. tc（Traffic Control）与 eBPF](#4-tctraffic-control与-ebpf)
+  - [5. 对比：iptables / nftables / eBPF / XDP](#5-对比iptables--nftables--ebpf--xdp)
+  - [6. 场景分析](#6-场景分析)
+  - [7. 术语表](#7-术语表)
+  - [8. 国际来源映射](#8-国际来源映射)
+  - [9. 相关文件](#9-相关文件)
+  - [国际权威来源链接 / Authoritative Sources](#国际权威来源链接--authoritative-sources)
+
+<!-- TOC END -->
+
 > **权威来源**：Linux Kernel Networking (Rami Rosen), Brendan Gregg *BPF Performance Tools*, LWN.net, Linux Kernel `net/netfilter/`, `kernel/bpf/`, `net/core/filter.c`。
 >
 > **目标**：系统讲解 Linux 网络数据包过滤、修改、转发的三层机制：netfilter、tc、eBPF/XDP。

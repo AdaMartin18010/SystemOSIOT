@@ -1,5 +1,32 @@
 # HAL、BSP 与设备树
 
+
+<!-- TOC START -->
+
+- [HAL、BSP 与设备树](#halbsp-与设备树)
+  - [1. 概念对比](#1-概念对比)
+  - [2. 设备树（Device Tree）](#2-设备树device-tree)
+    - [2.1 设计目标](#21-设计目标)
+    - [2.2 编译流程](#22-编译流程)
+    - [2.3 关键节点与属性](#23-关键节点与属性)
+    - [2.4 设备树覆盖（Overlay）](#24-设备树覆盖overlay)
+  - [3. HAL（硬件抽象层）](#3-hal硬件抽象层)
+    - [3.1 设计模式](#31-设计模式)
+    - [3.2 Zephyr HAL 示例](#32-zephyr-hal-示例)
+    - [3.3 Linux 是否有 HAL？](#33-linux-是否有-hal)
+  - [4. BSP（板级支持包）](#4-bsp板级支持包)
+    - [4.1 典型内容](#41-典型内容)
+    - [4.2 与 Yocto/Buildroot 的关系](#42-与-yoctobuildroot-的关系)
+  - [5. ACPI vs Device Tree](#5-acpi-vs-device-tree)
+  - [6. RTOS 中的 HAL/BSP](#6-rtos-中的-halbsp)
+  - [7. 决策：何时用 DT，何时用 ACPI，何时用 HAL](#7-决策何时用-dt何时用-acpi何时用-hal)
+  - [8. 术语表](#8-术语表)
+  - [9. 国际来源映射](#9-国际来源映射)
+  - [10. 相关文件](#10-相关文件)
+  - [国际权威来源链接 / Authoritative Sources](#国际权威来源链接--authoritative-sources)
+
+<!-- TOC END -->
+
 > **权威来源**：ARM Devicetree Specification, Linux Device Drivers, U-Boot Docs, ACPI Spec, FreeRTOS/Zephyr HAL docs。
 >
 > **目标**：对比硬件抽象层（HAL）、板级支持包（BSP）、设备树（Device Tree）、ACPI 的设计思想、适用场景与 Linux/RTOS 实现。

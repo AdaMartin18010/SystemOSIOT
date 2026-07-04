@@ -1,5 +1,24 @@
 # SPI 总线
 
+
+<!-- TOC START -->
+
+- [SPI 总线](#spi-总线)
+  - [1. SPI 信号线](#1-spi-信号线)
+  - [2. 时钟极性与相位](#2-时钟极性与相位)
+  - [3. 数据传输](#3-数据传输)
+  - [4. Linux SPI 框架](#4-linux-spi-框架)
+    - [4.1 核心结构](#41-核心结构)
+    - [4.2 设备树绑定](#42-设备树绑定)
+    - [4.3 核心 API](#43-核心-api)
+  - [5. 用户态访问](#5-用户态访问)
+  - [6. 场景分析](#6-场景分析)
+  - [7. 术语表](#7-术语表)
+  - [8. 相关文件](#8-相关文件)
+  - [国际权威来源链接 / Authoritative Sources](#国际权威来源链接--authoritative-sources)
+
+<!-- TOC END -->
+
 > **权威来源**：Motorola SPI Block Guide, Linux Kernel `drivers/spi/`, Linux Device Drivers。
 >
 > **目标**：系统讲解 SPI 协议、时序、CPOL/CPHA、Linux SPI 驱动框架与设备树绑定。

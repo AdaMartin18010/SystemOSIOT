@@ -1,5 +1,20 @@
 # 操作系统机制组合树（OS Mechanism Composition Tree）
 
+
+<!-- TOC START -->
+
+- [操作系统机制组合树（OS Mechanism Composition Tree）](#操作系统机制组合树os-mechanism-composition-tree)
+  - [1. 多任务（Multitasking）](#1-多任务multitasking)
+  - [2. 虚拟内存（Virtual Memory）](#2-虚拟内存virtual-memory)
+  - [3. 文件系统持久化（File System Persistence）](#3-文件系统持久化file-system-persistence)
+  - [4. 网络栈吞吐（Network Stack Throughput）](#4-网络栈吞吐network-stack-throughput)
+  - [5. 外设访问（Peripheral Access）](#5-外设访问peripheral-access)
+  - [6. 实时性（Real-Time）](#6-实时性real-time)
+  - [7. 安全隔离（Security Isolation）](#7-安全隔离security-isolation)
+  - [8. 国际来源映射](#8-国际来源映射)
+
+<!-- TOC END -->
+
 > **权威来源**：OSTEP, Berkeley CS162, MIT xv6, Linux Kernel Development。
 >
 > **目标**：解释“底层机制如何组合成系统能力/性质”，建立机制 → 子机制 → 性质 → 场景的完整链条。

@@ -1,5 +1,20 @@
 # 跨层映射图（Cross-Layer Mapping）
 
+
+<!-- TOC START -->
+
+- [跨层映射图（Cross-Layer Mapping）](#跨层映射图cross-layer-mapping)
+  - [1. `printf` → 屏幕/文件](#1-printf--屏幕文件)
+  - [2. `socket()` + `send()` → 网络](#2-socket--send--网络)
+  - [3. 传感器读取 → I2C → 用户态](#3-传感器读取--i2c--用户态)
+  - [4. 跨层接口映射表](#4-跨层接口映射表)
+  - [5. 开销分析](#5-开销分析)
+  - [6. 国际来源映射](#6-国际来源映射)
+  - [7. 相关文件](#7-相关文件)
+  - [国际权威来源链接 / Authoritative Sources](#国际权威来源链接--authoritative-sources)
+
+<!-- TOC END -->
+
 > **目标**：展示关键用户操作如何经过应用层、glibc、系统调用、内核子系统、驱动、硬件的完整路径。
 
 ---

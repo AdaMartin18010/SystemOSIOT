@@ -1,5 +1,26 @@
 # USB 总线
 
+
+<!-- TOC START -->
+
+- [USB 总线](#usb-总线)
+  - [1. USB 拓扑](#1-usb-拓扑)
+  - [2. USB 速度](#2-usb-速度)
+  - [3. 描述符](#3-描述符)
+  - [4. 传输类型](#4-传输类型)
+  - [5. Host Controller](#5-host-controller)
+  - [6. Linux USB 子系统](#6-linux-usb-子系统)
+    - [6.1 核心结构](#61-核心结构)
+    - [6.2 URB 生命周期](#62-urb-生命周期)
+    - [6.3 常见 API](#63-常见-api)
+  - [7. USB Gadget](#7-usb-gadget)
+  - [8. 场景分析](#8-场景分析)
+  - [9. 术语表](#9-术语表)
+  - [10. 相关文件](#10-相关文件)
+  - [国际权威来源链接 / Authoritative Sources](#国际权威来源链接--authoritative-sources)
+
+<!-- TOC END -->
+
 > **权威来源**：USB-IF USB 3.2 Specification, Linux Kernel `drivers/usb/`, Linux Device Drivers。
 >
 > **目标**：系统讲解 USB 拓扑、描述符、URB、Host Controller、Gadget、Linux USB 子系统。

@@ -1,5 +1,32 @@
 # 外设与总线概念树（Peripheral & Bus Concept Tree）
 
+
+<!-- TOC START -->
+
+- [外设与总线概念树（Peripheral \& Bus Concept Tree）](#外设与总线概念树peripheral--bus-concept-tree)
+  - [1. 全局概念树](#1-全局概念树)
+  - [2. 外设分类与属性](#2-外设分类与属性)
+    - [2.1 通用属性](#21-通用属性)
+  - [3. 总线概念展开](#3-总线概念展开)
+    - [3.1 PCIe](#31-pcie)
+    - [3.2 USB](#32-usb)
+    - [3.3 I2C](#33-i2c)
+    - [3.4 SPI](#34-spi)
+    - [3.5 UART](#35-uart)
+    - [3.6 GPIO](#36-gpio)
+    - [3.7 CAN](#37-can)
+  - [4. Linux 设备模型](#4-linux-设备模型)
+    - [4.1 核心数据结构](#41-核心数据结构)
+  - [5. 中断与 DMA](#5-中断与-dma)
+  - [6. 设备树（Device Tree）](#6-设备树device-tree)
+    - [6.1 核心概念](#61-核心概念)
+    - [6.2 标准属性](#62-标准属性)
+  - [7. 术语表](#7-术语表)
+  - [8. 国际来源映射](#8-国际来源映射)
+  - [9. 相关文件](#9-相关文件)
+
+<!-- TOC END -->
+
 > **权威来源**：Linux Device Drivers (Corbet, Rubini, Kroah-Hartman), PCI-SIG PCIe Base Spec, USB-IF, NXP I2C-bus Spec, SPI Block Guide, ARM Device Tree Spec。
 >
 > **目标**：建立计算机外设、总线、接口的完整概念树，覆盖分类、属性、关系、Linux 驱动框架与典型场景。

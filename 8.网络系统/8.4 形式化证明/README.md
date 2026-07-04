@@ -15,6 +15,7 @@
   - [应用领域](#应用领域)
   - [相关资源](#相关资源)
   - [实践项目](#实践项目)
+  - [国际权威来源链接 | International Authoritative Sources](#国际权威来源链接-international-authoritative-sources)
 
 <!-- TOC END -->
 
@@ -90,3 +91,20 @@
 2. **最短路径验证**：验证最短路径算法的正确性
 3. **网络协议分析**：分析网络协议的复杂度
 4. **系统调用验证**：验证网络系统调用的正确性
+
+## 国际权威来源链接 | International Authoritative Sources
+
+- [ISO/IEC 7498-1 — OSI Basic Reference Model](https://www.iso.org/standard/20269.html)
+- [RFC 1122 — Host Requirements](https://datatracker.ietf.org/doc/html/rfc1122)
+- [RFC 791 — Internet Protocol (IPv4)](https://datatracker.ietf.org/doc/html/rfc791)
+- [RFC 793 — Transmission Control Protocol (TCP)](https://datatracker.ietf.org/doc/html/rfc793)
+- [RFC 8200 — Internet Protocol, Version 6 (IPv6)](https://datatracker.ietf.org/doc/html/rfc8200)
+- [RFC 5681 — TCP Congestion Control](https://datatracker.ietf.org/doc/html/rfc5681)
+- [IEEE 802.3-2022 — Ethernet](https://standards.ieee.org/standard/802.3-2022.html)
+- [IEEE 802.1Q-2024 — VLAN Bridging](https://standards.ieee.org/standard/802.1Q-2024.html)
+- [NIST SP 800-207 — Zero Trust Architecture](https://csrc.nist.gov/publications/detail/sp/800/207/final)
+- [NIST Cybersecurity Framework](https://www.nist.gov/cyberframework)
+- [RFC 8446 — TLS 1.3](https://datatracker.ietf.org/doc/html/rfc8446)
+- [Lamport, L. Specifying Systems (TLA+)](https://lamport.azurewebsites.net/tla/book.html)
+- [RFC 793 — TCP Specification](https://datatracker.ietf.org/doc/html/rfc793)
+- [Baier & Katoen (2008). Principles of Model Checking. MIT Press.](https://mitpress.mit.edu/9780262026499/principles-of-model-checking/)

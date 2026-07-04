@@ -1,5 +1,32 @@
 # 中断与 DMA
 
+
+<!-- TOC START -->
+
+- [中断与 DMA](#中断与-dma)
+  - [1. 中断全景](#1-中断全景)
+  - [2. 中断控制器](#2-中断控制器)
+    - [2.1 ARM GICv3 组件](#21-arm-gicv3-组件)
+  - [3. Linux 中断处理](#3-linux-中断处理)
+    - [3.1 核心 API](#31-核心-api)
+    - [3.2 顶半部与底半部](#32-顶半部与底半部)
+    - [3.3 中断处理流程](#33-中断处理流程)
+  - [4. DMA](#4-dma)
+    - [4.1 DMA 类型](#41-dma-类型)
+    - [4.2 Linux DMA API](#42-linux-dma-api)
+    - [4.3 DMA 数据流](#43-dma-数据流)
+  - [5. Cache Coherence](#5-cache-coherence)
+  - [6. IOMMU](#6-iommu)
+    - [6.1 IOMMU 映射](#61-iommu-映射)
+  - [7. 中断亲和性与负载均衡](#7-中断亲和性与负载均衡)
+  - [8. 场景分析](#8-场景分析)
+  - [9. 术语表](#9-术语表)
+  - [10. 国际来源映射](#10-国际来源映射)
+  - [11. 相关文件](#11-相关文件)
+  - [国际权威来源链接 / Authoritative Sources](#国际权威来源链接--authoritative-sources)
+
+<!-- TOC END -->
+
 > **权威来源**：Hennessy & Patterson, *Computer Architecture: A Quantitative Approach*; Linux Kernel Development (Love); ARM Generic Interrupt Controller Spec; Intel SDM Vol. 3A; Linux Device Drivers。
 >
 > **目标**：系统讲解中断控制器、中断处理流程、DMA 引擎、cache coherence、IOMMU，并映射到 Linux 源码。

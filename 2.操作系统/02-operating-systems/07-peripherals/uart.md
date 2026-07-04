@@ -1,5 +1,24 @@
 # UART 串口
 
+
+<!-- TOC START -->
+
+- [UART 串口](#uart-串口)
+  - [1. UART 信号线](#1-uart-信号线)
+  - [2. 帧格式](#2-帧格式)
+  - [3. 流控](#3-流控)
+  - [4. 16550 UART](#4-16550-uart)
+  - [5. Linux Serial 子系统](#5-linux-serial-子系统)
+    - [5.1 层次](#51-层次)
+    - [5.2 核心结构](#52-核心结构)
+    - [5.3 配置](#53-配置)
+  - [6. 场景分析](#6-场景分析)
+  - [7. 术语表](#7-术语表)
+  - [8. 相关文件](#8-相关文件)
+  - [国际权威来源链接 / Authoritative Sources](#国际权威来源链接--authoritative-sources)
+
+<!-- TOC END -->
+
 > **权威来源**：16550 UART Datasheet, Linux Kernel `drivers/tty/serial/`, Linux Device Drivers。
 >
 > **目标**：系统讲解 UART 协议、波特率、流控、FIFO、Linux tty/serial 子系统。

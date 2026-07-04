@@ -1,5 +1,37 @@
 # Linux 进程调度
 
+
+<!-- TOC START -->
+
+- [Linux 进程调度](#linux-进程调度)
+  - [1. 核心数据结构](#1-核心数据结构)
+    - [1.1 task\_struct](#11-task_struct)
+    - [1.2 sched\_entity（CFS）](#12-sched_entitycfs)
+    - [1.3 sched\_class](#13-sched_class)
+  - [2. 调度类层次](#2-调度类层次)
+  - [3. CFS 完全公平调度器](#3-cfs-完全公平调度器)
+    - [3.1 核心思想](#31-核心思想)
+    - [3.2 vruntime 计算](#32-vruntime-计算)
+    - [3.3 关键函数](#33-关键函数)
+    - [3.4 调度时延](#34-调度时延)
+  - [4. 实时调度](#4-实时调度)
+    - [4.1 SCHED\_FIFO](#41-sched_fifo)
+    - [4.2 SCHED\_RR](#42-sched_rr)
+    - [4.3 SCHED\_DEADLINE](#43-sched_deadline)
+    - [4.4 关键函数](#44-关键函数)
+  - [5. 进程创建与退出](#5-进程创建与退出)
+  - [6. cgroup 与 namespace](#6-cgroup-与-namespace)
+    - [6.1 cgroup](#61-cgroup)
+    - [6.2 namespace](#62-namespace)
+  - [7. 调度相关系统调用与工具](#7-调度相关系统调用与工具)
+  - [8. 场景分析](#8-场景分析)
+  - [9. 术语表](#9-术语表)
+  - [10. 国际来源映射](#10-国际来源映射)
+  - [11. 相关文件](#11-相关文件)
+  - [国际权威来源链接 / Authoritative Sources](#国际权威来源链接--authoritative-sources)
+
+<!-- TOC END -->
+
 > **权威来源**：Linux Kernel Development (Love), OSTEP Ch. 7~9, kernel.org `Documentation/scheduler/`, LWN.net。
 >
 > **目标**：深入 Linux 进程/线程描述符、调度类、CFS、实时调度、cgroup、namespace 的实现与源码映射。

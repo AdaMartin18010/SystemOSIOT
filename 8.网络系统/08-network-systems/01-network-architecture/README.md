@@ -33,6 +33,7 @@
   - [应用场景](#应用场景)
   - [学习目标](#学习目标)
   - [实践项目](#实践项目)
+  - [国际权威来源链接 | International Authoritative Sources](#国际权威来源链接-international-authoritative-sources)
 
 <!-- TOC END -->
 
@@ -195,3 +196,21 @@
 - 网络设备配置
 - 网络安全配置
 - 网络监控系统
+
+## 国际权威来源链接 | International Authoritative Sources
+
+- [ISO/IEC 7498-1 — OSI Basic Reference Model](https://www.iso.org/standard/20269.html)
+- [RFC 1122 — Host Requirements](https://datatracker.ietf.org/doc/html/rfc1122)
+- [RFC 791 — Internet Protocol (IPv4)](https://datatracker.ietf.org/doc/html/rfc791)
+- [RFC 793 — Transmission Control Protocol (TCP)](https://datatracker.ietf.org/doc/html/rfc793)
+- [RFC 8200 — Internet Protocol, Version 6 (IPv6)](https://datatracker.ietf.org/doc/html/rfc8200)
+- [RFC 5681 — TCP Congestion Control](https://datatracker.ietf.org/doc/html/rfc5681)
+- [IEEE 802.3-2022 — Ethernet](https://standards.ieee.org/standard/802.3-2022.html)
+- [IEEE 802.1Q-2024 — VLAN Bridging](https://standards.ieee.org/standard/802.1Q-2024.html)
+- [NIST SP 800-207 — Zero Trust Architecture](https://csrc.nist.gov/publications/detail/sp/800/207/final)
+- [NIST Cybersecurity Framework](https://www.nist.gov/cyberframework)
+- [RFC 8446 — TLS 1.3](https://datatracker.ietf.org/doc/html/rfc8446)
+- [MITRE ATT&CK](https://attack.mitre.org/)
+- [Newman, M. E. J. (2010). Networks: An Introduction. Oxford University Press.](https://academic.oup.com/book/5324)
+- [RFC 1034 — DNS Concepts](https://datatracker.ietf.org/doc/html/rfc1034)
+- [RFC 1035 — DNS Implementation](https://datatracker.ietf.org/doc/html/rfc1035)

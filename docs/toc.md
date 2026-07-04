@@ -24,6 +24,7 @@
 - [领域关系图](./navigation/domain-map.md)
 - [技术路线图](./navigation/technology-roadmap.md)
 - [OS / 网络 / 外设 / 接口 跨域术语对照表](./os-network-peripheral-interface-terminology.md)
+- [国际化权威标准基线](./international-baseline.md)
 
 ## 跨域映射
 
@@ -36,6 +37,6 @@
 > 可使用命令自动更新：
 >
 > ```bash
-> python tools/toc_generator.py --root . --output docs/toc.md
-> python tools/toc_validate.py --root . --toc docs/toc.md
+> python tools/toc_generator.py --all --apply .
+> python tools/toc_validate.py --all .
 > ```

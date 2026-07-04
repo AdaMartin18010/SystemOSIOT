@@ -1,5 +1,26 @@
 # GPIO
 
+
+<!-- TOC START -->
+
+- [GPIO](#gpio)
+  - [1. GPIO 基础](#1-gpio-基础)
+  - [2. pinctrl](#2-pinctrl)
+    - [2.1 设备树绑定](#21-设备树绑定)
+  - [3. Linux gpiolib](#3-linux-gpiolib)
+    - [3.1 核心结构](#31-核心结构)
+    - [3.2 驱动 API](#32-驱动-api)
+  - [4. 用户态接口](#4-用户态接口)
+    - [4.1 sysfs（旧）](#41-sysfs旧)
+    - [4.2 libgpiod（推荐）](#42-libgpiod推荐)
+  - [5. GPIO 中断](#5-gpio-中断)
+  - [6. 场景分析](#6-场景分析)
+  - [7. 术语表](#7-术语表)
+  - [8. 相关文件](#8-相关文件)
+  - [国际权威来源链接 / Authoritative Sources](#国际权威来源链接--authoritative-sources)
+
+<!-- TOC END -->
+
 > **权威来源**：Linux Kernel `drivers/gpio/`, pinctrl subsystem docs, Linux Device Drivers。
 >
 > **目标**：系统讲解 GPIO、pinctrl、gpiochip、中断触发、Linux gpiolib 与用户态接口。

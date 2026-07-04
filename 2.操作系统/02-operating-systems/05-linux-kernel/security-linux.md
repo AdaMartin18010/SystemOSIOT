@@ -1,5 +1,27 @@
 # Linux 安全子系统
 
+
+<!-- TOC START -->
+
+- [Linux 安全子系统](#linux-安全子系统)
+  - [1. Linux 安全层次](#1-linux-安全层次)
+  - [2. Capabilities](#2-capabilities)
+  - [3. LSM（Linux Security Modules）](#3-lsmlinux-security-modules)
+    - [3.1 框架](#31-框架)
+    - [3.2 SELinux](#32-selinux)
+    - [3.3 AppArmor](#33-apparmor)
+    - [3.4 其他 LSM](#34-其他-lsm)
+  - [4. seccomp](#4-seccomp)
+    - [4.1 seccomp-bpf Action](#41-seccomp-bpf-action)
+  - [5. Namespaces](#5-namespaces)
+  - [6. cgroups](#6-cgroups)
+  - [7. 场景分析](#7-场景分析)
+  - [8. 术语表](#8-术语表)
+  - [9. 相关文件](#9-相关文件)
+  - [国际权威来源链接 / Authoritative Sources](#国际权威来源链接--authoritative-sources)
+
+<!-- TOC END -->
+
 > **权威来源**：Linux Kernel Development, Linux Security Modules (LSM) Docs, SELinux Docs, AppArmor Docs, kernel.org `Documentation/security/`。
 >
 > **目标**：深入 Linux capabilities、LSM、SELinux/AppArmor、seccomp、namespaces、cgroups 安全机制。

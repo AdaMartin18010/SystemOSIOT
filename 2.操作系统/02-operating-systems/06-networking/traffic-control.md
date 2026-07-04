@@ -1,5 +1,26 @@
 # Linux 流量控制（tc）
 
+
+<!-- TOC START -->
+
+- [Linux 流量控制（tc）](#linux-流量控制tc)
+  - [1. tc 架构](#1-tc-架构)
+  - [2. 核心组件](#2-核心组件)
+  - [3. 常见 qdisc](#3-常见-qdisc)
+    - [3.1 fq\_codel](#31-fq_codel)
+    - [3.2 HTB](#32-htb)
+    - [3.3 CAKE](#33-cake)
+  - [4. filter 与 action](#4-filter-与-action)
+    - [4.1 常见 filter](#41-常见-filter)
+    - [4.2 常见 action](#42-常见-action)
+  - [5. 配置示例](#5-配置示例)
+  - [6. 场景分析](#6-场景分析)
+  - [7. 术语表](#7-术语表)
+  - [8. 相关文件](#8-相关文件)
+  - [国际权威来源链接 / Authoritative Sources](#国际权威来源链接--authoritative-sources)
+
+<!-- TOC END -->
+
 > **权威来源**：Linux Advanced Routing & Traffic Control (LARTC), kernel.org `Documentation/networking/sched/`, LWN.net。
 >
 > **目标**：系统讲解 tc qdisc、class、filter、action，以及常见队列规则与工程调优。

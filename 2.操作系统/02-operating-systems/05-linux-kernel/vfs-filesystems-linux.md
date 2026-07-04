@@ -1,5 +1,30 @@
 # Linux VFS 与文件系统
 
+
+<!-- TOC START -->
+
+- [Linux VFS 与文件系统](#linux-vfs-与文件系统)
+  - [1. VFS 核心数据结构](#1-vfs-核心数据结构)
+  - [2. 打开文件流程](#2-打开文件流程)
+  - [3. 读文件流程](#3-读文件流程)
+  - [4. 页缓存（Page Cache）](#4-页缓存page-cache)
+  - [5. 写文件与一致性](#5-写文件与一致性)
+    - [5.1 写路径](#51-写路径)
+    - [5.2 日志模式（ext4）](#52-日志模式ext4)
+  - [6. 具体文件系统](#6-具体文件系统)
+    - [6.1 ext4](#61-ext4)
+    - [6.2 Btrfs](#62-btrfs)
+    - [6.3 XFS](#63-xfs)
+    - [6.4 overlayfs](#64-overlayfs)
+  - [7. procfs / sysfs / tmpfs / devtmpfs](#7-procfs--sysfs--tmpfs--devtmpfs)
+  - [8. 文件系统挂载](#8-文件系统挂载)
+  - [9. 场景分析](#9-场景分析)
+  - [10. 术语表](#10-术语表)
+  - [11. 相关文件](#11-相关文件)
+  - [国际权威来源链接 / Authoritative Sources](#国际权威来源链接--authoritative-sources)
+
+<!-- TOC END -->
+
 > **权威来源**：Linux Kernel Development (Love), OSTEP Ch. 37~43, kernel.org `Documentation/filesystems/`, LWN.net。
 >
 > **目标**：深入 Linux 虚拟文件系统 VFS、页缓存、具体文件系统 ext4/Btrfs/XFS/overlay 的实现映射。

@@ -1,5 +1,23 @@
 # POSIX 与 Linux 实现条款映射
 
+
+<!-- TOC START -->
+
+- [POSIX 与 Linux 实现条款映射](#posix-与-linux-实现条款映射)
+  - [1. POSIX §3 进程/线程控制](#1-posix-3-进程线程控制)
+  - [2. POSIX §13 文件系统接口](#2-posix-13-文件系统接口)
+  - [3. POSIX §16 网络 Socket](#3-posix-16-网络-socket)
+  - [4. POSIX §17 实时扩展](#4-posix-17-实时扩展)
+  - [5. pthread 同步](#5-pthread-同步)
+  - [6. Linux 特有扩展](#6-linux-特有扩展)
+  - [7. 覆盖状态汇总](#7-覆盖状态汇总)
+  - [8. 术语表](#8-术语表)
+  - [9. 国际来源映射](#9-国际来源映射)
+  - [10. 相关文件](#10-相关文件)
+  - [国际权威来源链接 / Authoritative Sources](#国际权威来源链接--authoritative-sources)
+
+<!-- TOC END -->
+
 > **权威来源**：POSIX.1-2024, Linux Standard Base 5.0, Linux Kernel Source, glibc Source。
 >
 > **目标**：将 POSIX.1-2024 关键条款映射到 Linux 内核实现、glibc 函数与源码路径。

@@ -1,5 +1,14 @@
 # 07-peripherals / 外设与总线
 
+
+<!-- TOC START -->
+
+- [07-peripherals / 外设与总线](#07-peripherals--外设与总线)
+  - [文件列表](#文件列表)
+  - [返回](#返回)
+
+<!-- TOC END -->
+
 本目录覆盖嵌入式与服务器中常见外设总线：PCIe、USB、I2C、SPI、UART、GPIO、CAN，以及中断、DMA、IOMMU 等底层机制。
 
 ## 文件列表

@@ -18,6 +18,7 @@
   - [应用领域](#应用领域)
   - [相关资源](#相关资源)
   - [实践项目](#实践项目)
+  - [国际权威来源链接 | International Authoritative Sources](#国际权威来源链接-international-authoritative-sources)
 
 <!-- TOC END -->
 
@@ -130,3 +131,21 @@ if 队列长度持续上升 且 丢包率上升:
 2. **带宽管理系统**：设计网络带宽的动态管理
 3. **路由优化系统**：实现网络路由的优化策略
 4. **网络监控平台**：构建网络系统的监控平台
+
+## 国际权威来源链接 | International Authoritative Sources
+
+- [ISO/IEC 7498-1 — OSI Basic Reference Model](https://www.iso.org/standard/20269.html)
+- [RFC 1122 — Host Requirements](https://datatracker.ietf.org/doc/html/rfc1122)
+- [RFC 791 — Internet Protocol (IPv4)](https://datatracker.ietf.org/doc/html/rfc791)
+- [RFC 793 — Transmission Control Protocol (TCP)](https://datatracker.ietf.org/doc/html/rfc793)
+- [RFC 8200 — Internet Protocol, Version 6 (IPv6)](https://datatracker.ietf.org/doc/html/rfc8200)
+- [RFC 5681 — TCP Congestion Control](https://datatracker.ietf.org/doc/html/rfc5681)
+- [IEEE 802.3-2022 — Ethernet](https://standards.ieee.org/standard/802.3-2022.html)
+- [IEEE 802.1Q-2024 — VLAN Bridging](https://standards.ieee.org/standard/802.1Q-2024.html)
+- [NIST SP 800-207 — Zero Trust Architecture](https://csrc.nist.gov/publications/detail/sp/800/207/final)
+- [NIST Cybersecurity Framework](https://www.nist.gov/cyberframework)
+- [RFC 8446 — TLS 1.3](https://datatracker.ietf.org/doc/html/rfc8446)
+- [NIST AI Risk Management Framework](https://www.nist.gov/itl/ai-risk-management-framework)
+- [EU AI Act](https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32024R1689)
+- [Newman, M. E. J. (2010). Networks: An Introduction. Oxford University Press.](https://academic.oup.com/book/5324)
+- [Lamport, L. Specifying Systems (TLA+)](https://lamport.azurewebsites.net/tla/book.html)

@@ -1,5 +1,21 @@
 # ABI 与 API 接口层映射
 
+
+<!-- TOC START -->
+
+- [ABI 与 API 接口层映射](#abi-与-api-接口层映射)
+  - [1. API vs ABI 对比](#1-api-vs-abi-对比)
+  - [2. Linux API 层次](#2-linux-api-层次)
+  - [3. 系统调用 ABI（x86\_64）](#3-系统调用-abix86_64)
+    - [3.1 示例：`write(1, buf, len)`](#31-示例write1-buf-len)
+  - [4. POSIX API → 系统调用映射](#4-posix-api--系统调用映射)
+  - [5. 内核与用户态 ABI](#5-内核与用户态-abi)
+  - [6. 稳定性与兼容性](#6-稳定性与兼容性)
+  - [7. 相关文件](#7-相关文件)
+  - [国际权威来源链接 / Authoritative Sources](#国际权威来源链接--authoritative-sources)
+
+<!-- TOC END -->
+
 > **目标**：区分 ABI（Application Binary Interface）与 API（Application Programming Interface），并映射到 Linux/POSIX 系统调用与库接口。
 
 ---

@@ -1,5 +1,29 @@
 # 操作系统概念树（Operating Systems Concept Tree）
 
+
+<!-- TOC START -->
+
+- [操作系统概念树（Operating Systems Concept Tree）](#操作系统概念树operating-systems-concept-tree)
+  - [1. 全局概念树（Mermaid）](#1-全局概念树mermaid)
+  - [2. 核心子域概念展开](#2-核心子域概念展开)
+    - [2.1 进程管理（Process Management）](#21-进程管理process-management)
+      - [属性-关系映射（精选）](#属性-关系映射精选)
+    - [2.2 内存管理（Memory Management）](#22-内存管理memory-management)
+      - [属性-关系映射（精选）](#属性-关系映射精选-1)
+    - [2.3 文件系统与持久化（File System \& Persistence）](#23-文件系统与持久化file-system--persistence)
+      - [属性-关系映射（精选）](#属性-关系映射精选-2)
+    - [2.4 设备管理（Device Management）](#24-设备管理device-management)
+    - [2.5 网络子系统（Networking Subsystem）](#25-网络子系统networking-subsystem)
+    - [2.6 外设与总线（Peripheral \& Bus）](#26-外设与总线peripheral--bus)
+    - [2.7 接口与抽象层（Interface \& Abstraction）](#27-接口与抽象层interface--abstraction)
+    - [2.8 安全与保护（Security \& Protection）](#28-安全与保护security--protection)
+  - [3. 主题间关系：虚拟化 · 并发 · 持久化](#3-主题间关系虚拟化--并发--持久化)
+  - [4. 术语表](#4-术语表)
+  - [5. 国际来源映射](#5-国际来源映射)
+  - [6. 相关文件](#6-相关文件)
+
+<!-- TOC END -->
+
 > **权威来源**：OSTEP (Arpaci-Dusseau, *Operating Systems: Three Easy Pieces*), ACM/IEEE CS Curricula 2023 OS Knowledge Areas, MIT xv6, IITBombay OS Lectures.
 >
 > **说明**：本文件以“根概念 → 核心子域 → 关键概念 → 机制/策略 → 实例”五级结构，建立操作系统领域的全局概念树。边标注关系类型：`is-a`（泛化）、`part-of`（组成）、`depends-on`（依赖）、`instance-of`（实例）。

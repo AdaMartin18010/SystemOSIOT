@@ -1,5 +1,32 @@
 # 内核网络卸载与多队列
 
+
+<!-- TOC START -->
+
+- [内核网络卸载与多队列](#内核网络卸载与多队列)
+  - [1. NAPI（New API）](#1-napinew-api)
+    - [1.1 传统中断 vs NAPI](#11-传统中断-vs-napi)
+    - [1.2 NAPI 流程](#12-napi-流程)
+    - [1.3 关键参数](#13-关键参数)
+  - [2. 硬件卸载（Offload）](#2-硬件卸载offload)
+    - [2.1 GSO（Generic Segmentation Offload）](#21-gsogeneric-segmentation-offload)
+    - [2.2 TSO（TCP Segmentation Offload）](#22-tsotcp-segmentation-offload)
+    - [2.3 GRO（Generic Receive Offload）](#23-grogeneric-receive-offload)
+    - [2.4 LRO（Large Receive Offload）](#24-lrolarge-receive-offload)
+    - [2.5 Checksum Offload](#25-checksum-offload)
+  - [3. 多队列与分发](#3-多队列与分发)
+    - [3.1 RSS（Receive Side Scaling）](#31-rssreceive-side-scaling)
+    - [3.2 RPS（Receive Packet Steering）](#32-rpsreceive-packet-steering)
+    - [3.3 RFS（Receive Flow Steering）](#33-rfsreceive-flow-steering)
+    - [3.4 XPS（Transmit Packet Steering）](#34-xpstransmit-packet-steering)
+  - [4. 配置示例](#4-配置示例)
+  - [5. 场景分析](#5-场景分析)
+  - [6. 术语表](#6-术语表)
+  - [7. 相关文件](#7-相关文件)
+  - [国际权威来源链接 / Authoritative Sources](#国际权威来源链接--authoritative-sources)
+
+<!-- TOC END -->
+
 > **权威来源**：Linux Kernel Networking, LWN.net, kernel.org `Documentation/networking/`。
 >
 > **目标**：深入 NAPI、GRO/GSO/TSO/LSO、RPS/RFS/XPS/RSS 等网络性能优化机制。

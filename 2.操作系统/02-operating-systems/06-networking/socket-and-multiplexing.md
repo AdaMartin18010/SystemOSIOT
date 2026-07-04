@@ -1,5 +1,32 @@
 # Socket 与 I/O 多路复用
 
+
+<!-- TOC START -->
+
+- [Socket 与 I/O 多路复用](#socket-与-io-多路复用)
+  - [1. Socket API 核心系统调用](#1-socket-api-核心系统调用)
+  - [2. Socket 与文件描述符](#2-socket-与文件描述符)
+  - [3. select / poll](#3-select--poll)
+    - [3.1 select](#31-select)
+    - [3.2 poll](#32-poll)
+  - [4. epoll](#4-epoll)
+    - [4.1 核心数据结构](#41-核心数据结构)
+    - [4.2 关键函数](#42-关键函数)
+    - [4.3 工作原理](#43-工作原理)
+    - [4.4 LT 与 ET 模式](#44-lt-与-et-模式)
+  - [5. io\_uring](#5-io_uring)
+    - [5.1 核心数据结构](#51-核心数据结构)
+    - [5.2 队列模型](#52-队列模型)
+    - [5.3 关键特性](#53-关键特性)
+    - [5.4 操作类型](#54-操作类型)
+  - [6. select / poll / epoll / io\_uring 对比](#6-select--poll--epoll--io_uring-对比)
+  - [7. 决策树](#7-决策树)
+  - [8. 国际来源映射](#8-国际来源映射)
+  - [9. 相关文件](#9-相关文件)
+  - [国际权威来源链接 / Authoritative Sources](#国际权威来源链接--authoritative-sources)
+
+<!-- TOC END -->
+
 > **权威来源**：POSIX.1-2024 §16, OSTEP Ch. 33, Linux Kernel `net/socket.c`, `fs/eventpoll.c`, `fs/io_uring.c`, LWN.net。
 >
 > **目标**：系统讲解 socket API、select/poll/epoll/io_uring 的原理、源码映射与决策场景。

@@ -9,6 +9,7 @@
   - [3. 覆盖缺口与补齐计划](#3-覆盖缺口与补齐计划)
   - [5. 形式化工件链接](#5-形式化工件链接)
   - [6. 维护记录](#6-维护记录)
+  - [国际权威来源链接 | International Authoritative Sources](#国际权威来源链接-international-authoritative-sources)
 
 <!-- TOC END -->
 
@@ -76,3 +77,21 @@
 | 2026-07-02 | 创建映射骨架 | Kimi Code CLI |
 | 2026-07-05 | 补齐以太网/IP/TCP/UDP/HTTP/TLS/DNS/OSI/IEEE 802.3/802.1Q 权威来源与链接 | Kimi Code CLI |
 | 2026-07-05 | 向 8.1/8.6/8.7/8.8 关键章节批量追加 RFC/ISO/IEEE/NIST 权威来源链接 | Kimi Code CLI |
+
+## 国际权威来源链接 | International Authoritative Sources
+
+- [ISO/IEC 7498-1 — OSI Basic Reference Model](https://www.iso.org/standard/20269.html)
+- [RFC 1122 — Host Requirements](https://datatracker.ietf.org/doc/html/rfc1122)
+- [RFC 791 — Internet Protocol (IPv4)](https://datatracker.ietf.org/doc/html/rfc791)
+- [RFC 793 — Transmission Control Protocol (TCP)](https://datatracker.ietf.org/doc/html/rfc793)
+- [RFC 8200 — Internet Protocol, Version 6 (IPv6)](https://datatracker.ietf.org/doc/html/rfc8200)
+- [RFC 5681 — TCP Congestion Control](https://datatracker.ietf.org/doc/html/rfc5681)
+- [IEEE 802.3-2022 — Ethernet](https://standards.ieee.org/standard/802.3-2022.html)
+- [IEEE 802.1Q-2024 — VLAN Bridging](https://standards.ieee.org/standard/802.1Q-2024.html)
+- [NIST SP 800-207 — Zero Trust Architecture](https://csrc.nist.gov/publications/detail/sp/800/207/final)
+- [NIST Cybersecurity Framework](https://www.nist.gov/cyberframework)
+- [RFC 8446 — TLS 1.3](https://datatracker.ietf.org/doc/html/rfc8446)
+- [NIST AI Risk Management Framework](https://www.nist.gov/itl/ai-risk-management-framework)
+- [EU AI Act](https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32024R1689)
+- [3GPP Specifications](https://www.3gpp.org/specifications)
+- [Lamport, L. Specifying Systems (TLA+)](https://lamport.azurewebsites.net/tla/book.html)

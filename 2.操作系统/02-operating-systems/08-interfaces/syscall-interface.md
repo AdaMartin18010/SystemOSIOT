@@ -1,5 +1,35 @@
 # 系统调用接口（System Call Interface）
 
+
+<!-- TOC START -->
+
+- [系统调用接口（System Call Interface）](#系统调用接口system-call-interface)
+  - [1. 系统调用全景](#1-系统调用全景)
+  - [2. 硬件基础：特权级与指令](#2-硬件基础特权级与指令)
+    - [2.1 x86-64 syscall 寄存器约定](#21-x86-64-syscall-寄存器约定)
+    - [2.2 ARM64 syscall 寄存器约定](#22-arm64-syscall-寄存器约定)
+  - [3. Linux 系统调用实现](#3-linux-系统调用实现)
+    - [3.1 入口代码](#31-入口代码)
+    - [3.2 系统调用表](#32-系统调用表)
+    - [3.3 定义系统调用](#33-定义系统调用)
+    - [3.4 关键路径示例：`write()`](#34-关键路径示例write)
+  - [4. vDSO（virtual Dynamic Shared Object）](#4-vdsovirtual-dynamic-shared-object)
+    - [4.1 目的](#41-目的)
+    - [4.2 机制](#42-机制)
+    - [4.3 vDSO 符号](#43-vdso-符号)
+  - [5. seccomp 与系统调用过滤](#5-seccomp-与系统调用过滤)
+    - [5.1 seccomp 模式](#51-seccomp-模式)
+    - [5.2 seccomp-bpf 流程](#52-seccomp-bpf-流程)
+  - [6. ptrace](#6-ptrace)
+  - [7. /proc 与 /sys 接口](#7-proc-与-sys-接口)
+  - [8. 系统调用开销与优化](#8-系统调用开销与优化)
+  - [9. 术语表](#9-术语表)
+  - [10. 国际来源映射](#10-国际来源映射)
+  - [11. 相关文件](#11-相关文件)
+  - [国际权威来源链接 / Authoritative Sources](#国际权威来源链接--authoritative-sources)
+
+<!-- TOC END -->
+
 > **权威来源**：POSIX.1-2024 §System Interfaces, Intel SDM Vol. 3A, ARM Architecture Reference Manual, Linux Kernel Development, LWN.net。
 >
 > **目标**：系统讲解系统调用接口的硬件基础、内核实现、ABI 约定、性能优化与安全控制。

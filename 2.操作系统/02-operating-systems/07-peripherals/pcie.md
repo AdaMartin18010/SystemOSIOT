@@ -1,5 +1,28 @@
 # PCIe 总线
 
+
+<!-- TOC START -->
+
+- [PCIe 总线](#pcie-总线)
+  - [1. PCIe 拓扑](#1-pcie-拓扑)
+  - [2. 配置空间](#2-配置空间)
+    - [2.1 关键寄存器](#21-关键寄存器)
+    - [2.2 BAR](#22-bar)
+  - [3. 枚举过程](#3-枚举过程)
+  - [4. 中断机制](#4-中断机制)
+  - [5. Linux PCI 子系统](#5-linux-pci-子系统)
+    - [5.1 核心数据结构](#51-核心数据结构)
+    - [5.2 驱动 API](#52-驱动-api)
+  - [6. IOMMU 与 SR-IOV](#6-iommu-与-sr-iov)
+    - [6.1 IOMMU](#61-iommu)
+    - [6.2 SR-IOV](#62-sr-iov)
+  - [7. 场景分析](#7-场景分析)
+  - [8. 术语表](#8-术语表)
+  - [9. 相关文件](#9-相关文件)
+  - [国际权威来源链接 / Authoritative Sources](#国际权威来源链接--authoritative-sources)
+
+<!-- TOC END -->
+
 > **权威来源**：PCI-SIG PCIe Base Specification, Linux Kernel `drivers/pci/`, LWN.net。
 >
 > **目标**：系统讲解 PCIe 拓扑、枚举、配置空间、BAR、MSI/MSI-X、IOMMU、SR-IOV。

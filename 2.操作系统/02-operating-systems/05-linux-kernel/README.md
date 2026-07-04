@@ -1,5 +1,14 @@
 # 05-linux-kernel / Linux 内核实现
 
+
+<!-- TOC START -->
+
+- [05-linux-kernel / Linux 内核实现](#05-linux-kernel--linux-内核实现)
+  - [文件列表](#文件列表)
+  - [返回](#返回)
+
+<!-- TOC END -->
+
 本目录聚焦 Linux 内核的工程实现，把操作系统通用概念映射到 `task_struct`、`mm_struct`、`VFS`、`net/`、`drivers/` 等真实源码结构。
 
 ## 文件列表

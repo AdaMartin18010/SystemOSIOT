@@ -1,5 +1,21 @@
 # 操作系统场景分析树 / 决策树（OS Scenario & Decision Tree）
 
+
+<!-- TOC START -->
+
+- [操作系统场景分析树 / 决策树（OS Scenario \& Decision Tree）](#操作系统场景分析树--决策树os-scenario--decision-tree)
+  - [1. 高并发 I/O 多路复用决策树](#1-高并发-io-多路复用决策树)
+  - [2. 调度策略决策树](#2-调度策略决策树)
+  - [3. 总线/外设选择决策树](#3-总线外设选择决策树)
+  - [4. Linux vs RTOS 平台选择决策树](#4-linux-vs-rtos-平台选择决策树)
+  - [5. 网络安全路径决策树](#5-网络安全路径决策树)
+  - [6. 容器网络选择决策树](#6-容器网络选择决策树)
+  - [7. 文件系统选择决策树](#7-文件系统选择决策树)
+  - [8. 国际来源映射](#8-国际来源映射)
+  - [9. 相关文件](#9-相关文件)
+
+<!-- TOC END -->
+
 > **权威来源**：OSTEP, Berkeley CS162, Linux Kernel Development, Brendan Gregg *BPF Performance Tools*, TCP/IP Illustrated。
 >
 > **目标**：把 OS 概念与机制落地到具体工程场景，提供“场景 → 约束/负载 → 候选方案 → 关键参数 → 验证指标 → 典型系统”的决策支持。

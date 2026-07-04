@@ -1,5 +1,27 @@
 # Linux 设备与驱动
 
+
+<!-- TOC START -->
+
+- [Linux 设备与驱动](#linux-设备与驱动)
+  - [1. Linux 设备模型](#1-linux-设备模型)
+    - [1.1 核心数据结构](#11-核心数据结构)
+    - [1.2 注册流程](#12-注册流程)
+  - [2. 字符设备](#2-字符设备)
+  - [3. 块设备](#3-块设备)
+  - [4. 平台设备与设备树](#4-平台设备与设备树)
+    - [4.1 平台驱动](#41-平台驱动)
+    - [4.2 设备树匹配](#42-设备树匹配)
+    - [4.3 解析设备树](#43-解析设备树)
+  - [5. 中断与 DMA](#5-中断与-dma)
+  - [6. sysfs 与 udev](#6-sysfs-与-udev)
+  - [7. 场景分析](#7-场景分析)
+  - [8. 术语表](#8-术语表)
+  - [9. 相关文件](#9-相关文件)
+  - [国际权威来源链接 / Authoritative Sources](#国际权威来源链接--authoritative-sources)
+
+<!-- TOC END -->
+
 > **权威来源**：Linux Device Drivers (Corbet, Rubini, Kroah-Hartman), Linux Kernel Development, ARM Devicetree Specification。
 >
 > **目标**：深入 Linux 设备模型、设备树、总线驱动、字符/块/网络设备、DMA、中断。
