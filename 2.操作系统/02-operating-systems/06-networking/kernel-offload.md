@@ -158,3 +158,12 @@ echo 1 > /sys/class/net/eth0/queues/tx-0/xps_cpus
 - [Linux 网络协议栈](./linux-network-stack.md)
 - [Socket 与多路复用](./socket-and-multiplexing.md)
 - [Netfilter/eBPF/XDP](./netfilter-ebpf-xdp.md)
+
+## 国际权威来源链接 / Authoritative Sources
+
+- [Linux Networking - NAPI](https://docs.kernel.org/networking/napi.html)
+- [Linux Kernel - Generic Receive Offload (GRO)](https://docs.kernel.org/networking/gro.html)
+- [Linux Kernel - Segmentation Offloads](https://docs.kernel.org/networking/segmentation-offloads.html)
+- [Linux Kernel - RPS/RFS/XPS](https://docs.kernel.org/networking/scaling.html)
+- [Linux Kernel Networking (Rami Rosen)](https://www.apress.com/gp/book/9781430261964)
+- [Linux netdev subsystem documentation](https://docs.kernel.org/process/maintainer-netdev.html)

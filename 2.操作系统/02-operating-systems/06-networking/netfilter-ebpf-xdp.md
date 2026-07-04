@@ -188,3 +188,13 @@ NIC RX
 - [Socket 与多路复用](./socket-and-multiplexing.md)
 - [流量控制](./traffic-control.md)
 - [操作系统场景分析树](../00-concept-atlas/scenario-analysis-tree-os.md)
+
+## 国际权威来源链接 / Authoritative Sources
+
+- [Linux BPF documentation](https://docs.kernel.org/bpf/)
+- [Linux XDP documentation](https://docs.kernel.org/networking/xdp.html)
+- [Cilium BPF and XDP Reference Guide](https://docs.cilium.io/en/latest/bpf/)
+- [eBPF.io - What is eBPF?](https://ebpf.io/what-is-ebpf/)
+- [Brendan Gregg - BPF Performance Tools](http://www.brendangregg.com/bpf-performance-tools-book.html)
+- [Netfilter project](https://www.netfilter.org/)
+- [nftables documentation](https://wiki.nftables.org/wiki-nftables/index.php/Main_Page)

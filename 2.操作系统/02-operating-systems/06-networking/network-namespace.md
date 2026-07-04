@@ -159,3 +159,12 @@ ip link set veth1 master br0
 
 - [Linux 网络协议栈](./linux-network-stack.md)
 - [操作系统场景分析树](../00-concept-atlas/scenario-analysis-tree-os.md)
+
+## 国际权威来源链接 / Authoritative Sources
+
+- [Linux network namespaces documentation](https://man7.org/linux/man-pages/man7/network_namespaces.7.html)
+- [Linux veth(4) manual](https://man7.org/linux/man-pages/man4/veth.4.html)
+- [Linux bridge documentation](https://docs.kernel.org/networking/bridge.html)
+- [CNI Specification](https://www.cni.dev/docs/spec/)
+- [IEEE 802.1Q-2024 VLAN](https://standards.ieee.org/standard/802.1Q-2024.html)
+- [PCI-SIG SR-IOV / I/O Virtualization](https://pcisig.com/specifications/iov)

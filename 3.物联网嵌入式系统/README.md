@@ -10,6 +10,7 @@
     - [3.4 形式化证明](#34-形式化证明)
     - [3.5 多表征](#35-多表征)
     - [3.6 形式语义](#36-形式语义)
+    - [新增工程专题](#新增工程专题)
   - [核心概念](#核心概念)
     - [3.0.1 物联网定义](#301-物联网定义)
     - [3.0.2 嵌入式系统定义](#302-嵌入式系统定义)
@@ -86,8 +87,12 @@
   - [实时调度可调度性](./04-rtos-concepts/real-time-schedulability.md)
 - [05-peripheral-interface-analysis / 外设接口分析](./05-peripheral-interface-analysis/)
   - [传感器到 OS 映射](./05-peripheral-interface-analysis/sensor-to-os-mapping.md)
+  - [嵌入式外设总线决策树](./05-peripheral-interface-analysis/embedded-bus-decision-tree.md)
+  - [低功耗接口与电源管理](./05-peripheral-interface-analysis/low-power-interface.md)
 - [06-decision-trees / 决策树](./06-decision-trees/)
   - [Linux vs RTOS 决策树](./06-decision-trees/linux-vs-rtos.md)
+  - [物联网协议选择决策树](./06-decision-trees/protocol-selection.md)
+  - [边缘计算架构决策树](./06-decision-trees/edge-architecture.md)
 
 ## 核心概念
 

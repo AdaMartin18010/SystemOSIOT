@@ -3,26 +3,32 @@
 
 <!-- TOC START -->
 
-- [操作系统 / Operating Systems](#操作系统--operating-systems)
-  - [📚 领域概览 / Domain Overview](#-领域概览--domain-overview)
-  - [🏗️ 领域架构 / Domain Architecture](#️-领域架构--domain-architecture)
+- [操作系统 / Operating Systems](#操作系统-operating-systems)
+  - [📚 领域概览 / Domain Overview](#-领域概览-domain-overview)
+  - [🏗️ 领域架构 / Domain Architecture](#-领域架构-domain-architecture)
     - [核心子领域](#核心子领域)
     - [新增概念分析体系](#新增概念分析体系)
-  - [🔗 技术关联 / Technical Relationships](#-技术关联--technical-relationships)
+    - [新增专题索引](#新增专题索引)
+      - [05-linux-kernel / Linux 内核实现](#05-linux-kernel-linux-内核实现)
+      - [06-networking / OS 网络子系统](#06-networking-os-网络子系统)
+      - [07-peripherals / 外设与总线](#07-peripherals-外设与总线)
+      - [08-interfaces / 接口与抽象层](#08-interfaces-接口与抽象层)
+      - [docs / 跨域术语](#docs-跨域术语)
+  - [🔗 技术关联 / Technical Relationships](#-技术关联-technical-relationships)
     - [前置知识](#前置知识)
     - [相关技术](#相关技术)
     - [应用场景](#应用场景)
-  - [📖 学习路径 / Learning Path](#-学习路径--learning-path)
+  - [📖 学习路径 / Learning Path](#-学习路径-learning-path)
     - [初级 (Beginner)](#初级-beginner)
     - [中级 (Intermediate)](#中级-intermediate)
     - [高级 (Advanced)](#高级-advanced)
-  - [🛠️ 实践项目 / Practical Projects](#️-实践项目--practical-projects)
+  - [🛠️ 实践项目 / Practical Projects](#-实践项目-practical-projects)
     - [推荐项目](#推荐项目)
     - [开发环境](#开发环境)
-  - [📚 推荐资源 / Recommended Resources](#-推荐资源--recommended-resources)
+  - [📚 推荐资源 / Recommended Resources](#-推荐资源-recommended-resources)
     - [经典教材](#经典教材)
     - [在线资源](#在线资源)
-  - [🔄 更新日志 / Update Log](#-更新日志--update-log)
+  - [🔄 更新日志 / Update Log](#-更新日志-update-log)
 
 <!-- TOC END -->
 
@@ -76,6 +82,7 @@
 - [内核卸载](./06-networking/kernel-offload.md)
 - [流量控制](./06-networking/traffic-control.md)
 - [网络命名空间](./06-networking/network-namespace.md)
+- [高性能网络路径选择](./06-networking/high-performance-networking.md)
 
 #### 07-peripherals / 外设与总线
 - [外设概念树](./07-peripherals/peripheral-concept-tree.md)
@@ -96,6 +103,9 @@
 - [POSIX 映射](./08-interfaces/posix-mapping.md)
 - [HAL / BSP / 设备树](./08-interfaces/hal-bsp-device-tree.md)
 - [跨层映射](./08-interfaces/cross-layer-mapping.md)
+
+#### docs / 跨域术语
+- [OS / 网络 / 外设 / 接口 跨域术语对照表](../../../docs/os-network-peripheral-interface-terminology.md)
 
 ## 🔗 技术关联 / Technical Relationships
 

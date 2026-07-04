@@ -24,6 +24,16 @@
 | 安全标准 | Common Criteria | ISO/IEC 15408:2022 | <https://www.iso.org/standard/72891.html> |
 | 形式化 OS | seL4 | SOSP 2009 | DOI: 10.1145/1629575.1629596 |
 | 微内核 | Fiasco.OC / L4Re | 最新 | <https://l4re.org/> |
+| 教材 | OSTEP (Remzi & Andrea Arpaci-Dusseau) | 最新在线版 | <https://pages.cs.wisc.edu/~remzi/OSTEP/> |
+| 教材 | Operating Systems: Principles and Practice (Anderson & Dahlin) | 2nd Ed. | <https://www.amazon.com/Operating-Systems-Principles-Practice-2nd/dp/0985673524> |
+| 课程 | MIT 6.S081 / 6.828 xv6 | 2024 | <https://pdos.csail.mit.edu/6.S081/> |
+| 课程 | Stanford CS140 / Pintos | 最新 | <https://web.stanford.edu/class/cs140/> |
+| 知识体系 | ACM/IEEE CS2023 OS/AR/NC/SF KAs | 2023 | <https://www.acm.org/education/curricula-recommendations> |
+| Linux 教材 | Linux Kernel Development (Robert Love) | 3rd Ed. | Pearson |
+| Linux 教材 | Understanding the Linux Kernel (Bovet & Cesati) | 3rd Ed. | O'Reilly |
+| 驱动教材 | Linux Device Drivers (Corbet, Rubini, Kroah-Hartman) | 3rd Ed. | <https://static.lwn.net/images/pdf/LDD3/ch00.pdf> |
+| 架构教材 | Computer Architecture: A Quantitative Approach (Hennessy & Patterson) | 6th Ed. | Morgan Kaufmann |
+| Linux 源码文档 | Linux Kernel Documentation | 最新 | <https://docs.kernel.org/> |
 
 ## 3. 物联网嵌入式系统
 
@@ -36,6 +46,20 @@
 | 协议 | CoAP | RFC 7252/8323 | <https://doi.org/10.17487/RFC7252> |
 | 协议 | LwM2M | 1.2 | <https://omaspecworks.org/> |
 | 标准 | Matter / Thread | 1.4 / 1.4 | <https://csa-iot.org/all-solutions/matter/> |
+| RTOS | FreeRTOS Documentation | 最新 | <https://www.freertos.org/Documentation/RTOS-book> |
+| RTOS | Zephyr Project Documentation | 最新 | <https://docs.zephyrproject.org/> |
+| RTOS | RTEMS Documentation | 最新 | <https://docs.rtems.org/> |
+| 实时理论 | Liu & Layland, "Scheduling Algorithms for Multiprogramming in a Hard-Real-Time Environment" | JACM 1973 | DOI: 10.1145/321738.321743 |
+| 实时教材 | Hard Real-Time Computing Systems (Buttazzo) | 4th Ed. | Springer |
+| 总线标准 | NXP I²C-bus Specification (UM10204) | Rev. 7, 2021 | <https://www.nxp.com/docs/en/user-guide/UM10204.pdf> |
+| 总线标准 | Motorola SPI Block Guide | V04.01 (S12SPIV4/D) | NXP/Freescale |
+| 总线标准 | ISO 11898 (CAN) | 2015/2020/2021 | <https://www.iso.org/standard/63648.html> |
+| 总线标准 | Bosch CAN Specification 2.0 | 2.0 | <https://www.bosch-semiconductors.com/us/ip-modules/can-protocol/can-2-0.html> |
+| 总线标准 | PCI Express Base Specification | 6.0/7.0 | <https://pcisig.com/specifications> |
+| 总线标准 | USB 2.0/3.2/4 Specifications | 最新 | <https://www.usb.org/documents> |
+| 架构手册 | Intel 64 and IA-32 Architectures Software Developer's Manual | Vol. 3A | <https://www.intel.com/content/www/us/en/developer/articles/technical/intel-sdm.html> |
+| 架构手册 | ARM Architecture Reference Manual / GIC | 最新 | <https://developer.arm.com/documentation> |
+| 架构手册 | RISC-V Privileged Spec / PLIC | 最新 | <https://riscv.org/technical/specifications/> |
 
 ## 4. 分布式系统
 
@@ -89,15 +113,30 @@
 
 | 类型 | 名称 | 版本/年份 | 链接/DOI |
 |---|---|---|---|
-| RFC | TCP/IP Host Requirements | RFC 1122/1123 | DOI: 10.17487/RFC1122 |
+| RFC | Internet Protocol (IPv4) | RFC 791 | <https://datatracker.ietf.org/doc/html/rfc791> |
+| RFC | Transmission Control Protocol (TCP) | RFC 793 | <https://datatracker.ietf.org/doc/html/rfc793> |
+| RFC | User Datagram Protocol (UDP) | RFC 768 | <https://datatracker.ietf.org/doc/html/rfc768> |
+| RFC | Internet Control Message Protocol (ICMP) | RFC 792 | <https://datatracker.ietf.org/doc/html/rfc792> |
+| RFC | Address Resolution Protocol (ARP) | RFC 826 | <https://datatracker.ietf.org/doc/html/rfc826> |
+| RFC | Internet Protocol, Version 6 (IPv6) | RFC 8200 | <https://datatracker.ietf.org/doc/html/rfc8200> |
+| RFC | TCP/IP Host Requirements | RFC 1122/1123 | <https://datatracker.ietf.org/doc/html/rfc1122> |
+| RFC | TCP Congestion Control | RFC 5681 | <https://datatracker.ietf.org/doc/html/rfc5681> |
 | RFC | QUIC | RFC 9000/9001/9002/9114 | DOI: 10.17487/RFC9000 |
 | RFC | BGP | RFC 4271 及扩展 | DOI: 10.17487/RFC4271 |
 | RFC | OSPF | RFC 2328/5340 | DOI: 10.17487/RFC2328 |
+| 标准 | IEEE 802.3 Ethernet | IEEE 802.3-2022 | <https://standards.ieee.org/standard/802.3-2022.html> |
+| 标准 | IEEE 802.1Q VLAN | IEEE 802.1Q-2024 | <https://standards.ieee.org/standard/802.1Q-2024.html> |
 | 标准 | IEEE 802.11 | IEEE 802.11-2024 | <https://standards.ieee.org/standard/802.11-2024.html> |
 | 协议 | OpenFlow | 1.5.1 | <https://opennetworking.org/software-defined-standards/> |
 | 语言 | P4 / P4Runtime | P4-16 / v1.4.1 | <https://p4.org/> |
 | 标准 | 3GPP 5G-Advanced | Release 18 | <https://www.3gpp.org/specifications> |
-| 框架 | NIST SP 800-207 | Zero Trust Architecture | <https://csrc.nist.gov/publications/detail/sp/800-207/final> |
+| 框架 | NIST SP 800-207 | Zero Trust Architecture | <https://csrc.nist.gov/publications/detail/sp/800/207/final> |
+| Linux 网络文档 | netdev subsystem | 最新 | <https://docs.kernel.org/process/maintainer-netdev.html> |
+| eBPF/XDP 文档 | Linux BPF / XDP | 最新 | <https://docs.kernel.org/bpf/>, <https://docs.kernel.org/networking/xdp.html> |
+| 流量控制 | Linux tc / Traffic Control | 最新 | <https://docs.kernel.org/networking/sched/> |
+| 教材 | TCP/IP Illustrated, Vol. 1 (Stevens) | 2nd Ed. | Addison-Wesley |
+| 教材 | Linux Kernel Networking (Rami Rosen) | 最新 | Apress |
+| 论文 | io_uring (Jens Axboe) | 2020 | <https://kernel.dk/io_uring.pdf> |
 
 ## 9. 形式化方法通用基准
 

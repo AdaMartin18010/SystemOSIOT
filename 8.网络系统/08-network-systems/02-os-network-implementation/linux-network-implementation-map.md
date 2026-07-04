@@ -97,3 +97,16 @@ send()
 - [Linux 网络协议栈](../../../2.操作系统/02-operating-systems/06-networking/linux-network-stack.md)
 - [Socket 与多路复用](../../../2.操作系统/02-operating-systems/06-networking/socket-and-multiplexing.md)
 - [操作系统-网络-嵌入式-接口跨域映射](../../Analysis/操作系统-网络-嵌入式-接口跨域映射.md)
+
+## 国际权威来源链接 / Authoritative Sources
+
+- [RFC 791 - Internet Protocol](https://datatracker.ietf.org/doc/html/rfc791)
+- [RFC 793 - Transmission Control Protocol](https://datatracker.ietf.org/doc/html/rfc793)
+- [RFC 768 - User Datagram Protocol](https://datatracker.ietf.org/doc/html/rfc768)
+- [RFC 792 - Internet Control Message Protocol](https://datatracker.ietf.org/doc/html/rfc792)
+- [RFC 826 - Address Resolution Protocol](https://datatracker.ietf.org/doc/html/rfc826)
+- [RFC 8200 - IPv6](https://datatracker.ietf.org/doc/html/rfc8200)
+- [IEEE 802.1Q-2024 VLAN](https://standards.ieee.org/standard/802.1Q-2024.html)
+- [POSIX.1-2024 Socket API](https://pubs.opengroup.org/onlinepubs/9799919799/)
+- [Linux netdev subsystem documentation](https://docs.kernel.org/process/maintainer-netdev.html)
+- [Linux Kernel Networking (Rami Rosen)](https://www.apress.com/gp/book/9781430261964)

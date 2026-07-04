@@ -253,3 +253,17 @@ send() / sendmsg()
 - [Netfilter/eBPF/XDP](./netfilter-ebpf-xdp.md)
 - [流量控制](./traffic-control.md)
 - [操作系统场景分析树](../00-concept-atlas/scenario-analysis-tree-os.md)
+
+## 国际权威来源链接 / Authoritative Sources
+
+- [RFC 791 - Internet Protocol](https://datatracker.ietf.org/doc/html/rfc791)
+- [RFC 793 - Transmission Control Protocol](https://datatracker.ietf.org/doc/html/rfc793)
+- [RFC 768 - User Datagram Protocol](https://datatracker.ietf.org/doc/html/rfc768)
+- [RFC 792 - Internet Control Message Protocol](https://datatracker.ietf.org/doc/html/rfc792)
+- [RFC 826 - Address Resolution Protocol](https://datatracker.ietf.org/doc/html/rfc826)
+- [RFC 8200 - Internet Protocol, Version 6 (IPv6)](https://datatracker.ietf.org/doc/html/rfc8200)
+- [IEEE 802.3-2022 Ethernet](https://standards.ieee.org/standard/802.3-2022.html)
+- [IEEE 802.1Q-2024 VLAN](https://standards.ieee.org/standard/802.1Q-2024.html)
+- [Linux netdev subsystem documentation](https://docs.kernel.org/process/maintainer-netdev.html)
+- [Linux Kernel Networking (Rami Rosen) - Apress](https://www.apress.com/gp/book/9781430261964)
+- [TCP/IP Illustrated, Vol. 1 (Stevens)](https://www.amazon.com/TCP-Illustrated-Protocols-Addison-Wesley-Professional/dp/0321336313)

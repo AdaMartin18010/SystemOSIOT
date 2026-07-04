@@ -139,3 +139,12 @@ tc filter add dev eth0 protocol ip parent 1:0 u32 match ip dport 443 0xffff clas
 - [Linux 网络协议栈](./linux-network-stack.md)
 - [Netfilter/eBPF/XDP](./netfilter-ebpf-xdp.md)
 - [内核卸载](./kernel-offload.md)
+
+## 国际权威来源链接 / Authoritative Sources
+
+- [Linux tc(8) manual](https://man7.org/linux/man-pages/man8/tc.8.html)
+- [Linux Traffic Control - Kernel Scheduler Docs](https://docs.kernel.org/networking/sched/)
+- [HTB manual](http://luxik.cdi.cz/~devik/qos/htb/)
+- [CoDel and fq_codel (ACM Queue/Van Jacobson)](https://queue.acm.org/detail.cfm?id=2209336)
+- [RFC 2475 - An Architecture for Differentiated Services](https://datatracker.ietf.org/doc/html/rfc2475)
+- [RFC 2998 - A Framework for Integrated Services Operation over Diffserv](https://datatracker.ietf.org/doc/html/rfc2998)

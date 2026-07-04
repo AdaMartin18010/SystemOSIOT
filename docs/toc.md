@@ -23,6 +23,13 @@
 - [主导航索引](./navigation/main-index.md)
 - [领域关系图](./navigation/domain-map.md)
 - [技术路线图](./navigation/technology-roadmap.md)
+- [OS / 网络 / 外设 / 接口 跨域术语对照表](./os-network-peripheral-interface-terminology.md)
+
+## 跨域映射
+
+- [操作系统-网络-嵌入式-接口跨域映射](../Analysis/操作系统-网络-嵌入式-接口跨域映射.md)
+- [高并发-实时-物联网场景决策树汇总](../Analysis/高并发-实时-物联网场景决策树汇总.md)
+- [形式化工件审计](../validation/formal-artifacts-gap-audit.md)
 
 ---
 

@@ -209,3 +209,12 @@ graph TD
 
 - [Linux 网络协议栈实现映射](./linux-network-stack.md)
 - [操作系统场景分析树](../00-concept-atlas/scenario-analysis-tree-os.md)
+
+## 国际权威来源链接 / Authoritative Sources
+
+- [POSIX.1-2024 - BSD Socket API](https://pubs.opengroup.org/onlinepubs/9799919799/)
+- [RFC 793 - Transmission Control Protocol (state machine)](https://datatracker.ietf.org/doc/html/rfc793)
+- [Linux epoll(7) manual](https://man7.org/linux/man-pages/man7/epoll.7.html)
+- [Linux io_uring documentation](https://docs.kernel.org/io_uring/)
+- [io_uring paper by Jens Axboe (PDF)](https://kernel.dk/io_uring.pdf)
+- [LWN.net - Lord of the io_uring](https://lwn.net/Articles/776703/)

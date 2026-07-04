@@ -116,3 +116,27 @@
 2. 将本审计结果链接到各模块的 `X.0 国际标准映射/README.md` 中。
 3. 在 CI 中固化工具安装脚本，确保每次提交都能复现验证结果。
 4. 定期审计 ISO/IEC/IEEE 15288、SysML v2、K8s、OCI、RFC 等标准的版本更新。
+
+---
+
+## 6. 新增主题覆盖状态（2026-07-05）
+
+> 本次冲刺新增/补齐了 OS 网络、外设总线、接口层、嵌入式/RTOS、跨域映射的 Markdown/Mermaid/伪代码工件。所有新增内容目前均为工程师级概念映射与决策树，**未新增 Coq/Isabelle/Lean/TLA+ 等形式化工件**。
+
+| 主题 | 新增/补齐文件 | 覆盖形式 | 形式化工件状态 |
+|---|---|---|---|
+| Linux 内核实现 | `05-linux-kernel/*.md` (6 文件) | Markdown + Mermaid | ❌ 无 |
+| OS 网络子系统 | `06-networking/*.md` (7 文件) | Markdown + Mermaid + 决策树 | ❌ 无 |
+| 外设总线 | `07-peripherals/*.md` (10 文件) | Markdown + Mermaid + 决策树 | ❌ 无 |
+| 接口与抽象层 | `08-interfaces/*.md` (6 文件) | Markdown + Mermaid + 跨层映射 | ❌ 无 |
+| 嵌入式 Linux | `03-embedded-linux/*.md` (4 文件) | Markdown + Mermaid | ❌ 无 |
+| RTOS 概念 | `04-rtos-concepts/*.md` (3 文件) | Markdown + Mermaid + 可调度性分析 | ❌ 无 |
+| 外设接口分析 | `05-peripheral-interface-analysis/*.md` (3 文件) | Markdown + Mermaid + 决策树 | ❌ 无 |
+| 嵌入式决策树 | `06-decision-trees/*.md` (3 文件) | Markdown + Mermaid | ❌ 无 |
+| 跨域映射 | `Analysis/*跨域映射.md`, `Analysis/*决策树汇总.md` | Markdown + Mermaid | ❌ 无 |
+| OS 网络实现映射 | `8.5 多表征/8.5.1 概念图.md` 已加入 Linux 实现节点 | Markdown + Mermaid | ❌ 无 |
+
+### 说明
+
+- 新增内容严格遵循“工程师深度、无形式化工件”的当前阶段约定；如需进入 Phase 9，可为 TCP 拥塞控制、设备树一致性、RMA/EDF 可调度性、中断优先级等主题补充 TLA+/Alloy/SMT 工件。
+- 已同步更新 `2.操作系统/02-operating-systems/README.md`、`3.物联网嵌入式系统/README.md`、`8.网络系统/README.md`、`Analysis/README.md` 导航。
