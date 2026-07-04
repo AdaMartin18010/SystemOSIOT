@@ -1,5 +1,20 @@
 # RTOS 概念树
 
+
+<!-- TOC START -->
+
+- [RTOS 概念树](#rtos-概念树)
+  - [1. RTOS 全局概念树](#1-rtos-全局概念树)
+  - [2. RTOS 与通用 OS 概念对照](#2-rtos-与通用-os-概念对照)
+  - [3. 属性-关系映射](#3-属性-关系映射)
+  - [4. 机制组合树](#4-机制组合树)
+  - [5. 实时性分类](#5-实时性分类)
+  - [6. 术语表](#6-术语表)
+  - [7. 相关文件](#7-相关文件)
+  - [国际权威来源链接 | International Authoritative Sources](#国际权威来源链接--international-authoritative-sources)
+
+<!-- TOC END -->
+
 > **权威来源**：FreeRTOS Docs, Zephyr Docs, RTEMS Docs, VxWorks Docs, Buttazzo *Hard Real-Time Computing Systems*。
 >
 > **目标**：建立实时操作系统 RTOS 的完整概念树，并与通用 OS/Linux 概念对齐。
@@ -136,10 +151,13 @@ graph TD
 - [Linux vs RTOS 决策树](../06-decision-trees/linux-vs-rtos.md)
 - [操作系统机制组合树](../../2.操作系统/02-operating-systems/00-concept-atlas/mechanism-composition-tree-os.md)
 
-## 国际权威来源链接 / Authoritative Sources
+## 国际权威来源链接 | International Authoritative Sources
 
 - [FreeRTOS Documentation](https://www.freertos.org/Documentation/RTOS-book)
 - [Zephyr Project Documentation](https://docs.zephyrproject.org/)
 - [RTEMS Documentation](https://docs.rtems.org/)
 - [Liu & Layland, "Scheduling Algorithms for Multiprogramming in a Hard-Real-Time Environment", JACM 1973](https://doi.org/10.1145/321738.321743)
 - [Buttazzo, *Hard Real-Time Computing Systems* (Springer)](https://link.springer.com/book/10.1007/978-3-031-04138-0)
+- [ARM Architecture Reference Manual](https://developer.arm.com/documentation)
+- [RISC-V Privileged Spec](https://riscv.org/technical/specifications/)
+- [项目国际化权威标准基线 — 3. 物联网嵌入式系统](../../../docs/international-baseline.md)

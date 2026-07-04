@@ -13,6 +13,7 @@
   - [应用领域](#应用领域)
   - [相关资源](#相关资源)
   - [实践项目](#实践项目)
+  - [国际权威来源链接 | International Authoritative Sources](#国际权威来源链接--international-authoritative-sources)
 
 <!-- TOC END -->
 
@@ -82,3 +83,14 @@
 2. **批判视角**：从不同角度批判容器与微服务
 3. **反思重构**：对容器与微服务进行反思和重构
 4. **改进建议**：提出容器与微服务的改进建议
+
+
+## 国际权威来源链接 | International Authoritative Sources
+
+- NIST SP 800-190 (Application Container Security Guide): <https://csrc.nist.gov/publications/detail/sp/800/190/final>
+- CIS Docker Benchmark: <https://www.cisecurity.org/benchmark/docker>
+- CIS Kubernetes Benchmark: <https://www.cisecurity.org/benchmark/kubernetes>
+- OCI Runtime Spec v1.3.0: <https://github.com/opencontainers/runtime-spec/releases/tag/v1.3.0>
+- Kubernetes v1.33 Security Documentation: <https://v1-33.docs.kubernetes.io/docs/concepts/security/>
+- CloudEvents v1.0.2: <https://github.com/cloudevents/spec/blob/v1.0.2/cloudevents/spec.md>
+- SMI (Service Mesh Interface): <https://smi-spec.io/>

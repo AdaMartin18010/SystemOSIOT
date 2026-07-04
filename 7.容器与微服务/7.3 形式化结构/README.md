@@ -14,6 +14,7 @@
   - [应用领域](#应用领域)
   - [相关资源](#相关资源)
   - [实践项目](#实践项目)
+  - [国际权威来源链接 | International Authoritative Sources](#国际权威来源链接--international-authoritative-sources)
 
 <!-- TOC END -->
 
@@ -82,3 +83,16 @@
 2. **结构模型设计**：设计容器与微服务系统的结构模型
 3. **形式化表示**：使用数学工具表示容器与微服务系统结构
 4. **结构分析验证**：分析和验证容器与微服务系统结构的正确性
+
+
+## 国际权威来源链接 | International Authoritative Sources
+
+- OCI Runtime Spec v1.3.0: <https://github.com/opencontainers/runtime-spec/releases/tag/v1.3.0>
+- OCI Image Spec v1.1.0: <https://github.com/opencontainers/image-spec/releases/tag/v1.1.0>
+- Kubernetes v1.33 API Reference: <https://v1-33.docs.kubernetes.io/docs/reference/kubernetes-api/>
+- CNI Spec v1.1.0: <https://www.cni.dev/docs/spec/>
+- CRI protobuf / API: <https://kubernetes.io/docs/concepts/architecture/cri/>
+- CSI Spec: <https://github.com/container-storage-interface/spec>
+- gRPC: <https://github.com/grpc/grpc/releases/tag/v1.71.0>
+- Linux cgroups v2: <https://docs.kernel.org/admin-guide/cgroup-v2.html>
+- Linux Namespaces: <https://man7.org/linux/man-pages/man7/namespaces.7.html>

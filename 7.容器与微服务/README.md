@@ -4,6 +4,7 @@
 
 - [7.容器与微服务 主题内容与文件规划 / Container and Microservices Topic Content and File Planning](#7容器与微服务-主题内容与文件规划--container-and-microservices-topic-content-and-file-planning)
   - [目录结构与内容说明 / Directory Structure and Content Description](#目录结构与内容说明--directory-structure-and-content-description)
+    - [7.0 国际标准映射 / International Standard Mapping](#70-国际标准映射--international-standard-mapping)
     - [7.1 知识梳理 / Knowledge Organization](#71-知识梳理--knowledge-organization)
     - [7.2 批判性分析 / Critical Analysis](#72-批判性分析--critical-analysis)
     - [7.3 形式化结构 / Formal Structure](#73-形式化结构--formal-structure)
@@ -25,6 +26,7 @@
     - [质量保证机制 / Quality Assurance Mechanisms](#质量保证机制--quality-assurance-mechanisms)
   - [快速导航（项目级）](#快速导航项目级)
   - [工具与校验（项目级）](#工具与校验项目级)
+  - [国际权威来源链接 | International Authoritative Sources](#国际权威来源链接--international-authoritative-sources)
 
 <!-- TOC END -->
 
@@ -32,6 +34,13 @@
 This topic focuses on modern system architectures such as containers, microservices, service mesh, serverless, and cloud-native, with content divided into the following subdirectories and topics:
 
 ## 目录结构与内容说明 / Directory Structure and Content Description
+
+### 7.0 国际标准映射 / International Standard Mapping
+
+- 容器与微服务领域国际权威标准条款与项目章节的映射入口
+  Entry point for mapping international authoritative standards to project chapters
+- 详细映射表与覆盖缺口分析见 [7.0 国际标准映射/README.md](7.0%20国际标准映射/README.md)
+  Detailed mapping tables and gap analysis are in [7.0 国际标准映射/README.md](7.0%20国际标准映射/README.md)
 
 ### 7.1 知识梳理 / Knowledge Organization
 
@@ -233,3 +242,27 @@ python ../tools/toc_validate.py --root .. --toc ../docs/toc.md
 ```powershell
 powershell -ExecutionPolicy Bypass -File ../tools/ci_toc_check.ps1
 ```
+
+
+## 国际权威来源链接 | International Authoritative Sources
+
+本主题与以下国际权威标准/规范对齐，详细条款映射参见 [7.0 国际标准映射/README.md](7.0%20国际标准映射/README.md)：
+
+- OCI Runtime Spec v1.3.0: <https://github.com/opencontainers/runtime-spec/releases/tag/v1.3.0>
+- OCI Image Spec v1.1.0: <https://github.com/opencontainers/image-spec/releases/tag/v1.1.0>
+- OCI Distribution Spec v1.1.0: <https://github.com/opencontainers/distribution-spec/releases/tag/v1.1.0>
+- Kubernetes v1.33: <https://v1-33.docs.kubernetes.io/>
+- CNI Spec v1.1.0: <https://www.cni.dev/docs/spec/>
+- CRI: <https://kubernetes.io/docs/concepts/architecture/cri/>
+- CSI: <https://github.com/container-storage-interface/spec>
+- gRPC: <https://github.com/grpc/grpc/releases/tag/v1.71.0>
+- CloudEvents v1.0.2: <https://github.com/cloudevents/spec/blob/v1.0.2/cloudevents/spec.md>
+- SMI: <https://smi-spec.io/>
+- Dockerfile reference: <https://docs.docker.com/reference/dockerfile/>
+- NIST SP 800-190: <https://csrc.nist.gov/publications/detail/sp/800/190/final>
+- CIS Benchmarks: <https://www.cisecurity.org/cis-benchmarks>
+- IEEE 802.1Q: <https://standards.ieee.org/standard/802.1Q-2023.html>
+- PCI-SIG SR-IOV: <https://pcisig.com/specifications>
+- Linux cgroups v2: <https://docs.kernel.org/admin-guide/cgroup-v2.html>
+- Linux Namespaces: <https://man7.org/linux/man-pages/man7/namespaces.7.html>
+- eBPF docs: <https://docs.ebpf.io/>

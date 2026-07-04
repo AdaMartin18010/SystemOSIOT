@@ -1,5 +1,22 @@
 # FreeRTOS / Zephyr / RTEMS / VxWorks 对比映射
 
+
+<!-- TOC START -->
+
+- [FreeRTOS / Zephyr / RTEMS / VxWorks 对比映射](#freertos--zephyr--rtems--vxworks-对比映射)
+  - [1. 总体对比](#1-总体对比)
+  - [2. 任务/线程模型](#2-任务线程模型)
+  - [3. 调度器对比](#3-调度器对比)
+  - [4. 同步原语对比](#4-同步原语对比)
+  - [5. 中断与内存](#5-中断与内存)
+  - [6. 设备树与 HAL](#6-设备树与-hal)
+  - [7. 场景选择](#7-场景选择)
+  - [8. 术语表](#8-术语表)
+  - [9. 相关文件](#9-相关文件)
+  - [国际权威来源链接 | International Authoritative Sources](#国际权威来源链接--international-authoritative-sources)
+
+<!-- TOC END -->
+
 > **权威来源**：FreeRTOS Docs, Zephyr Docs, RTEMS Docs, VxWorks Docs。
 >
 > **目标**：对比主流 RTOS 的任务模型、调度器、同步原语、内存、中断、安全、适用场景。
@@ -109,9 +126,11 @@
 - [RTOS 概念树](./rtos-concept-tree.md)
 - [Linux vs RTOS 决策树](../06-decision-trees/linux-vs-rtos.md)
 
-## 国际权威来源链接 / Authoritative Sources
+## 国际权威来源链接 | International Authoritative Sources
 
 - [FreeRTOS Documentation](https://www.freertos.org/Documentation/RTOS-book)
 - [Zephyr Project Documentation](https://docs.zephyrproject.org/)
 - [RTEMS Documentation](https://docs.rtems.org/)
 - [Wind River VxWorks Documentation](https://docs.windriver.com/)
+- [POSIX.1 / IEEE Std 1003.1](https://pubs.opengroup.org/onlinepubs/9799919799/)
+- [项目国际化权威标准基线 — 3. 物联网嵌入式系统](../../../docs/international-baseline.md)

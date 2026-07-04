@@ -16,6 +16,7 @@
     - [3.0.2 嵌入式系统定义](#302-嵌入式系统定义)
     - [3.0.3 系统架构层次](#303-系统架构层次)
     - [3.0.4 关键技术](#304-关键技术)
+  - [国际权威来源映射](#国际权威来源映射)
   - [规范说明](#规范说明)
     - [内容要求](#内容要求)
     - [结构要求](#结构要求)
@@ -126,6 +127,28 @@
 - **通信技术**：WiFi、蓝牙、ZigBee、LoRa、NB-IoT
 - **计算技术**：边缘计算、云计算、人工智能
 - **安全技术**：加密、认证、隐私保护
+
+## 国际权威来源映射
+
+本模块所有内容均对齐项目基线 [`docs/international-baseline.md`](../docs/international-baseline.md) 中“3. 物联网嵌入式系统”的权威来源。完整映射、标准条款对照、覆盖缺口与补齐计划见：
+
+- **[3.0 国际标准映射](3.0%20国际标准映射/README.md)**
+
+关键 Markdown 文件已追加或在末尾维护 `## 国际权威来源链接 | International Authoritative Sources` 章节，方便逐文件追溯权威来源：
+
+- `3.1 知识梳理/README.md`
+- `3.1 知识梳理/3.1.1 基本概念.md`
+- `3.1 知识梳理/3.1.4 关键问题与挑战.md`
+- `3.1 知识梳理/3.1.5 相关案例.md`
+- `03-embedded-linux/embedded-linux-bootflow.md`
+- `04-rtos-concepts/rtos-concept-tree.md`
+- `04-rtos-concepts/freertos-zephyr-rtems-vxworks-map.md`
+- `04-rtos-concepts/real-time-schedulability.md`
+- `05-peripheral-interface-analysis/embedded-bus-decision-tree.md`
+- `05-peripheral-interface-analysis/sensor-to-os-mapping.md`
+- `06-decision-trees/linux-vs-rtos.md`
+- `06-decision-trees/protocol-selection.md`
+- `06-decision-trees/edge-architecture.md`
 
 ## 规范说明
 

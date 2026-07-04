@@ -1,5 +1,18 @@
 # 嵌入式外设总线选择决策树
 
+
+<!-- TOC START -->
+
+- [嵌入式外设总线选择决策树](#嵌入式外设总线选择决策树)
+  - [1. 决策树](#1-决策树)
+  - [2. 总线属性对比](#2-总线属性对比)
+  - [3. 选择矩阵](#3-选择矩阵)
+  - [4. Linux/RTOS 映射](#4-linuxrtos-映射)
+  - [5. 相关文件](#5-相关文件)
+  - [国际权威来源链接 | International Authoritative Sources](#国际权威来源链接--international-authoritative-sources)
+
+<!-- TOC END -->
+
 > **目标**：为 MCU/MPU 嵌入式系统选择合适的外设总线：I2C / SPI / UART / CAN / USB / PCIe。
 
 ---
@@ -72,3 +85,15 @@ graph TD
 - [SPI](../../../2.操作系统/02-operating-systems/07-peripherals/spi.md)
 - [UART](../../../2.操作系统/02-operating-systems/07-peripherals/uart.md)
 - [CAN](../../../2.操作系统/02-operating-systems/07-peripherals/can.md)
+
+## 国际权威来源链接 | International Authoritative Sources
+
+- [NXP I²C-bus Specification UM10204, Rev. 7](https://www.nxp.com/docs/en/user-guide/UM10204.pdf)
+- [Motorola SPI Block Guide V04.01 (S12SPIV4/D)](https://www.nxp.com/)
+- [ISO 11898 — Road vehicles — Controller area network (CAN)](https://www.iso.org/standard/63648.html)
+- [Bosch CAN Specification 2.0](https://www.bosch-semiconductors.com/us/ip-modules/can-protocol/can-2-0.html)
+- [PCI Express Base Specification 6.0/7.0](https://pcisig.com/specifications)
+- [USB 2.0/3.2/4 Specifications](https://www.usb.org/documents)
+- [ARM Architecture Reference Manual](https://developer.arm.com/documentation)
+- [RISC-V Privileged Spec](https://riscv.org/technical/specifications/)
+- [项目国际化权威标准基线 — 3. 物联网嵌入式系统](../../../docs/international-baseline.md)

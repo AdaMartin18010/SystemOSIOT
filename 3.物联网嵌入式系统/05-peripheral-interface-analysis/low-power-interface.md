@@ -1,5 +1,19 @@
 # 低功耗接口与电源管理映射
 
+
+<!-- TOC START -->
+
+- [低功耗接口与电源管理映射](#低功耗接口与电源管理映射)
+  - [1. 低功耗层次](#1-低功耗层次)
+  - [2. 功耗来源与优化](#2-功耗来源与优化)
+  - [3. 唤醒源](#3-唤醒源)
+  - [4. Linux / RTOS 实现](#4-linux--rtos-实现)
+  - [5. 设计检查清单](#5-设计检查清单)
+  - [6. 相关文件](#6-相关文件)
+  - [国际权威来源链接 | International Authoritative Sources](#国际权威来源链接--international-authoritative-sources)
+
+<!-- TOC END -->
+
 > **目标**：梳理嵌入式/IoT 中低功耗接口设计：时钟门控、电源域、休眠唤醒、GPIO 中断唤醒。
 
 ---
@@ -66,3 +80,13 @@ graph TD
 
 - [传感器到 OS 映射](./sensor-to-os-mapping.md)
 - [嵌入式总线决策树](./embedded-bus-decision-tree.md)
+
+## 国际权威来源链接 | International Authoritative Sources
+
+- [ARM Architecture Reference Manual](https://developer.arm.com/documentation)
+- [RISC-V Privileged Spec](https://riscv.org/technical/specifications/)
+- [Zephyr Project Documentation — Power Management](https://docs.zephyrproject.org/)
+- [FreeRTOS Documentation](https://www.freertos.org/Documentation/RTOS-book)
+- [Linux Kernel Documentation — CPU Idle](https://docs.kernel.org/admin-guide/pm/cpuidle.html)
+- [Linux Kernel Documentation — Runtime PM](https://docs.kernel.org/power/runtime_pm.html)
+- [项目国际化权威标准基线 — 3. 物联网嵌入式系统](../../../docs/international-baseline.md)

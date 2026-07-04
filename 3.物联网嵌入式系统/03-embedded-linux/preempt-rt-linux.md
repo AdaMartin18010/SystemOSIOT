@@ -1,5 +1,20 @@
 # Linux PREEMPT_RT 实时性映射
 
+
+<!-- TOC START -->
+
+- [Linux PREEMPT_RT 实时性映射](#linux-preempt_rt-实时性映射)
+  - [1. PREEMPT_RT 核心修改](#1-preempt_rt-核心修改)
+  - [2. 中断线程化](#2-中断线程化)
+  - [3. 调度策略对比](#3-调度策略对比)
+  - [4. 实时性指标](#4-实时性指标)
+  - [5. 与 RTOS 对比](#5-与-rtos-对比)
+  - [6. 配置检查清单](#6-配置检查清单)
+  - [7. 相关文件](#7-相关文件)
+  - [国际权威来源链接 | International Authoritative Sources](#国际权威来源链接--international-authoritative-sources)
+
+<!-- TOC END -->
+
 > **目标**：说明 Linux PREEMPT_RT 补丁如何让通用 Linux 具备硬实时能力，以及与 RTOS 的差异。
 
 ---
@@ -80,9 +95,12 @@ graph TD
 - [Linux vs RTOS 决策树](../06-decision-trees/linux-vs-rtos.md)
 - [实时调度可调度性](../04-rtos-concepts/real-time-schedulability.md)
 
-## 国际权威来源链接 / Authoritative Sources
+## 国际权威来源链接 | International Authoritative Sources
 
 - [Linux PREEMPT_RT Wiki](https://wiki.linuxfoundation.org/realtime/start)
-- [Linux Kernel Documentation - Real-Time](https://docs.kernel.org/admin-guide/real-time.html)
+- [Linux Kernel Documentation — Real-Time](https://docs.kernel.org/admin-guide/real-time.html)
+- [POSIX.1 / IEEE Std 1003.1 — Real-Time Extensions](https://pubs.opengroup.org/onlinepubs/9799919799/)
+- [Liu & Layland, "Scheduling Algorithms for Multiprogramming in a Hard-Real-Time Environment", JACM 1973](https://doi.org/10.1145/321738.321743)
 - [Buttazzo, *Hard Real-Time Computing Systems* (Springer)](https://link.springer.com/book/10.1007/978-3-031-04138-0)
-- [cyclictest - RT-Tests](https://wiki.linuxfoundation.org/realtime/documentation/howto/tools/cyclictest)
+- [cyclictest — RT-Tests](https://wiki.linuxfoundation.org/realtime/documentation/howto/tools/cyclictest)
+- [项目国际化权威标准基线 — 3. 物联网嵌入式系统](../../../docs/international-baseline.md)

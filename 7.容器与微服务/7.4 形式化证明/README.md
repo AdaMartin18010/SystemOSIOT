@@ -14,6 +14,7 @@
   - [应用领域](#应用领域)
   - [相关资源](#相关资源)
   - [实践项目](#实践项目)
+  - [国际权威来源链接 | International Authoritative Sources](#国际权威来源链接--international-authoritative-sources)
 
 <!-- TOC END -->
 
@@ -81,3 +82,14 @@
 2. **容器调度算法证明**：证明调度算法的正确性
 3. **服务治理机制分析**：分析服务发现和负载均衡机制
 4. **弹性模式验证**：验证熔断器和重试模式的有效性
+
+
+## 国际权威来源链接 | International Authoritative Sources
+
+- Kubernetes v1.33: <https://v1-33.docs.kubernetes.io/>
+- OCI Runtime Spec v1.3.0: <https://github.com/opencontainers/runtime-spec/releases/tag/v1.3.0>
+- CNI Spec v1.1.0: <https://www.cni.dev/docs/spec/>
+- gRPC: <https://github.com/grpc/grpc/releases/tag/v1.71.0>
+- CloudEvents v1.0.2: <https://github.com/cloudevents/spec/blob/v1.0.2/cloudevents/spec.md>
+- SMI (Service Mesh Interface): <https://smi-spec.io/>
+- TLA+ Examples for Kubernetes: <https://github.com/kubernetes/community/blob/master/sig-scalability/formal-verification/>

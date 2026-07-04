@@ -14,6 +14,7 @@
   - [应用领域](#应用领域)
   - [相关资源](#相关资源)
   - [实践项目](#实践项目)
+  - [国际权威来源链接 | International Authoritative Sources](#国际权威来源链接--international-authoritative-sources)
 
 <!-- TOC END -->
 
@@ -81,3 +82,13 @@
 2. **流程图绘制**：绘制容器部署和微服务调用流程
 3. **性能对比表**：创建不同技术的性能对比表
 4. **多维度评估**：从多个维度评估系统方案
+
+
+## 国际权威来源链接 | International Authoritative Sources
+
+- CloudEvents v1.0.2 Specification: <https://github.com/cloudevents/spec/blob/v1.0.2/cloudevents/spec.md>
+- Kubernetes v1.33 Architecture Diagrams: <https://v1-33.docs.kubernetes.io/docs/concepts/overview/components/>
+- OCI Image Spec v1.1.0: <https://github.com/opencontainers/image-spec/releases/tag/v1.1.0>
+- SMI (Service Mesh Interface): <https://smi-spec.io/>
+- CNI Spec v1.1.0: <https://www.cni.dev/docs/spec/>
+- gRPC: <https://github.com/grpc/grpc/releases/tag/v1.71.0>

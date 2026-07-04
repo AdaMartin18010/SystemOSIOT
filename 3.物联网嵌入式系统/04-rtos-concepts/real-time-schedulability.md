@@ -1,5 +1,20 @@
 # 实时调度可调度性分析
 
+
+<!-- TOC START -->
+
+- [实时调度可调度性分析](#实时调度可调度性分析)
+  - [1. 实时任务模型](#1-实时任务模型)
+  - [2. 利用率测试（Rate Monotonic, RM）](#2-利用率测试rate-monotonic-rm)
+  - [3. 响应时间分析（RTA）](#3-响应时间分析rta)
+  - [4. EDF 可调度性](#4-edf-可调度性)
+  - [5. 优先级倒置与继承](#5-优先级倒置与继承)
+  - [6. 工程师检查清单](#6-工程师检查清单)
+  - [7. 相关文件](#7-相关文件)
+  - [国际权威来源链接 | International Authoritative Sources](#国际权威来源链接--international-authoritative-sources)
+
+<!-- TOC END -->
+
 > **权威来源**：Liu & Layland (1973), Buttazzo *Hard Real-Time Computing Systems*。
 >
 > **目标**：总结实时任务可调度性判定方法，并提供工程师可直接使用的公式与检查清单。
@@ -95,8 +110,10 @@ $$
 - [RTOS 概念树](./rtos-concept-tree.md)
 - [Linux vs RTOS 决策树](../06-decision-trees/linux-vs-rtos.md)
 
-## 国际权威来源链接 / Authoritative Sources
+## 国际权威来源链接 | International Authoritative Sources
 
 - [Liu & Layland, "Scheduling Algorithms for Multiprogramming in a Hard-Real-Time Environment", JACM 1973](https://doi.org/10.1145/321738.321743)
 - [Buttazzo, *Hard Real-Time Computing Systems* (Springer)](https://link.springer.com/book/10.1007/978-3-031-04138-0)
 - [Rate Monotonic Analysis (NASA)](https://shemesh.larc.nasa.gov/fm/papers/RMA-93.pdf)
+- [POSIX.1 / IEEE Std 1003.1 — Real-Time Scheduling](https://pubs.opengroup.org/onlinepubs/9799919799/)
+- [项目国际化权威标准基线 — 3. 物联网嵌入式系统](../../../docs/international-baseline.md)

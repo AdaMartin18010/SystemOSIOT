@@ -14,6 +14,7 @@
   - [应用领域](#应用领域)
   - [相关资源](#相关资源)
   - [实践项目](#实践项目)
+  - [国际权威来源链接 | International Authoritative Sources](#国际权威来源链接--international-authoritative-sources)
 
 <!-- TOC END -->
 
@@ -84,3 +85,19 @@
 2. **理论流派比较**：比较不同理论流派的观点
 3. **问题识别分析**：识别和分析容器与微服务的关键问题
 4. **案例研究应用**：应用容器与微服务理论分析实际案例
+
+
+## 国际权威来源链接 | International Authoritative Sources
+
+- OCI Runtime Spec v1.3.0: <https://github.com/opencontainers/runtime-spec/releases/tag/v1.3.0>
+- OCI Image Spec v1.1.0: <https://github.com/opencontainers/image-spec/releases/tag/v1.1.0>
+- OCI Distribution Spec v1.1.0: <https://github.com/opencontainers/distribution-spec/releases/tag/v1.1.0>
+- Kubernetes v1.33: <https://v1-33.docs.kubernetes.io/>
+- CNI Spec v1.1.0: <https://www.cni.dev/docs/spec/>
+- CRI: <https://kubernetes.io/docs/concepts/architecture/cri/>
+- CSI: <https://github.com/container-storage-interface/spec>
+- gRPC: <https://github.com/grpc/grpc/releases/tag/v1.71.0>
+- Dockerfile reference: <https://docs.docker.com/reference/dockerfile/>
+- Linux cgroups v2: <https://docs.kernel.org/admin-guide/cgroup-v2.html>
+- Linux Namespaces: <https://man7.org/linux/man-pages/man7/namespaces.7.html>
+- eBPF docs: <https://docs.ebpf.io/>

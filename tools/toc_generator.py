@@ -112,6 +112,7 @@ def generate_toc(headings: List[Heading], max_level: int) -> List[str]:
 
 def insert_or_update_toc(original: str, max_level: int) -> Tuple[str, bool]:
     lines = original.splitlines(True)  # keepends
+    use_crlf = "\r\n" in original
     headings = extract_headings(lines)
     headings = [h for h in headings if not (lines[h.line_index].strip() == TOC_START or lines[h.line_index].strip() == TOC_END)]
     if not headings:
@@ -120,6 +121,9 @@ def insert_or_update_toc(original: str, max_level: int) -> Tuple[str, bool]:
     toc_lines = generate_toc(headings, max_level=max_level)
     if not toc_lines:
         return original, False
+
+    if use_crlf:
+        toc_lines = [line.replace("\n", "\r\n") for line in toc_lines]
 
     block = find_toc_block(lines)
     if block:
@@ -169,7 +173,9 @@ def process_file(path: Path, max_level: int, apply: bool) -> ProcessResult:
 
     if apply:
         try:
-            path.write_text(updated_text, encoding="utf-8", newline="\n")
+            # Preserve original CRLF/LF style to avoid churn under Windows autocrlf.
+            newline = "\r\n" if "\r\n" in original else "\n"
+            path.write_text(updated_text, encoding="utf-8", newline=newline)
         except Exception as exc:
             return ProcessResult(path=path, changed=False, skipped_reason=f"write_error: {exc}")
     return ProcessResult(path=path, changed=True)

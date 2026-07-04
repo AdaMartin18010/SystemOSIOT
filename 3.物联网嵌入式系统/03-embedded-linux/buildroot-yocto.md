@@ -1,5 +1,21 @@
 # Buildroot 与 Yocto 构建系统映射
 
+
+<!-- TOC START -->
+
+- [Buildroot 与 Yocto 构建系统映射](#buildroot-与-yocto-构建系统映射)
+  - [1. 总体对比](#1-总体对比)
+  - [2. Buildroot 核心流程](#2-buildroot-核心流程)
+    - [2.1 关键目录](#21-关键目录)
+  - [3. Yocto 核心流程](#3-yocto-核心流程)
+    - [3.1 关键概念](#31-关键概念)
+  - [4. 选择决策树](#4-选择决策树)
+  - [5. 场景选择](#5-场景选择)
+  - [6. 相关文件](#6-相关文件)
+  - [国际权威来源链接 | International Authoritative Sources](#国际权威来源链接--international-authoritative-sources)
+
+<!-- TOC END -->
+
 > **目标**：对比 Buildroot 与 Yocto 两种嵌入式 Linux 构建系统的设计理念、架构与适用场景。
 
 ---
@@ -98,8 +114,10 @@ graph TD
 - [嵌入式 Linux 启动流程](./embedded-linux-bootflow.md)
 - [Device Tree 与 U-Boot](./device-tree-and-uboot.md)
 
-## 国际权威来源链接 / Authoritative Sources
+## 国际权威来源链接 | International Authoritative Sources
 
 - [Buildroot Manual](https://buildroot.org/downloads/manual/manual.html)
 - [Yocto Project Documentation](https://docs.yoctoproject.org/)
 - [OpenEmbedded Layer Index](https://layers.openembedded.org/)
+- [Linux Standard Base (LSB) — ISO/IEC 23360](https://webstore.iec.ch/en/publication/71478)
+- [项目国际化权威标准基线 — 3. 物联网嵌入式系统](../../../docs/international-baseline.md)

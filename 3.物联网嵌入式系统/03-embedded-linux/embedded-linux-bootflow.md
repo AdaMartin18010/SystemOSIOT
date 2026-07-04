@@ -1,5 +1,29 @@
 # 嵌入式 Linux 启动流程
 
+
+<!-- TOC START -->
+
+- [嵌入式 Linux 启动流程](#嵌入式-linux-启动流程)
+  - [1. 启动流程全景](#1-启动流程全景)
+  - [2. 各阶段详解](#2-各阶段详解)
+    - [2.1 Boot ROM](#21-boot-rom)
+    - [2.2 SPL（Secondary Program Loader）](#22-splsecondary-program-loader)
+    - [2.3 U-Boot](#23-u-boot)
+    - [2.4 设备树传递](#24-设备树传递)
+    - [2.5 Linux 内核启动](#25-linux-内核启动)
+    - [2.6 initramfs](#26-initramfs)
+    - [2.7 根文件系统](#27-根文件系统)
+  - [3. 启动参数（bootargs）](#3-启动参数bootargs)
+  - [4. 依赖树](#4-依赖树)
+  - [5. 构建系统对比](#5-构建系统对比)
+  - [6. 调试手段](#6-调试手段)
+  - [7. 术语表](#7-术语表)
+  - [8. 国际来源映射](#8-国际来源映射)
+  - [9. 相关文件](#9-相关文件)
+  - [国际权威来源链接 | International Authoritative Sources](#国际权威来源链接--international-authoritative-sources)
+
+<!-- TOC END -->
+
 > **权威来源**：U-Boot Docs, Linux Kernel Development, ARM Devicetree Specification, Buildroot/Yocto Docs。
 >
 > **目标**：系统讲解从 SoC 上电到用户应用运行的完整嵌入式 Linux 启动链，包括 Bootloader、设备树、内核、initramfs、根文件系统。
@@ -195,3 +219,15 @@ graph TD
 - [设备树与 U-Boot](./device-tree-and-uboot.md)
 - [PREEMPT_RT](./preempt-rt-linux.md)
 - [HAL/BSP/设备树](../../2.操作系统/02-operating-systems/08-interfaces/hal-bsp-device-tree.md)
+
+## 国际权威来源链接 | International Authoritative Sources
+
+- [U-Boot Documentation](https://u-boot.readthedocs.io/en/latest/)
+- [Devicetree Specification](https://devicetree-specification.readthedocs.io/en/stable/)
+- [Linux Kernel Documentation](https://docs.kernel.org/)
+- [Buildroot Manual](https://buildroot.org/downloads/manual/manual.html)
+- [Yocto Project Documentation](https://docs.yoctoproject.org/)
+- [Intel 64 and IA-32 Architectures Software Developer's Manual, Vol. 3A](https://www.intel.com/content/www/us/en/developer/articles/technical/intel-sdm.html)
+- [ARM Architecture Reference Manual](https://developer.arm.com/documentation)
+- [RISC-V Privileged Spec](https://riscv.org/technical/specifications/)
+- [项目国际化权威标准基线 — 3. 物联网嵌入式系统](../../../docs/international-baseline.md)

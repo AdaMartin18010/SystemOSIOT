@@ -1,5 +1,17 @@
 # 物联网协议选择决策树
 
+
+<!-- TOC START -->
+
+- [物联网协议选择决策树](#物联网协议选择决策树)
+  - [1. 决策树](#1-决策树)
+  - [2. 协议属性对比](#2-协议属性对比)
+  - [3. 场景选择](#3-场景选择)
+  - [4. 相关文件](#4-相关文件)
+  - [国际权威来源链接 | International Authoritative Sources](#国际权威来源链接--international-authoritative-sources)
+
+<!-- TOC END -->
+
 > **目标**：为 IoT 场景选择 MQTT / CoAP / LwM2M / HTTP / gRPC 等协议。
 
 ---
@@ -52,10 +64,12 @@ graph TD
 - [Linux vs RTOS 决策树](./linux-vs-rtos.md)
 - [边缘架构决策树](./edge-architecture.md)
 
-## 国际权威来源链接 / Authoritative Sources
+## 国际权威来源链接 | International Authoritative Sources
 
 - [MQTT v5.0 Specification (OASIS)](https://docs.oasis-open.org/mqtt/mqtt/v5.0/mqtt-v5.0.html)
 - [CoAP RFC 7252](https://datatracker.ietf.org/doc/html/rfc7252)
-- [LwM2M Specification (OMA SpecWorks)](https://omaspecworks.org/what-is-oma-specworks/iot/lightweight-m2m-lwm2m/)
-- [HTTP/1.1 RFC 7230-7235](https://datatracker.ietf.org/doc/html/rfc7230)
+- [LwM2M Specification (OMA SpecWorks)](https://omaspecworks.org/)
+- [HTTP Semantics RFC 9110](https://datatracker.ietf.org/doc/html/rfc9110)
 - [gRPC Documentation](https://grpc.io/docs/)
+- [ISO/IEC 30141:2024 — IoT Reference Architecture](https://www.iso.org/standard/88800.html)
+- [项目国际化权威标准基线 — 3. 物联网嵌入式系统](../../../docs/international-baseline.md)

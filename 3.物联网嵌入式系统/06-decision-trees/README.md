@@ -1,5 +1,14 @@
 # 06-decision-trees / 决策树
 
+
+<!-- TOC START -->
+
+- [06-decision-trees / 决策树](#06-decision-trees--决策树)
+  - [文件列表](#文件列表)
+  - [返回](#返回)
+
+<!-- TOC END -->
+
 本目录提供物联网与嵌入式系统的工程选型决策树。
 
 ## 文件列表

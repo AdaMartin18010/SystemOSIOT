@@ -1,5 +1,25 @@
 # 传感器到操作系统的完整映射
 
+
+<!-- TOC START -->
+
+- [传感器到操作系统的完整映射](#传感器到操作系统的完整映射)
+  - [1. 完整数据路径](#1-完整数据路径)
+  - [2. 各层详解](#2-各层详解)
+    - [2.1 物理层](#21-物理层)
+    - [2.2 设备树描述](#22-设备树描述)
+    - [2.3 总线驱动匹配](#23-总线驱动匹配)
+    - [2.4 IIO 子系统](#24-iio-子系统)
+    - [2.5 Input 子系统](#25-input-子系统)
+    - [2.6 hwmon / thermal](#26-hwmon--thermal)
+  - [3. 用户态访问方式](#3-用户态访问方式)
+  - [4. 场景分析](#4-场景分析)
+  - [5. 跨层映射表](#5-跨层映射表)
+  - [6. 相关文件](#6-相关文件)
+  - [国际权威来源链接 | International Authoritative Sources](#国际权威来源链接--international-authoritative-sources)
+
+<!-- TOC END -->
+
 > **目标**：展示一个典型传感器如何从硬件连接到 Linux 用户态应用，涉及总线、驱动、子系统、sysfs、API。
 
 ---
@@ -123,3 +143,12 @@ graph LR
 - [I2C](../../2.操作系统/02-operating-systems/07-peripherals/i2c.md)
 - [SPI](../../2.操作系统/02-operating-systems/07-peripherals/spi.md)
 - [跨层映射](../../2.操作系统/02-operating-systems/08-interfaces/cross-layer-mapping.md)
+
+## 国际权威来源链接 | International Authoritative Sources
+
+- [NXP I²C-bus Specification UM10204, Rev. 7](https://www.nxp.com/docs/en/user-guide/UM10204.pdf)
+- [Motorola SPI Block Guide V04.01 (S12SPIV4/D)](https://www.nxp.com/)
+- [Linux Kernel Documentation — Industrial I/O](https://docs.kernel.org/driver-api/iio/)
+- [Linux Kernel Documentation — Device Tree Bindings](https://docs.kernel.org/devicetree/bindings/)
+- [ARM Architecture Reference Manual](https://developer.arm.com/documentation)
+- [项目国际化权威标准基线 — 3. 物联网嵌入式系统](../../../docs/international-baseline.md)

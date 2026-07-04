@@ -1,5 +1,20 @@
 # Linux vs RTOS 平台选择决策树
 
+
+<!-- TOC START -->
+
+- [Linux vs RTOS 平台选择决策树](#linux-vs-rtos-平台选择决策树)
+  - [1. 决策树](#1-决策树)
+  - [2. 对比矩阵](#2-对比矩阵)
+  - [3. 场景决策表](#3-场景决策表)
+  - [4. Linux PREEMPT_RT 关键配置](#4-linux-preempt_rt-关键配置)
+  - [5. 术语表](#5-术语表)
+  - [6. 国际来源映射](#6-国际来源映射)
+  - [7. 相关文件](#7-相关文件)
+  - [国际权威来源链接 | International Authoritative Sources](#国际权威来源链接--international-authoritative-sources)
+
+<!-- TOC END -->
+
 > **权威来源**：Buttazzo *Hard Real-Time Computing Systems*, FreeRTOS Docs, Zephyr Docs, Linux Kernel Development。
 >
 > **目标**：根据实时性、复杂度、生态、功耗等约束，选择嵌入式 Linux 或 RTOS。
@@ -95,3 +110,13 @@ graph TD
 - [嵌入式 Linux 启动流程](../03-embedded-linux/embedded-linux-bootflow.md)
 - [PREEMPT_RT](../03-embedded-linux/preempt-rt-linux.md)
 - [操作系统场景分析树](../../2.操作系统/02-operating-systems/00-concept-atlas/scenario-analysis-tree-os.md)
+
+## 国际权威来源链接 | International Authoritative Sources
+
+- [Liu & Layland, "Scheduling Algorithms for Multiprogramming in a Hard-Real-Time Environment", JACM 1973](https://doi.org/10.1145/321738.321743)
+- [Buttazzo, *Hard Real-Time Computing Systems* (Springer)](https://link.springer.com/book/10.1007/978-3-031-04138-0)
+- [FreeRTOS Documentation](https://www.freertos.org/Documentation/RTOS-book)
+- [Zephyr Project Documentation](https://docs.zephyrproject.org/)
+- [RTEMS Documentation](https://docs.rtems.org/)
+- [Linux PREEMPT_RT Wiki](https://wiki.linuxfoundation.org/realtime/start)
+- [项目国际化权威标准基线 — 3. 物联网嵌入式系统](../../../docs/international-baseline.md)

@@ -1,5 +1,14 @@
 # 03-embedded-linux / 嵌入式 Linux
 
+
+<!-- TOC START -->
+
+- [03-embedded-linux / 嵌入式 Linux](#03-embedded-linux--嵌入式-linux)
+  - [文件列表](#文件列表)
+  - [返回](#返回)
+
+<!-- TOC END -->
+
 本目录覆盖嵌入式 Linux 的启动、构建、实时化与部署链路。
 
 ## 文件列表

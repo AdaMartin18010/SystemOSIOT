@@ -17,6 +17,7 @@
   - [应用领域](#应用领域)
   - [相关资源](#相关资源)
   - [实践项目](#实践项目)
+  - [国际权威来源链接 | International Authoritative Sources](#国际权威来源链接--international-authoritative-sources)
 
 <!-- TOC END -->
 
@@ -108,3 +109,14 @@
 2. **编排操作分析**：分析容器编排操作的语义
 3. **治理机制验证**：验证服务治理机制的语义
 4. **API语义定义**：定义微服务API的语义
+
+
+## 国际权威来源链接 | International Authoritative Sources
+
+- Kubernetes v1.33 API Semantics: <https://v1-33.docs.kubernetes.io/docs/reference/kubernetes-api/>
+- OCI Runtime Spec v1.3.0: <https://github.com/opencontainers/runtime-spec/releases/tag/v1.3.0>
+- CNI Spec v1.1.0: <https://www.cni.dev/docs/spec/>
+- gRPC: <https://github.com/grpc/grpc/releases/tag/v1.71.0>
+- CloudEvents v1.0.2: <https://github.com/cloudevents/spec/blob/v1.0.2/cloudevents/spec.md>
+- NIST SP 800-190: <https://csrc.nist.gov/publications/detail/sp/800/190/final>
+- Linux cgroups v2: <https://docs.kernel.org/admin-guide/cgroup-v2.html>

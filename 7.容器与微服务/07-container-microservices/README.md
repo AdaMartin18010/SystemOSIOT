@@ -2,9 +2,9 @@
 
 <!-- TOC START -->
 
-- [容器与微服务 / Container \& Microservices](#容器与微服务--container--microservices)
+- [容器与微服务 / Container & Microservices](#容器与微服务--container--microservices)
   - [📚 领域概览 / Domain Overview](#-领域概览--domain-overview)
-  - [🏗️ 领域架构 / Domain Architecture](#️-领域架构--domain-architecture)
+  - [🏗️ 领域架构 / Domain Architecture](#-领域架构--domain-architecture)
     - [核心子领域](#核心子领域)
   - [🔗 技术关联 / Technical Relationships](#-技术关联--technical-relationships)
     - [前置知识](#前置知识)
@@ -14,13 +14,14 @@
     - [初级 (Beginner)](#初级-beginner)
     - [中级 (Intermediate)](#中级-intermediate)
     - [高级 (Advanced)](#高级-advanced)
-  - [🛠️ 实践项目 / Practical Projects](#️-实践项目--practical-projects)
+  - [🛠️ 实践项目 / Practical Projects](#-实践项目--practical-projects)
     - [推荐项目](#推荐项目)
     - [开发环境](#开发环境)
   - [📚 推荐资源 / Recommended Resources](#-推荐资源--recommended-resources)
     - [经典教材](#经典教材)
     - [在线资源](#在线资源)
   - [🔄 更新日志 / Update Log](#-更新日志--update-log)
+  - [国际权威来源链接 | International Authoritative Sources](#国际权威来源链接--international-authoritative-sources)
 
 <!-- TOC END -->
 
@@ -131,3 +132,15 @@
 
 > 容器与微服务是现代应用架构的核心，掌握这些技术是构建可扩展、可维护系统的关键。
 > Containers and microservices are the core of modern application architecture. Mastering these technologies is key to building scalable and maintainable systems.
+
+
+## 国际权威来源链接 | International Authoritative Sources
+
+- OCI Runtime Spec v1.3.0: <https://github.com/opencontainers/runtime-spec/releases/tag/v1.3.0>
+- OCI Image Spec v1.1.0: <https://github.com/opencontainers/image-spec/releases/tag/v1.1.0>
+- OCI Distribution Spec v1.1.0: <https://github.com/opencontainers/distribution-spec/releases/tag/v1.1.0>
+- Kubernetes v1.33: <https://v1-33.docs.kubernetes.io/>
+- CNI Spec v1.1.0: <https://www.cni.dev/docs/spec/>
+- Dockerfile reference: <https://docs.docker.com/reference/dockerfile/>
+- NIST SP 800-190: <https://csrc.nist.gov/publications/detail/sp/800/190/final>
+- CIS Benchmarks: <https://www.cisecurity.org/cis-benchmarks>

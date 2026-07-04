@@ -69,6 +69,8 @@ def validate_file(path: Path, max_level: int) -> ValidationResult:
         return ValidationResult(path=path, ok=False, issues=[ValidationIssue("read_error", str(exc))])
 
     lines = content.splitlines(True)
+    # Normalize CRLF so validation is insensitive to Windows autocrlf churn.
+    lines = [line.replace("\r\n", "\n") for line in lines]
     headings = extract_headings(lines)
     block = find_toc_block_idx(lines)
 

@@ -1,5 +1,18 @@
 # 边缘计算架构决策树
 
+
+<!-- TOC START -->
+
+- [边缘计算架构决策树](#边缘计算架构决策树)
+  - [1. 决策树](#1-决策树)
+  - [2. 架构模式对比](#2-架构模式对比)
+  - [3. 选型因素](#3-选型因素)
+  - [4. 关键技术与栈](#4-关键技术与栈)
+  - [5. 相关文件](#5-相关文件)
+  - [国际权威来源链接 | International Authoritative Sources](#国际权威来源链接--international-authoritative-sources)
+
+<!-- TOC END -->
+
 > **目标**：为 IoT/嵌入式系统选择“云-边-端”分层架构：纯云端、网关聚合、边缘推理、分布式边缘。
 
 ---
@@ -60,3 +73,12 @@ graph TD
 - [协议选择决策树](./protocol-selection.md)
 - [Linux vs RTOS 决策树](./linux-vs-rtos.md)
 - [跨域映射](../../Analysis/操作系统-网络-嵌入式-接口跨域映射.md)
+
+## 国际权威来源链接 | International Authoritative Sources
+
+- [ISO/IEC 30141:2024 — IoT Reference Architecture](https://www.iso.org/standard/88800.html)
+- [IEC 62443-2-1:2024 — IACS Security Requirements](https://webstore.iec.ch/en/publication/62883)
+- [NIST SP 800-213 / 800-213A — IoT Device Cybersecurity Guidance](https://csrc.nist.gov/publications/detail/sp/800/213/final)
+- [OASIS MQTT v5.0 Specification](https://docs.oasis-open.org/mqtt/mqtt/v5.0/mqtt-v5.0.html)
+- [RFC 7252 — The Constrained Application Protocol (CoAP)](https://doi.org/10.17487/RFC7252)
+- [项目国际化权威标准基线 — 3. 物联网嵌入式系统](../../../docs/international-baseline.md)

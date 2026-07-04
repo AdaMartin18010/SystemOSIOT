@@ -1,5 +1,22 @@
 # Device Tree 与 U-Boot 启动映射
 
+
+<!-- TOC START -->
+
+- [Device Tree 与 U-Boot 启动映射](#device-tree-与-u-boot-启动映射)
+  - [1. 启动链概览](#1-启动链概览)
+  - [2. U-Boot 关键阶段](#2-u-boot-关键阶段)
+    - [2.1 常用命令](#21-常用命令)
+  - [3. Device Tree 结构](#3-device-tree-结构)
+    - [3.1 典型节点](#31-典型节点)
+  - [4. Linux 启动时解析](#4-linux-启动时解析)
+  - [5. U-Boot 与 Device Tree 的关系](#5-u-boot-与-device-tree-的关系)
+  - [6. 标准与源码映射](#6-标准与源码映射)
+  - [7. 相关文件](#7-相关文件)
+  - [国际权威来源链接 | International Authoritative Sources](#国际权威来源链接--international-authoritative-sources)
+
+<!-- TOC END -->
+
 > **目标**：建立嵌入式 Linux 启动链中 U-Boot 与 Device Tree 的角色、数据结构与流程映射。
 
 ---
@@ -112,9 +129,12 @@ bootz ${kernel_addr_r} - ${fdt_addr_r}
 - [嵌入式 Linux 启动流程](./embedded-linux-bootflow.md)
 - [HAL/BSP/设备树映射](../../../2.操作系统/02-operating-systems/08-interfaces/hal-bsp-device-tree.md)
 
-## 国际权威来源链接 / Authoritative Sources
+## 国际权威来源链接 | International Authoritative Sources
 
 - [Devicetree Specification](https://devicetree-specification.readthedocs.io/en/stable/)
 - [U-Boot Documentation](https://u-boot.readthedocs.io/en/latest/)
-- [Linux Device Tree Bindings](https://docs.kernel.org/devicetree/bindings/)
-- [ARM Booting Documentation](https://docs.kernel.org/arm/booting.html)
+- [Linux Kernel Documentation — Device Tree Bindings](https://docs.kernel.org/devicetree/bindings/)
+- [Linux Kernel Documentation — ARM Booting](https://docs.kernel.org/arm/booting.html)
+- [ARM Architecture Reference Manual](https://developer.arm.com/documentation)
+- [RISC-V Privileged Spec](https://riscv.org/technical/specifications/)
+- [项目国际化权威标准基线 — 3. 物联网嵌入式系统](../../../docs/international-baseline.md)

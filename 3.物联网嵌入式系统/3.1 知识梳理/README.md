@@ -13,6 +13,7 @@
   - [规范说明](#规范说明)
     - [内容要求](#内容要求)
     - [结构要求](#结构要求)
+  - [国际权威来源链接 | International Authoritative Sources](#国际权威来源链接--international-authoritative-sources)
 
 <!-- TOC END -->
 
@@ -92,3 +93,16 @@
 
 ---
 > 本目录为物联网嵌入式系统知识梳理的起点，将持续完善和深化知识内容。
+
+## 国际权威来源链接 | International Authoritative Sources
+
+- [ISO/IEC 30141:2024 — IoT Reference Architecture](https://www.iso.org/standard/88800.html)
+- [IEC 62443-2-1:2024 — IACS Security Requirements](https://webstore.iec.ch/en/publication/62883)
+- [NIST SP 800-213 / 800-213A — IoT Device Cybersecurity Guidance](https://csrc.nist.gov/publications/detail/sp/800/213/final)
+- [OASIS MQTT v5.0 Specification](https://docs.oasis-open.org/mqtt/mqtt/v5.0/mqtt-v5.0.html)
+- [RFC 7252 — The Constrained Application Protocol (CoAP)](https://doi.org/10.17487/RFC7252)
+- [OMA SpecWorks — Lightweight M2M (LwM2M) 1.2](https://omaspecworks.org/)
+- [Matter / Thread 1.4](https://csa-iot.org/all-solutions/matter/)
+- [Liu & Layland, "Scheduling Algorithms for Multiprogramming in a Hard-Real-Time Environment", JACM 1973](https://doi.org/10.1145/321738.321743)
+- [Buttazzo, *Hard Real-Time Computing Systems* (Springer)](https://link.springer.com/book/10.1007/978-3-031-04138-0)
+- [项目国际化权威标准基线 — 3. 物联网嵌入式系统](../../docs/international-baseline.md)

@@ -19,6 +19,7 @@
   - [应用领域](#应用领域)
   - [相关资源](#相关资源)
   - [实践项目](#实践项目)
+  - [国际权威来源链接 | International Authoritative Sources](#国际权威来源链接--international-authoritative-sources)
 
 <!-- TOC END -->
 
@@ -139,3 +140,14 @@ score(node) = 资源得分 + 亲和得分 - 跨域成本
 2. **负载均衡系统**：设计微服务负载均衡策略
 3. **资源管理系统**：实现容器资源的统一管理
 4. **性能监控平台**：构建调度系统的性能监控
+
+
+## 国际权威来源链接 | International Authoritative Sources
+
+- Kubernetes v1.33 Scheduling: <https://v1-33.docs.kubernetes.io/docs/concepts/scheduling-eviction/>
+- Kubernetes Scheduler Framework: <https://v1-33.docs.kubernetes.io/docs/concepts/scheduling-eviction/scheduling-framework/>
+- Linux cgroups v2: <https://docs.kernel.org/admin-guide/cgroup-v2.html>
+- Linux Namespaces: <https://man7.org/linux/man-pages/man7/namespaces.7.html>
+- eBPF Documentation: <https://docs.ebpf.io/>
+- PCI-SIG SR-IOV: <https://pcisig.com/specifications>
+- CNI Spec v1.1.0: <https://www.cni.dev/docs/spec/>
