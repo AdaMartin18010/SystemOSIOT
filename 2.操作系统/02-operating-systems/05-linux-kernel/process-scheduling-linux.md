@@ -79,7 +79,7 @@ graph TD
 
 ### 3.2 vruntime 计算
 
-```
+```text
 vruntime += delta_exec * NICE_0_LOAD / se->load.weight
 ```
 
@@ -231,3 +231,10 @@ vruntime += delta_exec * NICE_0_LOAD / se->load.weight
 - [Linux 内核源码映射](./linux-source-map.md)
 - [内存管理](./memory-management-linux.md)
 - [操作系统场景分析树](../00-concept-atlas/scenario-analysis-tree-os.md)
+
+## 国际权威来源链接 / Authoritative Sources
+
+- [Linux Kernel - Scheduler documentation](https://docs.kernel.org/scheduler/)
+- [Linux Kernel - CFS Scheduler](https://docs.kernel.org/scheduler/sched-design-CFS.html)
+- [Linux Kernel - Control Groups v2](https://docs.kernel.org/admin-guide/cgroup-v2.html)
+- [Linux Kernel Development (Robert Love)](https://www.amazon.com/Linux-Kernel-Development-Robert-Love/dp/0672329468)

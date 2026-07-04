@@ -79,3 +79,10 @@ graph TD
 
 - [Linux vs RTOS 决策树](../06-decision-trees/linux-vs-rtos.md)
 - [实时调度可调度性](../04-rtos-concepts/real-time-schedulability.md)
+
+## 国际权威来源链接 / Authoritative Sources
+
+- [Linux PREEMPT_RT Wiki](https://wiki.linuxfoundation.org/realtime/start)
+- [Linux Kernel Documentation - Real-Time](https://docs.kernel.org/admin-guide/real-time.html)
+- [Buttazzo, *Hard Real-Time Computing Systems* (Springer)](https://link.springer.com/book/10.1007/978-3-031-04138-0)
+- [cyclictest - RT-Tests](https://wiki.linuxfoundation.org/realtime/documentation/howto/tools/cyclictest)

@@ -94,3 +94,9 @@ $$
 
 - [RTOS 概念树](./rtos-concept-tree.md)
 - [Linux vs RTOS 决策树](../06-decision-trees/linux-vs-rtos.md)
+
+## 国际权威来源链接 / Authoritative Sources
+
+- [Liu & Layland, "Scheduling Algorithms for Multiprogramming in a Hard-Real-Time Environment", JACM 1973](https://doi.org/10.1145/321738.321743)
+- [Buttazzo, *Hard Real-Time Computing Systems* (Springer)](https://link.springer.com/book/10.1007/978-3-031-04138-0)
+- [Rate Monotonic Analysis (NASA)](https://shemesh.larc.nasa.gov/fm/papers/RMA-93.pdf)

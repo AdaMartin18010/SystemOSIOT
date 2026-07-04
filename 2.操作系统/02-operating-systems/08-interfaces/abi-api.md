@@ -94,3 +94,10 @@ syscall
 - [系统调用接口](./syscall-interface.md)
 - [POSIX 映射](./posix-mapping.md)
 - [内核-用户边界](./kernel-user-boundary.md)
+
+## 国际权威来源链接 / Authoritative Sources
+
+- [System V AMD64 ABI](https://gitlab.com/x86-psABIs/x86-64-ABI)
+- [ELF Format Specification (TIS Committee)](https://refspecs.linuxbase.org/elf/elf.pdf)
+- [POSIX.1-2024](https://pubs.opengroup.org/onlinepubs/9799919799/)
+- [Linux Kernel - System Calls](https://docs.kernel.org/process/syscall-architecture.html)

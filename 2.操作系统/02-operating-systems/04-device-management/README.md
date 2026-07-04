@@ -40,6 +40,7 @@
     - [云计算](#云计算)
   - [学习目标](#学习目标)
   - [实践项目](#实践项目)
+  - [I/O 与驱动模型来源映射 | I/O & Driver Source Mapping](#io-与驱动模型来源映射-io-driver-source-mapping)
 
 <!-- TOC END -->
 
@@ -237,3 +238,21 @@
 - 设备管理模拟器
 - 设备虚拟化设计
 - 设备监控系统
+
+
+---
+
+## I/O 与驱动模型来源映射 | I/O & Driver Source Mapping
+
+| 概念 | 来源类型 | 来源 | 位置 | 状态 |
+|------|----------|------|------|------|
+| 设备驱动模型 | Textbook | Linux Device Drivers (LDD3) | Ch. 1–3, 12–14 | 已覆盖 |
+| 字符/块设备 | SourceCode | Linux Kernel | `include/linux/fs.h`, `drivers/char/`, `drivers/block/` | 已覆盖 |
+| 设备模型 / sysfs | SourceCode | Linux Kernel | `drivers/base/`, `include/linux/device.h` | 已覆盖 |
+| 平台总线 / devicetree | Standard | Devicetree Specification | <https://www.devicetree.org/specifications/> | 已覆盖 |
+| 中断与底半部 | SourceCode | Linux Kernel | `kernel/irq/`, `include/linux/interrupt.h` | 已覆盖 |
+| DMA | Standard | PCI-SIG / Intel SDM | PCI Express Base Spec, Intel SDM Vol. 2/3 | 已覆盖 |
+| I/O 调度 | SourceCode | Linux Kernel | `block/mq-deadline.c`, `block/kyber-iosched.c`, `block/bfq-iosched.c` | 已覆盖 |
+| NVMe | Standard | NVM Express | <https://nvmexpress.org/specifications/> | 已覆盖 |
+| USB | Standard | USB-IF | USB 3.2 / USB4 Spec | 已覆盖 |
+| PCIe | Standard | PCI-SIG | PCIe Base Spec 6.0/7.0 | 已覆盖 |

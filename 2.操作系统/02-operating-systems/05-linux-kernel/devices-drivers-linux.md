@@ -33,7 +33,7 @@ graph TD
 
 ### 1.2 注册流程
 
-```
+```text
 driver_register()
   ↓ bus_add_driver()
     ↓ 遍历总线上未绑定设备
@@ -158,3 +158,10 @@ static const struct of_device_id my_of_match[] = {
 - [外设概念树](../07-peripherals/peripheral-concept-tree.md)
 - [中断与 DMA](../07-peripherals/interrupts-and-dma.md)
 - [HAL/BSP/设备树](../08-interfaces/hal-bsp-device-tree.md)
+
+## 国际权威来源链接 / Authoritative Sources
+
+- [Linux Kernel - Driver API documentation](https://docs.kernel.org/driver-api/)
+- [Linux Device Drivers (LDD3)](https://static.lwn.net/images/pdf/LDD3/ch00.pdf)
+- [Linux Kernel - Device Tree Bindings](https://docs.kernel.org/devicetree/bindings/)
+- [Linux Kernel - DMAEngine](https://docs.kernel.org/driver-api/dmaengine/)

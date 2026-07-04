@@ -97,3 +97,9 @@ graph TD
 
 - [嵌入式 Linux 启动流程](./embedded-linux-bootflow.md)
 - [Device Tree 与 U-Boot](./device-tree-and-uboot.md)
+
+## 国际权威来源链接 / Authoritative Sources
+
+- [Buildroot Manual](https://buildroot.org/downloads/manual/manual.html)
+- [Yocto Project Documentation](https://docs.yoctoproject.org/)
+- [OpenEmbedded Layer Index](https://layers.openembedded.org/)

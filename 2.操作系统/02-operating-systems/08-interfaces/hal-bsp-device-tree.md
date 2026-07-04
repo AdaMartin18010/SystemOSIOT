@@ -39,7 +39,7 @@ graph TD
 
 ### 2.2 编译流程
 
-```
+```text
 .dts + .dtsi
   ↓ dtc
 .dtb
@@ -66,7 +66,7 @@ graph TD
 
 ### 2.4 设备树覆盖（Overlay）
 
-```
+```text
 base.dtb
   + overlay.dtbo
   ----------------
@@ -113,7 +113,7 @@ gpio_pin_set(dev, pin, 1);
 
 ### 4.1 典型内容
 
-```
+```text
 bsp/<board>/
   ├── bootloader/          # U-Boot 配置/补丁
   ├── dts/                 # 设备树源文件
@@ -212,3 +212,10 @@ graph TD
 - [跨层映射](./cross-layer-mapping.md)
 - [外设概念树](../07-peripherals/peripheral-concept-tree.md)
 - [中断与 DMA](../07-peripherals/interrupts-and-dma.md)
+
+## 国际权威来源链接 / Authoritative Sources
+
+- [Devicetree Specification](https://devicetree-specification.readthedocs.io/en/stable/)
+- [ACPI Specification (UEFI Forum)](https://uefi.org/specifications)
+- [Linux Device Tree Bindings](https://docs.kernel.org/devicetree/bindings/)
+- [Zephyr Device Driver Model](https://docs.zephyrproject.org/latest/kernel/drivers/index.html)

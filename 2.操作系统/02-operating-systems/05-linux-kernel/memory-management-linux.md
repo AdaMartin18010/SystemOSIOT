@@ -58,7 +58,7 @@
 
 ### 4.1 缺页处理
 
-```
+```text
 用户访问未映射地址
   ↓ 触发 page fault
   ↓ do_page_fault() (arch specific)
@@ -197,3 +197,10 @@
 - [进程调度](./process-scheduling-linux.md)
 - [VFS 与文件系统](./vfs-filesystems-linux.md)
 - [操作系统机制组合树](../00-concept-atlas/mechanism-composition-tree-os.md)
+
+## 国际权威来源链接 / Authoritative Sources
+
+- [Linux Kernel - Memory Management documentation](https://docs.kernel.org/mm/)
+- [Linux Kernel - Page Allocator](https://docs.kernel.org/mm/page_owner.html)
+- [Linux Kernel - SLUB](https://docs.kernel.org/mm/slub.html)
+- [Understanding the Linux Kernel (Bovet & Cesati)](https://www.amazon.com/Understanding-Linux-Kernel-Third-Daniel/dp/0596005652)

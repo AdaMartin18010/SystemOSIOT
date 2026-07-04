@@ -51,3 +51,11 @@ graph TD
 
 - [Linux vs RTOS 决策树](./linux-vs-rtos.md)
 - [边缘架构决策树](./edge-architecture.md)
+
+## 国际权威来源链接 / Authoritative Sources
+
+- [MQTT v5.0 Specification (OASIS)](https://docs.oasis-open.org/mqtt/mqtt/v5.0/mqtt-v5.0.html)
+- [CoAP RFC 7252](https://datatracker.ietf.org/doc/html/rfc7252)
+- [LwM2M Specification (OMA SpecWorks)](https://omaspecworks.org/what-is-oma-specworks/iot/lightweight-m2m-lwm2m/)
+- [HTTP/1.1 RFC 7230-7235](https://datatracker.ietf.org/doc/html/rfc7230)
+- [gRPC Documentation](https://grpc.io/docs/)

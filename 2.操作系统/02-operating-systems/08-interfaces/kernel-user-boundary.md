@@ -91,3 +91,10 @@ graph TD
 - [系统调用接口](./syscall-interface.md)
 - [ABI/API 映射](./abi-api.md)
 - [安全机制 Linux](../05-linux-kernel/security-linux.md)
+
+## 国际权威来源链接 / Authoritative Sources
+
+- [POSIX.1-2024](https://pubs.opengroup.org/onlinepubs/9799919799/)
+- [Linux Kernel - System Calls](https://docs.kernel.org/process/syscall-architecture.html)
+- [Linux seccomp documentation](https://docs.kernel.org/userspace-api/seccomp_filter.html)
+- [Intel 64 and IA-32 Architectures Software Developer's Manual, Vol. 3A](https://www.intel.com/content/www/us/en/developer/articles/technical/intel-sdm.html)

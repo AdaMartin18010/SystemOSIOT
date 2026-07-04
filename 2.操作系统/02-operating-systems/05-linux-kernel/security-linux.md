@@ -152,3 +152,11 @@ graph TD
 - [Linux 内核源码映射](./linux-source-map.md)
 - [系统调用接口](../08-interfaces/syscall-interface.md)
 - [操作系统机制组合树](../00-concept-atlas/mechanism-composition-tree-os.md)
+
+## 国际权威来源链接 / Authoritative Sources
+
+- [Linux Kernel - Security documentation](https://docs.kernel.org/security/)
+- [Linux Kernel - LSM](https://docs.kernel.org/admin-guide/LSM/index.html)
+- [Linux Kernel - seccomp](https://docs.kernel.org/userspace-api/seccomp_filter.html)
+- [SELinux Project](https://selinuxproject.org/)
+- [AppArmor Documentation](https://apparmor.net/)

@@ -108,3 +108,10 @@
 
 - [RTOS 概念树](./rtos-concept-tree.md)
 - [Linux vs RTOS 决策树](../06-decision-trees/linux-vs-rtos.md)
+
+## 国际权威来源链接 / Authoritative Sources
+
+- [FreeRTOS Documentation](https://www.freertos.org/Documentation/RTOS-book)
+- [Zephyr Project Documentation](https://docs.zephyrproject.org/)
+- [RTEMS Documentation](https://docs.rtems.org/)
+- [Wind River VxWorks Documentation](https://docs.windriver.com/)

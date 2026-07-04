@@ -137,3 +137,10 @@ graph LR
 - [Linux 网络协议栈](../06-networking/linux-network-stack.md)
 - [外设概念树](../07-peripherals/peripheral-concept-tree.md)
 - [Linux 内核源码映射](../05-linux-kernel/linux-source-map.md)
+
+## 国际权威来源链接 / Authoritative Sources
+
+- [POSIX.1-2024](https://pubs.opengroup.org/onlinepubs/9799919799/)
+- [Linux Kernel Documentation](https://docs.kernel.org/)
+- [RFC 793 - TCP](https://datatracker.ietf.org/doc/html/rfc793)
+- [NXP I²C-bus Specification UM10204](https://www.nxp.com/docs/en/user-guide/UM10204.pdf)

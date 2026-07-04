@@ -72,13 +72,23 @@
 
 | 概念 | 来源类型 | 来源 | 位置 | 状态 |
 |------|----------|------|------|------|
-| IP | RFC | IETF | RFC 791 | 已覆盖 |
-| TCP | RFC | IETF | RFC 793 | 已覆盖 |
-| UDP | RFC | IETF | RFC 768 | 已覆盖 |
-| ICMP | RFC | IETF | RFC 792 | 已覆盖 |
-| IPv6 | RFC | IETF | RFC 8200 | 已覆盖 |
-| TCP 拥塞控制 | RFC | IETF | RFC 2581, RFC 5681 | 已覆盖 |
-| NAPI | Article | LWN.net | NAPI | 已覆盖 |
+| IP | RFC | IETF | [RFC 791](https://datatracker.ietf.org/doc/html/rfc791) | 已覆盖 |
+| TCP | RFC | IETF | [RFC 793](https://datatracker.ietf.org/doc/html/rfc793) | 已覆盖 |
+| UDP | RFC | IETF | [RFC 768](https://datatracker.ietf.org/doc/html/rfc768) | 已覆盖 |
+| ICMP | RFC | IETF | [RFC 792](https://datatracker.ietf.org/doc/html/rfc792) | 已覆盖 |
+| ARP | RFC | IETF | [RFC 826](https://datatracker.ietf.org/doc/html/rfc826) | 已覆盖 |
+| IPv6 | RFC | IETF | [RFC 8200](https://datatracker.ietf.org/doc/html/rfc8200) | 已覆盖 |
+| TCP 拥塞控制 | RFC | IETF | [RFC 5681](https://datatracker.ietf.org/doc/html/rfc5681) | 已覆盖 |
+| Host Requirements | RFC | IETF | [RFC 1122](https://datatracker.ietf.org/doc/html/rfc1122) | 已覆盖 |
+| HTTP | RFC | IETF | [RFC 9110](https://datatracker.ietf.org/doc/html/rfc9110) | 已覆盖 |
+| TLS 1.3 | RFC | IETF | [RFC 8446](https://datatracker.ietf.org/doc/html/rfc8446) | 已覆盖 |
+| DNS | RFC | IETF | [RFC 1034](https://datatracker.ietf.org/doc/html/rfc1034), [RFC 1035](https://datatracker.ietf.org/doc/html/rfc1035) | 已覆盖 |
+| BGP | RFC | IETF | [RFC 4271](https://datatracker.ietf.org/doc/html/rfc4271) | 已覆盖 |
+| OSPF | RFC | IETF | [RFC 2328](https://datatracker.ietf.org/doc/html/rfc2328) | 已覆盖 |
+| QUIC | RFC | IETF | [RFC 9000](https://datatracker.ietf.org/doc/html/rfc9000) | 已覆盖 |
+| IEEE 802.3 | Standard | IEEE | [IEEE 802.3-2022](https://standards.ieee.org/standard/802.3-2022.html) | 已覆盖 |
+| IEEE 802.1Q | Standard | IEEE | [IEEE 802.1Q-2024](https://standards.ieee.org/standard/802.1Q-2024.html) | 已覆盖 |
+| NAPI | Article | LWN.net | [NAPI](https://lwn.net/Articles/17992/) | 已覆盖 |
 | eBPF | Docs | Linux Kernel | `Documentation/bpf/` | 已覆盖 |
 | XDP | Docs | Linux Kernel | `Documentation/networking/xdp/` | 已覆盖 |
 

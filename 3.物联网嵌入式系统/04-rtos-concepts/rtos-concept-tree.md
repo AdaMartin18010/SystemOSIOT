@@ -135,3 +135,11 @@ graph TD
 - [RTOS 对比映射](./freertos-zephyr-rtems-vxworks-map.md)
 - [Linux vs RTOS 决策树](../06-decision-trees/linux-vs-rtos.md)
 - [操作系统机制组合树](../../2.操作系统/02-operating-systems/00-concept-atlas/mechanism-composition-tree-os.md)
+
+## 国际权威来源链接 / Authoritative Sources
+
+- [FreeRTOS Documentation](https://www.freertos.org/Documentation/RTOS-book)
+- [Zephyr Project Documentation](https://docs.zephyrproject.org/)
+- [RTEMS Documentation](https://docs.rtems.org/)
+- [Liu & Layland, "Scheduling Algorithms for Multiprogramming in a Hard-Real-Time Environment", JACM 1973](https://doi.org/10.1145/321738.321743)
+- [Buttazzo, *Hard Real-Time Computing Systems* (Springer)](https://link.springer.com/book/10.1007/978-3-031-04138-0)

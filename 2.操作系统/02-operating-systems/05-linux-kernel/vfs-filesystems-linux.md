@@ -23,7 +23,7 @@
 
 ## 2. 打开文件流程
 
-```
+```text
 openat()
   ↓ sys_openat()
     ↓ do_filp_open()
@@ -43,7 +43,7 @@ openat()
 
 ## 3. 读文件流程
 
-```
+```text
 read()
   ↓ vfs_read()
     ↓ file->f_op->read_iter()   # 默认 generic_file_read_iter()
@@ -73,7 +73,7 @@ read()
 
 ### 5.1 写路径
 
-```
+```text
 write()
   ↓ vfs_write()
     ↓ file->f_op->write_iter()  # ext4_file_write_iter()
@@ -184,3 +184,10 @@ write()
 - [Linux 内核源码映射](./linux-source-map.md)
 - [进程调度](./process-scheduling-linux.md)
 - [内存管理](./memory-management-linux.md)
+
+## 国际权威来源链接 / Authoritative Sources
+
+- [Linux Kernel - Filesystems documentation](https://docs.kernel.org/filesystems/)
+- [Linux Kernel - ext4](https://docs.kernel.org/filesystems/ext4/index.html)
+- [Linux Kernel - VFS](https://docs.kernel.org/filesystems/vfs.html)
+- [Linux Device Drivers - VFS and block layer](https://static.lwn.net/images/pdf/LDD3/ch12.pdf)

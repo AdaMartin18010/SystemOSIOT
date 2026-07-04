@@ -86,7 +86,7 @@ SYSCALL_DEFINE3(write, unsigned int, fd, const char __user *, buf, size_t, count
 
 ### 3.4 关键路径示例：`write()`
 
-```
+```text
 用户态 write()
   ↓ libc 设置 rax=1, rdi=fd, rsi=buf, rdx=count
   ↓ syscall 指令
@@ -112,7 +112,7 @@ SYSCALL_DEFINE3(write, unsigned int, fd, const char __user *, buf, size_t, count
 
 ### 4.2 机制
 
-```
+```text
 内核初始化时生成 vDSO 页
   ↓ 映射到每个进程用户态地址空间
   ↓ glibc 调用 __vdso_clock_gettime
@@ -142,7 +142,7 @@ SYSCALL_DEFINE3(write, unsigned int, fd, const char __user *, buf, size_t, count
 
 ### 5.2 seccomp-bpf 流程
 
-```
+```text
 进程加载 seccomp filter
   ↓ 每次系统调用前执行 BPF prog
     ↓ ALLOW：继续执行系统调用
@@ -221,3 +221,11 @@ SYSCALL_DEFINE3(write, unsigned int, fd, const char __user *, buf, size_t, count
 - [HAL/BSP/设备树](./hal-bsp-device-tree.md)
 - [跨层映射](./cross-layer-mapping.md)
 - [POSIX 映射](./posix-mapping.md)
+
+## 国际权威来源链接 / Authoritative Sources
+
+- [POSIX.1-2024 System Interfaces](https://pubs.opengroup.org/onlinepubs/9799919799/)
+- [Linux Kernel - System Calls](https://docs.kernel.org/process/syscall-architecture.html)
+- [Linux seccomp documentation](https://docs.kernel.org/userspace-api/seccomp_filter.html)
+- [Linux vDSO documentation](https://docs.kernel.org/userspace-api/vDSO.html)
+- [Intel 64 and IA-32 Architectures Software Developer's Manual, Vol. 3A](https://www.intel.com/content/www/us/en/developer/articles/technical/intel-sdm.html)

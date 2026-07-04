@@ -131,3 +131,9 @@
 - [ABI/API](./abi-api.md)
 - [Linux 网络协议栈](../06-networking/linux-network-stack.md)
 - [Linux 内核源码映射](../05-linux-kernel/linux-source-map.md)
+
+## 国际权威来源链接 / Authoritative Sources
+
+- [POSIX.1-2024 Base Definitions](https://pubs.opengroup.org/onlinepubs/9799919799/)
+- [POSIX.1-2024 System Interfaces](https://pubs.opengroup.org/onlinepubs/9799919799/)
+- [Linux man-pages project](https://www.kernel.org/doc/man-pages/)

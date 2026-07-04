@@ -28,7 +28,7 @@ graph LR
 
 ### 2.1 常用命令
 
-```
+```text
 setenv bootargs 'console=ttyS0,115200 root=/dev/mmcblk0p2 rw'
 load mmc 0:1 ${kernel_addr_r} zImage
 load mmc 0:1 ${fdt_addr_r} board.dtb
@@ -111,3 +111,10 @@ bootz ${kernel_addr_r} - ${fdt_addr_r}
 
 - [嵌入式 Linux 启动流程](./embedded-linux-bootflow.md)
 - [HAL/BSP/设备树映射](../../../2.操作系统/02-operating-systems/08-interfaces/hal-bsp-device-tree.md)
+
+## 国际权威来源链接 / Authoritative Sources
+
+- [Devicetree Specification](https://devicetree-specification.readthedocs.io/en/stable/)
+- [U-Boot Documentation](https://u-boot.readthedocs.io/en/latest/)
+- [Linux Device Tree Bindings](https://docs.kernel.org/devicetree/bindings/)
+- [ARM Booting Documentation](https://docs.kernel.org/arm/booting.html)
