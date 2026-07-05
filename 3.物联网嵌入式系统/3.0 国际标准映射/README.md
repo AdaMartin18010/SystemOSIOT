@@ -74,6 +74,11 @@
 | ISO/IEC 30141:2024 6 | Trustworthiness | 3.2 批判分析 | `3.2.1 主要争议.md` | 未覆盖 |
 | IEC 62443-2-1:2024 | Asset owner security requirements | 3.2, 3.7 | 待补充 | 未覆盖 |
 | NIST SP 800-213A | IoT Device Cybersecurity Requirement Catalog | 3.2, 3.7 | 待补充 | 未覆盖 |
+| ISO 26262:2018 | Road vehicles — Functional Safety | 3.2, 3.4, 04-rtos-concepts | `rtos-safety-standards-mapping.md` | 已覆盖 |
+| IEC 61508:2010 | Functional safety of E/E/PE systems | 3.2, 3.4, 04-rtos-concepts | `rtos-safety-standards-mapping.md` | 已覆盖 |
+| DO-178C / ED-12C | Software Considerations in Airborne Systems | 3.2, 3.4, 04-rtos-concepts | `rtos-safety-standards-mapping.md` | 已覆盖 |
+| IEC 62304:2006+A1:2015 | Medical device software life cycle | 3.2, 3.4 | `rtos-safety-standards-mapping.md` | 已覆盖 |
+| ARINC 653 Part 1 | Avionics Application Standard Software Interface | 2018 | `rtos-safety-standards-mapping.md` | 已覆盖 |
 | MQTT v5.0 2.2 | Control Packets | 3.1, 3.6 | `3.1.1 基本概念.md` | 部分覆盖 |
 | CoAP RFC 7252 2 | Messages / Request/Response | 3.1, 3.6 | `3.1.1 基本概念.md` | 部分覆盖 |
 | LwM2M 1.2 Core | Objects and Resources | 3.1, 3.6 | 待补充 | 未覆盖 |
@@ -96,6 +101,11 @@
 | 工件 | 路径 | 说明 |
 |---|---|---|
 | IoT 实时调度 UPPAAL | `tools/uppaal-models/IoT_Scheduling.xml` | 传感器节点周期性采样-处理-传输-睡眠时间自动机 |
+| RTOS 可调度性 UPPAAL | `tools/uppaal-models/RTOS_Schedulability.xml` | 双周期任务固定优先级调度时间自动机 |
+| FreeRTOS 固定优先级调度 TLA+ | `tools/tla-specifications/FreeRTOS_TaskScheduler.tla` + `.cfg` | TLC 已通过：最高优先级就绪任务运行、无死锁 |
+| OS 调度器 Coq 证明 | `tools/coq-verification/OSScheduler.v` | 调度后运行任务优先级不低于就绪队列任务 |
+| OS 调度器 Isabelle/HOL 证明 | `tools/isabelle-verification/OS_Scheduler.thy` | 同上，Isabelle/HOL 版本 |
+| OS 内存管理 Coq 证明 | `tools/coq-verification/OSMemory.v` | 页表 present 映射数不超过物理帧数 |
 
 ## 6. 维护记录
 

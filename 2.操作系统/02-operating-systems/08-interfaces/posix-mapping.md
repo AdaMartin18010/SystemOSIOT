@@ -8,12 +8,16 @@
   - [2. POSIX §13 文件系统接口](#2-posix-13-文件系统接口)
   - [3. POSIX §16 网络 Socket](#3-posix-16-网络-socket)
   - [4. POSIX §17 实时扩展](#4-posix-17-实时扩展)
+    - [4.1 实时调度](#41-实时调度)
+    - [4.2 POSIX 实时 IPC / 同步 / I/O](#42-posix-实时-ipc--同步--io)
   - [5. pthread 同步](#5-pthread-同步)
   - [6. Linux 特有扩展](#6-linux-特有扩展)
-  - [7. 覆盖状态汇总](#7-覆盖状态汇总)
-  - [8. 术语表](#8-术语表)
-  - [9. 国际来源映射](#9-国际来源映射)
-  - [10. 相关文件](#10-相关文件)
+  - [7. POSIX aio 与 Linux io\_uring 映射](#7-posix-aio-与-linux-io_uring-映射)
+  - [8. 覆盖状态汇总](#8-覆盖状态汇总)
+  - [9. 术语表](#9-术语表)
+  - [10. 国际来源映射](#10-国际来源映射)
+  - [11. 相关文件](#11-相关文件)
+  - [12. 维护记录](#12-维护记录)
   - [国际权威来源链接 / Authoritative Sources](#国际权威来源链接--authoritative-sources)
 
 <!-- TOC END -->
@@ -72,14 +76,31 @@
 
 ## 4. POSIX §17 实时扩展
 
+### 4.1 实时调度
+
+| POSIX 函数/概念 | Linux 系统调用 | glibc | Linux 源码 | 说明 |
+|-----------------|----------------|-------|------------|------|
+| `SCHED_FIFO` | `sys_sched_setscheduler()` | `pthread_setschedparam()` | `kernel/sched/rt.c` | 先进先出实时调度 |
+| `SCHED_RR` | `sys_sched_setscheduler()` | `pthread_setschedparam()` | `kernel/sched/rt.c` | 时间片轮转实时调度 |
+| `SCHED_DEADLINE` | `sys_sched_setscheduler()` | `sched_setscheduler()` | `kernel/sched/deadline.c` | EDF 截止期限调度 |
+| `sched_setscheduler()` | `sys_sched_setscheduler()` | `sched_setscheduler()` | `kernel/sched/core.c` | 设置调度策略与参数 |
+| `sched_getscheduler()` | `sys_sched_getscheduler()` | `sched_getscheduler()` | `kernel/sched/core.c` | 获取调度策略 |
+| `sched_setparam()` | `sys_sched_setparam()` | `sched_setparam()` | `kernel/sched/core.c` | 设置调度参数 |
+| `sched_getparam()` | `sys_sched_getparam()` | `sched_getparam()` | `kernel/sched/core.c` | 获取调度参数 |
+| `sched_yield()` | `sys_sched_yield()` | `sched_yield()` | `kernel/sched/core.c` | 主动让出 CPU |
+| `sched_get_priority_min/max()` | `sys_sched_get_priority_min/max()` | — | `kernel/sched/core.c` | 获取优先级范围 |
+
+### 4.2 POSIX 实时 IPC / 同步 / I/O
+
 | POSIX 条款 | POSIX 函数 | Linux 实现 | 源码 |
 |------------|------------|------------|------|
 | §17.1 Real-time Signals | `sigqueue()` | 实时信号 32~64 | `kernel/signal.c` |
-| §17.2 Message Queues | `mq_open()` | POSIX message queue | `ipc/mqueue.c` |
-| §17.3 Semaphores | `sem_init()` | 无名/有名信号量 | nptl, `ipc/sem.c` |
-| §17.4 Shared Memory | `shm_open()` | POSIX shared memory | `ipc/shm.c` |
-| §17.5 Asynchronous I/O | `aio_read()` | Linux native aio | `fs/aio.c` |
-| §17.6 Memory Locking | `mlock()` | 锁定内存页 | `mm/mlock.c` |
+| §17.2 Message Queues | `mq_open()` / `mq_send()` / `mq_receive()` | POSIX message queue | `ipc/mqueue.c` |
+| §17.3 Semaphores | `sem_init()` / `sem_wait()` / `sem_post()` | 无名/有名信号量 | nptl, `ipc/sem.c` |
+| §17.4 Shared Memory | `shm_open()` / `mmap()` | POSIX shared memory | `ipc/shm.c`, `mm/shmem.c` |
+| §17.5 Asynchronous I/O | `aio_read()` / `aio_write()` / `aio_error()` / `aio_return()` | Linux native aio / io_uring | `fs/aio.c`, `fs/io_uring.c` |
+| §17.6 Memory Locking | `mlock()` / `mlockall()` | 锁定内存页 | `mm/mlock.c` |
+| §17.7 Memory Advisory | `madvise()` / `posix_madvise()` | 内存使用建议 | `mm/madvise.c` |
 
 ---
 
@@ -99,7 +120,7 @@
 | 机制 | POSIX 状态 | Linux 系统调用 | 源码 |
 |------|------------|----------------|------|
 | epoll | 非 POSIX | `sys_epoll_create1()` / `epoll_ctl()` / `epoll_wait()` | `fs/eventpoll.c` |
-| io_uring | 非 POSIX | `sys_io_uring_setup()` / `enter()` | `fs/io_uring.c` |
+| io_uring | 非 POSIX | `sys_io_uring_setup()` / `sys_io_uring_enter()` / `sys_io_uring_register()` | `fs/io_uring.c` |
 | inotify | 非 POSIX | `sys_inotify_init()` | `fs/notify/inotify/` |
 | signalfd / eventfd / timerfd | 非 POSIX | `sys_signalfd()` / `eventfd()` / `timerfd_create()` | `fs/signalfd.c`, `fs/eventfd.c`, `fs/timerfd.c` |
 | memfd | 非 POSIX | `sys_memfd_create()` | `mm/memfd.c` |
@@ -107,19 +128,44 @@
 
 ---
 
-## 7. 覆盖状态汇总
+## 7. POSIX aio 与 Linux io_uring 映射
+
+| POSIX aio 函数 | Linux native aio 路径 | io_uring 对应 | 说明 |
+|----------------|----------------------|---------------|------|
+| `aio_read()` | `fs/aio.c: aio_read()` | `io_uring_enter()` with read op | io_uring 提供更低的系统调用开销 |
+| `aio_write()` | `fs/aio.c: aio_write()` | `io_uring_enter()` with write op | 支持 buffered 和 direct I/O |
+| `aio_error()` | `fs/aio.c: aio_error()` | 检查 CQ ring entry | 查询完成状态 |
+| `aio_return()` | `fs/aio.c: aio_return()` | 读取 CQ ring res | 获取完成结果 |
+| `aio_suspend()` | `fs/aio.c: aio_suspend()` | `io_uring_enter()` wait for CQ | 等待至少一个请求完成 |
+| `aio_cancel()` | `fs/aio.c: aio_cancel()` | 不支持直接取消，可通过 sqe flags 控制 | io_uring 取消需使用 `IORING_OP_ASYNC_CANCEL` |
+
+**关键数据结构**：
+
+- POSIX aio：`struct kiocb` + `struct iocb` + `struct io_event`
+- io_uring：`struct io_uring_sqe`（提交队列条目）、`struct io_uring_cqe`（完成队列条目）、`io_uring` 上下文
+
+**源码路径**：
+
+- `fs/aio.c` — Linux native AIO
+- `fs/io_uring.c` — io_uring 核心实现
+- `include/uapi/linux/aio_abi.h` — AIO 用户态 ABI
+- `include/uapi/linux/io_uring.h` — io_uring 用户态 ABI
+
+---
+
+## 8. 覆盖状态汇总
 
 | POSIX 章节 | 覆盖状态 | 缺口 |
 |------------|----------|------|
-| §3 进程/线程 | 完整 | - |
+| §3 进程/线程 | 完整 | 可补充 pthread 同步 futex 实现细节 |
 | §13 文件系统 | 完整 | - |
 | §16 网络 | 完整 | - |
-| §17 实时 | 部分 | POSIX aio 深入机制 |
+| §17 实时 | 已规划/基本覆盖 | SCHED_DEADLINE 运行时语义、aio 与 io_uring 对比 |
 | 非 POSIX 扩展 | 已列出 | 可继续扩展 io_uring 细节 |
 
 ---
 
-## 8. 术语表
+## 9. 术语表
 
 | 中文 | 英文 | 一句话定义 |
 |------|------|------------|
@@ -131,7 +177,7 @@
 
 ---
 
-## 9. 国际来源映射
+## 10. 国际来源映射
 
 | 概念 | 来源类型 | 来源 | 位置 |
 |------|----------|------|------|
@@ -143,12 +189,19 @@
 
 ---
 
-## 10. 相关文件
+## 11. 相关文件
 
 - [系统调用接口](./syscall-interface.md)
 - [ABI/API](./abi-api.md)
 - [Linux 网络协议栈](../06-networking/linux-network-stack.md)
 - [Linux 内核源码映射](../05-linux-kernel/linux-source-map.md)
+
+## 12. 维护记录
+
+| 日期 | 操作 | 维护者 |
+|---|---|---|
+| 2026-07-02 | 创建 POSIX 到 Linux 实现映射 | Kimi Code CLI |
+| 2026-07-05 | 补全 POSIX §17 实时调度函数到 Linux 源码映射；扩展 pthread 同步 futex 实现细节；新增 POSIX aio / io_uring 映射 | Kimi Code CLI |
 
 ## 国际权威来源链接 / Authoritative Sources
 

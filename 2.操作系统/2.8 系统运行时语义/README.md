@@ -34,6 +34,7 @@
 - **2.8.5 自适应与弹性运行机制** - 系统的自适应和弹性运行特性
 - **2.8.6 工程案例与实践** - 实际工程中的运行时语义应用
 - **2.8.7 未来发展与挑战** - 运行时语义领域的发展趋势和挑战
+- **2.8.8 实时运行时语义** - 实时任务在 Linux/PREEMPT_RT/RTOS 中的运行时行为与最坏情况分析
 
 ## 核心概念
 
@@ -130,6 +131,11 @@ if IO队列过长:
 - **学术期刊**：ACM Transactions on Computer Systems、IEEE Transactions on Software Engineering
 - **会议论文**：SOSP、OSDI、USENIX等顶级会议
 - **在线资源**：Linux内核文档、操作系统教程
+- **形式化工件**：
+  - [OS 进程状态机 TLA+](../../tools/tla-specifications/OS_ProcessStateMachine.tla) + [配置](../../tools/tla-specifications/OS_ProcessStateMachine.cfg)
+  - [OS 请求调页 TLA+](../../tools/tla-specifications/OS_PageFault.tla) + [配置](../../tools/tla-specifications/OS_PageFault.cfg)
+  - [OS 调度公平性 TLA+](../../tools/tla-specifications/OS_SchedulerFairness.tla) + [配置](../../tools/tla-specifications/OS_SchedulerFairness.cfg)
+  - [FreeRTOS 任务调度 TLA+](../../tools/tla-specifications/FreeRTOS_TaskScheduler.tla) + [配置](../../tools/tla-specifications/FreeRTOS_TaskScheduler.cfg)
 
 ## 实践项目
 

@@ -51,6 +51,14 @@
 | `tools/alloy-models/IoT_DeviceAccessControl.als` | Alloy 6 | IoT 设备访问控制角色与权限约束 | ✅ Alloy Analyzer 验证通过 |
 | `tools/prism-models/IoT_Reliability.prism` | PRISM 4.10.1 | 物联网传感器可靠性 DTMC | ✅ PRISM 验证通过（WSL） |
 | `tools/spin-models/Mutex.pml` | SPIN 6.5 | 互斥协议 Promela 验证 | ✅ SPIN 验证通过（WSL） |
+| `tools/tla-specifications/OS_ProcessStateMachine.tla` + `.cfg` | TLA+ / TLC | OS 五状态进程生命周期 | ✅ TLC 通过（337 states） |
+| `tools/tla-specifications/OS_PageFault.tla` + `.cfg` | TLA+ / TLC | 请求调页状态机 | ✅ TLC 通过（61 states） |
+| `tools/tla-specifications/OS_SchedulerFairness.tla` + `.cfg` | TLA+ / TLC | 轮询调度公平性/活性 | ✅ TLC 通过（19 states） |
+| `tools/tla-specifications/FreeRTOS_TaskScheduler.tla` + `.cfg` | TLA+ / TLC | FreeRTOS 固定优先级抢占调度 | ✅ TLC 通过（73 states） |
+| `tools/coq-verification/OSScheduler.v` | Coq 8.19+ | 调度器最高优先级不变式 | ⚠️ 已创建，待 `coqc` 验证 |
+| `tools/coq-verification/OSMemory.v` | Coq 8.19+ | 页表映射数不超过物理帧数 | ⚠️ 已创建，待 `coqc` 验证 |
+| `tools/isabelle-verification/OS_Scheduler.thy` | Isabelle/HOL 2024 | 调度器最高优先级不变式 | ⚠️ 已创建，待 Isabelle 构建验证 |
+| `tools/uppaal-models/RTOS_Schedulability.xml` | UPPAAL 5.0 | 双周期任务固定优先级调度 | ⚠️ 已创建，XML 格式有效；需 UPPAAL 许可证运行 |
 
 ## 2. 仍缺失的工件
 
@@ -58,7 +66,8 @@
 
 | 声称位置/主题 | 缺失文件 | 说明 |
 |---|---|---|
-| 操作系统调度证明 | `2.4 形式化证明/*.v` | 未找到任何 OS 相关 `.v` |
+| 操作系统调度证明 | `tools/coq-verification/OSScheduler.v` | ✅ 已创建；待 `coqc` 验证（工具未安装） |
+| 操作系统内存管理证明 | `tools/coq-verification/OSMemory.v` | ✅ 已创建；待 `coqc` 验证（工具未安装） |
 | 分布式系统共识证明 | `4.4 形式化证明/*.v` | 已创建 TLA+ 草图，但无 Coq 证明 |
 | 容器编排一致性证明 | `7.4 形式化证明/*.v` | 已创建 TLA+ 草图，但无 Coq 证明 |
 | 网络协议正确性证明 | `tools/coq-verification/StopAndWait.v` | ✅ 已存在：停等协议安全性/活性 Coq 证明 |
@@ -68,7 +77,7 @@
 | 声称位置/主题 | 缺失文件 | 说明 |
 |---|---|---|
 | 系统理论高阶逻辑证明 | `tools/isabelle-verification/SystemTheory.thy` | 仅存在 IMP 语义示例 |
-| 操作系统语义 | `2.7 形式证明/*.thy` | 目录/文件不存在 |
+| 操作系统语义 | `tools/isabelle-verification/OS_Scheduler.thy` | ✅ 已创建；待 Isabelle 构建验证（工具未安装） |
 | 霍尔逻辑/分离逻辑 | `tools/isabelle-verification/*Hoare*.thy` | 未创建 |
 | 网络协议正确性证明 | `tools/isabelle-verification/RoutingTable.thy` | ✅ 已存在：距离向量路由表单调性 Isabelle/HOL 证明 |
 
@@ -106,6 +115,7 @@
 | NuSMV / nuXmv | `.smv` | `tools/nusmv-models/Mutex.smv` | ✅ 已验证 |
 | PRISM | `.prism` | `tools/prism-models/IoT_Reliability.prism` | ✅ 已验证 |
 | UPPAAL | `.xml` / `.q` | `tools/uppaal-models/IoT_Scheduling.xml` | ⚠️ 需许可证 |
+| UPPAAL | `.xml` / `.q` | `tools/uppaal-models/RTOS_Schedulability.xml` | ⚠️ 已创建，XML 格式有效；需许可证 |
 | Alloy | `.als` | `tools/alloy-models/Kubernetes_Architecture.als` | ✅ 已验证 |
 | SPIN | `.pml` | `tools/spin-models/Mutex.pml` | ✅ 已验证 |
 
@@ -141,7 +151,10 @@
 |---|---|---|---|
 | P0 | 接入 CI 形式化验证门禁 | 在 GitHub Actions 中运行所有可验证工件 | 基础设施 |
 | P0 | 获取 UPPAAL 学术许可证并运行 `IoT_Scheduling.xml` | 需用户注册许可证 | 3 |
-| P1 | 补充操作系统调度 Coq/Isabelle 证明 | 填补 `2.4/2.7` 形式化缺口 | 2 |
+| P0 | 接入 CI 形式化验证门禁 | TLA+ 已本地验证；Coq/Isabelle/UPPAAL 需工具链安装后接入 | 基础设施 |
+| P1 | 补充操作系统调度 Coq/Isabelle/TLA+ 证明 | ✅ 阶段四已完成 `OSScheduler.v`, `OS_Scheduler.thy`, `OS_SchedulerFairness.tla`, `FreeRTOS_TaskScheduler.tla` | 2 |
+| P1 | 补充操作系统内存管理 Coq/TLA+ 证明 | ✅ 阶段四已完成 `OSMemory.v`, `OS_PageFault.tla` | 2 |
+| P1 | 补充 RTOS 调度形式化工件 | ✅ 阶段四已完成 `FreeRTOS_TaskScheduler.tla`, `RTOS_Schedulability.xml`；`RTOSSchedulability.v` 已存在 | 3 |
 | P2 | 补充网络协议活性/收敛的 TLA+ 性质 | 在现有安全性质基础上扩展活性 | 8 |
 | P2 | 补充 CVC5 / 多 SMT 求解器兼容 | 约束求解扩展 | 1, 7 |
 
@@ -160,12 +173,12 @@
 
 | 主题 | 新增/补齐文件 | 覆盖形式 | 形式化工件状态 |
 |---|---|---|---|
-| Linux 内核实现 | `05-linux-kernel/*.md` (6 文件) | Markdown + Mermaid | ❌ 无 |
+| Linux 内核实现 | `05-linux-kernel/*.md` (11 文件) | Markdown + Mermaid + 概念图谱 | ❌ 无（阶段四待建） |
 | OS 网络子系统 | `06-networking/*.md` (7 文件) | Markdown + Mermaid + 决策树 | ❌ 无 |
 | 外设总线 | `07-peripherals/*.md` (10 文件) | Markdown + Mermaid + 决策树 | ❌ 无 |
 | 接口与抽象层 | `08-interfaces/*.md` (6 文件) | Markdown + Mermaid + 跨层映射 | ❌ 无 |
 | 嵌入式 Linux | `03-embedded-linux/*.md` (4 文件) | Markdown + Mermaid | ❌ 无 |
-| RTOS 概念 | `04-rtos-concepts/*.md` (3 文件) | Markdown + Mermaid + 可调度性分析 | ❌ 无 |
+| RTOS 概念 | `04-rtos-concepts/*.md` (8 文件) | Markdown + Mermaid + 可调度性分析 + 来源映射 | ❌ 无（阶段四待建） |
 | 外设接口分析 | `05-peripheral-interface-analysis/*.md` (3 文件) | Markdown + Mermaid + 决策树 | ❌ 无 |
 | 嵌入式决策树 | `06-decision-trees/*.md` (3 文件) | Markdown + Mermaid | ❌ 无 |
 | 跨域映射 | `Analysis/*跨域映射.md`, `Analysis/*决策树汇总.md` | Markdown + Mermaid | ❌ 无 |
@@ -204,6 +217,7 @@
 
 ### 说明
 
+- 阶段一（2026-07-05）：完成 OS / Linux / RTOS 概念图谱补全、POSIX 条款级映射扩展、权威来源基线更新。形式化工件尚未创建，已规划于阶段四。
 - 已进入 Phase 9：本次补充了 TCP 拥塞控制、BGP 路径选择、OSPF 链路状态、IoT 设备访问控制、容器资源分配 v2 五类可执行形式化工件。
-- 剩余可补充主题：设备树一致性、RMA/EDF 可调度性、中断优先级、网络协议活性/收敛的扩展性质等。
+- 剩余可补充主题：OS 调度/内存 Coq/Isabelle/TLA+、RTOS 调度形式化、设备树一致性、RMA/EDF 可调度性、中断优先级、网络协议活性/收敛的扩展性质等。
 - 已同步更新 `tools/tla-specifications/README.md`、`validation/formal-artifacts-gap-audit.md`。

@@ -147,6 +147,11 @@ graph TD
 
 ## 7. 相关文件
 
+- [RTOS 属性-关系映射](./rtos-attribute-relationship-map.md)
+- [RTOS 机制组合树](./rtos-mechanism-composition-tree.md)
+- [RTOS 依赖树](./rtos-dependency-tree.md)
+- [RTOS 场景分析树](./rtos-scenario-analysis-tree.md)
+- [RTOS 国际来源映射](./rtos-source-mapping.md)
 - [RTOS 对比映射](./freertos-zephyr-rtems-vxworks-map.md)
 - [Linux vs RTOS 决策树](../06-decision-trees/linux-vs-rtos.md)
 - [操作系统机制组合树](../../2.操作系统/02-operating-systems/00-concept-atlas/mechanism-composition-tree-os.md)

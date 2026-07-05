@@ -64,26 +64,26 @@
 | POSIX.1-2024 §3.141 | Process（进程生命周期、fork/exec/wait） | 2.1, 2.3, 2.6 | 2.1 知识梳理、2.6 形式语义 | 已规划 |
 | POSIX.1-2024 §13 | File System Interfaces（open/close/read/write/权限） | 2.1, 2.3 | 2.1 知识梳理 | 已规划 |
 | POSIX.1-2024 §16 | Networking Interfaces（socket、TCP/UDP 抽象） | 2.1, 2.6, 2.8 | 2.6 形式语义、2.8 系统运行时语义 | 已规划 |
-| POSIX.1-2024 §17 | Realtime（实时调度、优先级、信号量） | 2.1, 2.8 | [2.0.1 POSIX 与 Linux 标准条款映射](2.0.1%20POSIX%20与%20Linux%20标准条款映射.md)、`01-process-management/03-real-time-scheduling.md`（待建） | 已规划 |
+| POSIX.1-2024 §17 | Realtime（实时调度、优先级、信号量） | 2.1, 2.8 | [2.0.1 POSIX 与 Linux 标准条款映射](2.0.1%20POSIX%20与%20Linux%20标准条款映射.md)、[01-process-management/03-real-time-scheduling.md](../02-operating-systems/01-process-management/03-real-time-scheduling.md) | 已覆盖 |
 | LSB 5.0 Core §15 | System Initialization（SysV init/LSB headers） | 2.1, 2.8 | `2.8 系统运行时语义/`（待补） | 已规划 |
-| ISO/IEC 15408:2022 §7 (ASE) | Security Target evaluation | 2.2, 2.4 | [2.0.2 操作系统安全与可信计算标准映射](2.0.2%20操作系统安全与可信计算标准映射.md)、`2.0.2.1 Common-Criteria-NIST-TPM-TrustZone-mapping.md`（待建） | 已规划 |
-| ISO/IEC 15408:2022 §8–10 (ADV/ATE/AVA) | Design, tests, vulnerability assessment | 2.4, 2.7 | `2.0.2.1 Common-Criteria-NIST-TPM-TrustZone-mapping.md`（待建） | 已规划 |
-| NIST SP 800-53 Rev.5 AC-3 | Access Enforcement | 2.2, 2.4 | `2.0.2.1 Common-Criteria-NIST-TPM-TrustZone-mapping.md`（待建） | 已规划 |
-| NIST SP 800-53 Rev.5 SC-39 | Process Isolation | 2.2, 2.3 | `2.0.2.1 Common-Criteria-NIST-TPM-TrustZone-mapping.md`（待建） | 已规划 |
+| ISO/IEC 15408:2022 §7 (ASE) | Security Target evaluation | 2.2, 2.4 | [2.0.2 操作系统安全与可信计算标准映射](2.0.2%20操作系统安全与可信计算标准映射.md)、[2.0.2.1 Common-Criteria-NIST-TPM-TrustZone-mapping.md](2.0.2.1%20Common-Criteria-NIST-TPM-TrustZone-mapping.md) | 已覆盖 |
+| ISO/IEC 15408:2022 §8–10 (ADV/ATE/AVA) | Design, tests, vulnerability assessment | 2.4, 2.7 | [2.0.2.1 Common-Criteria-NIST-TPM-TrustZone-mapping.md](2.0.2.1%20Common-Criteria-NIST-TPM-TrustZone-mapping.md) | 已覆盖 |
+| NIST SP 800-53 Rev.5 AC-3 | Access Enforcement | 2.2, 2.4 | [2.0.2.1 Common-Criteria-NIST-TPM-TrustZone-mapping.md](2.0.2.1%20Common-Criteria-NIST-TPM-TrustZone-mapping.md) | 已覆盖 |
+| NIST SP 800-53 Rev.5 SC-39 | Process Isolation | 2.2, 2.3 | [2.0.2.1 Common-Criteria-NIST-TPM-TrustZone-mapping.md](2.0.2.1%20Common-Criteria-NIST-TPM-TrustZone-mapping.md) | 已覆盖 |
 | seL4 SOSP 2009 | Functional correctness proof of seL4 microkernel | 2.4, 2.6, 2.7 | 2.4 形式化证明、2.7 形式证明 | 已规划 |
-| TCG TPM 2.0 Part 1 §12 | Trusted Computing Base (TCB) definition | 2.2, 2.4 | `2.0.2.1 Common-Criteria-NIST-TPM-TrustZone-mapping.md`（待建） | 已规划 |
+| TCG TPM 2.0 Part 1 §12 | Trusted Computing Base (TCB) definition | 2.2, 2.4 | [2.0.2.1 Common-Criteria-NIST-TPM-TrustZone-mapping.md](2.0.2.1%20Common-Criteria-NIST-TPM-TrustZone-mapping.md) | 已覆盖 |
 | ACPI 6.5 §5.2 | ACPI Namespace and Definition Blocks | 2.1, 2.3 | `02-operating-systems/08-interfaces/hal-bsp-device-tree.md`（待补） | 已规划 |
-| UEFI 2.10 §2–3 | Boot Services, Runtime Services | 2.1, 2.8 | `02-operating-systems/08-interfaces/trusted-boot-chain.md`（待建） | 已规划 |
+| UEFI 2.10 §2–3 | Boot Services, Runtime Services | 2.1, 2.8 | [02-operating-systems/08-interfaces/trusted-boot-chain.md](../02-operating-systems/08-interfaces/trusted-boot-chain.md) | 已覆盖 |
 | ELF §1–2 | Object File Format / Sections / Segments | 2.1, 2.3 | `02-operating-systems/08-interfaces/elf-dwarf-formal.md`（待建） | 已规划 |
 | DWARF v5 §2 | Debugging Information Entries (DIEs) | 2.1, 2.6 | `02-operating-systems/08-interfaces/elf-dwarf-formal.md`（待建） | 已规划 |
 | POSIX.1-2024 §11 | General Terminal Interface（termios） | 2.8, 02-07-uart | `2.8 系统运行时语义/`、`02-operating-systems/07-peripherals/uart.md` | 已规划 |
 | POSIX.1-2024 §18 | Asynchronous I/O（aio_read/aio_write） | 2.8, 02-07 | `02-operating-systems/08-interfaces/io_uring-aio-semantics.md`（待建） | 已规划 |
-| USB 2.0/3.2/USB4 Spec | 设备枚举、描述符、传输类型、xHCI | 02-07-usb | `02-operating-systems/07-peripherals/pcie-usb-descriptors-formal.md`（待建） | 已规划 |
-| PCI Express Base 6.0/7.0 | 配置空间、BAR、MSI/MSI-X、ATS | 02-07-pcie | `02-operating-systems/07-peripherals/pcie-usb-descriptors-formal.md`（待建） | 已规划 |
-| PCI-SIG SR-IOV | PF/VF、虚拟化直通 | 02-07-pcie | `02-operating-systems/07-peripherals/pcie-usb-descriptors-formal.md`（待建） | 已规划 |
-| NXP UM10204 I²C | 时序、地址、Clock Stretching | 02-07-i2c | `02-operating-systems/07-peripherals/timing-diagrams-i2c-spi-can.md`（待建） | 已规划 |
-| Motorola SPI Block Guide | CPOL/CPHA、全双工 | 02-07-spi | `02-operating-systems/07-peripherals/timing-diagrams-i2c-spi-can.md`（待建） | 已规划 |
-| ISO 11898-1 / Bosch CAN 2.0 | 帧格式、位时序、仲裁 | 02-07-can | `02-operating-systems/07-peripherals/timing-diagrams-i2c-spi-can.md`（待建） | 已规划 |
+| USB 2.0/3.2/USB4 Spec | 设备枚举、描述符、传输类型、xHCI | 02-07-usb | [02-operating-systems/07-peripherals/pcie-usb-descriptors-formal.md](../02-operating-systems/07-peripherals/pcie-usb-descriptors-formal.md) | 已覆盖 |
+| PCI Express Base 6.0/7.0 | 配置空间、BAR、MSI/MSI-X、ATS | 02-07-pcie | [02-operating-systems/07-peripherals/pcie-usb-descriptors-formal.md](../02-operating-systems/07-peripherals/pcie-usb-descriptors-formal.md) | 已覆盖 |
+| PCI-SIG SR-IOV | PF/VF、虚拟化直通 | 02-07-pcie | [02-operating-systems/07-peripherals/pcie-usb-descriptors-formal.md](../02-operating-systems/07-peripherals/pcie-usb-descriptors-formal.md) | 已覆盖 |
+| NXP UM10204 I²C | 时序、地址、Clock Stretching | 02-07-i2c | [02-operating-systems/07-peripherals/timing-diagrams-i2c-spi-can.md](../02-operating-systems/07-peripherals/timing-diagrams-i2c-spi-can.md) | 已覆盖 |
+| Motorola SPI Block Guide | CPOL/CPHA、全双工 | 02-07-spi | [02-operating-systems/07-peripherals/timing-diagrams-i2c-spi-can.md](../02-operating-systems/07-peripherals/timing-diagrams-i2c-spi-can.md) | 已覆盖 |
+| ISO 11898-1 / Bosch CAN 2.0 | 帧格式、位时序、仲裁 | 02-07-can | [02-operating-systems/07-peripherals/timing-diagrams-i2c-spi-can.md](../02-operating-systems/07-peripherals/timing-diagrams-i2c-spi-can.md) | 已覆盖 |
 | ACPI 6.5 / UEFI 2.10 | 硬件发现、电源管理、启动服务 | 02-08-hal | `02-operating-systems/08-interfaces/hal-bsp-device-tree.md`（待补） | 已规划 |
 | ARM GICv3/v4 / Intel SDM Vol. 3A / RISC-V PLIC | 中断控制器架构、路由、亲和性 | 02-07-interrupts | `02-operating-systems/07-peripherals/interrupts-and-dma.md`（待补） | 已规划 |
 | IEEE 802.1Q VLAN | 虚拟局域网桥接与标签 | 02-08-abi | `02-operating-systems/08-interfaces/abi-api.md`（待补） | 已规划 |
@@ -104,7 +104,12 @@
 
 | 工件 | 路径 | 说明 |
 |---|---|---|
-| OS 调度/内存形式化证明 | 待补充 | 当前未找到操作系统专用 Coq/Isabelle/TLA+ 工件，详见 [`validation/formal-artifacts-gap-audit.md`](../../validation/formal-artifacts-gap-audit.md)。 |
+| OS 进程状态机 TLA+ | `tools/tla-specifications/OS_ProcessStateMachine.tla` + `.cfg` | TLC 已通过（337 / 112 states） |
+| OS 请求调页 TLA+ | `tools/tla-specifications/OS_PageFault.tla` + `.cfg` | TLC 已通过（61 / 19 states） |
+| OS 调度公平性 TLA+ | `tools/tla-specifications/OS_SchedulerFairness.tla` + `.cfg` | TLC 已通过（19 / 10 states） |
+| OS 调度器 Coq 证明 | `tools/coq-verification/OSScheduler.v` | 已创建；待 `coqc` 验证 |
+| OS 内存管理 Coq 证明 | `tools/coq-verification/OSMemory.v` | 已创建；待 `coqc` 验证 |
+| OS 调度器 Isabelle/HOL 证明 | `tools/isabelle-verification/OS_Scheduler.thy` | 已创建；待 Isabelle 构建验证 |
 | seL4  Isabelle/HOL 证明 | <https://github.com/seL4/l4v> | 项目外部参考；本项目尚未建立本地可运行副本。 |
 | Linux Kernel Memory Model (LKMM) | <https://github.com/torvalds/linux/tree/master/tools/memory-model> | 项目外部参考；可与 `2.6 形式语义` 内存模型对照。 |
 
@@ -116,3 +121,4 @@
 | 2026-07-02 | 扩展主要对标标准、标准条款映射表、缺口计划、形式化工件链接，新增 2.0.1 / 2.0.2 子文档 | Kimi Code CLI |
 | 2026-07-05 | 同步外设与接口层权威来源：POSIX.1-2024 termios/aio、USB/PCIe/I²C/SPI/CAN、ACPI/UEFI、ARM GIC/Intel SDM/RISC-V PLIC/ACLINT、IEEE 802.1Q VLAN 等 | Kimi Code CLI |
 | 2026-07-05 | 根据补全计划更新覆盖状态为“已规划”，移除 Windows Internals，关联到阶段一待建文件 | Kimi Code CLI |
+| 2026-07-06 | 阶段四完成：补充 OS 进程状态机/请求调页/调度公平性 TLA+、Coq/Isabelle 证明骨架；更新形式化工件链接与覆盖状态 | Kimi Code CLI |

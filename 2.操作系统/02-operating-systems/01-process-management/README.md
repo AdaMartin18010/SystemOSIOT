@@ -5,12 +5,7 @@
 
 - [进程管理 (Process Management)](#进程管理-process-management)
   - [概述](#概述)
-  - [目录结构](#目录结构)
-    - [01-process-concepts/](#01-process-concepts)
-    - [02-process-scheduling/](#02-process-scheduling)
-    - [03-process-synchronization/](#03-process-synchronization)
-    - [04-inter-process-communication/](#04-inter-process-communication)
-    - [05-thread-management/](#05-thread-management)
+  - [文件列表](#文件列表)
   - [核心概念](#核心概念)
     - [进程定义](#进程定义)
     - [进程特征](#进程特征)
@@ -43,42 +38,11 @@
 
 进程管理是操作系统的核心功能之一，负责创建、调度、同步和终止进程。本目录涵盖了进程的基本概念、进程调度算法、进程同步机制、进程间通信等核心内容。
 
-## 目录结构
+## 文件列表
 
-### 01-process-concepts/
-
-- 进程基本概念
-- 进程状态
-- 进程控制块
-- 进程创建与终止
-
-### 02-process-scheduling/
-
-- 调度算法
-- 调度策略
-- 调度器实现
-- 实时调度
-
-### 03-process-synchronization/
-
-- 同步机制
-- 互斥锁
-- 信号量
-- 条件变量
-
-### 04-inter-process-communication/
-
-- 管道通信
-- 消息队列
-- 共享内存
-- 套接字通信
-
-### 05-thread-management/
-
-- 线程概念
-- 线程调度
-- 线程同步
-- 线程池
+- [01-process-concepts.md](./01-process-concepts.md) — 进程基本概念、状态、PCB、创建与终止
+- [02-process-scheduling.md](./02-process-scheduling.md) — 调度算法、调度策略与调度器实现
+- [03-real-time-scheduling.md](./03-real-time-scheduling.md) — 实时调度：RMS/EDF、优先级倒置、PREEMPT_RT、可调度性分析
 
 ## 核心概念
 

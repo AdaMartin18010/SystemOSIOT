@@ -118,7 +118,7 @@ jobs:
       - name: Run TLA+ model checking
         run: |
           cd tools/tla-specifications
-          for cfg in Raft.cfg Kubernetes.cfg QUIC.cfg; do
+          for cfg in *.cfg; do
             name="${cfg%.cfg}"
             echo "== TLA+ $name =="
             java -cp ../engines/tla2tools.jar tlc2.TLC \

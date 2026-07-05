@@ -34,6 +34,14 @@
 | `BGP_PathSelection.cfg` | BGP 路径选择模型检查配置 | `8.网络系统` | ✅ TLC 通过 |
 | `OSPF_LinkState.tla` | OSPF 链路状态协议邻居状态机 / LSA 泛洪 / LSDB 同步 / SPF 计算 | `8.网络系统` | ✅ TLC 通过（1132793 / 168844 states） |
 | `OSPF_LinkState.cfg` | OSPF 链路状态模型检查配置 | `8.网络系统` | ✅ TLC 通过 |
+| `OS_ProcessStateMachine.tla` | OS 五状态进程生命周期（New/Ready/Running/Waiting/Terminated） | `2.操作系统` | ✅ TLC 通过（337 / 112 states） |
+| `OS_ProcessStateMachine.cfg` | 进程状态机配置 | `2.操作系统` | ✅ TLC 通过 |
+| `OS_PageFault.tla` | 请求调页状态机（引用/缺页/换入/驱逐） | `2.操作系统` | ✅ TLC 通过（61 / 19 states） |
+| `OS_PageFault.cfg` | 缺页配置 | `2.操作系统` | ✅ TLC 通过 |
+| `OS_SchedulerFairness.tla` | 轮询调度公平性/活性模型 | `2.操作系统` | ✅ TLC 通过（19 / 10 states） |
+| `OS_SchedulerFairness.cfg` | 调度公平性配置 | `2.操作系统` | ✅ TLC 通过 |
+| `FreeRTOS_TaskScheduler.tla` | FreeRTOS 固定优先级抢占调度模型 | `3.物联网嵌入式系统` | ✅ TLC 通过（73 / 22 states） |
+| `FreeRTOS_TaskScheduler.cfg` | FreeRTOS 调度配置 | `3.物联网嵌入式系统` | ✅ TLC 通过 |
 
 ## 运行方式
 
@@ -50,12 +58,17 @@ java -cp tla2tools.jar tlc2.TLC QUIC -config QUIC.cfg -nowarning
 java -cp tla2tools.jar tlc2.TLC TCP_CongestionControl -config TCP_CongestionControl.cfg -nowarning
 java -cp tla2tools.jar tlc2.TLC BGP_PathSelection -config BGP_PathSelection.cfg -nowarning
 java -cp tla2tools.jar tlc2.TLC OSPF_LinkState -config OSPF_LinkState.cfg -nowarning
+java -cp tla2tools.jar tlc2.TLC OS_ProcessStateMachine -config OS_ProcessStateMachine.cfg -nowarning
+java -cp tla2tools.jar tlc2.TLC OS_PageFault -config OS_PageFault.cfg -nowarning
+java -cp tla2tools.jar tlc2.TLC OS_SchedulerFairness -config OS_SchedulerFairness.cfg -nowarning
+java -cp tla2tools.jar tlc2.TLC FreeRTOS_TaskScheduler -config FreeRTOS_TaskScheduler.cfg -nowarning
 ```
 
 > 说明：
 >
 > - 在 Windows（Git Bash / MSYS2 / WSL）下均可使用上述命令；路径中的 jar 为本地相对路径，不会污染系统目录。
 > - `OSPF_LinkState` 状态空间较大，完整验证约需 3–5 分钟（视硬件而定）。
+- OS/RTOS 模型状态空间较小，可快速完成验证。
 > - 若出现 `UseParallelGC` 警告，可追加 `-XX:+UseParallelGC` 到 `java` 参数。
 
 ### 使用 TLA+ Toolbox（图形界面）
@@ -69,6 +82,8 @@ java -cp tla2tools.jar tlc2.TLC OSPF_LinkState -config OSPF_LinkState.cfg -nowar
 - `Raft.tla` 对应 `4.分布式系统/4.0 国际标准映射/4.0.1 分布式共识与一致性模型.md` 中提出的形式化工件建议。
 - `Kubernetes.tla` 对应 `7.容器与微服务/7.0 国际标准映射/7.0.2 Kubernetes-v1.33.md` 中提出的 TLA+ 规范建议。
 - `QUIC.tla`、`TCP_CongestionControl.tla`、`BGP_PathSelection.tla`、`OSPF_LinkState.tla` 对应 `8.网络系统/8.0 国际标准映射/` 与 `8.8 综合专题与前沿展望/` 中网络协议深度分析的形式化补充。
+- `OS_ProcessStateMachine.tla`、`OS_PageFault.tla`、`OS_SchedulerFairness.tla` 对应 `2.操作系统/` 中进程管理、内存管理与调度形式化需求。
+- `FreeRTOS_TaskScheduler.tla` 对应 `3.物联网嵌入式系统/04-rtos-concepts/` 中固定优先级抢占调度形式化需求。
 
 ## 验证日志
 
@@ -90,3 +105,4 @@ validation/verification-results/tla-phase9/
 |---|---|---|
 | 2026-07-02 | 创建 Raft / Kubernetes TLA+ 规范 | Kimi Code CLI |
 | 2026-07-05 | 新增 QUIC / TCP 拥塞控制 / BGP / OSPF TLA+ 规范并完成 TLC 验证 | Kimi Code CLI |
+| 2026-07-06 | 新增 OS 进程状态机、请求调页、调度公平性、FreeRTOS 任务调度 TLA+ 规范并完成 TLC 验证 | Kimi Code CLI |
