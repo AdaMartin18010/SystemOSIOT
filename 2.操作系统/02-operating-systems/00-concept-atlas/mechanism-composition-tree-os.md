@@ -11,11 +11,12 @@
   - [5. 外设访问（Peripheral Access）](#5-外设访问peripheral-access)
   - [6. 实时性（Real-Time）](#6-实时性real-time)
   - [7. 安全隔离（Security Isolation）](#7-安全隔离security-isolation)
-  - [8. 国际来源映射](#8-国际来源映射)
+  - [8. 容器与虚拟化隔离（Container \& Virtualization Isolation）](#8-容器与虚拟化隔离container--virtualization-isolation)
+  - [9. 国际来源映射](#9-国际来源映射)
 
 <!-- TOC END -->
 
-> **权威来源**：OSTEP, Berkeley CS162, MIT xv6, Linux Kernel Development。
+> **权威来源**：OSTEP, Silberschatz *Operating System Concepts* 10e, ACM/IEEE CS2013 OS KA, MIT 6.S081 xv6, Linux Kernel Development。
 >
 > **目标**：解释“底层机制如何组合成系统能力/性质”，建立机制 → 子机制 → 性质 → 场景的完整链条。
 
@@ -284,7 +285,57 @@ graph TD
 
 ---
 
-## 8. 国际来源映射
+## 8. 容器与虚拟化隔离（Container & Virtualization Isolation）
+
+```mermaid
+graph TD
+    CV[容器/虚拟化隔离 Container/VM Isolation] -->|requires| NS[命名空间 Namespaces]
+    CV -->|requires| CG2[cgroups]
+    CV -->|requires| SECCOMP2[seccomp]
+    CV -->|requires| CAPP2[Capabilities]
+    CV -->|requires| LSM2[LSM]
+    CV -->|optional| VMHW[硬件虚拟化 VT-x/AMD-V]
+
+    NS -->|type| PID_NS2[PID]
+    NS -->|type| NET_NS2[Network]
+    NS -->|type| MNT_NS2[Mount]
+    NS -->|type| USER_NS2[User]
+    NS -->|type| IPC_NS2[IPC]
+    NS -->|type| UTS_NS2[UTS]
+    NS -->|type| CGROUP_NS2[Cgroup]
+    NS -->|type| TIME_NS2[Time]
+
+    CG2 -->|controller| CPU_CG[cpu]
+    CG2 -->|controller| MEM_CG[memory]
+    CG2 -->|controller| IO_CG[io]
+    CG2 -->|controller| PID_CG[pids]
+    CG2 -->|controller| CPUSET_CG[cpuset]
+
+    LSM2 -->|instance| SELINUX2[SELinux]
+    LSM2 -->|instance| APPARMOR2[AppArmor]
+    LSM2 -->|instance| SMACK[Smack]
+    LSM2 -->|instance| TOMOYO[Tomoyo]
+
+    VMHW -->|uses| VMX[VMX/VMCS]
+    VMHW -->|uses| EPT[EPT/NPT 二级页表]
+    VMHW -->|uses| IOMMU2[IOMMU]
+
+    CV -->|enables| CONTAINER2[容器 Container]
+    CV -->|enables| KVM[KVM VM]
+    CV -->|enables| SANDBOX2[应用沙箱]
+```
+
+**组合语义**：
+
+- namespaces → 视图隔离（PID/网络/文件系统/用户等）
+- cgroups → 资源隔离与限制（CPU/内存/IO/进程数）
+- seccomp + Capabilities → 系统调用与特权裁剪
+- LSM → 强制访问控制策略
+- 硬件虚拟化 + KVM →  stronger 隔离边界，运行完整 Guest OS
+
+---
+
+## 9. 国际来源映射
 
 | 系统能力 | 关键机制 | 来源类型 | 来源 | 位置 |
 |----------|----------|----------|------|------|
@@ -295,3 +346,5 @@ graph TD
 | 外设访问 | 设备树、中断、DMA | SourceCode | Linux Kernel | drivers/base/, kernel/irq/ |
 | 实时性 | PREEMPT_RT、RMA/EDF | Paper/Textbook | Liu & Layland 1973; Buttazzo | - |
 | 安全隔离 | namespaces/cgroups/LSM | SourceCode | Linux Kernel | kernel/nsproxy.c, kernel/cgroup/, security/ |
+| 容器隔离 | namespaces/cgroups/seccomp/LSM | Standard | OCI Runtime Spec v1.3.0 | <https://github.com/opencontainers/runtime-spec> |
+| 虚拟化 | VT-x/EPT/KVM | SourceCode | Linux Kernel | arch/x86/kvm/ |

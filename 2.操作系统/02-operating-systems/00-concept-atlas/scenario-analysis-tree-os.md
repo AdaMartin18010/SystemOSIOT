@@ -3,7 +3,7 @@
 
 <!-- TOC START -->
 
-- [操作系统场景分析树 / 决策树（OS Scenario & Decision Tree）](#操作系统场景分析树--决策树os-scenario--decision-tree)
+- [操作系统场景分析树 / 决策树（OS Scenario \& Decision Tree）](#操作系统场景分析树--决策树os-scenario--decision-tree)
   - [1. 高并发 I/O 多路复用决策树](#1-高并发-io-多路复用决策树)
   - [2. 调度策略决策树](#2-调度策略决策树)
   - [3. 总线/外设选择决策树](#3-总线外设选择决策树)
@@ -11,12 +11,13 @@
   - [5. 网络安全路径决策树](#5-网络安全路径决策树)
   - [6. 容器网络选择决策树](#6-容器网络选择决策树)
   - [7. 文件系统选择决策树](#7-文件系统选择决策树)
-  - [8. 国际来源映射](#8-国际来源映射)
+  - [8. 可信启动链场景分析](#8-可信启动链场景分析)
+  - [9. 国际来源映射](#9-国际来源映射)
   - [9. 相关文件](#9-相关文件)
 
 <!-- TOC END -->
 
-> **权威来源**：OSTEP, Berkeley CS162, Linux Kernel Development, Brendan Gregg *BPF Performance Tools*, TCP/IP Illustrated。
+> **权威来源**：OSTEP, Silberschatz *Operating System Concepts* 10e, ACM/IEEE CS2013 OS KA, Linux Kernel Development, Brendan Gregg *BPF Performance Tools*, TCP/IP Illustrated, Buttazzo *Hard Real-Time Computing Systems*。
 >
 > **目标**：把 OS 概念与机制落地到具体工程场景，提供“场景 → 约束/负载 → 候选方案 → 关键参数 → 验证指标 → 典型系统”的决策支持。
 
@@ -49,6 +50,7 @@ graph TD
 | 高并发 Web 服务器 | 10K+ 长连接，低延迟 | epoll / io_uring | `somaxconn`, `busy_poll`, `iodepth` | P99 延迟 < 10ms, 连接数 | Nginx, Envoy |
 | 传统跨平台应用 | fd 少，简单可移植 | select / poll | `FD_SETSIZE`, timeout | 可移植性 | 小型工具 |
 | 高 IOPS 存储服务 | 大量随机读写 | io_uring | `sq_thread_idle`, `flags=IORING_SETUP_IOPOLL` | IOPS, 99th 延迟 | ScyllaDB |
+| 高并发 KV 存储 | 低延迟，高吞吐 | io_uring + SPDK | `IORING_SETUP_SQPOLL`, polling | P99 读延迟 < 100us | RocksDB, TiKV |
 | 100Gbps 网络 | 超高吞吐，低 CPU | DPDK / RDMA | hugepages, RSS, offload | 吞吐 Gbps, CPU% | Cloudflare, HPC |
 
 ---
@@ -76,6 +78,8 @@ graph TD
 | 工业控制 | 硬实时，周期性 | SCHED_FIFO + PREEMPT_RT | 周期、WCET、优先级 | 100% 截止时间满足 | 机器人控制器 |
 | 视频流处理 | 低延迟，可偶发丢帧 | CFS + 高 nice | `sched_latency_ns` | 帧率稳定 | FFmpeg 服务器 |
 | 大数据批处理 | 吞吐优先，延迟不敏感 | SCHED_BATCH | cpu affinity | 任务完成时间 | Spark 批处理 |
+| 工业实时控制（扩展） | 硬实时，周期性，确定性 | SCHED_FIFO + PREEMPT_RT + cpu isolation | 周期、WCET、优先级、IRQ threaded | 100% 截止时间满足，调度延迟 < 50us | 机器人控制器、CNC、汽车 ECU |
+| 航空电子/医疗设备 | 安全关键，认证 | ARINC 653 / DO-178C / IEC 62304 合规 RTOS | DAL/ASIL 等级、分区、WCET | 故障率、认证通过 | Airbus A380, 达芬奇手术机器人 |
 
 ---
 
@@ -203,7 +207,29 @@ graph TD
 
 ---
 
-## 8. 国际来源映射
+## 8. 可信启动链场景分析
+
+```mermaid
+graph TD
+    SB[可信启动场景] -->|信任根| ROM[Boot ROM / Root of Trust]
+    ROM -->|度量| BL[Bootloader]
+    BL -->|Secure Boot| KERNEL[Kernel Image]
+    KERNEL -->|IMA/EVM| INITRAMFS[initramfs]
+    INITRAMFS -->|LSM| INIT[init / systemd]
+    INIT -->|MAC| APP[Applications]
+    ROM -->|TPM| PCR[PCR Registers]
+    PCR -->|seal/unseal| KEY[Disk Encryption Key]
+```
+
+| 场景 | 负载/威胁特征 | 机制选择 | 关键参数 | 验证指标 | 典型系统 |
+|------|--------------|----------|----------|----------|----------|
+| 企业服务器可信启动 | 防止 bootloader/kernel 被篡改 | UEFI Secure Boot + TPM 2.0 measured boot + IMA | Secure Boot keys, PCR 0~7, IMA policy | 启动链度量值匹配 | Azure Shielded VMs, AWS Nitro Enclaves |
+| 边缘网关安全 | 物理可接触，需防篡改 | TPM + dm-crypt + LSM (SELinux/AppArmor) | PCR 密封, LUKS key slot | 磁盘加密, 强制访问控制生效 | 工业边缘网关 |
+| 移动设备安全启动 | 防止刷入未授权固件 | ARM TrustZone + Verified Boot | AVB flags, dm-verity | boot image 签名验证 | Android Verified Boot |
+
+---
+
+## 9. 国际来源映射
 
 | 决策主题 | 来源类型 | 来源 | 位置 |
 |----------|----------|------|------|
@@ -213,8 +239,11 @@ graph TD
 | 实时调度 | Paper | Liu & Layland 1973 | JACM |
 | 总线选择 | Datasheet | NXP I2C Spec, SPI Block Guide, USB-IF | - |
 | Linux vs RTOS | Textbook | Buttazzo, Hard Real-Time Computing Systems | - |
+| 实时调度 | Paper | Liu & Layland 1973 | JACM |
+| 可信启动 | Standard | TCG TPM 2.0, UEFI 2.10 | Part 1, §2-3 |
 | 网络安全 | Book | Brendan Gregg, BPF Performance Tools | Ch. Network |
 | 容器网络 | SourceCode | Linux Kernel | drivers/net/veth.c, drivers/net/macvlan.c |
+| io_uring | Paper | Jens Axboe, 2020 | <https://kernel.dk/io_uring.pdf> |
 
 ---
 

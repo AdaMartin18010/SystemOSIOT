@@ -13,12 +13,13 @@
   - [7. 学习路径建议](#7-学习路径建议)
     - [7.1 本科生路径](#71-本科生路径)
     - [7.2 工程师路径](#72-工程师路径)
-  - [8. 国际来源映射](#8-国际来源映射)
+  - [8. CS2013 学习路径 → 概念 → Linux 实现 → 形式化模型](#8-cs2013-学习路径--概念--linux-实现--形式化模型)
+  - [9. 国际来源映射](#9-国际来源映射)
   - [9. 相关文件](#9-相关文件)
 
 <!-- TOC END -->
 
-> **权威来源**：OSTEP, ACM/IEEE CS Curricula 2023, MIT xv6, Stanford CS140。
+> **权威来源**：OSTEP, ACM/IEEE CS2013 Operating Systems KA, MIT 6.S081 xv6, Stanford CS140 Pintos, CMU 15-410。
 >
 > **目标**：明确操作系统概念、实现与部署之间的前置-后置关系，支持学习路径与工程落地。
 >
@@ -196,11 +197,61 @@ graph LR
 
 ---
 
-## 8. 国际来源映射
+## 8. CS2013 学习路径 → 概念 → Linux 实现 → 形式化模型
+
+```mermaid
+graph LR
+    CS[ACM/IEEE CS2013 OS KA] -->|LO| CONCEPT[OS Core Concepts]
+    CONCEPT -->|instance| LINUX[Linux Kernel Implementation]
+    LINUX -->|formalize| FORMAL[Formal Models]
+
+    CS -->|OS/Overview| OS_OVER[OS Overview]
+    CS -->|OS/Operating System Principles| OS_PRIN[OS Principles]
+    CS -->|OS/Concurrency| OS_CONC[Concurrency]
+    CS -->|OS/Scheduling and Dispatch| OS_SCHED[Scheduling]
+    CS -->|OS/Memory Management| OS_MEM[Memory Management]
+    CS -->|OS/Security and Protection| OS_SEC[Security & Protection]
+    CS -->|OS/Device Management| OS_DEV[Device Management]
+    CS -->|OS/File Systems| OS_FS[File Systems]
+    CS -->|OS/Virtual Machines| OS_VM[Virtual Machines]
+    CS -->|OS/Real Time and Embedded Systems| OS_RT[Real Time & Embedded]
+
+    OS_OVER -->|leads-to| OS_PRIN
+    OS_PRIN -->|leads-to| OS_SCHED
+    OS_PRIN -->|leads-to| OS_MEM
+    OS_SCHED -->|leads-to| OS_CONC
+    OS_MEM -->|leads-to| OS_FS
+    OS_CONC -->|leads-to| OS_SEC
+    OS_DEV -->|leads-to| OS_RT
+    OS_FS -->|leads-to| OS_VM
+
+    OS_SCHED -->|Linux| LINUX_SCHED[kernel/sched/]
+    OS_MEM -->|Linux| LINUX_MEM[mm/]
+    OS_CONC -->|Linux| LINUX_SYNC[kernel/locking/]
+    OS_FS -->|Linux| LINUX_FS[fs/]
+    OS_DEV -->|Linux| LINUX_DRV[drivers/]
+    OS_SEC -->|Linux| LINUX_SEC[security/, kernel/cgroup/, kernel/nsproxy.c]
+    OS_RT -->|Linux| LINUX_RT[kernel/sched/rt.c, PREEMPT_RT]
+
+    LINUX_SCHED -->|TLA+| FORMAL_SCHED[OS_SchedulerFairness.tla]
+    LINUX_MEM -->|TLA+| FORMAL_MEM[OS_PageFault.tla]
+    LINUX_SCHED -->|Coq| FORMAL_COQ[OSScheduler.v]
+    LINUX_MEM -->|Coq| FORMAL_COQ_MEM[OSMemory.v]
+```
+
+**说明**：
+
+- 该依赖树将 CS2013 的学习成果（LO）映射到项目中的概念、Linux 源码实现和形式化工件。
+- 每个 CS2013 知识单元对应一个或多个项目文件，最终关联到阶段四将创建的形式化模型。
+
+---
+
+## 9. 国际来源映射
 
 | 依赖主题 | 来源类型 | 来源 | 位置 |
 |----------|----------|------|------|
-| 学习路径 | Standard | ACM/IEEE CS Curricula 2023 | OS Knowledge Area |
+| 学习路径 | Standard | ACM/IEEE CS2013 | OS Knowledge Area |
+| CS2013 → Linux → 形式化 | Course/Standard | CS2013 + MIT 6.S081 + CMU 15-410 | Learning Outcomes + xv6/Pintos projects |
 | 系统启动 | Textbook | OSTEP | Ch. 1 Dialogue |
 | xv6 启动 | Course | MIT 6.S081 | xv6 book Ch. 1 |
 | Linux 启动 | SourceCode | Linux Kernel | init/main.c, arch/x86/ |

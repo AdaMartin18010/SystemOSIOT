@@ -4,21 +4,21 @@
 <!-- TOC START -->
 
 - [操作系统属性-关系映射（OS Attribute-Relationship Mapping）](#操作系统属性-关系映射os-attribute-relationship-mapping)
-  - [1. 进程与线程（Process & Thread）](#1-进程与线程process--thread)
+  - [1. 进程与线程（Process \& Thread）](#1-进程与线程process--thread)
   - [2. 调度（Scheduling）](#2-调度scheduling)
   - [3. 内存管理（Memory Management）](#3-内存管理memory-management)
   - [4. 文件系统（File System）](#4-文件系统file-system)
-  - [5. 设备与 I/O（Device & I/O）](#5-设备与-iodevice--io)
+  - [5. 设备与 I/O（Device \& I/O）](#5-设备与-iodevice--io)
   - [6. 网络（Networking）](#6-网络networking)
-  - [7. 安全与隔离（Security & Isolation）](#7-安全与隔离security--isolation)
-  - [8. 接口与抽象层（Interface & Abstraction）](#8-接口与抽象层interface--abstraction)
+  - [7. 安全与隔离（Security \& Isolation）](#7-安全与隔离security--isolation)
+  - [8. 接口与抽象层（Interface \& Abstraction）](#8-接口与抽象层interface--abstraction)
   - [9. 关系总图](#9-关系总图)
   - [10. 国际来源映射](#10-国际来源映射)
   - [11. 相关文件](#11-相关文件)
 
 <!-- TOC END -->
 
-> **权威来源**：OSTEP, Berkeley CS162 (Anderson & Dahlin), ACM/IEEE CS Curricula 2023 OS KA, MIT xv6。
+> **权威来源**：OSTEP (Arpaci-Dusseau), Silberschatz *Operating System Concepts* 10e, ACM/IEEE CS2013 Operating Systems KA, MIT 6.S081 xv6, Stanford CS140 Pintos。
 >
 > **目标**：为操作系统核心概念建立可检索的属性集、关系集与约束，支撑形式化定义与跨层映射。
 
@@ -57,8 +57,13 @@
 | Task | arrival_time | Time | 到达时间 |
 | Task | burst_time | Time | CPU 突发时间 |
 | Task | deadline | Time ∪ {∞} | 截止时间（实时任务） |
+| Task | period | Time | 任务周期（周期性实时任务） |
+| Task | wcet | Time | 最坏执行时间（Worst-Case Execution Time） |
+| Task | utilization | [0, 1] | WCET / Period；RMA 可调度性判据输入 |
 | Task | vruntime | ℕ | Linux CFS 虚拟运行时间 |
 | SchedulingClass | hierarchy | [RT, DL, CFS, IDLE] | Linux 调度类优先级顺序 |
+| RealTimeTask | sched_policy | {FIFO, RR, DEADLINE} | POSIX.1-2024 §17 实时调度策略 |
+| RealTimeTask | priority_inheritance | Boolean | 是否启用优先级继承，避免优先级倒置 |
 
 ---
 
@@ -150,6 +155,10 @@
 | seccomp | mode | {SECCOMP_MODE_STRICT, FILTER} | 系统调用过滤模式 |
 | DAC | owner | UID/GID | 文件所有者权限 |
 | MAC | label | SecurityLabel | SELinux/AppArmor 标签 |
+| TrustedBoot | root_of_trust | {ROM, TPM, TrustZone} | 信任根来源 |
+| TrustedBoot | measured_boot | Boolean | 是否启用度量启动 |
+| TrustedBoot | secure_boot | Boolean | UEFI Secure Boot 状态 |
+| TCB | boundary | Set<Components> | 可信计算基边界（内核/驱动/init/LSM 等） |
 
 ---
 
@@ -200,11 +209,14 @@ graph TD
 | 概念 | 来源类型 | 来源 | 位置 | 状态 |
 |------|----------|------|------|------|
 | 进程/线程属性 | Textbook | OSTEP | Ch. 4, 25, 26 | 已覆盖 |
+| 进程/线程属性 | Standard | POSIX.1-2024 | §2.9 Threads, §3 Definitions | 已规划 |
 | 调度属性 | Textbook | OSTEP | Ch. 7~9 | 已覆盖 |
+| 实时调度属性 | Textbook | Buttazzo, *Hard Real-Time Computing Systems* | Ch. 3~4 | 已规划 |
 | 内存属性 | Textbook | OSTEP | Ch. 13~22 | 已覆盖 |
 | 文件属性 | Textbook | Berkeley CS162 | Ch. File Systems | 已覆盖 |
 | 网络属性 | Textbook | TCP/IP Illustrated Vol. 1 | Ch. 1~12 | 已覆盖 |
 | 安全属性 | SourceCode | Linux Kernel | include/linux/cred.h, security/ | 已覆盖 |
+| 可信启动属性 | Standard | TCG TPM 2.0, UEFI 2.10 | Part 1, §2-3 | 已规划 |
 | ABI/ELF | Standard | System V ABI + ELF Spec | §Sections | 已覆盖 |
 
 ---
