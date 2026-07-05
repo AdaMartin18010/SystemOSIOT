@@ -5,7 +5,7 @@
 
 - [操作系统 / Operating Systems](#操作系统--operating-systems)
   - [📚 领域概览 / Domain Overview](#-领域概览--domain-overview)
-  - [🏗️ 领域架构 / Domain Architecture](#-领域架构--domain-architecture)
+  - [🏗️ 领域架构 / Domain Architecture](#️-领域架构--domain-architecture)
     - [核心子领域](#核心子领域)
     - [新增概念分析体系](#新增概念分析体系)
     - [新增专题索引](#新增专题索引)
@@ -22,7 +22,7 @@
     - [初级 (Beginner)](#初级-beginner)
     - [中级 (Intermediate)](#中级-intermediate)
     - [高级 (Advanced)](#高级-advanced)
-  - [🛠️ 实践项目 / Practical Projects](#-实践项目--practical-projects)
+  - [🛠️ 实践项目 / Practical Projects](#️-实践项目--practical-projects)
     - [推荐项目](#推荐项目)
     - [开发环境](#开发环境)
   - [📚 推荐资源 / Recommended Resources](#-推荐资源--recommended-resources)
@@ -68,6 +68,7 @@
 ### 新增专题索引
 
 #### 05-linux-kernel / Linux 内核实现
+
 - [Linux 源码地图](./05-linux-kernel/linux-source-map.md)
 - [进程调度 Linux](./05-linux-kernel/process-scheduling-linux.md)
 - [内存管理 Linux](./05-linux-kernel/memory-management-linux.md)
@@ -76,6 +77,7 @@
 - [安全机制 Linux](./05-linux-kernel/security-linux.md)
 
 #### 06-networking / OS 网络子系统
+
 - [Linux 网络协议栈](./06-networking/linux-network-stack.md)
 - [Socket 与多路复用](./06-networking/socket-and-multiplexing.md)
 - [Netfilter / eBPF / XDP](./06-networking/netfilter-ebpf-xdp.md)
@@ -85,6 +87,7 @@
 - [高性能网络路径选择](./06-networking/high-performance-networking.md)
 
 #### 07-peripherals / 外设与总线
+
 - [外设概念树](./07-peripherals/peripheral-concept-tree.md)
 - [中断与 DMA](./07-peripherals/interrupts-and-dma.md)
 - [外设总线决策树](./07-peripherals/decision-tree-peripheral-bus.md)
@@ -97,6 +100,7 @@
 - [CAN](./07-peripherals/can.md)
 
 #### 08-interfaces / 接口与抽象层
+
 - [系统调用接口](./08-interfaces/syscall-interface.md)
 - [ABI 与 API](./08-interfaces/abi-api.md)
 - [内核-用户边界](./08-interfaces/kernel-user-boundary.md)
@@ -105,6 +109,7 @@
 - [跨层映射](./08-interfaces/cross-layer-mapping.md)
 
 #### docs / 跨域术语
+
 - [OS / 网络 / 外设 / 接口 跨域术语对照表](../../../docs/os-network-peripheral-interface-terminology.md)
 
 ## 🔗 技术关联 / Technical Relationships

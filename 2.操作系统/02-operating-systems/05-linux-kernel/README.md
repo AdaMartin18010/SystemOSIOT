@@ -14,6 +14,11 @@
 ## 文件列表
 
 - [linux-source-map.md](./linux-source-map.md) — Linux 源码地图与子系统索引
+- [linux-concept-tree.md](./linux-concept-tree.md) — Linux 内核概念树
+- [linux-attribute-relationship-map.md](./linux-attribute-relationship-map.md) — Linux 内核属性-关系映射
+- [linux-mechanism-composition-tree.md](./linux-mechanism-composition-tree.md) — Linux 内核机制组合树
+- [linux-dependency-tree.md](./linux-dependency-tree.md) — Linux 内核依赖树
+- [linux-scenario-analysis-tree.md](./linux-scenario-analysis-tree.md) — Linux 内核场景分析树
 - [process-scheduling-linux.md](./process-scheduling-linux.md) — 进程调度：CFS / RT / DL / cgroup / namespace
 - [memory-management-linux.md](./memory-management-linux.md) — 内存管理：伙伴系统、SLUB、页缓存、NUMA
 - [vfs-filesystems-linux.md](./vfs-filesystems-linux.md) — VFS 与文件系统：ext4/Btrfs/XFS/overlay
