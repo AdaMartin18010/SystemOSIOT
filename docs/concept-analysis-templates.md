@@ -1,5 +1,17 @@
 # 概念分析六类模板
 
+
+<!-- TOC START -->
+
+- [概念分析六类模板](#概念分析六类模板)
+  - [1. 概念树（Concept Tree）](#1-概念树concept-tree)
+  - [2. 属性-关系映射（Attribute-Relationship Mapping）](#2-属性-关系映射attribute-relationship-mapping)
+  - [3. 机制组合树（Mechanism Composition Tree）](#3-机制组合树mechanism-composition-tree)
+  - [文件命名与目录约定](#文件命名与目录约定)
+  - [交叉引用约定](#交叉引用约定)
+
+<!-- TOC END -->
+
 本文件定义操作系统、Linux、嵌入式/物联网主题的统一概念分析格式。所有新建的概念分析文件应至少包含以下六类工件之一，并尽量在同一文件中交叉引用。
 
 ---

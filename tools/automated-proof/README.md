@@ -1,5 +1,62 @@
 # 系统理论自动定理证明系统 / Automated Theorem Proving System for System Theory
 
+
+<!-- TOC START -->
+
+- [系统理论自动定理证明系统 / Automated Theorem Proving System for System Theory](#系统理论自动定理证明系统--automated-theorem-proving-system-for-system-theory)
+  - [📚 概述 / Overview](#-概述--overview)
+  - [🎯 系统架构 / System Architecture](#-系统架构--system-architecture)
+    - [1. 系统组件 / System Components](#1-系统组件--system-components)
+      - [1.1 核心组件 / Core Components](#11-核心组件--core-components)
+    - [2. 系统架构图 / System Architecture Diagram](#2-系统架构图--system-architecture-diagram)
+  - [🔧 证明策略 / Proof Strategies](#-证明策略--proof-strategies)
+    - [1. 基础证明策略 / Basic Proof Strategies](#1-基础证明策略--basic-proof-strategies)
+      - [1.1 直接证明策略 / Direct Proof Strategy](#11-直接证明策略--direct-proof-strategy)
+      - [1.2 反证法策略 / Proof by Contradiction Strategy](#12-反证法策略--proof-by-contradiction-strategy)
+      - [1.3 归纳证明策略 / Inductive Proof Strategy](#13-归纳证明策略--inductive-proof-strategy)
+    - [2. 高级证明策略 / Advanced Proof Strategies](#2-高级证明策略--advanced-proof-strategies)
+      - [2.1 构造性证明策略 / Constructive Proof Strategy](#21-构造性证明策略--constructive-proof-strategy)
+      - [2.2 对偶证明策略 / Dual Proof Strategy](#22-对偶证明策略--dual-proof-strategy)
+  - [🏗️ 证明算法实现 / Proof Algorithm Implementation](#️-证明算法实现--proof-algorithm-implementation)
+    - [1. 证明状态管理 / Proof State Management](#1-证明状态管理--proof-state-management)
+      - [1.1 证明状态类 / Proof State Class](#11-证明状态类--proof-state-class)
+      - [1.2 证明步骤类 / Proof Step Class](#12-证明步骤类--proof-step-class)
+    - [2. 推理规则实现 / Inference Rule Implementation](#2-推理规则实现--inference-rule-implementation)
+      - [2.1 基本推理规则 / Basic Inference Rules](#21-基本推理规则--basic-inference-rules)
+      - [2.2 复合推理规则 / Composite Inference Rules](#22-复合推理规则--composite-inference-rules)
+    - [3. 证明搜索算法 / Proof Search Algorithm](#3-证明搜索算法--proof-search-algorithm)
+      - [3.1 广度优先搜索 / Breadth-First Search](#31-广度优先搜索--breadth-first-search)
+      - [3.2 深度优先搜索 / Depth-First Search](#32-深度优先搜索--depth-first-search)
+      - [3.3 A*搜索算法 / A* Search Algorithm](#33-a搜索算法--a-search-algorithm)
+  - [📊 测试框架 / Testing Framework](#-测试框架--testing-framework)
+    - [1. 单元测试 / Unit Tests](#1-单元测试--unit-tests)
+      - [1.1 推理规则测试 / Inference Rule Tests](#11-推理规则测试--inference-rule-tests)
+      - [1.2 证明策略测试 / Proof Strategy Tests](#12-证明策略测试--proof-strategy-tests)
+    - [2. 集成测试 / Integration Tests](#2-集成测试--integration-tests)
+      - [2.1 系统集成测试 / System Integration Tests](#21-系统集成测试--system-integration-tests)
+    - [3. 性能测试 / Performance Tests](#3-性能测试--performance-tests)
+      - [3.1 证明时间测试 / Proof Time Tests](#31-证明时间测试--proof-time-tests)
+      - [3.2 内存使用测试 / Memory Usage Tests](#32-内存使用测试--memory-usage-tests)
+  - [📈 性能优化 / Performance Optimization](#-性能优化--performance-optimization)
+    - [1. 算法优化 / Algorithm Optimization](#1-算法优化--algorithm-optimization)
+      - [1.1 启发式函数优化 / Heuristic Function Optimization](#11-启发式函数优化--heuristic-function-optimization)
+      - [1.2 缓存机制优化 / Caching Mechanism Optimization](#12-缓存机制优化--caching-mechanism-optimization)
+    - [2. 并行化优化 / Parallelization Optimization](#2-并行化优化--parallelization-optimization)
+      - [2.1 多线程证明 / Multi-threaded Proof](#21-多线程证明--multi-threaded-proof)
+  - [📚 使用指南 / Usage Guide](#-使用指南--usage-guide)
+    - [1. 基本使用 / Basic Usage](#1-基本使用--basic-usage)
+      - [1.1 系统初始化 / System Initialization](#11-系统初始化--system-initialization)
+      - [1.2 执行证明 / Execute Proof](#12-执行证明--execute-proof)
+    - [2. 高级使用 / Advanced Usage](#2-高级使用--advanced-usage)
+      - [2.1 自定义证明策略 / Custom Proof Strategies](#21-自定义证明策略--custom-proof-strategies)
+      - [2.2 证明结果分析 / Proof Result Analysis](#22-证明结果分析--proof-result-analysis)
+  - [📚 参考文献 / References](#-参考文献--references)
+    - [自动定理证明文献 / Automated Theorem Proving Literature](#自动定理证明文献--automated-theorem-proving-literature)
+    - [系统理论文献 / System Theory Literature](#系统理论文献--system-theory-literature)
+    - [形式化验证文献 / Formal Verification Literature](#形式化验证文献--formal-verification-literature)
+
+<!-- TOC END -->
+
 ## 📚 概述 / Overview
 
 本文档描述系统理论的自动定理证明系统，该系统能够自动证明系统理论中的定理和命题。自动定理证明系统包括证明策略设计、证明算法实现、测试框架建立等核心组件，为系统理论的形式化验证提供自动化支持。

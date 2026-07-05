@@ -1,3 +1,10 @@
+<!-- TOC START -->
+
+- [Toolchain Versions](#toolchain-versions)
+- [Verification Results](#verification-results)
+
+<!-- TOC END -->
+
 ﻿# Environment Verification Report
 
 Generated: 2025-09-19 20:23:22

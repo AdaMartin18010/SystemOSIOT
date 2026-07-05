@@ -1,5 +1,38 @@
 # SystemOSIOT领域关系图 / Domain Relationship Map
 
+
+<!-- TOC START -->
+
+- [SystemOSIOT领域关系图 / Domain Relationship Map](#systemosiot领域关系图--domain-relationship-map)
+  - [🗺️ 领域关系总览 / Domain Relationship Overview](#️-领域关系总览--domain-relationship-overview)
+  - [🔗 核心领域关联图 / Core Domain Relationships](#-核心领域关联图--core-domain-relationships)
+    - [整体关系图 / Overall Relationship Diagram](#整体关系图--overall-relationship-diagram)
+    - [详细依赖关系 / Detailed Dependency Relationships](#详细依赖关系--detailed-dependency-relationships)
+      - [1. 系统理论基础 (System Theory Foundation)](#1-系统理论基础-system-theory-foundation)
+      - [2. 操作系统 (Operating Systems)](#2-操作系统-operating-systems)
+      - [3. 网络系统 (Network Systems)](#3-网络系统-network-systems)
+      - [4. 分布式系统 (Distributed Systems)](#4-分布式系统-distributed-systems)
+      - [5. 集群系统 (Cluster Systems)](#5-集群系统-cluster-systems)
+      - [6. P2P系统 (P2P Systems)](#6-p2p系统-p2p-systems)
+      - [7. 物联网嵌入式系统 (IoT \& Embedded Systems)](#7-物联网嵌入式系统-iot--embedded-systems)
+      - [8. 容器与微服务 (Containers \& Microservices)](#8-容器与微服务-containers--microservices)
+  - [🔄 技术演进路径 / Technology Evolution Path](#-技术演进路径--technology-evolution-path)
+    - [技术发展脉络 / Technology Development Context](#技术发展脉络--technology-development-context)
+    - [技术栈层次 / Technology Stack Layers](#技术栈层次--technology-stack-layers)
+  - [🎯 学习路径规划 / Learning Path Planning](#-学习路径规划--learning-path-planning)
+    - [基础学习路径 / Basic Learning Path](#基础学习路径--basic-learning-path)
+    - [进阶学习路径 / Advanced Learning Path](#进阶学习路径--advanced-learning-path)
+    - [专业学习路径 / Professional Learning Path](#专业学习路径--professional-learning-path)
+  - [🔍 交叉引用索引 / Cross-Reference Index](#-交叉引用索引--cross-reference-index)
+    - [理论交叉引用 / Theoretical Cross-References](#理论交叉引用--theoretical-cross-references)
+    - [技术交叉引用 / Technical Cross-References](#技术交叉引用--technical-cross-references)
+    - [应用交叉引用 / Application Cross-References](#应用交叉引用--application-cross-references)
+  - [🚀 未来发展方向 / Future Development Directions](#-未来发展方向--future-development-directions)
+    - [技术融合趋势 / Technology Convergence Trends](#技术融合趋势--technology-convergence-trends)
+    - [新兴应用领域 / Emerging Application Areas](#新兴应用领域--emerging-application-areas)
+
+<!-- TOC END -->
+
 ```text
 title: SystemOSIOT领域关系图
 description: 展示SystemOSIOT项目各个核心系统领域之间的关联关系和依赖关系

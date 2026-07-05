@@ -218,5 +218,6 @@ DTS i2c 节点
 ## 国际权威来源链接 / Authoritative Sources
 
 - [NXP I²C-bus Specification and User Manual UM10204 (Rev. 7, 2021)](https://www.nxp.com/docs/en/user-guide/UM10204.pdf)
+- [System Management Bus (SMBus) Specification](http://smbus.org/specs/)
 - [Linux I2C subsystem documentation](https://docs.kernel.org/i2c/)
 - [Linux Device Drivers - I2C chapter](https://static.lwn.net/images/pdf/LDD3/ch08.pdf)

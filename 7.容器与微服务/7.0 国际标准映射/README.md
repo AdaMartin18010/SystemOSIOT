@@ -1,7 +1,7 @@
 # 7.0 容器与微服务 — 国际标准映射
 
-> **目录说明 / Directory Note**：本项目同时存在 `7.0 国际标准映射/` 与 `7.0 国际化标准/` 两个目录。`7.0 国际化标准/` 为早期创建的术语、格式与引用规范文档集合；`7.0 国际标准映射/` 为本项目与 OCI、Kubernetes、CNI/CRI/CSI 等国际权威标准条款对齐的正式映射目录。后续新增的标准映射请统一归入 `7.0 国际标准映射/`，`7.0 国际化标准/` 保留作为历史参考，不主动删除。
-> This project has both `7.0 国际标准映射/` and `7.0 国际化标准/` directories. The former is the canonical standard-to-project mapping directory; the latter is retained as historical reference for terminology/formatting standards.
+> **目录说明 / Directory Note**：本目录为容器与微服务主题的国际权威标准（OCI、Kubernetes、CNI/CRI/CSI 等）与项目章节对齐的正式映射目录。原 `7.0 国际化标准/` 中的历史参考文档（术语、格式与引用规范、多语言支持）已合并至本目录，统一归档管理。
+> This directory is the canonical standard-to-project mapping directory for the container and microservices topic (OCI, Kubernetes, CNI/CRI/CSI, etc.). Historical reference documents from the former `7.0 国际化标准/` directory (terminology, formatting and citation standards, multilingual support) have been merged here for unified archiving.
 
 <!-- TOC START -->
 
@@ -13,6 +13,7 @@
   - [5. 权威来源链接](#5-权威来源链接)
   - [6. 形式化工件链接](#6-形式化工件链接)
   - [7. 维护记录](#7-维护记录)
+  - [8. 已合并的历史参考文档](#8-已合并的历史参考文档)
 
 <!-- TOC END -->
 
@@ -74,16 +75,16 @@
 
 ## 4. 覆盖缺口与补齐计划
 
-1. **清理过度递归**：已删除/合并 8 层以上嵌套文件，执行最大深度 ≤ 5 规则。  
-2. **版本升级**：将 Kubernetes 内容升级到 v1.33，补充 Gateway API、Sidecar Containers、Resource Claims、DRA。  
-3. **OCI 条款级映射**：已建立 Runtime/Image/Distribution 与 runc/containerd/CRI-O 的对应，需在 `7.1 知识梳理` 中补充镜像仓库、供应链安全、Linux 安全机制细节。  
-4. **服务网格标准化**：增加 SMI、Istio、Linkerd、Cilium Service Mesh 对比。  
-5. **安全与合规**：补充 NIST SP 800-190、CIS Docker/Kubernetes Benchmark 到 `7.2 批判性分析`。  
-6. **网络与硬件虚拟化**：补充 IEEE 802.1Q VLAN/QoS、PCI-SIG SR-IOV 与 CNI 高性能网络方案映射。  
-7. **底层内核机制**：补充 Linux cgroups v2、namespaces、eBPF 与容器运行时隔离/可观测性映射。  
-8. **事件与 API 协议**：补充 CloudEvents v1.0.2 与 gRPC 在服务间通信中的语义映射。  
-9. **TLA+ 规范**：为 K8s Deployment 滚动更新、Pod 生命周期、CSI volume 状态机建立可运行模型（Phase 2）。  
-10. **重复目录治理**：`7.0 国际化标准/` 保留为历史参考，新映射统一归入 `7.0 国际标准映射/`。
+1. **清理过度递归**：已删除/合并 8 层以上嵌套文件，执行最大深度 ≤ 5 规则。
+2. **版本升级**：将 Kubernetes 内容升级到 v1.33，补充 Gateway API、Sidecar Containers、Resource Claims、DRA。
+3. **OCI 条款级映射**：已建立 Runtime/Image/Distribution 与 runc/containerd/CRI-O 的对应，需在 `7.1 知识梳理` 中补充镜像仓库、供应链安全、Linux 安全机制细节。
+4. **服务网格标准化**：增加 SMI、Istio、Linkerd、Cilium Service Mesh 对比。
+5. **安全与合规**：补充 NIST SP 800-190、CIS Docker/Kubernetes Benchmark 到 `7.2 批判性分析`。
+6. **网络与硬件虚拟化**：补充 IEEE 802.1Q VLAN/QoS、PCI-SIG SR-IOV 与 CNI 高性能网络方案映射。
+7. **底层内核机制**：补充 Linux cgroups v2、namespaces、eBPF 与容器运行时隔离/可观测性映射。
+8. **事件与 API 协议**：补充 CloudEvents v1.0.2 与 gRPC 在服务间通信中的语义映射。
+9. **TLA+ 规范**：为 K8s Deployment 滚动更新、Pod 生命周期、CSI volume 状态机建立可运行模型（Phase 2）。
+10. **重复目录治理**：`7.0 国际化标准/` 已合并到 `7.0 国际标准映射/`，相关历史参考文档见[已合并的历史参考文档](#8-已合并的历史参考文档)小节；新增标准映射请继续统一归入 `7.0 国际标准映射/`。
 
 ## 5. 权威来源链接
 
@@ -121,3 +122,15 @@
 | 2026-07-02 | 创建映射骨架 | Kimi Code CLI |
 | 2026-07-02 | 补充 OCI/K8s/CNI-CRI-CSI 详细映射 | Kimi Code CLI |
 | 2026-07-05 | 补齐 Dockerfile、NIST/CIS、IEEE 802.1Q、SR-IOV、cgroups v2、namespaces、eBPF、CloudEvents、SMI 等全量映射表；新增覆盖缺口与权威来源链接；标注重复目录说明 | Kimi Code CLI |
+| 2026-07-05 | 合并 `7.0 国际化标准/` 到 `7.0 国际标准映射/`，统一归档历史参考文档 | Kimi Code CLI |
+
+## 8. 已合并的历史参考文档
+
+以下文件原位于 `7.0 国际化标准/`，现已统一迁移至 `7.0 国际标准映射/` 归档保留：
+
+| 文件 | 说明 |
+|---|---|
+| [7.0.1 术语标准化对照表.md](7.0.1%20术语标准化对照表.md) | 术语标准化中英对照表 |
+| [7.0.2 文档格式标准.md](7.0.2%20文档格式标准.md) | 文档撰写与排版格式规范 |
+| [7.0.3 引用规范标准.md](7.0.3%20引用规范标准.md) | 参考文献与外部来源引用规范 |
+| [7.0.4 多语言支持.md](7.0.4%20多语言支持.md) | 多语言内容组织与翻译规范 |

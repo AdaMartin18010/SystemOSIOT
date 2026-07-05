@@ -1,0 +1,23 @@
+TLC2 Version 2.19 of 08 August 2024 (rev: 5a47802)
+Running breadth-first search Model-Checking with fp 17 and seed 3105405443315641687 with 1 worker on 24 cores with 24368MB heap and 64MB offheap memory [pid: 21280] (Windows 11 10.0 amd64, Microsoft 21.0.10 x86_64, MSBDiskFPSet, DiskStateQueue).
+Parsing file E:\_src\SystemOSIOT\tools\tla-specifications\Raft.tla
+Parsing file C:\Users\luyan\AppData\Local\Temp\Integers.tla
+Parsing file C:\Users\luyan\AppData\Local\Temp\FiniteSets.tla
+Parsing file C:\Users\luyan\AppData\Local\Temp\Sequences.tla
+Parsing file C:\Users\luyan\AppData\Local\Temp\Naturals.tla
+Semantic processing of module Naturals
+Semantic processing of module Integers
+Semantic processing of module Sequences
+Semantic processing of module FiniteSets
+Semantic processing of module Raft
+Starting... (2026-07-05 21:41:20)
+Computing initial states...
+Finished computing initial states: 1 distinct state generated at 2026-07-05 21:41:20.
+Model checking completed. No error has been found.
+  Estimates of the probability that TLC did not check all reachable states
+  because two distinct states had the same fingerprint:
+  calculated (optimistic):  val = 9.9E-11
+102679 states generated, 22977 distinct states found, 0 states left on queue.
+The depth of the complete state graph search is 22.
+The average outdegree of the complete state graph is 1 (minimum is 0, the maximum 6 and the 95th percentile is 3).
+Finished in 00s at (2026-07-05 21:41:21)

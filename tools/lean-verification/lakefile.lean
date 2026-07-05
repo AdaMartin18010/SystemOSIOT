@@ -6,4 +6,4 @@ package «SystemOSIOTLean» where
 
 @[default_target]
 lean_lib SystemOSIOTLean where
-  roots := #[`SimpleTypeTheory]
+  roots := #[`SimpleTypeTheory, `PacketSeqMonotonicity]

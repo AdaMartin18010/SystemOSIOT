@@ -244,5 +244,8 @@ graph TD
 
 - [Devicetree Specification](https://devicetree-specification.readthedocs.io/en/stable/)
 - [ACPI Specification (UEFI Forum)](https://uefi.org/specifications)
+- [UEFI Specification (UEFI Forum)](https://uefi.org/specifications)
 - [Linux Device Tree Bindings](https://docs.kernel.org/devicetree/bindings/)
 - [Zephyr Device Driver Model](https://docs.zephyrproject.org/latest/kernel/drivers/index.html)
+- [FreeRTOS Board Support Packages](https://www.freertos.org/Documentation/03-Libraries/02-FreeRTOS-plus/07-BSP)
+- [RTEMS Board Support Packages](https://docs.rtems.org/branches/master/user/bsps/bsps-index.html)

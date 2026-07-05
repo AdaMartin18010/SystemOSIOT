@@ -3,8 +3,8 @@
 
 <!-- TOC START -->
 
-- [Linux PREEMPT_RT 实时性映射](#linux-preempt_rt-实时性映射)
-  - [1. PREEMPT_RT 核心修改](#1-preempt_rt-核心修改)
+- [Linux PREEMPT\_RT 实时性映射](#linux-preempt_rt-实时性映射)
+  - [1. PREEMPT\_RT 核心修改](#1-preempt_rt-核心修改)
   - [2. 中断线程化](#2-中断线程化)
   - [3. 调度策略对比](#3-调度策略对比)
   - [4. 实时性指标](#4-实时性指标)

@@ -12,8 +12,6 @@
     - [5.1 层次](#51-层次)
     - [5.2 核心结构](#52-核心结构)
     - [5.3 配置](#53-配置)
-- [查看串口](#查看串口)
-- [配置波特率](#配置波特率)
   - [6. 场景分析](#6-场景分析)
   - [7. 术语表](#7-术语表)
   - [8. 相关文件](#8-相关文件)
@@ -144,5 +142,6 @@ stty -F /dev/ttyS0 115200 cs8 -cstopb -parenb
 ## 国际权威来源链接 / Authoritative Sources
 
 - [16550 UART specification (National Semiconductor/Texas Instruments)](https://www.ti.com/lit/ds/symlink/pc16550d.pdf)
+- [POSIX.1-2024 General Terminal Interface (termios)](https://pubs.opengroup.org/onlinepubs/9799919799/)
 - [Linux serial/UART core documentation](https://docs.kernel.org/driver-api/serial/)
 - [Linux Device Drivers - TTY layer](https://static.lwn.net/images/pdf/LDD3/ch18.pdf)

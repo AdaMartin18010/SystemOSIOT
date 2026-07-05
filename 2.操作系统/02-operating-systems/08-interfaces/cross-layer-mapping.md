@@ -157,5 +157,9 @@ graph LR
 
 - [POSIX.1-2024](https://pubs.opengroup.org/onlinepubs/9799919799/)
 - [Linux Kernel Documentation](https://docs.kernel.org/)
+- [System V AMD64 ABI](https://gitlab.com/x86-psABIs/x86-64-ABI)
 - [RFC 793 - TCP](https://datatracker.ietf.org/doc/html/rfc793)
 - [NXP I²C-bus Specification UM10204](https://www.nxp.com/docs/en/user-guide/UM10204.pdf)
+- [Motorola SPI Block Guide V04.01](https://www.nxp.com/docs/en/reference-manual/S12SPIV4.pdf)
+- [PCI-SIG PCI Express Base Specification](https://pcisig.com/specifications)
+- [USB-IF Document Library](https://www.usb.org/documents)

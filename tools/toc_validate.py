@@ -105,14 +105,31 @@ def validate_file(path: Path, max_level: int) -> ValidationResult:
     return ValidationResult(path=path, ok=(len(issues) == 0), issues=issues)
 
 
+def _skip_path(path: Path) -> bool:
+    # Skip hidden segments and vendored engine/tool distributions
+    parts = path.parts
+    if any(seg.startswith(".") for seg in parts):
+        return True
+    if "tools" in parts and "engines" in parts:
+        return True
+    return False
+
+
 def iter_markdown_files(roots: Iterable[Path]) -> Iterable[Path]:
     for root in roots:
-        if root.is_file() and root.suffix.lower() in MD_EXTENSIONS:
-            yield root
+        try:
+            if root.is_file() and root.suffix.lower() in MD_EXTENSIONS:
+                if not _skip_path(root):
+                    yield root
+                continue
+        except OSError:
             continue
         for p in root.rglob("*"):
-            if p.is_file() and p.suffix.lower() in MD_EXTENSIONS and not any(seg.startswith(".") for seg in p.parts):
-                yield p
+            try:
+                if p.is_file() and p.suffix.lower() in MD_EXTENSIONS and not _skip_path(p):
+                    yield p
+            except OSError:
+                continue
 
 
 def is_numbered_topic_path(path: Path) -> bool:

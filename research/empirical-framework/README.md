@@ -1,5 +1,57 @@
 # 系统理论实证研究框架 / Empirical Research Framework for System Theory
 
+
+<!-- TOC START -->
+
+- [系统理论实证研究框架 / Empirical Research Framework for System Theory](#系统理论实证研究框架--empirical-research-framework-for-system-theory)
+  - [📚 概述 / Overview](#-概述--overview)
+  - [🎯 研究框架设计 / Research Framework Design](#-研究框架设计--research-framework-design)
+    - [1. 研究目标 / Research Objectives](#1-研究目标--research-objectives)
+      - [1.1 主要研究目标 / Primary Research Objectives](#11-主要研究目标--primary-research-objectives)
+      - [1.2 具体研究问题 / Specific Research Questions](#12-具体研究问题--specific-research-questions)
+  - [🔬 研究假设设计 / Research Hypothesis Design](#-研究假设设计--research-hypothesis-design)
+    - [1. 核心假设 / Core Hypotheses](#1-核心假设--core-hypotheses)
+      - [1.1 系统整体性假设 / System Wholeness Hypothesis](#11-系统整体性假设--system-wholeness-hypothesis)
+      - [1.2 涌现性假设 / Emergence Hypothesis](#12-涌现性假设--emergence-hypothesis)
+      - [1.3 层次性假设 / Hierarchy Hypothesis](#13-层次性假设--hierarchy-hypothesis)
+    - [2. 辅助假设 / Auxiliary Hypotheses](#2-辅助假设--auxiliary-hypotheses)
+      - [2.1 稳定性假设 / Stability Hypothesis](#21-稳定性假设--stability-hypothesis)
+      - [2.2 适应性假设 / Adaptability Hypothesis](#22-适应性假设--adaptability-hypothesis)
+  - [🔧 研究方法 / Research Methods](#-研究方法--research-methods)
+    - [1. 实验方法 / Experimental Methods](#1-实验方法--experimental-methods)
+      - [1.1 控制实验 / Controlled Experiments](#11-控制实验--controlled-experiments)
+      - [1.2 模拟实验 / Simulation Experiments](#12-模拟实验--simulation-experiments)
+    - [2. 观察方法 / Observational Methods](#2-观察方法--observational-methods)
+      - [2.1 自然观察 / Natural Observation](#21-自然观察--natural-observation)
+      - [2.2 案例研究 / Case Studies](#22-案例研究--case-studies)
+    - [3. 统计方法 / Statistical Methods](#3-统计方法--statistical-methods)
+      - [3.1 描述性统计 / Descriptive Statistics](#31-描述性统计--descriptive-statistics)
+      - [3.2 推断性统计 / Inferential Statistics](#32-推断性统计--inferential-statistics)
+  - [📊 数据收集标准 / Data Collection Standards](#-数据收集标准--data-collection-standards)
+    - [1. 数据质量标准 / Data Quality Standards](#1-数据质量标准--data-quality-standards)
+      - [1.1 数据完整性 / Data Completeness](#11-数据完整性--data-completeness)
+      - [1.2 数据准确性 / Data Accuracy](#12-数据准确性--data-accuracy)
+      - [1.3 数据一致性 / Data Consistency](#13-数据一致性--data-consistency)
+    - [2. 数据收集方法 / Data Collection Methods](#2-数据收集方法--data-collection-methods)
+      - [2.1 直接测量 / Direct Measurement](#21-直接测量--direct-measurement)
+      - [2.2 间接测量 / Indirect Measurement](#22-间接测量--indirect-measurement)
+    - [3. 数据存储标准 / Data Storage Standards](#3-数据存储标准--data-storage-standards)
+      - [3.1 数据格式 / Data Format](#31-数据格式--data-format)
+      - [3.2 数据元数据 / Data Metadata](#32-数据元数据--data-metadata)
+  - [📈 研究设计 / Research Design](#-研究设计--research-design)
+    - [1. 研究类型 / Research Types](#1-研究类型--research-types)
+      - [1.1 探索性研究 / Exploratory Research](#11-探索性研究--exploratory-research)
+      - [1.2 验证性研究 / Confirmatory Research](#12-验证性研究--confirmatory-research)
+    - [2. 研究设计类型 / Research Design Types](#2-研究设计类型--research-design-types)
+      - [2.1 横断面研究 / Cross-sectional Study](#21-横断面研究--cross-sectional-study)
+      - [2.2 纵向研究 / Longitudinal Study](#22-纵向研究--longitudinal-study)
+  - [📚 参考文献 / References](#-参考文献--references)
+    - [研究方法文献 / Research Method Literature](#研究方法文献--research-method-literature)
+    - [系统理论文献 / System Theory Literature](#系统理论文献--system-theory-literature)
+    - [实证研究文献 / Empirical Research Literature](#实证研究文献--empirical-research-literature)
+
+<!-- TOC END -->
+
 ## 📚 概述 / Overview
 
 本文档建立系统理论的实证研究框架，为系统理论的验证和应用提供科学的研究方法。实证研究框架包括研究假设设计、研究方法制定、数据收集标准建立等核心组件，确保系统理论的实证研究具有科学性和可靠性。

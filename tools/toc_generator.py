@@ -181,18 +181,34 @@ def process_file(path: Path, max_level: int, apply: bool) -> ProcessResult:
     return ProcessResult(path=path, changed=True)
 
 
+def _skip_path(path: Path) -> bool:
+    parts = path.parts
+    if any(seg.startswith(".") for seg in parts):
+        return True
+    if "tools" in parts and "engines" in parts:
+        return True
+    return False
+
+
 def iter_markdown_files(roots: Iterable[Path]) -> Iterable[Path]:
     for root in roots:
-        if root.is_file() and root.suffix.lower() in MD_EXTENSIONS:
-            yield root
+        try:
+            if root.is_file() and root.suffix.lower() in MD_EXTENSIONS:
+                if not _skip_path(root):
+                    yield root
+                continue
+        except OSError:
             continue
         for p in root.rglob("*"):
-            if not p.is_file():
+            try:
+                if not p.is_file():
+                    continue
+            except OSError:
                 continue
             if p.suffix.lower() not in MD_EXTENSIONS:
                 continue
-            # Skip common non-content files
-            if any(seg.startswith(".") for seg in p.parts):
+            # Skip common non-content files and vendored engine distributions
+            if _skip_path(p):
                 continue
             yield p
 

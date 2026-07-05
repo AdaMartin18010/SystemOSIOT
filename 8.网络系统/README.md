@@ -105,6 +105,22 @@
 - VXLAN / Geneve / CNI / VXLAN, Geneve and CNI
 - OpenFlow / P4 / OpenFlow and P4
 - 5G / Wi-Fi 7 / ETSI MEC / 5G, Wi-Fi 7 and ETSI MEC
+- WebSocket / HTTP/2 / WebSocket and HTTP/2
+- TCP Fast Open / BBR / MPTCP / SCTP / DCCP / TCP Fast Open, BBR, MPTCP, SCTP and DCCP
+- MQTT v5.0 / CoAP / MQTT v5.0 and CoAP
+- TLS 1.3 / PKI / TLS 1.3 and PKI Engineering
+- SNMP / NetFlow / IPFIX / sFlow / SNMP, NetFlow, IPFIX and sFlow
+- TSN / 802.1AS / DetNet / Time-Sensitive Networking, 802.1AS and DetNet
+- Zero Trust / SASE / SDP / Zero Trust, SASE and SDP
+- AIOps / 异常检测 / 智能流量工程 / AIOps, Anomaly Detection and Intelligent Traffic Engineering
+- CSA / TI / STIX / TAXII / MITRE ATT&CK / Cyber Situation Awareness, Threat Intelligence and MITRE ATT&CK
+- NTN / Starlink / 3GPP NR-NTN / Non-Terrestrial Networks, Starlink and 3GPP NR-NTN
+- Deterministic IP / SRv6+ / AP6 / Deterministic IP, SRv6+ and AP6
+- RDMA / RoCE / DCB / RDMA, RoCE and Data Center Bridging
+- SOC / SIEM / SOAR / Security Operations Center, SIEM and Response Orchestration
+- IBN / YANG / Network Digital Twin / Intent-Based Networking, YANG and Network Digital Twin
+- CFN / Computing-aware Routing / Eastern Data Western Computing / Computing Force Network and Computing-Network Convergence
+- SD-WAN / SASE / MEF 70 / Software-Defined WAN, SASE and MEF 3.0
 - 5G/6G网络技术 / 5G/6G Network Technologies
 - 量子网络与未来网络 / Quantum Networks and Future Networks
 
@@ -148,6 +164,14 @@
 - BGP 安全与 RPKI / BGP Security and RPKI
 - DNS 安全（DNSSEC/DoH/DoT） / DNS Security (DNSSEC/DoH/DoT)
 - IPsec / IKEv2 / IPsec and IKEv2
+- WebSocket / HTTP/2 / WebSocket and HTTP/2
+- TCP Fast Open / BBR / MPTCP / SCTP / DCCP / TCP Fast Open, BBR, MPTCP, SCTP and DCCP
+- MQTT v5.0 / CoAP / MQTT v5.0 and CoAP
+- TLS 1.3 / PKI / TLS 1.3 and PKI Engineering
+- TSN / 802.1AS / DetNet / Time-Sensitive Networking, 802.1AS and DetNet
+- NTN / Starlink / 3GPP NR-NTN / Non-Terrestrial Networks, Starlink and 3GPP NR-NTN
+- Deterministic IP / SRv6+ / AP6 / Deterministic IP, SRv6+ and AP6
+- RDMA / RoCE / DCB / RDMA, RoCE and Data Center Bridging
 
 ### 网络性能优化专题 / Network Performance Optimization Topics
 
@@ -169,6 +193,11 @@
 - 网络入侵检测系统 / Network Intrusion Detection Systems
 - 网络威胁情报分析 / Network Threat Intelligence Analysis
 - 网络隐私保护技术 / Network Privacy Protection Technologies
+- TLS 1.3 / PKI / TLS 1.3 and PKI Engineering
+- Zero Trust / SASE / SDP / Zero Trust, SASE and SDP
+- CSA / TI / STIX / TAXII / MITRE ATT&CK / Cyber Situation Awareness, Threat Intelligence and MITRE ATT&CK
+- SOC / SIEM / SOAR / Security Operations Center, SIEM and Response Orchestration
+- SD-WAN / SASE / MEF 70 / Software-Defined WAN, SASE and MEF 3.0
 
 ## 规划与建议 / Planning and Recommendations
 

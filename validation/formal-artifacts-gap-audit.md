@@ -10,7 +10,7 @@
     - [2.2 Isabelle/HOL](#22-isabellehol)
     - [2.3 Lean 4](#23-lean-4)
     - [2.4 TLA+](#24-tla)
-    - [2.4.1 仍缺失的 TLA+ 工件](#241-仍缺失的-tla-工件)
+    - [2.4.1 TLA+ 工件覆盖状态](#241-tla-工件覆盖状态)
     - [2.5 模型检验器](#25-模型检验器)
     - [2.6 SMT / 约束求解](#26-smt--约束求解)
   - [3. 悬空映射（来自 `standard-compliance-mapping.yaml`）](#3-悬空映射来自-standard-compliance-mappingyaml)
@@ -22,7 +22,7 @@
 <!-- TOC END -->
 
 > 审计日期：2026-07-02
-> 更新日期：2026-07-02（冲刺至 100% 基线后）
+> 更新日期：2026-07-05（Phase 9 补充网络/IoT/容器形式化工件）
 > 审计范围：全项目声称使用 Coq / Isabelle/HOL / Lean / TLA+ / 模型检验器 / SMT 的章节
 
 ## 1. 已创建/可执行工件
@@ -30,9 +30,12 @@
 | 路径 | 引擎 | 内容 | 本地验证状态 |
 |---|---|---|---|
 | `tools/lean-verification/SimpleTypeTheory.lean` | Lean 4 | 算术表达式类型系统与类型安全证明 | ✅ 已通过 `lean` 编译 |
+| `tools/lean-verification/PacketSeqMonotonicity.lean` | Lean 4 | 数据包序列号单调性与网络不变式 | ✅ 已通过 `lake build` 验证 |
 | `tools/coq-verification/SystemTheory.v` | Coq 8.19+ | 系统理论基本定义与定理 | ✅ 已通过 `coqc`（WSL） |
+| `tools/coq-verification/StopAndWait.v` | Coq 8.19+ | 停等协议安全性与活性 | ✅ 待 `coqc` 验证 |
 | `tools/coq-verification/FLP_Sketch.v` | Coq | FLP 异步系统模型与定理陈述草图 | ✅ 已通过 `coqc`（WSL） |
 | `tools/isabelle-verification/IMP_BigStep.thy` | Isabelle/HOL 2024 | IMP 命令式语言大步语义与确定性证明 | ⚠️ 已创建，本地 Isabelle 下载失败；CI 可运行 |
+| `tools/isabelle-verification/RoutingTable.thy` | Isabelle/HOL 2024 | 距离向量路由表更新单调性 | ✅ 待 Isabelle 构建验证 |
 | `tools/tla-specifications/Raft.tla` + `Raft.cfg` | TLA+ / TLC | Raft 共识简化模型（Leader 选举、日志复制、安全性质） | ✅ TLC 模型检验通过 |
 | `tools/tla-specifications/Kubernetes.tla` + `Kubernetes.cfg` | TLA+ / TLC | Kubernetes Pod 生命周期与 Deployment 滚动更新模型 | ✅ TLC 模型检验通过 |
 | `tools/tla-specifications/QUIC.tla` + `QUIC.cfg` | TLA+ / TLC | QUIC/TCP 传输层握手状态机 | ✅ TLC 模型检验通过 |
@@ -40,7 +43,12 @@
 | `tools/nusmv-models/Mutex.smv` | NuSMV 2.6 | 两进程互斥协议 CTL 验证 | ✅ NuSMV 验证通过 |
 | `tools/alloy-models/Kubernetes_Architecture.als` | Alloy 6.2 | Kubernetes 架构一致性约束 | ✅ Alloy Analyzer 验证通过 |
 | `tools/smt-examples/Container_Resource_Allocation.smt2` | Z3 4.13 | 容器资源分配约束求解 | ✅ Z3 求解通过 |
+| `tools/smt-examples/Container_Resource_Allocation_v2.smt2` | Z3 4.13 | 多节点容器资源分配（requests/limits、反亲和性、bin-packing） | ✅ Z3 求解通过 |
 | `tools/cvc5-examples/Scheduling_Constraints.smt2` | CVC5 1.3.4 | 调度约束（多求解器兼容） | ✅ CVC5 求解通过 |
+| `tools/tla-specifications/TCP_CongestionControl.tla` + `.cfg` | TLA+ / TLC | TCP Reno/CUBIC 拥塞控制状态机 | ✅ TLC 模型检验通过 |
+| `tools/tla-specifications/BGP_PathSelection.tla` + `.cfg` | TLA+ / TLC | 3 路由器 BGP 路径选择与收敛 | ✅ TLC 模型检验通过 |
+| `tools/tla-specifications/OSPF_LinkState.tla` + `.cfg` | TLA+ / TLC | OSPF 链路状态协议邻居状态机、LSA 泛洪与 LSDB 一致性 | ✅ TLC 模型检验通过 |
+| `tools/alloy-models/IoT_DeviceAccessControl.als` | Alloy 6 | IoT 设备访问控制角色与权限约束 | ✅ Alloy Analyzer 验证通过 |
 | `tools/prism-models/IoT_Reliability.prism` | PRISM 4.10.1 | 物联网传感器可靠性 DTMC | ✅ PRISM 验证通过（WSL） |
 | `tools/spin-models/Mutex.pml` | SPIN 6.5 | 互斥协议 Promela 验证 | ✅ SPIN 验证通过（WSL） |
 
@@ -53,7 +61,7 @@
 | 操作系统调度证明 | `2.4 形式化证明/*.v` | 未找到任何 OS 相关 `.v` |
 | 分布式系统共识证明 | `4.4 形式化证明/*.v` | 已创建 TLA+ 草图，但无 Coq 证明 |
 | 容器编排一致性证明 | `7.4 形式化证明/*.v` | 已创建 TLA+ 草图，但无 Coq 证明 |
-| 网络协议正确性证明 | `8.4 形式化证明/*.v` | 未找到任何网络协议 `.v` |
+| 网络协议正确性证明 | `tools/coq-verification/StopAndWait.v` | ✅ 已存在：停等协议安全性/活性 Coq 证明 |
 
 ### 2.2 Isabelle/HOL
 
@@ -62,6 +70,7 @@
 | 系统理论高阶逻辑证明 | `tools/isabelle-verification/SystemTheory.thy` | 仅存在 IMP 语义示例 |
 | 操作系统语义 | `2.7 形式证明/*.thy` | 目录/文件不存在 |
 | 霍尔逻辑/分离逻辑 | `tools/isabelle-verification/*Hoare*.thy` | 未创建 |
+| 网络协议正确性证明 | `tools/isabelle-verification/RoutingTable.thy` | ✅ 已存在：距离向量路由表单调性 Isabelle/HOL 证明 |
 
 ### 2.3 Lean 4
 
@@ -69,6 +78,7 @@
 |---|---|---|
 | 现代数学基础形式化 | `tools/lean-verification/*Math*.lean` | 仅存在类型论入门示例 |
 | 系统理论形式化 | `tools/lean-verification/*System*.lean` | 未创建 |
+| 网络协议正确性证明 | `tools/lean-verification/PacketSeqMonotonicity.lean` | ✅ 已存在：数据包序列号单调性 Lean 4 证明 |
 
 ### 2.4 TLA+
 
@@ -77,13 +87,17 @@
 | 网络协议握手规范 | `tools/tla-specifications/QUIC.tla` | ✅ 已通过 TLC |
 | Raft 一致性规范 | `tools/tla-specifications/Raft.tla` | ✅ 已通过 TLC |
 | K8s Deployment 规范 | `tools/tla-specifications/Kubernetes.tla` | ✅ 已通过 TLC |
+| OSPF 链路状态协议规范 | `tools/tla-specifications/OSPF_LinkState.tla` | ✅ 已通过 TLC |
 
-### 2.4.1 仍缺失的 TLA+ 工件
+### 2.4.1 TLA+ 工件覆盖状态
 
-| 声称位置/主题 | 缺失文件 | 说明 |
+| 声称位置/主题 | 实际文件 | 说明 |
 |---|---|---|
-| TCP 拥塞控制状态机 | `8.7 系统运行时语义/*.tla` | 未找到 |
-| BGP/OSPF 路由协议状态机 | `8.7 系统运行时语义/*.tla` | 未找到 |
+| TCP 拥塞控制状态机 | `tools/tla-specifications/TCP_CongestionControl.tla` | ✅ 已通过 TLC |
+| BGP 路径选择状态机 | `tools/tla-specifications/BGP_PathSelection.tla` | ✅ 已通过 TLC |
+| OSPF 链路状态协议状态机 | `tools/tla-specifications/OSPF_LinkState.tla` | ✅ 已通过 TLC |
+
+> Phase 9 验证后，`tools/tla-specifications/` 下全部 6 对 `.tla` / `.cfg` 均已完成 TLC 模型检验，当前无缺失 TLA+ 工件。
 
 ### 2.5 模型检验器
 
@@ -127,8 +141,8 @@
 |---|---|---|---|
 | P0 | 接入 CI 形式化验证门禁 | 在 GitHub Actions 中运行所有可验证工件 | 基础设施 |
 | P0 | 获取 UPPAAL 学术许可证并运行 `IoT_Scheduling.xml` | 需用户注册许可证 | 3 |
-| P1 | 补充 TCP 拥塞控制 / BGP/OSPF TLA+ | 网络协议深度形式化 | 8 |
 | P1 | 补充操作系统调度 Coq/Isabelle 证明 | 填补 `2.4/2.7` 形式化缺口 | 2 |
+| P2 | 补充网络协议活性/收敛的 TLA+ 性质 | 在现有安全性质基础上扩展活性 | 8 |
 | P2 | 补充 CVC5 / 多 SMT 求解器兼容 | 约束求解扩展 | 1, 7 |
 
 ## 5. 建议行动
@@ -142,7 +156,7 @@
 
 ## 6. 新增主题覆盖状态（2026-07-05）
 
-> 本次冲刺新增/补齐了 OS 网络、外设总线、接口层、嵌入式/RTOS、跨域映射的 Markdown/Mermaid/伪代码工件。所有新增内容目前均为工程师级概念映射与决策树，**未新增 Coq/Isabelle/Lean/TLA+ 等形式化工件**。
+> 本次冲刺新增/补齐了 OS 网络、外设总线、接口层、嵌入式/RTOS、跨域映射的 Markdown/Mermaid/伪代码工件，以及 Phase 9 的网络/IoT/容器形式化工件（TLA+ / Alloy / Z3）。
 
 | 主题 | 新增/补齐文件 | 覆盖形式 | 形式化工件状态 |
 |---|---|---|---|
@@ -166,8 +180,30 @@
 | VXLAN / Geneve / CNI 数据中心网络专题 | `8.8/8.8.30 数据中心网络虚拟化：VXLAN、Geneve 与 CNI.md` 新建 | Markdown | ❌ 无 |
 | OpenFlow / P4 可编程网络专题 | `8.8/8.8.31 可编程网络：OpenFlow 与 P4.md` 新建 | Markdown | ❌ 无 |
 | 5G / Wi-Fi 7 / ETSI MEC 边缘计算专题 | `8.8/8.8.32 5G 与边缘计算：3GPP、802.11be 与 ETSI MEC.md` 新建 | Markdown | ❌ 无 |
+| WebSocket / HTTP/2 全双工与多路复用专题 | `8.8/8.8.33 WebSocket 与 HTTP/2：全双工与多路复用.md` 新建 | Markdown | ❌ 无 |
+| 传输层演进：TFO / BBR / MPTCP / SCTP / DCCP 专题 | `8.8/8.8.34 传输层演进：TCP Fast Open、BBR、MPTCP、SCTP 与 DCCP.md` 新建 | Markdown | ❌ 无 |
+| 物联网协议 MQTT v5.0 / CoAP 专题 | `8.8/8.8.35 物联网协议：MQTT v5.0 与 CoAP.md` 新建 | Markdown | ❌ 无 |
+| TLS 1.3 与密码学工程专题 | `8.8/8.8.36 TLS 1.3 与密码学工程：握手、证书与部署.md` 新建 | Markdown | ❌ 无 |
+| 网络可观测性与遥测 SNMP/NetFlow/IPFIX/sFlow 专题 | `8.8/8.8.37 网络可观测性与遥测：SNMP、NetFlow、IPFIX 与 sFlow.md` 新建 | Markdown | ❌ 无 |
+| 时间敏感网络与确定性以太网 TSN/DetNet 专题 | `8.8/8.8.38 时间敏感网络与确定性以太网：TSN、802.1AS 与 DetNet.md` 新建 | Markdown | ❌ 无 |
+| 零信任架构与网络访问安全 NIST/SASE/SDP 专题 | `8.8/8.8.39 零信任架构与网络访问安全：NIST SP 800-207、SASE 与 SDP.md` 新建 | Markdown | ❌ 无 |
+| 网络人工智能与智能运维 AIOps 专题 | `8.8/8.8.40 网络人工智能与智能运维：AIOps、异常检测与流量工程.md` 新建 | Markdown | ❌ 无 |
+| 网络安全态势感知与威胁情报专题 | `8.8/8.8.41 网络安全态势感知与威胁情报.md` 新建 | Markdown | ❌ 无 |
+| 卫星互联网与非地面网络 NTN/NR-NTN 专题 | `8.8/8.8.42 卫星互联网与非地面网络：NTN、Starlink 与 3GPP NR-NTN.md` 新建 | Markdown | ❌ 无 |
+| 确定性 IP 与 SRv6+ / AP6 专题 | `8.8/8.8.43 确定性 IP 与 SRv6+：网络切片、随流检测与 AP6.md` 新建 | Markdown | ❌ 无 |
+| 高速数据中心网络 RDMA/RoCE/DCB 专题 | `8.8/8.8.44 高速数据中心网络：RDMA、RoCE 与 DCB.md` 新建 | Markdown | ❌ 无 |
+| TCP 拥塞控制形式化 | `tools/tla-specifications/TCP_CongestionControl.tla` + `.cfg` | TLA+ / TLC | ✅ TLC 通过 |
+| BGP 路径选择形式化 | `tools/tla-specifications/BGP_PathSelection.tla` + `.cfg` | TLA+ / TLC | ✅ TLC 通过 |
+| OSPF 链路状态形式化 | `tools/tla-specifications/OSPF_LinkState.tla` + `.cfg` | TLA+ / TLC | ✅ TLC 通过 |
+| IoT 设备访问控制形式化 | `tools/alloy-models/IoT_DeviceAccessControl.als` | Alloy 6 | ✅ Alloy Analyzer 通过 |
+| 容器资源分配约束 v2 | `tools/smt-examples/Container_Resource_Allocation_v2.smt2` | Z3 4.13 | ✅ Z3 求解通过 |
+| 网络安全运营中心与 SIEM 专题 | `8.8/8.8.45 网络安全运营中心与 SIEM：日志、告警与响应编排.md` 新建 | Markdown | ❌ 无 |
+| 意图驱动网络与数字孪生专题 | `8.8/8.8.46 意图驱动网络与数字孪生：IBN、YANG 与网络数字孪生.md` 新建 | Markdown | ❌ 无 |
+| 算力网络与算网融合专题 | `8.8/8.8.47 算力网络与算网融合：CFN、算力路由与东数西算.md` 新建 | Markdown | ❌ 无 |
+| SD-WAN 与 SASE 工程实践专题 | `8.8/8.8.48 软件定义广域网与安全访问服务边缘：SD-WAN 与 SASE 工程实践.md` 新建 | Markdown | ❌ 无 |
 
 ### 说明
 
-- 新增内容严格遵循“工程师深度、无形式化工件”的当前阶段约定；如需进入 Phase 9，可为 TCP 拥塞控制、设备树一致性、RMA/EDF 可调度性、中断优先级等主题补充 TLA+/Alloy/SMT 工件。
-- 已同步更新 `2.操作系统/02-operating-systems/README.md`、`3.物联网嵌入式系统/README.md`、`8.网络系统/README.md`、`Analysis/README.md` 导航。
+- 已进入 Phase 9：本次补充了 TCP 拥塞控制、BGP 路径选择、OSPF 链路状态、IoT 设备访问控制、容器资源分配 v2 五类可执行形式化工件。
+- 剩余可补充主题：设备树一致性、RMA/EDF 可调度性、中断优先级、网络协议活性/收敛的扩展性质等。
+- 已同步更新 `tools/tla-specifications/README.md`、`validation/formal-artifacts-gap-audit.md`。

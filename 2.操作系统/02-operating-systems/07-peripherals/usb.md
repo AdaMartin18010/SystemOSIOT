@@ -160,7 +160,10 @@ usb_alloc_urb()
 
 ## 国际权威来源链接 / Authoritative Sources
 
-- [USB-IF Document Library (USB 2.0/3.2/4)](https://www.usb.org/documents)
+- [USB-IF Document Library (USB 2.0/3.2/USB4)](https://www.usb.org/documents)
+- [USB 2.0 Specification](https://www.usb.org/document-library/usb-20-specification)
+- [USB 3.2 Specification](https://www.usb.org/document-library/usb-32-revision-11-june-2022)
+- [USB4 Specification](https://www.usb.org/document-library/usb4tm-specification)
 - [Linux USB core documentation](https://docs.kernel.org/driver-api/usb/)
 - [Linux Device Drivers - USB chapter](https://static.lwn.net/images/pdf/LDD3/ch13.pdf)
 - [xHCI specification (Intel)](https://www.intel.com/content/www/us/en/products/details/io/usb/specifications.html)

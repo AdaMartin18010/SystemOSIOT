@@ -3,7 +3,7 @@
 
 <!-- TOC START -->
 
-- [外设与总线概念树（Peripheral & Bus Concept Tree）](#外设与总线概念树peripheral--bus-concept-tree)
+- [外设与总线概念树（Peripheral \& Bus Concept Tree）](#外设与总线概念树peripheral--bus-concept-tree)
   - [1. 全局概念树](#1-全局概念树)
   - [2. 外设分类与属性](#2-外设分类与属性)
     - [2.1 通用属性](#21-通用属性)
@@ -24,6 +24,7 @@
   - [7. 术语表](#7-术语表)
   - [8. 国际来源映射](#8-国际来源映射)
   - [9. 相关文件](#9-相关文件)
+  - [国际权威来源链接 | International Authoritative Sources](#国际权威来源链接--international-authoritative-sources)
 
 <!-- TOC END -->
 
@@ -301,3 +302,23 @@ graph TD
 - [USB](./usb.md)
 - [系统调用接口](../08-interfaces/syscall-interface.md)
 - [HAL/BSP/设备树](../08-interfaces/hal-bsp-device-tree.md)
+
+## 国际权威来源链接 | International Authoritative Sources
+
+- [POSIX.1-2024 Base Definitions & System Interfaces](https://pubs.opengroup.org/onlinepubs/9799919799/)
+- [Linux Device Drivers, 3rd Edition (Corbet, Rubini, Kroah-Hartman)](https://static.lwn.net/images/pdf/LDD3/)
+- [Linux Kernel Documentation](https://docs.kernel.org/)
+- [PCI-SIG PCI Express Base Specification 6.0 / 7.0](https://pcisig.com/specifications)
+- [PCI-SIG SR-IOV Specification](https://pcisig.com/specifications/iov)
+- [USB-IF USB 2.0 / 3.2 / USB4 Specifications](https://www.usb.org/documents)
+- [NXP I²C-bus Specification and User Manual UM10204](https://www.nxp.com/docs/en/user-guide/UM10204.pdf)
+- [Motorola SPI Block Guide V04.01 (S12SPIV4/D)](https://www.nxp.com/docs/en/reference-manual/S12SPIV4.pdf)
+- [ISO 11898-1:2015 - CAN Data Link Layer and Physical Signaling](https://www.iso.org/standard/63648.html)
+- [Bosch CAN Specification 2.0](https://www.bosch-semiconductors.com/us/ip-modules/can-protocol/can-2-0.html)
+- [ARM Devicetree Specification](https://devicetree-specification.readthedocs.io/en/stable/)
+- [ARM Generic Interrupt Controller (GIC) Architecture](https://developer.arm.com/documentation/198123/0100)
+- [RISC-V PLIC Specification](https://github.com/riscv/riscv-plic-spec)
+- [RISC-V ACLINT Specification](https://github.com/riscv/riscv-aclint)
+- [Intel 64 and IA-32 Architectures Software Developer's Manual, Vol. 3A](https://www.intel.com/content/www/us/en/developer/articles/technical/intel-sdm.html)
+- [ACPI Specification (UEFI Forum)](https://uefi.org/specifications)
+- [UEFI Specification (UEFI Forum)](https://uefi.org/specifications)

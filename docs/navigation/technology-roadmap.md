@@ -1,5 +1,61 @@
 # SystemOSIOT技术路线图 / Technology Roadmap
 
+
+<!-- TOC START -->
+
+- [SystemOSIOT技术路线图 / Technology Roadmap](#systemosiot技术路线图--technology-roadmap)
+  - [🗺️ 技术路线图总览 / Technology Roadmap Overview](#️-技术路线图总览--technology-roadmap-overview)
+  - [🎯 发展愿景 / Development Vision](#-发展愿景--development-vision)
+    - [长期愿景 (5-10年) / Long-term Vision](#长期愿景-5-10年--long-term-vision)
+    - [中期目标 (2-5年) / Medium-term Goals](#中期目标-2-5年--medium-term-goals)
+    - [短期目标 (6个月-1年) / Short-term Goals](#短期目标-6个月-1年--short-term-goals)
+  - [🚀 技术发展路线 / Technology Development Path](#-技术发展路线--technology-development-path)
+    - [第一阶段：基础建设 (已完成) / Phase 1: Foundation (Completed)](#第一阶段基础建设-已完成--phase-1-foundation-completed)
+      - [主要成就 / Major Achievements](#主要成就--major-achievements)
+      - [技术里程碑 / Technical Milestones](#技术里程碑--technical-milestones)
+    - [第二阶段：质量提升 (进行中) / Phase 2: Quality Enhancement (In Progress)](#第二阶段质量提升-进行中--phase-2-quality-enhancement-in-progress)
+      - [主要目标 / Main Objectives](#主要目标--main-objectives)
+      - [1技术里程碑 / Technical Milestones](#1技术里程碑--technical-milestones)
+    - [第三阶段：应用扩展 (计划中) / Phase 3: Application Extension (Planned)](#第三阶段应用扩展-计划中--phase-3-application-extension-planned)
+      - [1主要目标 / Main Objectives](#1主要目标--main-objectives)
+      - [2技术里程碑 / Technical Milestones](#2技术里程碑--technical-milestones)
+    - [第四阶段：平台建设 (计划中) / Phase 4: Platform Construction (Planned)](#第四阶段平台建设-计划中--phase-4-platform-construction-planned)
+      - [2主要目标 / Main Objectives](#2主要目标--main-objectives)
+      - [3技术里程碑 / Technical Milestones](#3技术里程碑--technical-milestones)
+    - [第五阶段：生态建设 (计划中) / Phase 5: Ecosystem Building (Planned)](#第五阶段生态建设-计划中--phase-5-ecosystem-building-planned)
+      - [3主要目标 / Main Objectives](#3主要目标--main-objectives)
+      - [4技术里程碑 / Technical Milestones](#4技术里程碑--technical-milestones)
+  - [🔬 技术演进趋势 / Technology Evolution Trends](#-技术演进趋势--technology-evolution-trends)
+    - [核心技术演进 / Core Technology Evolution](#核心技术演进--core-technology-evolution)
+    - [新兴技术集成 / Emerging Technology Integration](#新兴技术集成--emerging-technology-integration)
+      - [人工智能与系统集成 / AI-System Integration](#人工智能与系统集成--ai-system-integration)
+      - [量子计算应用 / Quantum Computing Applications](#量子计算应用--quantum-computing-applications)
+      - [边缘计算扩展 / Edge Computing Extension](#边缘计算扩展--edge-computing-extension)
+  - [📊 技术能力矩阵 / Technology Capability Matrix](#-技术能力矩阵--technology-capability-matrix)
+    - [当前能力评估 / Current Capability Assessment](#当前能力评估--current-capability-assessment)
+    - [目标能力规划 / Target Capability Planning](#目标能力规划--target-capability-planning)
+  - [🎯 关键成功因素 / Key Success Factors](#-关键成功因素--key-success-factors)
+    - [技术因素 / Technical Factors](#技术因素--technical-factors)
+    - [组织因素 / Organizational Factors](#组织因素--organizational-factors)
+    - [外部因素 / External Factors](#外部因素--external-factors)
+  - [🚨 风险识别与应对 / Risk Identification and Response](#-风险识别与应对--risk-identification-and-response)
+    - [技术风险 / Technical Risks](#技术风险--technical-risks)
+    - [执行风险 / Execution Risks](#执行风险--execution-risks)
+  - [📈 成功指标与监控 / Success Metrics and Monitoring](#-成功指标与监控--success-metrics-and-monitoring)
+    - [量化指标 / Quantitative Metrics](#量化指标--quantitative-metrics)
+      - [内容质量指标](#内容质量指标)
+      - [用户参与指标](#用户参与指标)
+      - [应用价值指标](#应用价值指标)
+    - [质化目标 / Qualitative Goals](#质化目标--qualitative-goals)
+      - [技术影响力](#技术影响力)
+      - [社区价值](#社区价值)
+  - [🎉 总结与展望 / Summary and Outlook](#-总结与展望--summary-and-outlook)
+    - [当前状态总结](#当前状态总结)
+    - [发展路径规划](#发展路径规划)
+    - [未来愿景](#未来愿景)
+
+<!-- TOC END -->
+
 ```text
 title: SystemOSIOT技术路线图
 description: 展示SystemOSIOT项目的技术发展方向、里程碑和未来规划

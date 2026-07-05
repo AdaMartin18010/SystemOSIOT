@@ -154,4 +154,7 @@
 
 - [POSIX.1-2024 Base Definitions](https://pubs.opengroup.org/onlinepubs/9799919799/)
 - [POSIX.1-2024 System Interfaces](https://pubs.opengroup.org/onlinepubs/9799919799/)
+- [Linux Standard Base (LSB) 5.0](https://refspecs.linuxfoundation.org/lsb.shtml)
+- [System V ABI x86-64](https://refspecs.linuxfoundation.org/elf/x86_64-abi-0.99.pdf)
 - [Linux man-pages project](https://www.kernel.org/doc/man-pages/)
+- [glibc source repository](https://sourceware.org/git/?p=glibc.git)

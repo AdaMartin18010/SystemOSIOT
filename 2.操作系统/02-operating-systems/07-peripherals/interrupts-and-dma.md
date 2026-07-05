@@ -243,7 +243,9 @@ Physical Address
 ## 国际权威来源链接 / Authoritative Sources
 
 - [Intel 64 and IA-32 Architectures Software Developer's Manual, Vol. 3A](https://www.intel.com/content/www/us/en/developer/articles/technical/intel-sdm.html)
-- [ARM Generic Interrupt Controller (GIC) documentation](https://developer.arm.com/documentation/198123/0100)
-- [RISC-V PLIC specification](https://github.com/riscv/riscv-plic-spec)
+- [ARM Generic Interrupt Controller (GIC) Architecture Specification](https://developer.arm.com/documentation/198123/0100)
+- [RISC-V PLIC Specification](https://github.com/riscv/riscv-plic-spec)
+- [RISC-V ACLINT Specification](https://github.com/riscv/riscv-aclint)
 - [Linux DMAEngine documentation](https://docs.kernel.org/driver-api/dmaengine/)
 - [Linux IRQ subsystem documentation](https://docs.kernel.org/core-api/irq/index.html)
+- [Linux Device Drivers - Memory Mapping and DMA](https://static.lwn.net/images/pdf/LDD3/ch15.pdf)

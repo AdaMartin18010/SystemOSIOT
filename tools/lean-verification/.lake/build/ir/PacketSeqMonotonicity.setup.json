@@ -1,0 +1,7 @@
+{"plugins": [],
+ "package": "SystemOSIOTLean",
+ "options": {},
+ "name": "PacketSeqMonotonicity",
+ "isModule": false,
+ "importArts": {},
+ "dynlibs": []}

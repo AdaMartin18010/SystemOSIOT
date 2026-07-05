@@ -14,7 +14,7 @@
     - [🎯 初学者路径 / Beginner Path (1-2个月)](#-初学者路径--beginner-path-1-2个月)
     - [🚀 进阶者路径 / Advanced Path (2-4个月)](#-进阶者路径--advanced-path-2-4个月)
     - [🏆 专家路径 / Expert Path (4-6个月)](#-专家路径--expert-path-4-6个月)
-  - [🛠️ 技术栈 / Technology Stack](#-技术栈--technology-stack)
+  - [🛠️ 技术栈 / Technology Stack](#️-技术栈--technology-stack)
     - [核心组件 / Core Components](#核心组件--core-components)
     - [系统服务 / System Services](#系统服务--system-services)
     - [安全机制 / Security Mechanisms](#安全机制--security-mechanisms)
@@ -290,6 +290,9 @@ tags: [操作系统, 系统管理, 进程管理, 内存管理, 文件系统]
 ## 快速导航（项目级）
 
 - 返回项目总览: [../README.md](../README.md)
+- 国际标准映射入口: [2.0 操作系统 — 国际标准映射](2.0%20国际标准映射/README.md)（含外设/接口权威来源映射）
+- 外设与总线: [02-operating-systems/07-peripherals](02-operating-systems/07-peripherals/README.md)
+- 接口与边界: [02-operating-systems/08-interfaces](02-operating-systems/08-interfaces/README.md)
 - 其它主题入口: [1.系统理论](../1.系统理论/README.md) · [3.物联网嵌入式系统](../3.物联网嵌入式系统/README.md) · [4.分布式系统](../4.分布式系统/README.md) · [5.集群系统](../5.集群系统/README.md) · [6.P2P系统](../6.P2P系统/README.md) · [7.容器与微服务](../7.容器与微服务/README.md) · [8.网络系统](../8.网络系统/README.md)
 
 ## 工具与校验（项目级）

@@ -1,5 +1,51 @@
 # SystemOSIOT内容迁移指南 / Content Migration Guide
 
+
+<!-- TOC START -->
+
+- [SystemOSIOT内容迁移指南 / Content Migration Guide](#systemosiot内容迁移指南--content-migration-guide)
+  - [📋 迁移概述 / Migration Overview](#-迁移概述--migration-overview)
+  - [🎯 迁移目标 / Migration Goals](#-迁移目标--migration-goals)
+    - [主要目标](#主要目标)
+    - [迁移原则](#迁移原则)
+  - [📁 新旧目录映射 / Old-New Directory Mapping](#-新旧目录映射--old-new-directory-mapping)
+    - [核心领域映射](#核心领域映射)
+    - [辅助目录映射](#辅助目录映射)
+  - [🔄 迁移执行计划 / Migration Execution Plan](#-迁移执行计划--migration-execution-plan)
+    - [第一阶段：系统理论领域 (已完成)](#第一阶段系统理论领域-已完成)
+    - [第二阶段：操作系统领域](#第二阶段操作系统领域)
+    - [第三阶段：物联网嵌入式领域](#第三阶段物联网嵌入式领域)
+    - [第四阶段：分布式系统领域](#第四阶段分布式系统领域)
+    - [第五阶段：集群系统领域](#第五阶段集群系统领域)
+    - [第六阶段：P2P系统领域](#第六阶段p2p系统领域)
+    - [第七阶段：容器微服务领域](#第七阶段容器微服务领域)
+    - [第八阶段：网络系统领域](#第八阶段网络系统领域)
+  - [🛠️ 迁移工具和脚本 / Migration Tools and Scripts](#️-迁移工具和脚本--migration-tools-and-scripts)
+    - [自动化脚本](#自动化脚本)
+      - [1. 目录创建脚本](#1-目录创建脚本)
+      - [2. 内容迁移脚本](#2-内容迁移脚本)
+    - [手动迁移步骤](#手动迁移步骤)
+      - [1. 内容备份](#1-内容备份)
+      - [2. 内容迁移](#2-内容迁移)
+  - [📋 迁移检查清单 / Migration Checklist](#-迁移检查清单--migration-checklist)
+    - [每个领域迁移完成后检查](#每个领域迁移完成后检查)
+    - [整体迁移完成后检查](#整体迁移完成后检查)
+  - [⚠️ 风险控制 / Risk Control](#️-风险控制--risk-control)
+    - [主要风险](#主要风险)
+    - [回滚方案](#回滚方案)
+      - [快速回滚](#快速回滚)
+      - [选择性回滚](#选择性回滚)
+  - [📊 迁移进度跟踪 / Migration Progress Tracking](#-迁移进度跟踪--migration-progress-tracking)
+    - [进度记录表](#进度记录表)
+  - [🎯 成功标准 / Success Criteria](#-成功标准--success-criteria)
+    - [迁移成功指标](#迁移成功指标)
+    - [验收标准](#验收标准)
+  - [📞 技术支持 / Technical Support](#-技术支持--technical-support)
+    - [问题反馈](#问题反馈)
+    - [文档资源](#文档资源)
+
+<!-- TOC END -->
+
 ## 📋 迁移概述 / Migration Overview
 
 本文档详细说明了如何将SystemOSIOT项目从旧目录结构迁移到新的优化目录结构。迁移工作将分阶段进行，确保内容完整性和系统稳定性。

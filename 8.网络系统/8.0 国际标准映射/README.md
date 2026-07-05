@@ -66,6 +66,22 @@
 | HTTP/2 / WebSocket | Application layer protocols | 8.1, 8.6 | 8.1/1.8.21, advanced-protocol-security-standards.md | 已覆盖 |
 | MPLS / SRv6 / EVPN | Routing & traffic engineering | 8.3, 8.8 | advanced-protocol-security-standards.md, 8.8/8.8.29 | 已覆盖 |
 | VXLAN / Geneve / CNI | Data center network virtualization | 8.8 | advanced-protocol-security-standards.md, 8.8/8.8.30 | 已覆盖 |
+| WebSocket / HTTP/2 | Full-duplex Web channels and multiplexing | 8.6, 8.8 | advanced-protocol-security-standards.md, 8.8/8.8.33 | 已覆盖 |
+| TCP Fast Open / BBR / MPTCP / SCTP / DCCP | Transport layer enhancements and alternatives | 8.1, 8.7, 8.8 | advanced-protocol-security-standards.md, 8.8/8.8.34 | 已覆盖 |
+| MQTT v5.0 / CoAP | IoT publish-subscribe and constrained REST protocols | 8.8 | advanced-protocol-security-standards.md, 8.8/8.8.35 | 已覆盖 |
+| TLS 1.3 / PKI | Modern TLS handshake, certificates and deployment | 8.2, 8.8 | advanced-protocol-security-standards.md, 8.8/8.8.36 | 已覆盖 |
+| SNMP / NetFlow / IPFIX / sFlow | Network observability and telemetry | 8.7, 8.8 | advanced-protocol-security-standards.md, 8.8/8.8.37 | 已覆盖 |
+| TSN / 802.1AS / DetNet | Time-sensitive networking and deterministic Ethernet | 8.5, 8.8 | advanced-protocol-security-standards.md, 8.8/8.8.38 | 已覆盖 |
+| Zero Trust / SASE / SDP | Zero trust architecture and network access security | 8.2, 8.8 | advanced-protocol-security-standards.md, 8.8/8.8.39 | 已覆盖 |
+| AIOps / 异常检测 / 智能流量工程 | Network AI and intelligent operations | 8.7, 8.8 | advanced-protocol-security-standards.md, 8.8/8.8.40 | 已覆盖 |
+| CSA / TI / STIX / TAXII / MITRE ATT&CK | Cyber situation awareness and threat intelligence | 8.2, 8.8 | advanced-protocol-security-standards.md, 8.8/8.8.41 | 已覆盖 |
+| NTN / Starlink / 3GPP NR-NTN | Satellite internet and non-terrestrial networks | 8.5, 8.8 | advanced-protocol-security-standards.md, 8.8/8.8.42 | 已覆盖 |
+| Deterministic IP / SRv6+ / AP6 | Deterministic IP, network slicing and IPv6+ telemetry | 8.3, 8.8 | advanced-protocol-security-standards.md, 8.8/8.8.43 | 已覆盖 |
+| RDMA / RoCE / DCB | High-speed data center networks | 8.5, 8.8 | advanced-protocol-security-standards.md, 8.8/8.8.44 | 已覆盖 |
+| SOC / SIEM / SOAR | Security operations, log correlation and response orchestration | 8.2, 8.8 | advanced-protocol-security-standards.md, 8.8/8.8.45 | 已覆盖 |
+| IBN / YANG / Network Digital Twin | Intent-based networking, YANG modeling and digital twin | 8.3, 8.8 | advanced-protocol-security-standards.md, 8.8/8.8.46 | 已覆盖 |
+| CFN / Computing-aware Routing / 东数西算 | Computing force network and computing-network convergence | 8.3, 8.8 | advanced-protocol-security-standards.md, 8.8/8.8.47 | 已覆盖 |
+| SD-WAN / SASE / MEF 70 | Software-defined WAN and secure access service edge | 8.2, 8.8 | advanced-protocol-security-standards.md, 8.8/8.8.48 | 已覆盖 |
 
 ## 3. 覆盖缺口与补齐计划
 
@@ -77,6 +93,22 @@
 6. ~~高级安全协议~~：DNSSEC/DoH/DoT、RPKI/BGPsec/ROV、IPsec/IKEv2 专题已补齐。
 7. ~~数据中心与可编程网络~~：VXLAN/Geneve/CNI/OpenFlow/P4 专题已补齐。
 8. ~~移动通信与边缘网络~~：3GPP 5G/802.11be/ETSI MEC 专题已补齐。
+9. ~~WebSocket / HTTP/2~~：已新增 `8.8/8.8.33 WebSocket 与 HTTP/2：全双工与多路复用.md`。
+10. ~~传输层增强~~：已新增 `8.8/8.8.34 传输层演进：TCP Fast Open、BBR、MPTCP、SCTP 与 DCCP.md`。
+11. ~~物联网协议~~：已新增 `8.8/8.8.35 物联网协议：MQTT v5.0 与 CoAP.md`。
+12. ~~TLS 1.3 / PKI~~：已新增 `8.8/8.8.36 TLS 1.3 与密码学工程：握手、证书与部署.md`。
+13. ~~网络可观测性~~：已新增 `8.8/8.8.37 网络可观测性与遥测：SNMP、NetFlow、IPFIX 与 sFlow.md`。
+14. ~~TSN / 确定性以太网~~：已新增 `8.8/8.8.38 时间敏感网络与确定性以太网：TSN、802.1AS 与 DetNet.md`。
+15. ~~零信任 / SASE / SDP~~：已新增 `8.8/8.8.39 零信任架构与网络访问安全：NIST SP 800-207、SASE 与 SDP.md`。
+16. ~~AIOps / 智能流量工程~~：已新增 `8.8/8.8.40 网络人工智能与智能运维：AIOps、异常检测与流量工程.md`。
+17. ~~网络安全态势感知与威胁情报~~：已新增 `8.8/8.8.41 网络安全态势感知与威胁情报.md`。
+18. ~~卫星互联网 / NTN~~：已新增 `8.8/8.8.42 卫星互联网与非地面网络：NTN、Starlink 与 3GPP NR-NTN.md`。
+19. ~~确定性 IP / SRv6+ / AP6~~：已新增 `8.8/8.8.43 确定性 IP 与 SRv6+：网络切片、随流检测与 AP6.md`。
+20. ~~高速数据中心网络~~：已新增 `8.8/8.8.44 高速数据中心网络：RDMA、RoCE 与 DCB.md`。
+21. ~~SOC / SIEM / SOAR~~：已新增 `8.8/8.8.45 网络安全运营中心与 SIEM：日志、告警与响应编排.md`。
+22. ~~IBN / YANG / Network Digital Twin~~：已新增 `8.8/8.8.46 意图驱动网络与数字孪生：IBN、YANG 与网络数字孪生.md`。
+23. ~~CFN / Computing-aware Routing / 东数西算~~：已新增 `8.8/8.8.47 算力网络与算网融合：CFN、算力路由与东数西算.md`。
+24. ~~SD-WAN / SASE / MEF 70~~：已新增 `8.8/8.8.48 软件定义广域网与安全访问服务边缘：SD-WAN 与 SASE 工程实践.md`。
 
 ## 5. 形式化工件链接
 
@@ -97,6 +129,9 @@
 | 2026-07-05 | 新增 DNS 安全（DNSSEC/DoH/DoT，8.8.27）与 IPsec/IKEv2 VPN 安全（8.8.28）专题，更新映射表覆盖状态 | Kimi Code CLI |
 | 2026-07-05 | 新增 MPLS/SRv6/EVPN 路由专题（8.8.29）与 VXLAN/Geneve/CNI 数据中心网络专题（8.8.30），更新映射表覆盖状态 | Kimi Code CLI |
 | 2026-07-05 | 新增可编程网络 OpenFlow/P4 专题（8.8.31）与 5G/边缘计算/Wi-Fi 7 专题（8.8.32），更新映射表覆盖状态 | Kimi Code CLI |
+| 2026-07-05 | 新增 WebSocket/HTTP/2（8.8.33）、传输层演进（8.8.34）、物联网协议 MQTT/CoAP（8.8.35）、TLS 1.3/PKI（8.8.36）专题，更新映射表覆盖状态 | Kimi Code CLI |
+| 2026-07-05 | 新增网络可观测性（8.8.37）、TSN/DetNet（8.8.38）、零信任/SASE/SDP（8.8.39）、AIOps（8.8.40）、态势感知与威胁情报（8.8.41）、卫星互联网/NTN（8.8.42）、确定性 IP/SRv6+（8.8.43）、RDMA/RoCE（8.8.44）专题，更新映射表覆盖状态 | Kimi Code CLI |
+| 2026-07-05 | 新增 SOC/SIEM/SOAR（8.8.45）、IBN/YANG/数字孪生（8.8.46）、算力网络/东数西算（8.8.47）、SD-WAN/SASE（8.8.48）专题，更新映射表覆盖状态 | Kimi Code CLI |
 
 ## 国际权威来源链接 | International Authoritative Sources
 

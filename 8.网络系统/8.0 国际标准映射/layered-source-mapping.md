@@ -9,7 +9,7 @@
   - [3. 网络层 / Network Layer](#3-网络层--network-layer)
   - [4. 传输层 / Transport Layer](#4-传输层--transport-layer)
   - [5. 应用层 / Application Layer](#5-应用层--application-layer)
-  - [6. 安全、管理与可编程网络 / Security, Management & Programmable Networks](#6-安全管理与可编程网络--security-management--programmable-networks)
+  - [6. 安全、管理与可编程网络 / Security, Management \& Programmable Networks](#6-安全管理与可编程网络--security-management--programmable-networks)
   - [7. 跨层映射到项目章节](#7-跨层映射到项目章节)
   - [维护记录](#维护记录)
 

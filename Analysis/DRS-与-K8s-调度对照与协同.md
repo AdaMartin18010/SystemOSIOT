@@ -1,5 +1,22 @@
 # vCenter DRS × Kubernetes 调度：对照与协同
 
+
+<!-- TOC START -->
+
+- [vCenter DRS × Kubernetes 调度：对照与协同](#vcenter-drs--kubernetes-调度对照与协同)
+  - [1. 目标](#1-目标)
+    - [1.1 范围与边界（Scope \& Non-goals）](#11-范围与边界scope--non-goals)
+  - [2. 模型与目标](#2-模型与目标)
+    - [2.1 形式化刻画（摘要）](#21-形式化刻画摘要)
+  - [3. 时序与冲突](#3-时序与冲突)
+  - [4. 协同策略](#4-协同策略)
+  - [5. 观测与回归](#5-观测与回归)
+    - [5.1 基准方法学（Benchmark Methodology）](#51-基准方法学benchmark-methodology)
+  - [6. 实施建议](#6-实施建议)
+  - [7. 参考与链接](#7-参考与链接)
+
+<!-- TOC END -->
+
 ## 1. 目标
 
 - 对比 DRS（集群资源均衡/迁移）与 K8s（Pod 绑定/打散/约束）在目标函数、约束、时序上的差异。

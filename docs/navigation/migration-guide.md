@@ -1,5 +1,43 @@
 # 项目结构迁移指南 / Project Structure Migration Guide
 
+
+<!-- TOC START -->
+
+- [项目结构迁移指南 / Project Structure Migration Guide](#项目结构迁移指南--project-structure-migration-guide)
+  - [📋 迁移概述 / Migration Overview](#-迁移概述--migration-overview)
+  - [🔄 目录结构对比 / Directory Structure Comparison](#-目录结构对比--directory-structure-comparison)
+    - [旧结构 → 新结构映射](#旧结构--新结构映射)
+    - [新增目录](#新增目录)
+  - [📁 详细迁移路径 / Detailed Migration Paths](#-详细迁移路径--detailed-migration-paths)
+    - [1. 系统理论领域迁移](#1-系统理论领域迁移)
+      - [旧结构](#旧结构)
+      - [新结构](#新结构)
+    - [2. 其他领域迁移](#2-其他领域迁移)
+      - [操作系统](#操作系统)
+      - [物联网嵌入式系统](#物联网嵌入式系统)
+      - [分布式系统](#分布式系统)
+      - [集群系统](#集群系统)
+      - [P2P系统](#p2p系统)
+      - [容器与微服务](#容器与微服务)
+      - [网络系统](#网络系统)
+  - [🚀 迁移执行步骤 / Migration Execution Steps](#-迁移执行步骤--migration-execution-steps)
+    - [阶段1: 准备阶段 (1-2天)](#阶段1-准备阶段-1-2天)
+    - [阶段2: 内容迁移 (3-5天)](#阶段2-内容迁移-3-5天)
+    - [阶段3: 引用更新 (2-3天)](#阶段3-引用更新-2-3天)
+    - [阶段4: 测试验证 (1-2天)](#阶段4-测试验证-1-2天)
+  - [⚠️ 注意事项 / Important Notes](#️-注意事项--important-notes)
+    - [迁移风险](#迁移风险)
+    - [风险控制措施](#风险控制措施)
+  - [🔍 迁移后检查清单 / Post-Migration Checklist](#-迁移后检查清单--post-migration-checklist)
+    - [目录结构检查](#目录结构检查)
+    - [内容完整性检查](#内容完整性检查)
+    - [引用链接检查](#引用链接检查)
+    - [功能验证检查](#功能验证检查)
+  - [📞 技术支持 / Technical Support](#-技术支持--technical-support)
+  - [🎯 迁移完成标志 / Migration Completion Criteria](#-迁移完成标志--migration-completion-criteria)
+
+<!-- TOC END -->
+
 ## 📋 迁移概述 / Migration Overview
 
 本文档指导用户从旧的目录结构迁移到新的统一命名规范目录结构。新结构采用数字前缀和英文命名，提供更好的可维护性和国际化支持。
