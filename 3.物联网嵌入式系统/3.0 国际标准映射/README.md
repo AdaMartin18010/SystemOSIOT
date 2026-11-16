@@ -50,8 +50,17 @@
 | MQTT 控制包与会话 | OASIS MQTT v5.0 | §2.2, §3 | `3.1 知识梳理/3.1.1 基本概念.md`, `3.6 形式语义/` |
 | CoAP 请求/响应模型 | RFC 7252 / RFC 8323 | §2, §12 | `3.1 知识梳理/3.1.1 基本概念.md`, `3.6 形式语义/` |
 | 轻量级 M2M 对象模型 | OMA LwM2M 1.2 | Core, Transport, Objects | `3.1 知识梳理/`, `3.6 形式语义/` |
-| Matter 设备认证与会话 | Matter 1.4 | Core Specification | `3.1 知识梳理/`, `3.5 多表征/` |
-| Thread 低功耗 mesh 网络 | Thread 1.4 | Thread Specification | `3.1 知识梳理/`, `3.5 多表征/` |
+| Matter 设备认证与会话 | Matter 1.6.1 | Core Specification | `3.1 知识梳理/`, `3.5 多表征/` |
+| Thread 低功耗 mesh 网络 | Thread 1.4.1 | Thread Specification | `3.1 知识梳理/`, `3.5 多表征/` |
+
+## 2.1 详细映射子文档
+
+| 子文档 | 内容 |
+|---|---|
+| [RTOS 安全认证国际标准映射](rtos-safety-standards-mapping.md) | ISO 26262 / IEC 61508 / DO-178C / IEC 62304 / ARINC 653 与 RTOS 机制映射 |
+| [3.0.3 ISO/IEC 30141:2024 物联网参考架构映射](3.0.3%20ISO-IEC-30141-2024%20物联网参考架构映射.md) | IoT 参考架构视图与项目模块映射 |
+| [3.0.4 NIST SP 800-213 / IEC 62443 物联网安全映射](3.0.4%20NIST-SP-800-213%20与%20IEC-62443%20物联网安全映射.md) | IoT 设备网络安全与 IACS 安全计划映射 |
+| [3.0.5 Matter / Thread / LwM2M 设备互操作协议映射](3.0.5%20Matter-Thread-LwM2M%20设备互操作协议映射.md) | 智能家居与轻量级 M2M 协议映射 |
 | 硬实时调度理论 | Liu & Layland (1973) | Rate Monotonic Utilization Bound | `3.1 知识梳理/`, `3.4 形式化证明/`, `04-rtos-concepts/real-time-schedulability.md` |
 | 实时系统教材 | Buttazzo (2024) | RM / EDF / Response Time Analysis | `3.1 知识梳理/`, `3.4 形式化证明/`, `04-rtos-concepts/` |
 | FreeRTOS 任务/调度/同步 | FreeRTOS Documentation | Kernel, Task, Queue, Semaphore | `04-rtos-concepts/rtos-concept-tree.md`, `04-rtos-concepts/freertos-zephyr-rtems-vxworks-map.md` |
@@ -81,9 +90,9 @@
 | ARINC 653 Part 1 | Avionics Application Standard Software Interface | 2018 | `rtos-safety-standards-mapping.md` | 已覆盖 |
 | MQTT v5.0 2.2 | Control Packets | 3.1, 3.6 | `3.1.1 基本概念.md` | 部分覆盖 |
 | CoAP RFC 7252 2 | Messages / Request/Response | 3.1, 3.6 | `3.1.1 基本概念.md` | 部分覆盖 |
-| LwM2M 1.2 Core | Objects and Resources | 3.1, 3.6 | 待补充 | 未覆盖 |
-| Matter 1.4 Core | Device Attestation | 3.1, 3.5 | 待补充 | 未覆盖 |
-| Thread 1.4 | Mesh Link Establishment | 3.1, 3.5 | 待补充 | 未覆盖 |
+| LwM2M 1.2 Core | Objects and Resources | 3.1, 3.3, 3.6 | 待补充 | 未覆盖 |
+| Matter 1.6.1 Core | Device Attestation / CASE / PASE | 3.1, 3.2, 3.5 | 待补充 | 未覆盖 |
+| Thread 1.4.1 | Mesh Link Establishment / 6LoWPAN / Border Router | 3.1, 3.5, 3.7 | 待补充 | 未覆盖 |
 | NXP UM10204 3 | I²C Bus Protocol | 3.1, 05 | `05-peripheral-interface-analysis/embedded-bus-decision-tree.md` | 部分覆盖 |
 | Bosch CAN 2.0 3 | Message Transfer | 3.1, 05 | `05-peripheral-interface-analysis/embedded-bus-decision-tree.md` | 部分覆盖 |
 
@@ -92,9 +101,10 @@
 1. **ISO/IEC 30141:2024 Trustworthiness**：当前 3.2 批判分析未系统覆盖安全、隐私、可靠性、弹性等可信维度；计划在 3.2.1 中增加对 ISO/IEC 30141:2024 Clause 6 的对照分析。
 2. **IEC 62443 安全等级（SL0–SL4）与 NIST SP 800-213A 需求目录**：3.2 与 3.7 缺少安全等级到控制措施的映射表；计划新增 `3.2.4 安全等级映射.md` 或在 3.7 运行时语义中补充安全状态机。
 3. **MQTT v5.0 Properties / CoAP Observe / LwM2M 对象模型**：3.6 形式语义目前以概念描述为主，需补充协议状态机、属性语义与形式化规约。
-4. **Matter/Thread 1.4 设备认证与会话建立**：3.1 与 3.5 尚未覆盖 commissioning、attestation、CASE/PASE 会话；计划新增专题或扩展 3.5 多表征。
-5. **I²C/SPI/CAN/USB/PCIe 电气与协议细节**：05-peripheral-interface-analysis 当前为决策树与高层映射，需补充时序图、电气特性表和错误处理机制。
-6. **x86/ARM/RISC-V 架构依赖的运行时语义**：3.7 系统运行时语义目前侧重任务调度，需补充中断控制器（GIC/PLIC）、系统调用、内存序的架构级来源映射。
+4. **Matter 1.6.1 / Thread 1.4.1 设备认证与会话建立**：3.1、3.2 与 3.5 尚未覆盖 commissioning、attestation、CASE/PASE、Thread mesh 网络机制、边界路由器；计划新增专题或扩展 3.5 多表征。
+5. **LwM2M 1.2 对象/资源模型与 CoAP 绑定**：3.1、3.3 缺少 LwM2M 标准化对象（Security、Server、Device、Firmware Update 等）的结构化描述；3.6 缺少 LwM2M 接口语义。
+6. **I²C/SPI/CAN/USB/PCIe 电气与协议细节**：05-peripheral-interface-analysis 当前为决策树与高层映射，需补充时序图、电气特性表和错误处理机制。
+7. **x86/ARM/RISC-V 架构依赖的运行时语义**：3.7 系统运行时语义目前侧重任务调度，需补充中断控制器（GIC/PLIC）、系统调用、内存序的架构级来源映射。
 
 ## 5. 形式化工件链接
 

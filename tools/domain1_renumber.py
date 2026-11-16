@@ -36,7 +36,7 @@ def update_file_content(path, old_num, new_num, title_without_num=None):
     elif title_without_num:
         # Prepend new number to the existing H1 title.
         title_re = re.compile(rf"^(# )({re.escape(title_without_num)}.*)$", re.MULTILINE)
-        text = title_re.sub(rf"\g<1>{new_num} {title_without_num}\g<3>", text)
+        text = title_re.sub(rf"\g<1>{new_num} \g<2>", text)
     else:
         # Fallback: prepend new number to the first H1 line.
         text = re.sub(r"^(# )(.+)$", rf"\g<1>{new_num} \g<2>", text, count=1, flags=re.MULTILINE)
