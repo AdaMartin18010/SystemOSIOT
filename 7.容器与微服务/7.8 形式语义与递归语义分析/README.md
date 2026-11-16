@@ -7,6 +7,7 @@
   - [目录结构](#目录结构)
   - [推荐细化方向](#推荐细化方向)
   - [国际权威来源链接 | International Authoritative Sources](#国际权威来源链接--international-authoritative-sources)
+  - [质量治理注记（2026-11）](#质量治理注记2026-11)
 
 <!-- TOC END -->
 

@@ -30,6 +30,7 @@
     - [前沿发展完备性 Frontier Development Completeness](#前沿发展完备性-frontier-development-completeness)
   - [持续完善 Continuous Improvement](#持续完善-continuous-improvement)
   - [国际权威来源链接 | International Authoritative Sources](#国际权威来源链接--international-authoritative-sources)
+  - [治理注记（2026-11 Phase 0 编号唯一化）](#治理注记2026-11-phase-0-编号唯一化)
 
 <!-- TOC END -->
 

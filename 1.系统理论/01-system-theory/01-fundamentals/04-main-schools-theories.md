@@ -5,7 +5,7 @@
 
 - [主要流派与理论 / Main Schools and Theories](#主要流派与理论--main-schools-and-theories)
   - [📚 概述 / Overview](#-概述--overview)
-  - [🏛️ 一般系统论学派 / General Systems Theory School](#️-一般系统论学派--general-systems-theory-school)
+  - [🏛️ 一般系统论学派 / General Systems Theory School](#-一般系统论学派--general-systems-theory-school)
     - [1. 理论创始人 / Theory Founder](#1-理论创始人--theory-founder)
       - [1.1 路德维希·冯·贝塔朗菲 (Ludwig von Bertalanffy)](#11-路德维希冯贝塔朗菲-ludwig-von-bertalanffy)
     - [2. 理论体系 / Theoretical Framework](#2-理论体系--theoretical-framework)
@@ -17,7 +17,7 @@
     - [4. 应用领域 / Application Areas](#4-应用领域--application-areas)
       - [4.1 生物学应用](#41-生物学应用)
       - [4.2 社会科学应用](#42-社会科学应用)
-  - [🎛️ 控制论学派 / Cybernetics School](#️-控制论学派--cybernetics-school)
+  - [🎛️ 控制论学派 / Cybernetics School](#-控制论学派--cybernetics-school)
     - [1. 1理论创始人 / Theory Founder](#1-1理论创始人--theory-founder)
       - [1.1 诺伯特·维纳 (Norbert Wiener)](#11-诺伯特维纳-norbert-wiener)
     - [2. 1理论体系 / Theoretical Framework](#2-1理论体系--theoretical-framework)

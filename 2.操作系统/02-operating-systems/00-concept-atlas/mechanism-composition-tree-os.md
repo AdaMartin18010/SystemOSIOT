@@ -11,7 +11,7 @@
   - [5. 外设访问（Peripheral Access）](#5-外设访问peripheral-access)
   - [6. 实时性（Real-Time）](#6-实时性real-time)
   - [7. 安全隔离（Security Isolation）](#7-安全隔离security-isolation)
-  - [8. 容器与虚拟化隔离（Container \& Virtualization Isolation）](#8-容器与虚拟化隔离container--virtualization-isolation)
+  - [8. 容器与虚拟化隔离（Container & Virtualization Isolation）](#8-容器与虚拟化隔离container--virtualization-isolation)
   - [9. 国际来源映射](#9-国际来源映射)
 
 <!-- TOC END -->

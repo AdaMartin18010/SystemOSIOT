@@ -6,6 +6,7 @@
 - [05-peripheral-interface-analysis / 外设接口分析](#05-peripheral-interface-analysis--外设接口分析)
   - [文件列表](#文件列表)
   - [返回](#返回)
+  - [质量治理注记（2026-11）](#质量治理注记2026-11)
 
 <!-- TOC END -->
 

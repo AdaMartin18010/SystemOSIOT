@@ -5,7 +5,7 @@
 
 - [系统理论 / System Theory](#系统理论--system-theory)
   - [📚 领域概览 / Domain Overview](#-领域概览--domain-overview)
-  - [🏗️ 知识架构 / Knowledge Architecture](#️-知识架构--knowledge-architecture)
+  - [🏗️ 知识架构 / Knowledge Architecture](#-知识架构--knowledge-architecture)
   - [🔗 相关领域 / Related Domains](#-相关领域--related-domains)
   - [📖 学习路径 / Learning Path](#-学习路径--learning-path)
     - [入门级 (Beginner)](#入门级-beginner)

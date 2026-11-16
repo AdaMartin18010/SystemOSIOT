@@ -18,6 +18,7 @@
   - [相关资源](#相关资源)
   - [实践项目](#实践项目)
   - [国际权威来源链接 | International Authoritative Sources](#国际权威来源链接--international-authoritative-sources)
+  - [质量治理注记（2026-11）](#质量治理注记2026-11)
 
 <!-- TOC END -->
 

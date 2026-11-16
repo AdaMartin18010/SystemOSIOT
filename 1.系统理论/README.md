@@ -16,7 +16,7 @@
     - [🎯 初学者路径 / Beginner Path (1-2个月)](#-初学者路径--beginner-path-1-2个月)
     - [🚀 进阶者路径 / Advanced Path (2-4个月)](#-进阶者路径--advanced-path-2-4个月)
     - [🏆 专家路径 / Expert Path (4-6个月)](#-专家路径--expert-path-4-6个月)
-  - [🛠️ 技术栈 / Technology Stack](#️-技术栈--technology-stack)
+  - [🛠️ 技术栈 / Technology Stack](#-技术栈--technology-stack)
     - [理论工具 / Theoretical Tools](#理论工具--theoretical-tools)
     - [分析工具 / Analysis Tools](#分析工具--analysis-tools)
     - [验证工具 / Verification Tools](#验证工具--verification-tools)
@@ -37,6 +37,7 @@
     - [长期愿景 (6-12个月)](#长期愿景-6-12个月)
   - [快速导航（项目级）](#快速导航项目级)
   - [工具与校验（项目级）](#工具与校验项目级)
+  - [质量治理注记（2026-11）](#质量治理注记2026-11)
 
 <!-- TOC END -->
 

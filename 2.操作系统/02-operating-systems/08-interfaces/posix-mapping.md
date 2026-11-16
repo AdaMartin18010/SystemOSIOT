@@ -12,7 +12,7 @@
     - [4.2 POSIX 实时 IPC / 同步 / I/O](#42-posix-实时-ipc--同步--io)
   - [5. pthread 同步](#5-pthread-同步)
   - [6. Linux 特有扩展](#6-linux-特有扩展)
-  - [7. POSIX aio 与 Linux io\_uring 映射](#7-posix-aio-与-linux-io_uring-映射)
+  - [7. POSIX aio 与 Linux io_uring 映射](#7-posix-aio-与-linux-io_uring-映射)
   - [8. 覆盖状态汇总](#8-覆盖状态汇总)
   - [9. 术语表](#9-术语表)
   - [10. 国际来源映射](#10-国际来源映射)

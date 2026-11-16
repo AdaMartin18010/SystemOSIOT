@@ -5,7 +5,7 @@
 
 - [系统性质 / System Properties](#系统性质--system-properties)
   - [📚 模块概览 / Module Overview](#-模块概览--module-overview)
-  - [🏗️ 知识结构 / Knowledge Structure](#️-知识结构--knowledge-structure)
+  - [🏗️ 知识结构 / Knowledge Structure](#-知识结构--knowledge-structure)
   - [🔗 相关模块 / Related Modules](#-相关模块--related-modules)
     - [前置知识](#前置知识)
     - [后续学习](#后续学习)

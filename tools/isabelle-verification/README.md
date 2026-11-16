@@ -8,6 +8,7 @@
   - [运行方式](#运行方式)
     - [前提](#前提)
     - [验证](#验证)
+- [或在 Isabelle/jEdit 中打开 IMP_BigStep.thy / RoutingTable.thy](#或在-isabellejedit-中打开-imp_bigstepthy--routingtablethy)
   - [新增工件说明](#新增工件说明)
     - [`RoutingTable.thy`](#routingtablethy)
   - [与项目模块的关联](#与项目模块的关联)

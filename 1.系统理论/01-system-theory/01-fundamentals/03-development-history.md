@@ -17,7 +17,7 @@
       - [系统科学发展期 (Development of Systems Science)](#系统科学发展期-development-of-systems-science)
       - [复杂性科学兴起期 (Rise of Complexity Science)](#复杂性科学兴起期-rise-of-complexity-science)
       - [现代系统科学期 (Modern Systems Science)](#现代系统科学期-modern-systems-science)
-  - [🏛️ 主要学派发展 / Development of Major Schools](#️-主要学派发展--development-of-major-schools)
+  - [🏛️ 主要学派发展 / Development of Major Schools](#-主要学派发展--development-of-major-schools)
     - [1. 一般系统论学派 (General Systems Theory School)](#1-一般系统论学派-general-systems-theory-school)
       - [1.1 创始人: 路德维希·冯·贝塔朗菲 (Ludwig von Bertalanffy)](#11-创始人-路德维希冯贝塔朗菲-ludwig-von-bertalanffy)
       - [1.2 发展脉络](#12-发展脉络)

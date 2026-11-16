@@ -26,6 +26,7 @@
     - [2. 逻辑一致性 / Logical Consistency](#2-逻辑一致性--logical-consistency)
     - [3. 相关性一致性 / Relevance Consistency](#3-相关性一致性--relevance-consistency)
     - [4. 语义一致性 / Semantic Consistency](#4-语义一致性--semantic-consistency)
+  - [质量治理注记（2026-11）](#质量治理注记2026-11)
 
 <!-- TOC END -->
 

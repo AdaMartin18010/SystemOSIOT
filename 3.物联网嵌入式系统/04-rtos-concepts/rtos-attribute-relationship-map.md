@@ -11,7 +11,7 @@
   - [4. 中断（Interrupt）](#4-中断interrupt)
   - [5. 内存管理（Memory Management）](#5-内存管理memory-management)
   - [6. 电源管理（Power Management）](#6-电源管理power-management)
-  - [7. 安全与保护（Safety \& Protection）](#7-安全与保护safety--protection)
+  - [7. 安全与保护（Safety & Protection）](#7-安全与保护safety--protection)
   - [8. 关系总图](#8-关系总图)
   - [9. 国际来源映射](#9-国际来源映射)
   - [10. 相关文件](#10-相关文件)

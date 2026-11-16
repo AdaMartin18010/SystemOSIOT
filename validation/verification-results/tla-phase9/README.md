@@ -1,5 +1,16 @@
 # TLA+ 验证日志索引
 
+
+<!-- TOC START -->
+
+- [TLA+ 验证日志索引](#tla-验证日志索引)
+  - [Phase 4：操作系统 / RTOS 形式化工件验证结果](#phase-4操作系统--rtos-形式化工件验证结果)
+  - [Phase 9：网络 / IoT / 容器形式化工件验证结果](#phase-9网络--iot--容器形式化工件验证结果)
+  - [复现命令](#复现命令)
+  - [维护记录](#维护记录)
+
+<!-- TOC END -->
+
 > 位置：`validation/verification-results/tla-phase9/`
 > 工具：TLC Model Checker（`tools/tla-specifications/tla2tools.jar`）
 

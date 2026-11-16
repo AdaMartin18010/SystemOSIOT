@@ -1,5 +1,13 @@
 # Kubernetes_Architecture
 
+
+<!-- TOC START -->
+
+- [Kubernetes_Architecture](#kubernetes_architecture)
+  - [质量治理注记（2026-11）](#质量治理注记2026-11)
+
+<!-- TOC END -->
+
 ## 质量治理注记（2026-11）
 
 本目录 1 个内容文件经全库质量审计（2026-11-17，修正链接文本误判后）归类为模板填充（C 类），已归档至 `docs/Refactor/archive/2026-quality-audit/tools/alloy-models/Kubernetes_Architecture/`（原相对路径不变，`git mv` 可恢复）。保留本 README 作为目录骨架。

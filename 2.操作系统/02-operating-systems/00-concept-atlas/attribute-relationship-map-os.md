@@ -4,14 +4,14 @@
 <!-- TOC START -->
 
 - [操作系统属性-关系映射（OS Attribute-Relationship Mapping）](#操作系统属性-关系映射os-attribute-relationship-mapping)
-  - [1. 进程与线程（Process \& Thread）](#1-进程与线程process--thread)
+  - [1. 进程与线程（Process & Thread）](#1-进程与线程process--thread)
   - [2. 调度（Scheduling）](#2-调度scheduling)
   - [3. 内存管理（Memory Management）](#3-内存管理memory-management)
   - [4. 文件系统（File System）](#4-文件系统file-system)
-  - [5. 设备与 I/O（Device \& I/O）](#5-设备与-iodevice--io)
+  - [5. 设备与 I/O（Device & I/O）](#5-设备与-iodevice--io)
   - [6. 网络（Networking）](#6-网络networking)
-  - [7. 安全与隔离（Security \& Isolation）](#7-安全与隔离security--isolation)
-  - [8. 接口与抽象层（Interface \& Abstraction）](#8-接口与抽象层interface--abstraction)
+  - [7. 安全与隔离（Security & Isolation）](#7-安全与隔离security--isolation)
+  - [8. 接口与抽象层（Interface & Abstraction）](#8-接口与抽象层interface--abstraction)
   - [9. 关系总图](#9-关系总图)
   - [10. 国际来源映射](#10-国际来源映射)
   - [11. 相关文件](#11-相关文件)

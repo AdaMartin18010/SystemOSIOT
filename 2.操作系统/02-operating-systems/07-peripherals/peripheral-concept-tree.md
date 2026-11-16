@@ -3,7 +3,7 @@
 
 <!-- TOC START -->
 
-- [外设与总线概念树（Peripheral \& Bus Concept Tree）](#外设与总线概念树peripheral--bus-concept-tree)
+- [外设与总线概念树（Peripheral & Bus Concept Tree）](#外设与总线概念树peripheral--bus-concept-tree)
   - [1. 全局概念树](#1-全局概念树)
   - [2. 外设分类与属性](#2-外设分类与属性)
     - [2.1 通用属性](#21-通用属性)

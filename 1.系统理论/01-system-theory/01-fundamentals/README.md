@@ -5,7 +5,7 @@
 
 - [基础理论 / Fundamentals](#基础理论--fundamentals)
   - [📚 模块概览 / Module Overview](#-模块概览--module-overview)
-  - [🏗️ 知识结构 / Knowledge Structure](#️-知识结构--knowledge-structure)
+  - [🏗️ 知识结构 / Knowledge Structure](#-知识结构--knowledge-structure)
   - [🔗 相关模块 / Related Modules](#-相关模块--related-modules)
     - [前置知识](#前置知识)
     - [后续学习](#后续学习)
@@ -27,6 +27,7 @@
     - [知识目标](#知识目标)
     - [能力目标](#能力目标)
     - [应用目标](#应用目标)
+  - [质量治理注记（2026-11）](#质量治理注记2026-11)
 
 <!-- TOC END -->
 

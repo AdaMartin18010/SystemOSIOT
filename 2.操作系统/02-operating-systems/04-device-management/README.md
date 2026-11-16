@@ -40,7 +40,8 @@
     - [云计算](#云计算)
   - [学习目标](#学习目标)
   - [实践项目](#实践项目)
-  - [I/O 与驱动模型来源映射 | I/O \& Driver Source Mapping](#io-与驱动模型来源映射--io--driver-source-mapping)
+  - [I/O 与驱动模型来源映射 | I/O & Driver Source Mapping](#io-与驱动模型来源映射--io--driver-source-mapping)
+  - [质量治理注记（2026-11）](#质量治理注记2026-11)
 
 <!-- TOC END -->
 

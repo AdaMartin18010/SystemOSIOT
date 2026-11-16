@@ -4,7 +4,7 @@
 <!-- TOC START -->
 
 - [SystemOSIOT领域关系图 / Domain Relationship Map](#systemosiot领域关系图--domain-relationship-map)
-  - [🗺️ 领域关系总览 / Domain Relationship Overview](#️-领域关系总览--domain-relationship-overview)
+  - [🗺️ 领域关系总览 / Domain Relationship Overview](#-领域关系总览--domain-relationship-overview)
   - [🔗 核心领域关联图 / Core Domain Relationships](#-核心领域关联图--core-domain-relationships)
     - [整体关系图 / Overall Relationship Diagram](#整体关系图--overall-relationship-diagram)
     - [详细依赖关系 / Detailed Dependency Relationships](#详细依赖关系--detailed-dependency-relationships)
@@ -14,8 +14,8 @@
       - [4. 分布式系统 (Distributed Systems)](#4-分布式系统-distributed-systems)
       - [5. 集群系统 (Cluster Systems)](#5-集群系统-cluster-systems)
       - [6. P2P系统 (P2P Systems)](#6-p2p系统-p2p-systems)
-      - [7. 物联网嵌入式系统 (IoT \& Embedded Systems)](#7-物联网嵌入式系统-iot--embedded-systems)
-      - [8. 容器与微服务 (Containers \& Microservices)](#8-容器与微服务-containers--microservices)
+      - [7. 物联网嵌入式系统 (IoT & Embedded Systems)](#7-物联网嵌入式系统-iot--embedded-systems)
+      - [8. 容器与微服务 (Containers & Microservices)](#8-容器与微服务-containers--microservices)
   - [🔄 技术演进路径 / Technology Evolution Path](#-技术演进路径--technology-evolution-path)
     - [技术发展脉络 / Technology Development Context](#技术发展脉络--technology-development-context)
     - [技术栈层次 / Technology Stack Layers](#技术栈层次--technology-stack-layers)

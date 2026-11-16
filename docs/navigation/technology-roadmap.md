@@ -4,7 +4,7 @@
 <!-- TOC START -->
 
 - [SystemOSIOT技术路线图 / Technology Roadmap](#systemosiot技术路线图--technology-roadmap)
-  - [🗺️ 技术路线图总览 / Technology Roadmap Overview](#️-技术路线图总览--technology-roadmap-overview)
+  - [🗺️ 技术路线图总览 / Technology Roadmap Overview](#-技术路线图总览--technology-roadmap-overview)
   - [🎯 发展愿景 / Development Vision](#-发展愿景--development-vision)
     - [长期愿景 (5-10年) / Long-term Vision](#长期愿景-5-10年--long-term-vision)
     - [中期目标 (2-5年) / Medium-term Goals](#中期目标-2-5年--medium-term-goals)

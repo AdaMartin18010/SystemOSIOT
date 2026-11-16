@@ -8,6 +8,7 @@
   - [运行方式](#运行方式)
     - [前提](#前提)
     - [验证](#验证)
+- [或使用 Lake 构建](#或使用-lake-构建)
   - [新增工件说明](#新增工件说明)
     - [`PacketSeqMonotonicity.lean`](#packetseqmonotonicitylean)
   - [与项目模块的关联](#与项目模块的关联)

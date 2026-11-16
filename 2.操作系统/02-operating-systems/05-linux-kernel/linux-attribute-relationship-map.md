@@ -5,12 +5,12 @@
 <!-- TOC START -->
 
 - [Linux 内核属性-关系映射（Linux Kernel Attribute-Relationship Mapping）](#linux-内核属性-关系映射linux-kernel-attribute-relationship-mapping)
-  - [1. 进程管理：task\_struct](#1-进程管理task_struct)
-  - [2. 调度：sched\_entity / sched\_class](#2-调度sched_entity--sched_class)
-  - [3. 内存管理：mm\_struct / VMA / Page](#3-内存管理mm_struct--vma--page)
+  - [1. 进程管理：task_struct](#1-进程管理task_struct)
+  - [2. 调度：sched_entity / sched_class](#2-调度sched_entity--sched_class)
+  - [3. 内存管理：mm_struct / VMA / Page](#3-内存管理mm_struct--vma--page)
   - [4. 文件系统：VFS 核心结构](#4-文件系统vfs-核心结构)
-  - [5. 网络：socket / sock / sk\_buff / net\_device](#5-网络socket--sock--sk_buff--net_device)
-  - [6. 设备与驱动：device / device\_driver / bus](#6-设备与驱动device--device_driver--bus)
+  - [5. 网络：socket / sock / sk_buff / net_device](#5-网络socket--sock--sk_buff--net_device)
+  - [6. 设备与驱动：device / device_driver / bus](#6-设备与驱动device--device_driver--bus)
   - [7. 安全与隔离：cred / LSM / namespace / cgroup](#7-安全与隔离cred--lsm--namespace--cgroup)
   - [8. 关系总图](#8-关系总图)
   - [9. 国际来源映射](#9-国际来源映射)
