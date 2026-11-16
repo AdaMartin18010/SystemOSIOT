@@ -106,3 +106,7 @@
 - [NIST Cybersecurity Framework](https://www.nist.gov/cyberframework)
 - [RFC 8446 — TLS 1.3](https://datatracker.ietf.org/doc/html/rfc8446)
 - [Newman, M. E. J. (2010). Networks: An Introduction. Oxford University Press.](https://academic.oup.com/book/5324)
+
+## 治理注记（2026-11 Phase 0 编号唯一化）
+
+`8.5.9–8.5.14` 系由原 `8.5.5/8.5.6/8.5.7/8.5.8` 同号冲突文件续编（图形化模型、表格与数据结构、多模态与跨学科表征、多表征小结与批判、网络系统多模态表达与未来展望、多表征知识图谱）。完整旧→新映射见 `docs/Refactor/cleanup-queue.md` 处理记录。

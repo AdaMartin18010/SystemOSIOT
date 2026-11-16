@@ -41,6 +41,7 @@
 |---|---|
 | [6.0.1 BitTorrent 与 DHT 协议标准映射](6.0.1%20BitTorrent%20与%20DHT%20协议标准映射.md) | BitTorrent BEP、Kademlia DHT、libp2p、IPFS 内容寻址条款级映射 |
 | [6.0.2 P2P 安全与隐私标准映射](6.0.2%20P2P%20安全与隐私标准映射.md) | WebRTC 安全、DID/VC、GDPR/eIDAS、NIST 去中心化身份条款级映射 |
+| [6.0.3 区块链与去中心化存储来源映射](6.0.3%20%E5%8C%BA%E5%9D%97%E9%93%BE%E4%B8%8E%E5%8E%BB%E4%B8%AD%E5%BF%83%E5%8C%96%E5%AD%98%E5%82%A8%E6%9D%A5%E6%BA%90%E6%98%A0%E5%B0%84.md) | Bitcoin、HotStuff、libp2p/IPFS、BEP 52 v2 来源与覆盖缺口 |
 
 ## 3. 标准条款映射表
 

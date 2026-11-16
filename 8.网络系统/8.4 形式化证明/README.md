@@ -108,3 +108,7 @@
 - [Lamport, L. Specifying Systems (TLA+)](https://lamport.azurewebsites.net/tla/book.html)
 - [RFC 793 — TCP Specification](https://datatracker.ietf.org/doc/html/rfc793)
 - [Baier & Katoen (2008). Principles of Model Checking. MIT Press.](https://mitpress.mit.edu/9780262026499/principles-of-model-checking/)
+
+## 治理注记（2026-11 Phase 0 编号唯一化）
+
+`8.4.10 证明部分小结与批判` 系由原 `8.4.8` 同号冲突续编；`8.4.7 证明哲学与科学方法论`、`8.4.9 证明与社会-伦理的关系` 为本次治理一并理顺的编号。完整旧→新映射见 `docs/Refactor/cleanup-queue.md` 处理记录。

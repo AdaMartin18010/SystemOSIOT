@@ -216,3 +216,7 @@
 - [EU AI Act](https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32024R1689)
 - [NIST Post-Quantum Cryptography](https://csrc.nist.gov/projects/post-quantum-cryptography)
 - [ITU-T Quantum Information Technology](https://www.itu.int/)
+
+## 治理注记（2026-11 Phase 0 编号唯一化）
+
+`8.6.10–8.6.20` 系由原 `8.6.1–8.6.8` 同号冲突文件续编（形式语义工程应用与案例→8.6.19、形式语义工具与自动化→8.6.20、形式语义定义与类型→8.6.15、数据流语义→8.6.16、语义模型→8.6.17、语义分析方法→8.6.18 等，原 `8.6.10 形式语义工程论证与完备性分析`、`8.6.11 形式语义知识体系总结` 编号保持不变）。完整旧→新映射见 `docs/Refactor/cleanup-queue.md` 处理记录。

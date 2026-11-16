@@ -31,6 +31,8 @@
 | 子文档 | 内容 |
 |---|---|
 | [4.0.1 分布式共识与一致性模型](4.0.1%20分布式共识与一致性模型.md) | CAP/PACELC/FLP/Paxos/Raft/BFT/一致性模型光谱 |
+| [4.0.2 CAP-FLP-PACELC-一致性模型权威来源映射](4.0.2%20CAP-FLP-PACELC-%E4%B8%80%E8%87%B4%E6%80%A7%E6%A8%A1%E5%9E%8B%E6%9D%83%E5%A8%81%E6%9D%A5%E6%BA%90%E6%98%A0%E5%B0%84.md) | CAP/F/P/L/Linearizability 权威来源与覆盖状态 |
+| [4.0.3 共识算法与复制协议来源映射](4.0.3%20%E5%85%B1%E8%AF%86%E7%AE%97%E6%B3%95%E4%B8%8E%E5%A4%8D%E5%88%B6%E5%8D%8F%E8%AE%AE%E6%9D%A5%E6%BA%90%E6%98%A0%E5%B0%84.md) | Paxos/Raft/PBFT/HotStuff 来源与覆盖缺口 |
 
 ## 3. 标准/论文映射表
 

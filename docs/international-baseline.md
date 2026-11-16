@@ -1,7 +1,7 @@
 # SystemOSIOT 国际化权威标准基线
 
-> 版本：1.4.0
-> 更新日期：2026-07-05
+> 版本：1.4.1
+> 更新日期：2026-07
 > 用途：定义项目各模块必须对齐的国际权威来源，作为引用、映射与审计的基线。
 
 <!-- TOC START -->
@@ -84,7 +84,7 @@
 | 协议 | MQTT | v5.0 (OASIS) | <https://docs.oasis-open.org/mqtt/mqtt/v5.0/mqtt-v5.0.html> |
 | 协议 | CoAP | RFC 7252/8323 | <https://doi.org/10.17487/RFC7252> |
 | 协议 | LwM2M | 1.2 | <https://omaspecworks.org/> |
-| 标准 | Matter / Thread | 1.4 / 1.4 | <https://csa-iot.org/all-solutions/matter/> |
+| 标准 | Matter / Thread | 1.6.1 / 1.4.1 | <https://csa-iot.org/all-solutions/matter/> |
 | RTOS | FreeRTOS Documentation | 最新 | <https://www.freertos.org/Documentation/RTOS-book> |
 | RTOS | Zephyr Project Documentation | 最新 | <https://docs.zephyrproject.org/> |
 | RTOS | RTEMS Documentation | 最新 | <https://docs.rtems.org/> |
@@ -119,7 +119,7 @@
 | 类型 | 名称 | 版本/年份 | 链接/DOI |
 |---|---|---|---|
 | 标准 | MPI Standard | 4.1 (2023) | <https://www.mpi-forum.org/docs/mpi-4.1/mpi41-report.pdf> |
-| 软件 | Slurm Workload Manager | 24.11 / 25.05 | <https://slurm.schedmd.com/> |
+| 软件 | Slurm Workload Manager | 26.05 / 25.11 | <https://slurm.schedmd.com/> |
 | 基准 | TOP500 / Green500 | 2025-06 | <https://top500.org/> |
 | 能耗 | Energy Aware Runtime (EAR) | v7.0 | <https://www.ear.energy/> |
 

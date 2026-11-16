@@ -150,3 +150,7 @@
 - [EU AI Act](https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32024R1689)
 - [NIST Post-Quantum Cryptography](https://csrc.nist.gov/projects/post-quantum-cryptography)
 - [ITU-T Quantum Information Technology](https://www.itu.int/)
+
+## 治理注记（2026-11 Phase 0 编号唯一化）
+
+`8.8.49–8.8.53` 系由原 `8.8.1–8.8.5` 同号冲突文件续编（网络系统的跨域集成与协同机制、智能化与自主演化、安全治理与多方协作、伦理挑战与社会影响、未来趋势与前沿展望）。为保持 `docs/toc.md` 中 `8.8.25–8.8.48` 专题链接稳定，续编自 8.8.49 起。完整映射见 `docs/Refactor/cleanup-queue.md` 处理记录。

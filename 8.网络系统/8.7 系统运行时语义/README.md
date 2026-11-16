@@ -149,3 +149,7 @@ if 队列长度持续上升 且 丢包率上升:
 - [EU AI Act](https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32024R1689)
 - [Newman, M. E. J. (2010). Networks: An Introduction. Oxford University Press.](https://academic.oup.com/book/5324)
 - [Lamport, L. Specifying Systems (TLA+)](https://lamport.azurewebsites.net/tla/book.html)
+
+## 治理注记（2026-11 Phase 0 编号唯一化）
+
+`8.7.9–8.7.16` 系由原 `8.7.1–8.7.8` 同号冲突文件续编（运行时语义定义与类型、运行时监控与动态分析、运行时监控、运行时优化与自适应机制、运行时异常与故障恢复、运行时语义的前沿挑战与发展趋势、运行时语义的跨界应用、运行时语义知识图谱）。完整旧→新映射见 `docs/Refactor/cleanup-queue.md` 处理记录。
