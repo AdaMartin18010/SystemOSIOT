@@ -6,16 +6,17 @@
 tasks:
   - id: T-BREVIEW
     title: B 类 175 个文件复审清仓
-    lane: gpu+hermes
+    lane: cpu+hermes（GPU 挂起期间的先行方案）
     priority: P0
     deps: []
     status: pending
     plan: >
-      每批 20-25 个：GPU 车道产出语义打分+近重复聚类（embedding）+模板填充检测
-      （作业卡模板见 states/queue/ 示例）；hermes 按抽审标准裁决
-      （真占位符/无来源预测/递归填充→archive；有公式图表映射价值→keep），
-      清单落 states/breview/batch-NNN.json，archive 项 git mv 后 gate 必须 PASS。
-      全量完成后活库 B 类清零，A 类占比 ≥70%。
+      阶段一（现在就能跑）：纯 CPU 信号规则粗筛 175 个 B（复用 content_quality_audit
+      指标：真占位符/证明提纲/模板对/引用密度/图码表），明显保留者与明显归档者先分流；
+      hermes 只对中间带（每批 20 个）做人工式精读裁决，清单落 states/breview/batch-NNN.json。
+      阶段二（GPU 配置就绪后）：对剩余中间带补语义打分+embedding 近重复聚类复核。
+      裁决标准不变：真占位符/无来源预测/递归填充→archive；有公式图表映射价值→keep。
+      archive 项 git mv 后 gate 必须 PASS；全量完成后活库 B 清零、A 占比 ≥70%。
     acceptance: python tools/ci_quality_gate.py 通过 且 states/breview/ 覆盖全部 175 个原始 B 文件
 
   - id: T-R7-REST
@@ -102,11 +103,12 @@ tasks:
     acceptance: gap-audit 对应 4 行全部 ✅
 
   - id: T-USER-TOOLCHAINS
-    title: 【用户依赖】WSL 装 Coq 8.19+/Isabelle 2024；UPPAAL 学术许可证
+    title: 【用户依赖·已挂起 2026-11-17】WSL 装 Coq 8.19+/Isabelle 2024；UPPAAL 学术许可证；GPU 端点配置；E:\_src 同步盘排查
     lane: user
-    priority: P1
+    priority: PARKED
     deps: []
-    status: pending
+    status: parked
+    plan: 用户明确"暂时不管，先挂起"。hermes 每轮不得升级提醒；仅用户主动提出时重启。相关联任务按无工具链方案推进（draft/CPU 兜底），integrity_check 继续担任失踪防线。
 
   - id: T-QUARTER
     title: 季度基线核查（T-R10 产出报告后周期执行）

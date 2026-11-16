@@ -1,19 +1,32 @@
 {
-  "version": 1,
-  "updated": "2026-11-17",
-  "session": null,
-  "current_task": null,
-  "completed": ["Phase0", "Phase1-partial", "PhaseQ-triage", "Wave1-R1", "Wave1-R2", "Wave1-R3", "Wave1-R4", "Wave1-R11", "Wave1-R12-merge-2.7"],
-  "blockers": [
-    "T-USER-TOOLCHAINS: 需用户安装 WSL Coq 8.19+/Isabelle 2024",
-    "T-USER-TOOLCHAINS: 需用户注册 UPPAAL 学术许可证",
-    "用户需确认 E:\\_src 是否被 OneDrive/安全软件管控（历史文件失踪事故）",
-    "GPU worker 端点环境变量 GPU_API_BASE/GPU_MODEL 未配置（T-BREVIEW 依赖）"
-  ],
-  "stats_baseline": {
-    "live_md": 636,
-    "A": 329, "B": 175, "C_exempt": 132,
-    "archive_total": 349
-  },
-  "notes": "每轮 loop 依 docs/hermes-runbook.md；任务全集 states/task-queue.yaml"
+ "version": 1,
+ "updated": "2026-11-17",
+ "session": null,
+ "current_task": null,
+ "completed": [
+  "Phase0",
+  "Phase1-partial",
+  "PhaseQ-triage",
+  "Wave1-R1",
+  "Wave1-R2",
+  "Wave1-R3",
+  "Wave1-R4",
+  "Wave1-R11",
+  "Wave1-R12-merge-2.7"
+ ],
+ "blockers": [],
+ "stats_baseline": {
+  "live_md": 636,
+  "A": 329,
+  "B": 175,
+  "C_exempt": 132,
+  "archive_total": 349
+ },
+ "notes": "用户依赖四项已挂起（parked_user_items），hermes 不得每轮升级提醒；按无工具链方案推进：T-R10/T-R7-REST/T-R5-SMT/TLA/COQ/ISA/ALLOY（draft）、T-BREVIEW 阶段一（CPU 粗筛）。每轮 loop 依 docs/hermes-runbook.md。",
+ "parked_user_items": [
+  "WSL 安装 Coq 8.19+/Isabelle 2024（用户 2026-11-17 挂起）",
+  "UPPAAL 学术许可证注册（用户挂起）",
+  "GPU_API_BASE/GPU_MODEL 端点配置（用户挂起）",
+  "E:\\_src OneDrive/安全软件排查（用户挂起；integrity_check 继续担任防线）"
+ ]
 }
