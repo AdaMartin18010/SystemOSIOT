@@ -98,7 +98,7 @@ bootz ${kernel_addr_r} - ${fdt_addr_r}
 
 ### 2.5 Linux 内核启动
 
-```
+```text
 _start / head.S
   ↓ setup_arch()           # 架构相关初始化
   ↓ mm_init()              # 内存管理初始化

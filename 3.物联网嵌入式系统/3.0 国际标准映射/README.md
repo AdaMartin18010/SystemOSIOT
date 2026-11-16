@@ -23,7 +23,7 @@
 | MQTT | v5.0 (OASIS) | <https://docs.oasis-open.org/mqtt/mqtt/v5.0/mqtt-v5.0.html> | 3.1, 3.6, 3.7 |
 | CoAP | RFC 7252/8323 | <https://doi.org/10.17487/RFC7252> | 3.1, 3.6 |
 | LwM2M | 1.2 | <https://omaspecworks.org/> | 3.1, 3.6 |
-| Matter / Thread | 1.4 / 1.4 | <https://csa-iot.org/all-solutions/matter/> | 3.1, 3.5, 3.7 |
+| Matter / Thread | 1.6.1 / 1.4.1 | <https://csa-iot.org/all-solutions/matter/> | 3.1, 3.5, 3.7 |
 | FreeRTOS | 最新 | <https://www.freertos.org/Documentation/RTOS-book> | 03-embedded-linux, 04-rtos-concepts |
 | Zephyr Project | 最新 | <https://docs.zephyrproject.org/> | 04-rtos-concepts, 06-decision-trees |
 | RTEMS | 最新 | <https://docs.rtems.org/> | 04-rtos-concepts |

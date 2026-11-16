@@ -138,7 +138,7 @@ graph TD
 
 ### 3.3 地址空间布局（x86-64）
 
-```
+```text
 高地址
 ├─ Kernel Space (128 TiB ~ 256 TiB，取决于配置)
 │   ├─ Direct mapping of physical memory

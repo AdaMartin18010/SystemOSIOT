@@ -43,19 +43,19 @@
 
 | 来源 | 核心内容 | 项目覆盖章节 | 证据文件 | 覆盖状态 |
 |---|---|---|---|---|
-| [ISO/IEC 7498-1](https://www.iso.org/standard/20269.html) | OSI Basic Reference Model | 8.1, 8.5 | 8.1/1.8.20 | 已覆盖 |
-| [RFC 791](https://datatracker.ietf.org/doc/html/rfc791)/793/1122 | IPv4 / TCP / host requirements | 8.1, 8.6 | 8.1/1.8.21, 8.6/8.6.1 | 已覆盖 |
-| [RFC 768](https://datatracker.ietf.org/doc/html/rfc768)/792/826/8200 | UDP / ICMP / ARP / IPv6 | 8.1, 8.6 | 8.1/1.8.21 | 已覆盖 |
-| [RFC 5681](https://datatracker.ietf.org/doc/html/rfc5681) | TCP congestion control | 8.1, 8.7 | 8.1/1.8.21 | 已覆盖 |
-| [RFC 9110](https://datatracker.ietf.org/doc/html/rfc9110)/9112/9113/9114 | HTTP semantics / messaging / caching / alt-svc | 8.1, 8.6 | 8.1/1.8.21 | 已覆盖 |
-| [RFC 8446](https://datatracker.ietf.org/doc/html/rfc8446) | TLS 1.3 | 8.1, 8.2, 8.8 | 8.1/1.8.22 | 已覆盖 |
-| [RFC 1034](https://datatracker.ietf.org/doc/html/rfc1034)/1035/2181 | DNS concepts / implementation / clarifications | 8.1, 8.6 | 8.1/1.8.22 | 已覆盖 |
-| [RFC 1122](https://datatracker.ietf.org/doc/html/rfc1122) | Host requirements (link, IP, TCP) | 8.1, 8.6 | 8.1/1.8.21 | 已覆盖 |
+| [ISO/IEC 7498-1](https://www.iso.org/standard/20269.html) | OSI Basic Reference Model | 8.1, 8.5 | 8.1/8.1.21 | 已覆盖 |
+| [RFC 791](https://datatracker.ietf.org/doc/html/rfc791)/793/1122 | IPv4 / TCP / host requirements | 8.1, 8.6 | 8.1/8.1.22, 8.6/8.6.1 | 已覆盖 |
+| [RFC 768](https://datatracker.ietf.org/doc/html/rfc768)/792/826/8200 | UDP / ICMP / ARP / IPv6 | 8.1, 8.6 | 8.1/8.1.22 | 已覆盖 |
+| [RFC 5681](https://datatracker.ietf.org/doc/html/rfc5681) | TCP congestion control | 8.1, 8.7 | 8.1/8.1.22 | 已覆盖 |
+| [RFC 9110](https://datatracker.ietf.org/doc/html/rfc9110)/9112/9113/9114 | HTTP semantics / messaging / caching / alt-svc | 8.1, 8.6 | 8.1/8.1.22 | 已覆盖 |
+| [RFC 8446](https://datatracker.ietf.org/doc/html/rfc8446) | TLS 1.3 | 8.1, 8.2, 8.8 | 8.1/8.1.23 | 已覆盖 |
+| [RFC 1034](https://datatracker.ietf.org/doc/html/rfc1034)/1035/2181 | DNS concepts / implementation / clarifications | 8.1, 8.6 | 8.1/8.1.23 | 已覆盖 |
+| [RFC 1122](https://datatracker.ietf.org/doc/html/rfc1122) | Host requirements (link, IP, TCP) | 8.1, 8.6 | 8.1/8.1.22 | 已覆盖 |
 | [RFC 9000](https://datatracker.ietf.org/doc/html/rfc9000) | QUIC transport protocol | 8.1, 8.6, 8.7, 8.8 | tools/tla-specifications/QUIC.tla, 8.8/8.8.25 | 已覆盖 |
-| [RFC 4271](https://datatracker.ietf.org/doc/html/rfc4271) | BGP-4 path selection | 8.1, 8.3 | 8.1/1.8.22 | 已覆盖 |
-| [RFC 2328](https://datatracker.ietf.org/doc/html/rfc2328) | OSPFv2 Dijkstra/LSA | 8.1, 8.3 | 8.1/1.8.22 | 已覆盖 |
-| [IEEE 802.3-2022](https://standards.ieee.org/standard/802.3-2022.html) | Ethernet MAC/PHY | 8.1, 8.5 | 8.1/1.8.21 | 已覆盖 |
-| [IEEE 802.1Q-2024](https://standards.ieee.org/standard/802.1Q-2024.html) | VLAN bridging | 8.1, 8.5 | 8.1/1.8.21 | 已覆盖 |
+| [RFC 4271](https://datatracker.ietf.org/doc/html/rfc4271) | BGP-4 path selection | 8.1, 8.3 | 8.1/8.1.23 | 已覆盖 |
+| [RFC 2328](https://datatracker.ietf.org/doc/html/rfc2328) | OSPFv2 Dijkstra/LSA | 8.1, 8.3 | 8.1/8.1.23 | 已覆盖 |
+| [IEEE 802.3-2022](https://standards.ieee.org/standard/802.3-2022.html) | Ethernet MAC/PHY | 8.1, 8.5 | 8.1/8.1.22 | 已覆盖 |
+| [IEEE 802.1Q-2024](https://standards.ieee.org/standard/802.1Q-2024.html) | VLAN bridging | 8.1, 8.5 | 8.1/8.1.22 | 已覆盖 |
 | [IEEE 802.11-2024](https://standards.ieee.org/standard/802.11-2024.html) | WLAN MAC/PHY | 8.1, 8.5 | 8.5/8.5.1, advanced-protocol-security-standards.md | 已覆盖 |
 | [P4-16](https://p4.org/) Language Spec | Protocol-independent packet processing | 8.8 | 8.0 国际标准映射, 8.8/8.8.31 | 已覆盖 |
 | 分层权威来源映射 | OSI/TCP/IP 各层 → 标准/RFC/工程文档 | 8.0, 8.1–8.8 | [layered-source-mapping.md](./layered-source-mapping.md) | 已覆盖 |
@@ -63,7 +63,7 @@
 | DNSSEC / DoH / DoT | DNS security & privacy | 8.2, 8.8 | advanced-protocol-security-standards.md, 8.8/8.8.27 | 已覆盖 |
 | RPKI / BGPsec / ROV | BGP security extensions | 8.2, 8.8 | advanced-protocol-security-standards.md, 8.8/8.8.26 | 已覆盖 |
 | IPsec / IKEv2 | VPN / tunnel security | 8.2, 8.8 | advanced-protocol-security-standards.md, 8.8/8.8.28 | 已覆盖 |
-| HTTP/2 / WebSocket | Application layer protocols | 8.1, 8.6 | 8.1/1.8.21, advanced-protocol-security-standards.md | 已覆盖 |
+| HTTP/2 / WebSocket | Application layer protocols | 8.1, 8.6 | 8.1/8.1.22, advanced-protocol-security-standards.md | 已覆盖 |
 | MPLS / SRv6 / EVPN | Routing & traffic engineering | 8.3, 8.8 | advanced-protocol-security-standards.md, 8.8/8.8.29 | 已覆盖 |
 | VXLAN / Geneve / CNI | Data center network virtualization | 8.8 | advanced-protocol-security-standards.md, 8.8/8.8.30 | 已覆盖 |
 | WebSocket / HTTP/2 | Full-duplex Web channels and multiplexing | 8.6, 8.8 | advanced-protocol-security-standards.md, 8.8/8.8.33 | 已覆盖 |
