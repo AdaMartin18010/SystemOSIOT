@@ -1,0 +1,154 @@
+# SystemOSIOT 任务队列（hermes 唯一权威任务清单，2026-11-17 初始化）
+# 字段：id/title/lane(P: cpu|gpu|hermes 或组合)/priority/deps/status/plan/acceptance
+# status: pending | running | done | failed | parked
+# 每轮 loop 依 docs/hermes-runbook.md §3 选择任务；结构任务完成必须过 gate+integrity 双检。
+
+tasks:
+  - id: T-BREVIEW
+    title: B 类 175 个文件复审清仓
+    lane: gpu+hermes
+    priority: P0
+    deps: []
+    status: pending
+    plan: >
+      每批 20-25 个：GPU 车道产出语义打分+近重复聚类（embedding）+模板填充检测
+      （作业卡模板见 states/queue/ 示例）；hermes 按抽审标准裁决
+      （真占位符/无来源预测/递归填充→archive；有公式图表映射价值→keep），
+      清单落 states/breview/batch-NNN.json，archive 项 git mv 后 gate 必须 PASS。
+      全量完成后活库 B 类清零，A 类占比 ≥70%。
+    acceptance: python tools/ci_quality_gate.py 通过 且 states/breview/ 覆盖全部 175 个原始 B 文件
+
+  - id: T-R7-REST
+    title: 形式化声称-工件挂钩收尾
+    lane: cpu+hermes
+    priority: P0
+    deps: []
+    status: pending
+    plan: >
+      grep 收紧正则全库复扫（排除归档区与 gap-audit 自身）；每条命中由 hermes 判定：
+      有 tools/ 工件→补链接；无工件→改口径或挂免责声明模板（参照 7.8.2.1.1 先例）。
+    acceptance: 复扫结果仅剩"有工件支撑"或"已免责声明"两类，清单落 states/journal.md
+
+  - id: T-R10
+    title: 季度基线版本核查脚本
+    lane: cpu
+    priority: P0
+    deps: []
+    status: pending
+    plan: >
+      写 tools/baseline_version_check.py：解析 docs/international-baseline.md 表格中的
+      官方链接（ISO/IEC/IEEE/IETF/3GPP/NIST/K8s/Slurm/Matter 等），逐个 HTTP HEAD
+      探测（带缓存与超时），输出"版本疑似过期/链接失效"报告到 research/。
+      只读网络探测，不改基线文件。
+    acceptance: 脚本对已知条目（Matter 1.6.1、Slurm 26.05）输出报告且退出码 0
+
+  - id: T-R5-SMT
+    title: 形式化工件：SMT/约束类（Z3 本机可验）
+    lane: cpu+hermes
+    priority: P1
+    deps: []
+    status: pending
+    plan: >
+      从 yaml dangling_artifact_register 中挑可 SMT 化的 2 项（候选：
+      formal_safety_requirements、risk_models 的约束骨架），写 .smt2 草图到
+      tools/smt-examples/ 并用 z3 求解验证；登记 gap-audit 状态 draft→verified。
+    acceptance: z3 求解 sat/unsat 输出存在且脚本复跑一致
+
+  - id: T-R5-TLA
+    title: 形式化工件：TLA+ 草案（Paxos 简化/两阶段提交）
+    lane: hermes
+    priority: P1
+    deps: []
+    status: pending
+    plan: >
+      参照 tools/tla-specifications/Raft.tla 风格写 Paxos-simple 与 TwoPhase.tla 草案；
+      若本机有 tla2tools 则跑 TLC，否则标记 draft（不声称 verified）。
+    acceptance: 文件存在 + 语法经 tla2tools 解析（无工具则人工走查 + draft 标注）
+
+  - id: T-R5-COQ
+    title: 形式化工件：Coq 草图（RMA 可调度性 / 契约）
+    lane: hermes
+    priority: P1
+    deps: []
+    status: pending
+    plan: 写 tools/coq-verification/ 草图（Liu&Layland RMA 充分性陈述 + DbC 契约骨架）；本机无 coqc 则 draft。
+    acceptance: coqc 编译通过（有工具）或 draft 标注 + 结构与 SF 教材惯例一致
+
+  - id: T-R5-ISA
+    title: 形式化工件：Isabelle 草图（Hoare/分离逻辑）
+    lane: hermes
+    priority: P1
+    deps: []
+    status: pending
+    plan: 写 tools/isabelle-verification/Hoare_Simple.thy（IMP 霍尔逻辑基础规则 + 示例引理）；无 isabelle 则 draft。
+    acceptance: isabelle build 通过（有工具）或 draft 标注
+
+  - id: T-R5-ALLOY
+    title: 形式化工件：Alloy VFS 模型
+    lane: hermes
+    priority: P1
+    deps: []
+    status: pending
+    plan: 写 tools/alloy-models/VFS.als（inode/ dentry/ 目录无环约束）；Alloy Analyzer 可用则跑实例。
+    acceptance: analyzer 无矛盾实例（有工具）或 draft 标注
+
+  - id: T-R6-VERIFY
+    title: 4 项待验证工件复验（OSScheduler/OSMemory/OS_Scheduler/UPPAAL×2）
+    lane: cpu
+    priority: P1
+    deps: [T-USER-TOOLCHAINS]
+    status: pending
+    plan: 工具链就绪后 coqc/Isabelle/UPPAAL 跑通，更新 validation/formal-artifacts-gap-audit.md 状态列。
+    acceptance: gap-audit 对应 4 行全部 ✅
+
+  - id: T-USER-TOOLCHAINS
+    title: 【用户依赖】WSL 装 Coq 8.19+/Isabelle 2024；UPPAAL 学术许可证
+    lane: user
+    priority: P1
+    deps: []
+    status: pending
+
+  - id: T-QUARTER
+    title: 季度基线核查（T-R10 产出报告后周期执行）
+    lane: cpu
+    priority: P2
+    deps: [T-R10]
+    status: pending
+    plan: 每季度运行 tools/baseline_version_check.py，报告落 research/，diff 到 docs/international-baseline.md（改版本需用户确认）。
+    acceptance: 报告文件存在并 journal 记录
+
+  - id: T-FLIPFLOP-WATCH
+    title: 审计抖动监控（CI gate 失败时触发）
+    lane: hermes
+    priority: P2
+    deps: []
+    status: pending
+    plan: 仅当 ci_quality_gate FAIL 时启动：定位新 C 类文件，按政策归档或申请豁免，恢复 gate PASS。
+    acceptance: gate PASS
+
+  - id: T-ARCHIVE-REVIEW
+    title: 归档区删除评估（保留期满）
+    lane: hermes
+    priority: P2
+    deps: []
+    status: pending
+    plan: 2027-02 评估 2026-phase0 / 2026-quality-audit 批次删除；需用户确认后执行。
+    acceptance: 用户确认记录于 journal
+
+  - id: T-WAVE3
+    title: Wave 3 血肉重写（八域深文件）【用户暂缓】
+    lane: gpu+hermes
+    priority: PARKED
+    deps: [T-BREVIEW]
+    status: parked
+    plan: 暂缓。未来重启时：每域每维度以 A 类最高分为底稿重写为一个深文件，GPU 车道承担初稿与引用核查。
+    acceptance: —
+
+  - id: T-FRONTIER
+    title: 前沿 stub 50 目录立项评估【维持归档，不立项】
+    lane: hermes
+    priority: PARKED
+    deps: []
+    status: parked
+    plan: 不主动推进；用户提出立项时再走准入流程（重编号 + X.0 映射 + 六维度最小集）。
+    acceptance: —

@@ -21,7 +21,7 @@ from pathlib import Path
 
 CSV_PATH = Path("validation/content-audit-detail.csv")
 ARCHIVE_ROOT = Path("docs/Refactor/archive/2026-quality-audit")
-EXEMPT_PREFIXES = ("research/", "docs/", ".vscode/")
+EXEMPT_PREFIXES = ("research/", "docs/", "states/", ".vscode/")
 EXEMPT_FILES = {"API文档标准.md"}
 EXEMPT_MARKS = ("国际标准映射",)  # 对齐核心层永不自动归档，走人工/B 类评审
 

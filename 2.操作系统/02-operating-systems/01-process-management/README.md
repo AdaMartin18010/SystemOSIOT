@@ -41,8 +41,8 @@
 
 ## 文件列表
 
-- [01-process-concepts.md](./01-process-concepts.md) — 进程基本概念、状态、PCB、创建与终止
-- [02-process-scheduling.md](./02-process-scheduling.md) — 调度算法、调度策略与调度器实现
+- [01-process-concepts.md](../../../docs/Refactor/archive/2026-quality-audit/2.操作系统/02-operating-systems/01-process-management/01-process-concepts.md) — 进程基本概念、状态、PCB、创建与终止
+- [02-process-scheduling.md](../../../docs/Refactor/archive/2026-quality-audit/2.操作系统/02-operating-systems/01-process-management/02-process-scheduling.md) — 调度算法、调度策略与调度器实现
 - [03-real-time-scheduling.md](./03-real-time-scheduling.md) — 实时调度：RMS/EDF、优先级倒置、PREEMPT_RT、可调度性分析
 
 ## 核心概念

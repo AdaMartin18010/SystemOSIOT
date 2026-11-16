@@ -164,7 +164,7 @@ path,lines,score,class,citations,math,mermaid,code,tables,placeholders,proof_tmp
 2.操作系统/2.4 形式化证明/2.4.2 证明过程.md,426,21,A-保留,0,124,0,3,0,0,0,
 2.操作系统/2.4 形式化证明/2.4.3 证明符号与约定.md,416,15,B-待评审,0,204,0,0,0,0,0,
 2.操作系统/2.4 形式化证明/2.4.4 算法与复杂度分析.md,640,25,A-保留,0,63,0,18,0,0,0,
-2.操作系统/2.4 形式化证明/README.md,104,3,C-归档候选,0,0,0,0,0,0,0,
+2.操作系统/2.4 形式化证明/README.md,100,3,C-归档候选,0,0,0,0,0,0,0,
 2.操作系统/2.5 多表征/2.5.1 概念图.md,446,10,B-待评审,0,0,18,0,0,0,0,
 2.操作系统/2.5 多表征/2.5.3 数学符号.md,365,15,B-待评审,0,203,0,0,0,0,0,
 2.操作系统/2.5 多表征/README.md,88,3,C-归档候选,0,0,0,0,0,0,0,
@@ -299,9 +299,6 @@ path,lines,score,class,citations,math,mermaid,code,tables,placeholders,proof_tmp
 6.P2P系统/6.4 形式化证明/README.md,88,3,C-归档候选,0,0,0,0,0,0,0,
 6.P2P系统/6.5 多表征/README.md,88,3,C-归档候选,0,0,0,0,0,0,0,
 6.P2P系统/6.6 形式语义/6.6.1 语义定义.md,431,17,B-待评审,0,55,0,12,0,0,0,重复目录
-6.P2P系统/6.6 形式语义/6.6.2 语义模型.md,537,7,C-归档候选,0,94,0,0,0,0,0,重复目录
-6.P2P系统/6.6 形式语义/6.6.3 语义分析方法.md,492,7,C-归档候选,0,70,0,0,0,0,0,重复目录
-6.P2P系统/6.6 形式语义/6.6.4 语义与结构-证明的关系.md,544,7,C-归档候选,0,69,0,0,0,0,0,重复目录
 6.P2P系统/6.6 形式语义/README.md,89,1,C-归档候选,0,0,0,0,0,0,0,
 6.P2P系统/6.7 系统运行时语义/6.7.2 典型运行时机制分析.md,122,11,B-待评审,0,1,2,2,0,0,0,
 6.P2P系统/6.7 系统运行时语义/README.md,138,8,C-归档候选,0,0,1,1,6,0,0,
@@ -324,7 +321,6 @@ path,lines,score,class,citations,math,mermaid,code,tables,placeholders,proof_tmp
 7.容器与微服务/7.1 知识梳理/7.1.1.2 微服务架构形式化定义.md,374,27,A-保留,3,113,0,0,0,0,0,
 7.容器与微服务/7.1 知识梳理/7.1.1.3 服务网格形式化定义.md,378,35,A-保留,5,108,0,0,0,0,0,
 7.容器与微服务/7.1 知识梳理/7.1.6 容器技术与微服务/7.1.6 容器技术与微服务.md,168,10,B-待评审,0,17,1,0,7,0,0,重复目录
-7.容器与微服务/7.1 知识梳理/7.1.6 容器技术与微服务/7.1.6.1 容器技术发展趋势.md,145,7,C-归档候选,0,8,1,0,7,0,0,重复目录
 7.容器与微服务/7.1 知识梳理/7.1.6 容器技术与微服务/README.md,13,0,C-归档候选,0,0,0,0,0,0,0,
 7.容器与微服务/7.1 知识梳理/7.1.6.1.1 安全容器技术.md,647,18,B-待评审,0,40,4,0,29,0,0,重复目录
 7.容器与微服务/7.1 知识梳理/7.1.6.2 微服务架构发展趋势.md,121,18,B-待评审,0,10,1,0,7,0,0,
@@ -578,6 +574,7 @@ Analysis/操作系统运行时语义跨平台映射.md,144,13,B-待评审,2,0,0,
 API文档标准.md,940,33,A-保留,8,0,0,30,48,0,0,
 docs/concept-analysis-templates.md,266,26,A-保留,1,0,5,4,29,0,0,
 docs/content-governance-rules.md,70,8,C-归档候选,0,0,0,0,0,0,0,
+docs/hermes-runbook.md,106,3,C-归档候选,0,1,0,1,5,0,0,
 docs/international-baseline.md,275,36,A-保留,211,0,0,0,221,0,0,
 docs/navigation/content-migration-guide.md,347,11,B-待评审,0,0,0,6,26,0,0,
 docs/navigation/domain-map.md,343,2,C-归档候选,0,0,2,2,0,1,0,占位符x1
@@ -586,7 +583,7 @@ docs/navigation/migration-guide.md,292,5,C-归档候选,0,0,0,2,15,0,0,
 docs/navigation/technology-roadmap.md,437,0,C-归档候选,0,0,1,1,30,1,0,占位符x1
 docs/os-network-peripheral-interface-terminology.md,115,6,C-归档候选,0,0,0,0,55,0,0,
 docs/README.md,13,0,C-归档候选,0,0,0,0,0,0,0,
-docs/Refactor/cleanup-queue.md,83,1,C-归档候选,0,0,0,0,21,0,0,
+docs/Refactor/cleanup-queue.md,84,1,C-归档候选,0,0,0,0,22,0,0,
 docs/Refactor/README.md,210,0,C-归档候选,0,0,0,0,0,0,0,
 docs/Refactor/references.md,105,2,C-归档候选,1,0,0,0,50,0,0,重复目录
 docs/Refactor/持续执行进度报告.md,360,0,C-归档候选,0,0,0,0,6,0,0,
@@ -610,6 +607,7 @@ research/2026-phase1-mapping-report.md,109,5,C-归档候选,0,0,0,0,28,0,0,
 research/2026-phase2-formal-artifacts-report.md,90,2,C-归档候选,0,0,0,0,32,0,0,
 research/empirical-framework/README.md,681,25,A-保留,0,20,0,17,0,0,0,
 research/empirical-validation-framework.md,889,13,B-待评审,0,0,0,19,46,0,0,
+states/journal.md,9,0,C-归档候选,0,0,0,0,0,0,0,
 testing/benchmark-framework/README.md,487,10,B-待评审,0,0,0,20,0,0,0,
 tools/alloy-models/Kubernetes_Architecture/README.md,13,0,C-归档候选,0,0,0,0,0,0,0,
 tools/alloy-models/README.md,64,10,B-待评审,1,0,0,1,11,0,0,

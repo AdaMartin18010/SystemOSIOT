@@ -60,8 +60,8 @@
 | 子文档 | 内容 |
 |---|---|
 | [RTOS 安全认证国际标准映射](rtos-safety-standards-mapping.md) | ISO 26262 / IEC 61508 / DO-178C / IEC 62304 / ARINC 653 与 RTOS 机制映射 |
-| [3.0.3 ISO/IEC 30141:2024 物联网参考架构映射](3.0.3%20ISO-IEC-30141-2024%20物联网参考架构映射.md) | IoT 参考架构视图与项目模块映射 |
-| [3.0.4 NIST SP 800-213 / IEC 62443 物联网安全映射](3.0.4%20NIST-SP-800-213%20与%20IEC-62443%20物联网安全映射.md) | IoT 设备网络安全与 IACS 安全计划映射 |
+| [3.0.3 ISO/IEC 30141:2024 物联网参考架构映射](../../docs/Refactor/archive/2026-quality-audit/3.物联网嵌入式系统/3.0%20国际标准映射/3.0.3%20ISO-IEC-30141-2024%20物联网参考架构映射.md) | IoT 参考架构视图与项目模块映射 |
+| [3.0.4 NIST SP 800-213 / IEC 62443 物联网安全映射](../../docs/Refactor/archive/2026-quality-audit/3.物联网嵌入式系统/3.0%20国际标准映射/3.0.4%20NIST-SP-800-213%20与%20IEC-62443%20物联网安全映射.md) | IoT 设备网络安全与 IACS 安全计划映射 |
 | [3.0.5 Matter / Thread / LwM2M 设备互操作协议映射](3.0.5%20Matter-Thread-LwM2M%20设备互操作协议映射.md) | 智能家居与轻量级 M2M 协议映射 |
 | 硬实时调度理论 | Liu & Layland (1973) | Rate Monotonic Utilization Bound | `3.1 知识梳理/`, `3.4 形式化证明/`, `04-rtos-concepts/real-time-schedulability.md` |
 | 实时系统教材 | Buttazzo (2024) | RM / EDF / Response Time Analysis | `3.1 知识梳理/`, `3.4 形式化证明/`, `04-rtos-concepts/` |

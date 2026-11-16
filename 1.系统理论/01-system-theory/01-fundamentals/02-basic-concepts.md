@@ -422,7 +422,7 @@ $$F = \{f_1, f_2, ..., f_m\}$$
 
 ## 导航链接
 
-- **上一级**: [知识梳理](01-knowledge-organization.md)
+- **上一级**: [知识梳理](../../../docs/Refactor/archive/2026-quality-audit/1.系统理论/01-system-theory/01-fundamentals/01-knowledge-organization.md)
 - **下一级**: [发展历程](03-development-history.md)
 - **相关领域**:
   - [架构设计](../02-architecture/README.md)

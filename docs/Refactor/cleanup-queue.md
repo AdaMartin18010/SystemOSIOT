@@ -80,4 +80,5 @@
 | 2026-11-17 | Phase 0 归档：域 7 根目录散件 24 项、旧导航目录 `7.容器微服务/`、前沿 stub 50 目录、域 4 跨域重复 5 文件（改为索引桩）、空目录 states/ | 80+ | Kimi Code CLI |
 | 2026-11-17 | Phase 0-B：yaml 悬空工件 10 项登记 planned；Phase 1：新增 X.0 条款级映射 10 文件（1.0.4–1.0.6、3.0.3–3.0.5、4.0.2–4.0.3、5.0.3、6.0.3），`docs/international-baseline.md` 升 v1.4.1（Matter 1.6.1、Slurm 26.05/25.11 等经 WebSearch 核实） | 10+ | Kimi Code CLI（含中断子代理已完成的现场收尾） |
 | 2026-11-17 | **Phase Q 内容质量分诊**（用户指控低质，经审计证实）：`tools/content_quality_audit.py` 全库扫描 → 修正链接/mermaid/声称正则误判 → 双向对账（归档 328→恢复 133→抽审再归档 12）；B 类抽审 20 个定标准；`2026-quality-audit/` 归档 196 个；7.8.2.1.1 加无工件声称免责声明 | 500+ | Kimi Code CLI |
+| 2026-11-17 | **Wave 1 收尾（R2/R4/R12）+ 文件丢失事故处置**：TOC 全量再生成（747 文件 0 失败）；断链扫描 58 处；CI 质量门落地（gate 本地 PASS）；2.7 并入 2.4 完成；**两波未授权文件删除**（归档区 246 个 + docs/toc.md 等 3 个，疑与 E:\_src 的 OneDrive/同步盘或安全软件有关，已全部从 git 历史恢复；docs/ 列入审计豁免；reconcile 自动恢复改为 --restore 手动模式防抖动循环） | 1000+ | Kimi Code CLI |
 | 2026-11-17 | **Wave 1（R1/R3/R11）完成**：B 类规则归档 6 保留 168（活库定格 635）；声称复扫清零（唯一命中为 gap-audit 自身、有工件支撑）；删除老批次 `archive/7-container/`；reconcile 增加 R1 规则门 + 人工抽审 BYPASS 清单防回滚 | 20+ | Kimi Code CLI |

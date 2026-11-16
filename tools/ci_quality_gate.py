@@ -17,7 +17,7 @@ import sys
 from pathlib import Path
 
 CSV_PATH = Path("validation/content-audit-detail.csv")
-EX_PREFIX = ("research/", "docs/", ".vscode/")
+EX_PREFIX = ("research/", "docs/", "states/", ".vscode/")
 EX_MARKS = ("国际标准映射",)
 EX_FILES = {"API文档标准.md"}
 

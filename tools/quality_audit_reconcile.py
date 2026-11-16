@@ -20,7 +20,7 @@ from content_quality_audit import audit_file  # noqa: E402
 
 CSV_PATH = Path("validation/content-audit-detail.csv")
 ARCHIVE_ROOT = Path("docs/Refactor/archive/2026-quality-audit")
-EXEMPT_PREFIXES = ("research/", "docs/", ".vscode/")
+EXEMPT_PREFIXES = ("research/", "docs/", "states/", ".vscode/")
 EXEMPT_FILES = {"API文档标准.md"}
 EXEMPT_MARKS = ("国际标准映射",)
 MARKER = "## 质量治理注记（2026-11）"
@@ -71,8 +71,9 @@ def main() -> None:
                 or Path(p).name == "README.md" or any(m in p for m in EXEMPT_MARKS))
 
     restored, moved = [], []
-    # 1) 恢复误归档 / 2) 补归档新 C（--notes-only 时跳过移动，仅同步注记）
-    if not NOTES_ONLY and ARCHIVE_ROOT.exists():
+    # 1) 恢复误归档（默认关闭：仅在显式 --restore 时启用；自动恢复已完成其历史使命，
+    #    防止边界文件 B↔C 抖动导致归档-回滚循环）
+    if "--restore" in sys.argv and ARCHIVE_ROOT.exists():
         for f in sorted(ARCHIVE_ROOT.rglob("*.md")):
             rel = f.relative_to(ARCHIVE_ROOT).as_posix()
             if f.name == "README.md":

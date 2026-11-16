@@ -36,9 +36,9 @@
 | 子文档 | 内容 |
 |---|---|
 | [1.0.1 ISO/IEC/IEEE 15288:2023 映射](1.0.1%20ISO-IEC-IEEE-15288-2023.md) | 四大过程组与项目七维框架的详细映射 |
-| [1.0.2 SEBoK 映射](1.0.2%20SEBoK.md) | SEBoK 七大部分与项目模块对照 |
+| [1.0.2 SEBoK 映射](../../docs/Refactor/archive/2026-quality-audit/1.系统理论/1.0%20国际标准映射/1.0.2%20SEBoK.md) | SEBoK 七大部分与项目模块对照 |
 | [1.0.3 SysML v2 / KerML 映射](1.0.3%20SysML-v2.md) | 标准建模语言与多表征/形式化结构对接 |
-| [1.0.4 ISO/IEC/IEEE 42010:2022 架构描述映射](1.0.4%20ISO-IEC-IEEE-42010-2022%20架构描述标准映射.md) | 视点/视图/模型种类与系统架构内容映射 |
+| [1.0.4 ISO/IEC/IEEE 42010:2022 架构描述映射](../../docs/Refactor/archive/2026-quality-audit/1.系统理论/1.0%20国际标准映射/1.0.4%20ISO-IEC-IEEE-42010-2022%20架构描述标准映射.md) | 视点/视图/模型种类与系统架构内容映射 |
 | [1.0.5 ISO/IEC/IEEE 24641:2023 MBSSE 映射](1.0.5%20ISO-IEC-IEEE-24641-MBSE%20方法工具映射.md) | 基于模型的系统与软件工程方法工具映射 |
 | [1.0.6 INCOSE SE Handbook 5th + SEBoK 映射](1.0.6%20INCOSE-SE-Handbook-5th%20知识体系映射.md) | SE 流程与知识体系映射 |
 

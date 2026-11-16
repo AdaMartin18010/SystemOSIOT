@@ -54,8 +54,8 @@
 | MPI 4.0 第7章 | Process Topologies | 5.1, 5.3 | [5.1.1 基本概念](../5.1%20知识梳理/5.1.1%20基本概念.md)、[5.0.1 MPI 与 HPC 标准映射](5.0.1%20MPI%20与%20HPC%20标准映射.md) | 未覆盖 |
 | MPI 4.0 第11章 | One-Sided Communication | 5.1, 5.6 | [5.0.1 MPI 与 HPC 标准映射](5.0.1%20MPI%20与%20HPC%20标准映射.md) | 未覆盖 |
 | OpenMP 5.2/6.0 第11章 | Worksharing-Loop Constructs | 5.1, 5.7 | [5.0.1 MPI 与 HPC 标准映射](5.0.1%20MPI%20与%20HPC%20标准映射.md) | 未覆盖 |
-| Slurm 26.05 Scheduling | Partitions, QoS, Backfill, Preemption, Power Management | 5.1, 5.7 | [5.7.1 运行时行为与调度模型](../5.7%20系统运行时语义/5.7.1%20运行时行为与调度模型.md)、[5.0.2 集群调度与资源管理标准映射](5.0.2%20集群调度与资源管理标准映射.md)、[5.0.3 集群性能基准与能耗标准映射](5.0.3%20%E9%9B%86%E7%BE%A4%E6%80%A7%E8%83%BD%E5%9F%BA%E5%87%86%E4%B8%8E%E8%83%BD%E8%80%97%E6%A0%87%E5%87%86%E6%98%A0%E5%B0%84.md) | 部分覆盖 |
-| Kubernetes v1.33 Scheduling | kube-scheduler、Scheduling Framework、Pod Affinity/Anti-affinity | 5.1, 5.7 | [5.7.1 运行时行为与调度模型](../5.7%20系统运行时语义/5.7.1%20运行时行为与调度模型.md)、[5.0.2 集群调度与资源管理标准映射](5.0.2%20集群调度与资源管理标准映射.md) | 部分覆盖 |
+| Slurm 26.05 Scheduling | Partitions, QoS, Backfill, Preemption, Power Management | 5.1, 5.7 | [5.7.1 运行时行为与调度模型](../../docs/Refactor/archive/2026-quality-audit/5.集群系统/5.7%20系统运行时语义/5.7.1%20运行时行为与调度模型.md)、[5.0.2 集群调度与资源管理标准映射](5.0.2%20集群调度与资源管理标准映射.md)、[5.0.3 集群性能基准与能耗标准映射](5.0.3%20%E9%9B%86%E7%BE%A4%E6%80%A7%E8%83%BD%E5%9F%BA%E5%87%86%E4%B8%8E%E8%83%BD%E8%80%97%E6%A0%87%E5%87%86%E6%98%A0%E5%B0%84.md) | 部分覆盖 |
+| Kubernetes v1.33 Scheduling | kube-scheduler、Scheduling Framework、Pod Affinity/Anti-affinity | 5.1, 5.7 | [5.7.1 运行时行为与调度模型](../../docs/Refactor/archive/2026-quality-audit/5.集群系统/5.7%20系统运行时语义/5.7.1%20运行时行为与调度模型.md)、[5.0.2 集群调度与资源管理标准映射](5.0.2%20集群调度与资源管理标准映射.md) | 部分覆盖 |
 | OGF JSDL v1.0 (GFD.56) | Job Submission Description Language | 5.1, 5.7 | [5.0.2 集群调度与资源管理标准映射](5.0.2%20集群调度与资源管理标准映射.md) | 未覆盖 |
 | OGF DRMAA v2.2 | Job Submission, Monitoring and Control | 5.1, 5.7 | [5.0.2 集群调度与资源管理标准映射](5.0.2%20集群调度与资源管理标准映射.md) | 未覆盖 |
 | HPCG 3.1 | High Performance Conjugate Gradients Benchmark | 5.1, 5.2, 5.5 | [5.0.1 MPI 与 HPC 标准映射](5.0.1%20MPI%20与%20HPC%20标准映射.md) | 未覆盖 |

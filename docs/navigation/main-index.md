@@ -151,21 +151,21 @@ SystemOSIOT是一个综合性的系统科学、操作系统和物联网技术知
 - [技术路线图](technology-roadmap.md) - 技术发展趋势和路线规划
 - [领域关系图](domain-map.md) - 各领域间的关联关系
 - [项目结构优化报告](../项目结构优化分析报告.md) - 项目结构优化详情
-- [多视角-操作系统_虚拟化_容器_图灵机综合分析](../../Analysis/多视角-操作系统_虚拟化_容器_图灵机综合分析.md) - 本文整合 OS/vSphere/VMware/Docker/图灵机视角
+- [多视角-操作系统_虚拟化_容器_图灵机综合分析](../Refactor/archive/2026-quality-audit/Analysis/多视角-操作系统_虚拟化_容器_图灵机综合分析.md) - 本文整合 OS/vSphere/VMware/Docker/图灵机视角
 - [Analysis 索引](../../Analysis/README.md) - 本目录下文档的索引与导航
-- [NSX × CNI 策略与微分段映射](../../Analysis/NSX-与-CNI-策略与微分段映射.md) - 跨层策略统一与验证
-- [混合场景-基准与SLO-矩阵](../../validation/verification-results/混合场景-基准与SLO-矩阵.md) - 性能与可靠性验证模板
-- [策略回放用例库](../../validation/verification-results/策略回放用例库.md) - NSX×CNI×应用的回放验证
-- [目录视角映射（模板）](../../Analysis/目录视角映射-模板.md) - 快速在子目录落地多视角
-- [DRS × K8s 调度对照与协同](../../Analysis/DRS-与-K8s-调度对照与协同.md) - 调度目标/时序与协同策略
-- [跨层可观测性：统一时间线指南](../../Analysis/跨层可观测性-统一时间线指南.md) - 事件与指标统一回放
-- [分布式系统-多视角映射](../../Analysis/分布式系统-多视角映射.md)
-- [集群系统-多视角映射](../../Analysis/集群系统-多视角映射.md)
-- [网络系统-多视角映射](../../Analysis/网络系统-多视角映射.md)
+- [NSX × CNI 策略与微分段映射](../Refactor/archive/2026-quality-audit/Analysis/NSX-与-CNI-策略与微分段映射.md) - 跨层策略统一与验证
+- [混合场景-基准与SLO-矩阵](../Refactor/archive/2026-quality-audit/validation/verification-results/混合场景-基准与SLO-矩阵.md) - 性能与可靠性验证模板
+- [策略回放用例库](../Refactor/archive/2026-quality-audit/validation/verification-results/策略回放用例库.md) - NSX×CNI×应用的回放验证
+- [目录视角映射（模板）](../Refactor/archive/2026-quality-audit/Analysis/目录视角映射-模板.md) - 快速在子目录落地多视角
+- [DRS × K8s 调度对照与协同](../Refactor/archive/2026-quality-audit/Analysis/DRS-与-K8s-调度对照与协同.md) - 调度目标/时序与协同策略
+- [跨层可观测性：统一时间线指南](../Refactor/archive/2026-quality-audit/Analysis/跨层可观测性-统一时间线指南.md) - 事件与指标统一回放
+- [分布式系统-多视角映射](../Refactor/archive/2026-quality-audit/Analysis/分布式系统-多视角映射.md)
+- [集群系统-多视角映射](../Refactor/archive/2026-quality-audit/Analysis/集群系统-多视角映射.md)
+- [网络系统-多视角映射](../Refactor/archive/2026-quality-audit/Analysis/网络系统-多视角映射.md)
 - [P2P系统-多视角映射](../../Analysis/P2P系统-多视角映射.md)
-- [物联网嵌入式-多视角映射](../../Analysis/物联网嵌入式-多视角映射.md)
-- [容器与微服务-多视角映射](../../Analysis/容器与微服务-多视角映射.md)
-- [基准执行脚本样例](../../tools/benchmark-tools/基准执行脚本样例.md)
+- [物联网嵌入式-多视角映射](../Refactor/archive/2026-quality-audit/Analysis/物联网嵌入式-多视角映射.md)
+- [容器与微服务-多视角映射](../Refactor/archive/2026-quality-audit/Analysis/容器与微服务-多视角映射.md)
+- [基准执行脚本样例](../Refactor/archive/2026-quality-audit/tools/benchmark-tools/基准执行脚本样例.md)
 
 ## 🚀 开始使用 / Getting Started
 

@@ -227,7 +227,7 @@ RMS 边界（n=3）：3(2^(1/3) - 1) ≈ 0.780
 
 ## 9. 相关文件
 
-- [进程调度](02-process-scheduling.md)
+- [进程调度](../../../docs/Refactor/archive/2026-quality-audit/2.操作系统/02-operating-systems/01-process-management/02-process-scheduling.md)
 - [Linux 进程调度](../05-linux-kernel/process-scheduling-linux.md)
 - [POSIX 与 Linux 实现映射](../08-interfaces/posix-mapping.md)
 - [实时运行时语义](../../2.8%20系统运行时语义/2.8.8%20实时运行时语义.md)

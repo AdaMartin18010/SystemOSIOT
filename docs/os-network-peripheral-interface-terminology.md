@@ -112,4 +112,4 @@
 ## 8. 相关文件
 
 - [操作系统概念树](../2.操作系统/02-operating-systems/00-concept-atlas/concept-tree-os.md)
-- [跨域映射](../Analysis/操作系统-网络-嵌入式-接口跨域映射.md)
+- [跨域映射](Refactor/archive/2026-quality-audit/Analysis/操作系统-网络-嵌入式-接口跨域映射.md)

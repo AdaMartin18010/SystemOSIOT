@@ -1,0 +1,19 @@
+{
+  "version": 1,
+  "updated": "2026-11-17",
+  "session": null,
+  "current_task": null,
+  "completed": ["Phase0", "Phase1-partial", "PhaseQ-triage", "Wave1-R1", "Wave1-R2", "Wave1-R3", "Wave1-R4", "Wave1-R11", "Wave1-R12-merge-2.7"],
+  "blockers": [
+    "T-USER-TOOLCHAINS: 需用户安装 WSL Coq 8.19+/Isabelle 2024",
+    "T-USER-TOOLCHAINS: 需用户注册 UPPAAL 学术许可证",
+    "用户需确认 E:\\_src 是否被 OneDrive/安全软件管控（历史文件失踪事故）",
+    "GPU worker 端点环境变量 GPU_API_BASE/GPU_MODEL 未配置（T-BREVIEW 依赖）"
+  ],
+  "stats_baseline": {
+    "live_md": 636,
+    "A": 329, "B": 175, "C_exempt": 132,
+    "archive_total": 349
+  },
+  "notes": "每轮 loop 依 docs/hermes-runbook.md；任务全集 states/task-queue.yaml"
+}
