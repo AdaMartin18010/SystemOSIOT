@@ -57,7 +57,7 @@ python tools/toc_generator.py --all --apply . && python tools/toc_validate.py --
 ```
 
 **审计豁免清单（canonical，改这里须同步三个脚本）**：README（全库）、`research/`、`docs/`、
-`states/`、`.vscode/`、`X.0 国际标准映射`（任意路径含此段）、`API文档标准.md`。
+`states/`、`.vscode/`、`X.0 国际标准映射`（任意路径含此段）、`API文档标准.md`、根 `AGENTS.md`。
 脚本内对应常量：`tools/ci_quality_gate.py: EX_PREFIX/EX_MARKS/EX_FILES`、
 `tools/quality_audit_apply.py` 与 `tools/quality_audit_reconcile.py: EXEMPT_PREFIXES/EXEMPT_MARKS`。
 

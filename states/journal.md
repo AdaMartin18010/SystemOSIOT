@@ -28,3 +28,4 @@
 - 修复全部失效 TOC CLI 引用：README.md、8 个域 README、.githooks/pre-commit 提示语；统一为 `toc_generator.py --all --apply .` / `toc_validate.py --all .`。
 - README 工具指南增补质量审计三件套（audit/gate/integrity）；ci_toc_check.ps1 经核实本就使用真实 CLI，未改。
 - 验证：toc_validate 987 文件 0 失败；integrity 干净；gate PASS。
+- 补丁：AGENTS.md 加入审计豁免（EX_FILES），gate 复跑 PASS。

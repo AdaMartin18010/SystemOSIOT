@@ -21,7 +21,7 @@ from content_quality_audit import audit_file  # noqa: E402
 CSV_PATH = Path("validation/content-audit-detail.csv")
 ARCHIVE_ROOT = Path("docs/Refactor/archive/2026-quality-audit")
 EXEMPT_PREFIXES = ("research/", "docs/", "states/", ".vscode/")
-EXEMPT_FILES = {"API文档标准.md"}
+EXEMPT_FILES = {"API文档标准.md", "AGENTS.md"}
 EXEMPT_MARKS = ("国际标准映射",)
 MARKER = "## 质量治理注记（2026-11）"
 DRY = "--dry-run" in sys.argv
