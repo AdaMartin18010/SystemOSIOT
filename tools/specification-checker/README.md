@@ -406,3 +406,7 @@ checker.register_language("custom", CustomLanguage())
 **版本**: 1.0.0
 **最后更新**: 2024年12月
 **维护者**: SystemOSIOT开发团队
+
+## 质量治理注记（2026-11）
+
+本目录原 1 个内容文件经全库质量审计归类为模板填充（C 类），已整体归档至 `docs/Refactor/archive/2026-quality-audit/tools/specification-checker/`（原相对路径不变，可恢复）。保留本 README 作为目录骨架。

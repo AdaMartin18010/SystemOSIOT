@@ -129,3 +129,7 @@ powershell -ExecutionPolicy Bypass -File tools/ci_toc_check.ps1 -MaxLevel 4 -Wor
 | `tools/smt-examples/Container_Resource_Allocation_v2.smt2` | Z3 4.13 | 多节点容器资源分配：CPU/内存 requests/limits、容量、反亲和性、bin-packing | `tools/engines/z3-4.13.0-x64-win/bin/z3.exe tools/smt-examples/Container_Resource_Allocation_v2.smt2` |
 
 > 注意：TLC 需要从 `.tla` 文件所在目录运行；`tla2tools.jar` 已复制到 `tools/tla-specifications/` 以便使用。完整运行说明与状态见 `tools/tla-specifications/README.md`。
+
+## 质量治理注记（2026-11）
+
+本目录 1 个内容文件经全库质量审计（2026-11-17，修正链接文本误判后）归类为模板填充（C 类），已归档至 `docs/Refactor/archive/2026-quality-audit/tools/`（原相对路径不变，`git mv` 可恢复）。保留本 README 作为目录骨架。

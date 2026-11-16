@@ -151,3 +151,7 @@ score(node) = 资源得分 + 亲和得分 - 跨域成本
 - eBPF Documentation: <https://docs.ebpf.io/>
 - PCI-SIG SR-IOV: <https://pcisig.com/specifications>
 - CNI Spec v1.1.0: <https://www.cni.dev/docs/spec/>
+
+## 质量治理注记（2026-11）
+
+本目录 4 个内容文件经全库质量审计（2026-11-17，修正链接文本误判后）归类为模板填充（C 类），已归档至 `docs/Refactor/archive/2026-quality-audit/7.容器与微服务/7.7 运行时调度语义分析/`（原相对路径不变，`git mv` 可恢复）。保留本 README 作为目录骨架。

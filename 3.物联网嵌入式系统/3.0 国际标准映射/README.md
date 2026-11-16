@@ -125,3 +125,7 @@
 | 2026-07-02 | 创建映射骨架 | Kimi Code CLI |
 | 2026-07-05 | 补齐 ISO/IEC 30141、IEC 62443、NIST SP 800-213、MQTT/CoAP/LwM2M、Matter/Thread、FreeRTOS/Zephyr/RTEMS、I²C/SPI/CAN/PCIe/USB、Intel SDM/ARM/RISC-V 全量映射；新增覆盖缺口与补齐计划 | Kimi Code CLI |
 | 2026-07 | 新增 3.0.3 / 3.0.4 / 3.0.5 条款级映射，更新 Matter 1.6.1 / Thread 1.4.1 版本与覆盖缺口 | Kimi Code CLI |
+
+## 质量治理注记（2026-11）
+
+本目录 2 个内容文件经全库质量审计（2026-11-17，修正链接文本误判后）归类为模板填充（C 类），已归档至 `docs/Refactor/archive/2026-quality-audit/3.物联网嵌入式系统/3.0 国际标准映射/`（原相对路径不变，`git mv` 可恢复）。保留本 README 作为目录骨架。

@@ -20,3 +20,7 @@
 ## 返回
 
 - [返回物联网嵌入式系统总览](../README.md)
+
+## 质量治理注记（2026-11）
+
+本目录原 1 个内容文件经全库质量审计归类为模板填充（C 类），已整体归档至 `docs/Refactor/archive/2026-quality-audit/3.物联网嵌入式系统/05-peripheral-interface-analysis/`（原相对路径不变，可恢复）。保留本 README 作为目录骨架。

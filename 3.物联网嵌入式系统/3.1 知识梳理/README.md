@@ -89,3 +89,7 @@
 - [Liu & Layland, "Scheduling Algorithms for Multiprogramming in a Hard-Real-Time Environment", JACM 1973](https://doi.org/10.1145/321738.321743)
 - [Buttazzo, *Hard Real-Time Computing Systems* (Springer)](https://link.springer.com/book/10.1007/978-3-031-04138-0)
 - [项目国际化权威标准基线 — 3. 物联网嵌入式系统](../../docs/international-baseline.md)
+
+## 质量治理注记（2026-11）
+
+本目录原 2 个内容文件经全库质量审计归类为模板填充（C 类），已整体归档至 `docs/Refactor/archive/2026-quality-audit/3.物联网嵌入式系统/3.1 知识梳理/`（原相对路径不变，可恢复）。保留本 README 作为目录骨架。

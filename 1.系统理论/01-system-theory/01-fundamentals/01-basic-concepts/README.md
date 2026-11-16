@@ -174,3 +174,7 @@ $$S = (E, R, B, F)$$
 
 > 基本概念是系统科学的基石，掌握这些概念是深入理解复杂系统的第一步。
 > Basic concepts are the cornerstone of systems science. Mastering these concepts is the first step to deeply understanding complex systems.
+
+## 质量治理注记（2026-11）
+
+本目录原 1 个内容文件经全库质量审计归类为模板填充（C 类），已整体归档至 `docs/Refactor/archive/2026-quality-audit/1.系统理论/01-system-theory/01-fundamentals/01-basic-concepts/`（原相对路径不变，可恢复）。保留本 README 作为目录骨架。

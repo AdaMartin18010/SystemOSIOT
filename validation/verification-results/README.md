@@ -611,3 +611,7 @@
 - 文档类型：验证结果
 - 所属模块：真实系统验证
 - 完成状态：100%
+
+## 质量治理注记（2026-11）
+
+本目录 7 个内容文件经全库质量审计（2026-11-17，修正链接文本误判后）归类为模板填充（C 类），已归档至 `docs/Refactor/archive/2026-quality-audit/validation/verification-results/`（原相对路径不变，`git mv` 可恢复）。保留本 README 作为目录骨架。

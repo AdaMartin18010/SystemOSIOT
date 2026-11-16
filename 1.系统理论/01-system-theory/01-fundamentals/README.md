@@ -155,3 +155,7 @@
 
 > 基础理论是系统科学的根基，掌握这些基本概念和原理是深入理解复杂系统的前提。
 > Fundamentals are the foundation of systems science. Mastering these basic concepts and principles is a prerequisite for deeply understanding complex systems.
+
+## 质量治理注记（2026-11）
+
+本目录 1 个内容文件经全库质量审计（2026-11-17，修正链接文本误判后）归类为模板填充（C 类），已归档至 `docs/Refactor/archive/2026-quality-audit/1.系统理论/01-system-theory/01-fundamentals/`（原相对路径不变，`git mv` 可恢复）。保留本 README 作为目录骨架。
