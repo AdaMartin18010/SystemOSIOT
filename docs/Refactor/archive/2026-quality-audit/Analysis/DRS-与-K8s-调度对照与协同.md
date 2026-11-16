@@ -5,7 +5,7 @@
 
 - [vCenter DRS × Kubernetes 调度：对照与协同](#vcenter-drs--kubernetes-调度对照与协同)
   - [1. 目标](#1-目标)
-    - [1.1 范围与边界（Scope \& Non-goals）](#11-范围与边界scope--non-goals)
+    - [1.1 范围与边界（Scope & Non-goals）](#11-范围与边界scope--non-goals)
   - [2. 模型与目标](#2-模型与目标)
     - [2.1 形式化刻画（摘要）](#21-形式化刻画摘要)
   - [3. 时序与冲突](#3-时序与冲突)

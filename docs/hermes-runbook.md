@@ -1,5 +1,23 @@
 # Hermes 持续推进运行手册（2026-11-17 起生效）
 
+
+<!-- TOC START -->
+
+- [Hermes 持续推进运行手册（2026-11-17 起生效）](#hermes-持续推进运行手册2026-11-17-起生效)
+  - [0. 铁律（不可违反）](#0-铁律不可违反)
+  - [1. 每轮 Loop 协议（中断自愈核心）](#1-每轮-loop-协议中断自愈核心)
+  - [2. 三车道并行机制（CPU 脚本 / GPU / hermes）](#2-三车道并行机制cpu-脚本--gpu--hermes)
+    - [分工](#分工)
+    - [作业卡（states/queue/ 下的 JSON）](#作业卡statesqueue-下的-json)
+    - [并行安全](#并行安全)
+  - [3. 任务选择算法](#3-任务选择算法)
+  - [4. 验收与完成定义（DoD）](#4-验收与完成定义dod)
+  - [5. 事故恢复协议（文件失踪等）](#5-事故恢复协议文件失踪等)
+  - [6. 用户依赖项（blockers，需人在 loop 外解决）](#6-用户依赖项blockers需人在-loop-外解决)
+  - [7. 目录约定](#7-目录约定)
+
+<!-- TOC END -->
+
 > 本文件是 hermes 每轮 loop 的**唯一入口**。每轮开始先读本文件 + `states/hermes-state.json` + `states/journal.md` 末尾。
 > 任务全集见 `states/task-queue.yaml`（机器可读）。状态与日志只在 `states/` 维护。
 > 总纲：`research/2026-alignment-plan.md`（Phase R 路线图）；本手册将其转为可执行协议。

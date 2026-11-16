@@ -235,8 +235,8 @@ If you need to supplement specific content or have new topics, please continue t
 ## 工具与校验（项目级）
 
 ```bash
-python ../tools/toc_generator.py --root .. --output ../docs/toc.md
-python ../tools/toc_validate.py --root .. --toc ../docs/toc.md
+python ../tools/toc_generator.py --all --apply ..
+python ../tools/toc_validate.py --all ..
 ```
 
 ```powershell

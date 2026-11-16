@@ -156,8 +156,8 @@ P2P（Peer-to-Peer）系统是一种分布式网络架构，其中所有节点�
 ## 工具与校验（项目级）
 
 ```bash
-python ../tools/toc_generator.py --root .. --output ../docs/toc.md
-python ../tools/toc_validate.py --root .. --toc ../docs/toc.md
+python ../tools/toc_generator.py --all --apply ..
+python ../tools/toc_validate.py --all ..
 ```
 
 ```powershell

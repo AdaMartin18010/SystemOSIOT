@@ -1,7 +1,7 @@
 <!-- TOC START -->
 
-- [Toolchain Versions](#toolchain-versions)
-- [Verification Results](#verification-results)
+  - [Toolchain Versions](#toolchain-versions)
+  - [Verification Results](#verification-results)
 
 <!-- TOC END -->
 

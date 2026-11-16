@@ -58,8 +58,8 @@
     - [工程案例与实践](#工程案例与实践)
   - [工具与校验指南](#工具与校验指南)
     - [1. 依赖环境](#1-依赖环境)
-    - [2. 生成目录索引（TOC）](#2-生成目录索引toc)
-    - [3. TOC 校验](#3-toc-校验)
+    - [2. 生成/校验文件内 TOC](#2-生成校验文件内-toc)
+    - [3. 内容质量审计与完整性自检](#3-内容质量审计与完整性自检)
     - [4. CI 校验（PowerShell）](#4-ci-校验powershell)
   - [自动化内容递归补全与全局提升说明](#自动化内容递归补全与全局提升说明)
     - [1. 前沿趋势与创新方向（已批量补全）](#1-前沿趋势与创新方向已批量补全)
@@ -76,7 +76,7 @@
 - **关键目录直达**:
   - `1.系统理论/` · `2.操作系统/` · `3.物联网嵌入式系统/`
   - `4.分布式系统/` · `5.集群系统/` · `6.P2P系统/` · `7.容器与微服务/`
-- **工具与脚本**: `tools/toc_generator.py` · `tools/toc_validate.py` · `tools/ci_toc_check.ps1`
+- **工具与脚本**: `tools/toc_generator.py` · `tools/toc_validate.py` · `tools/content_quality_audit.py` · `tools/ci_quality_gate.py` · `tools/integrity_check.py` · `tools/ci_toc_check.ps1`
 - **标准与规范**: [API文档标准](API文档标准.md)
 
 ## 项目概述
@@ -476,28 +476,32 @@ SystemOSIOT/
 
 ## 工具与校验指南
 
-> 通过本地脚本生成/校验各目录 README 的目录树与目录索引，支持 CI 检查。
+> 通过本地脚本生成/校验各文件内目录（TOC）、执行内容质量审计与完整性自检，支持 CI 检查。
 
 ### 1. 依赖环境
 
 - Python 3.9+
 - PowerShell (Windows 已内置)
 
-### 2. 生成目录索引（TOC）
+### 2. 生成/校验文件内 TOC
 
 ```bash
-python tools/toc_generator.py --root . --output docs/toc.md
+python tools/toc_generator.py --all --apply .   # 全量再生成（--apply 写入；去掉为预览）
+python tools/toc_validate.py --all .            # 校验（0 失败即通过）
 ```
 
-- **参数**:
-  - `--root`: 起始目录（默认为当前目录）
-  - `--output`: 输出路径（建议放在 `docs/`）
+- **参数**: 位置参数为扫描路径（默认 `.`）；`--max-level`（默认 4）；`--workers`（默认 CPU 核数）
 
-### 3. TOC 校验
+### 3. 内容质量审计与完整性自检
 
 ```bash
-python tools/toc_validate.py --root . --toc docs/toc.md
+python tools/content_quality_audit.py   # 全库分诊 → research/2026-content-quality-audit.md + validation/content-audit-detail.csv
+python tools/ci_quality_gate.py         # 质量门：非豁免 C 类 = 0 且编号深度 ≤5
+python tools/integrity_check.py         # 每轮第一道闸：跟踪文件失踪/归档异常/脏树
 ```
+
+- 归档执行与对账：`tools/quality_audit_apply.py`（`--dry-run` 预览）、`tools/quality_audit_reconcile.py`（`--notes-only` 只同步目录注记）
+- 治理说明见 `AGENTS.md` §4 与 `docs/content-governance-rules.md`
 
 ### 4. CI 校验（PowerShell）
 
@@ -505,7 +509,7 @@ python tools/toc_validate.py --root . --toc docs/toc.md
 powershell -ExecutionPolicy Bypass -File tools/ci_toc_check.ps1
 ```
 
-- 在 CI 中执行时请使用非交互模式与“失败即退出”的策略。
+- 在 CI 中执行时请使用非交互模式与“失败即退出”的策略。GitHub Actions 另见 `.github/workflows/toc-ci.yml`（TOC + 内容质量门）。
 
 ## 自动化内容递归补全与全局提升说明
 
