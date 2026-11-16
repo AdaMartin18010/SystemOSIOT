@@ -25,6 +25,29 @@ EXEMPT_FILES = {"API文档标准.md"}
 EXEMPT_MARKS = ("国际标准映射",)
 MARKER = "## 质量治理注记（2026-11）"
 DRY = "--dry-run" in sys.argv
+NOTES_ONLY = "--notes-only" in sys.argv
+
+# 人工抽审裁定为归档的文件（永远不回滚）
+BYPASS = {
+    "1.系统理论/1.2 批判分析/1.2.7 认识论批判.md",
+    "1.系统理论/1.2 批判分析/1.2.8 方法论批判.md",
+    "1.系统理论/1.2 批判分析/1.2.9 方法论创新.md",
+    "1.系统理论/1.2 批判分析/1.2.10 范式转换分析.md",
+    "1.系统理论/1.2 批判分析/1.2.11 未来范式预测.md",
+    "1.系统理论/1.2 批判分析/1.2.12 跨文化比较研究.md",
+    "1.系统理论/1.2 批判分析/1.2.13 分析哲学基础.md",
+    "1.系统理论/1.2 批判分析/1.2.14 深度哲学分析.md",
+    "1.系统理论/1.2 批判分析/1.2.15 严格逻辑论证体系.md",
+    "7.容器与微服务/7.1 知识梳理/Firecracker未来趋势多云边缘子主题/子主题递归细化.md",
+    "7.容器与微服务/7.1 知识梳理/Firecracker未来趋势多云边缘子主题/Firecracker未来趋势子主题.md",
+    "7.容器与微服务/7.1 知识梳理/Firecracker未来趋势多云边缘子主题/输入门.md",
+}
+
+
+def archive_rule(rec: dict) -> bool:
+    """R1 抽审标准：真占位符 / 自指证明提纲≥10 / 模板对且近零引用 → 不归回。"""
+    return (int(rec["placeholders"]) > 0 or int(rec["proof_tmpl"]) >= 10
+            or ("模板对" in rec["flags"] and int(rec["citations"]) <= 1))
 
 
 def git_mv(src: Path, dst: Path) -> None:
@@ -48,26 +71,30 @@ def main() -> None:
                 or Path(p).name == "README.md" or any(m in p for m in EXEMPT_MARKS))
 
     restored, moved = [], []
-    # 1) 恢复误归档
-    if ARCHIVE_ROOT.exists():
+    # 1) 恢复误归档 / 2) 补归档新 C（--notes-only 时跳过移动，仅同步注记）
+    if not NOTES_ONLY and ARCHIVE_ROOT.exists():
         for f in sorted(ARCHIVE_ROOT.rglob("*.md")):
             rel = f.relative_to(ARCHIVE_ROOT).as_posix()
             if f.name == "README.md":
                 continue
-            if classify(rel, f) in ("A-保留", "B-待评审"):
+            rec = audit_file(f)
+            if rel in BYPASS:
+                continue
+            if rec["class"] in ("A-保留", "B-待评审") and not archive_rule(rec):
                 dst = Path(rel)
                 if not DRY:
                     git_mv(f, dst)
                 restored.append(rel)
     # 2) 补归档新 C
-    for p, c in sorted(cls.items()):
-        if c != "C-归档候选" or exempt(p):
-            continue
-        src = Path(p)
-        if src.exists():
-            if not DRY:
-                git_mv(src, ARCHIVE_ROOT / p)
-            moved.append(p)
+    if not NOTES_ONLY:
+        for p, c in sorted(cls.items()):
+            if c != "C-归档候选" or exempt(p):
+                continue
+            src = Path(p)
+            if src.exists():
+                if not DRY:
+                    git_mv(src, ARCHIVE_ROOT / p)
+                moved.append(p)
 
     print(f"restored={len(restored)}")
     for r in restored:
