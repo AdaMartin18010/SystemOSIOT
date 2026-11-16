@@ -1,27 +1,13 @@
 # SystemOSIOT 内容质量审计报告（2026-11-17）
 
-
-<!-- TOC START -->
-
-- [SystemOSIOT 内容质量审计报告（2026-11-17）](#systemosiot-内容质量审计报告2026-11-17)
-  - [1. 总量与分类](#1-总量与分类)
-  - [2. 域×维度分类矩阵（C 占比 / 平均得分）](#2-域维度分类矩阵c-占比--平均得分)
-  - [3. 最差 25 文件（得分升序）](#3-最差-25-文件得分升序)
-  - [4. 冒烟项](#4-冒烟项)
-    - [4.1 无工件支撑的形式化声称（违反治理规则第 4 条）：0 个](#41-无工件支撑的形式化声称违反治理规则第-4-条0-个)
-    - [4.2 占位符 ≥3 的文件：1 个（Top）](#42-占位符-3-的文件1-个top)
-  - [5. 与用户选项的映射建议](#5-与用户选项的映射建议)
-
-<!-- TOC END -->
-
 > 方法：逐文件计算实质信号得分（引用/公式/图码表/参考文献/标准组织词）减去模板惩罚
 > （占位符/自指证明提纲/模板对/重复目录/TODO/无工件形式化声称）。
 > 明细见 `validation/content-audit-detail.csv`。本报告仅分诊，不执行处置。
 
 ## 1. 总量与分类
 
-- 活库文件：635（另有归档区 408 个不参与分类；第三方工具包跳过 0 个）
-- **A-保留**：330（52.0%）　**B-待评审**：179（28.2%）　**C-归档候选**：126（19.8%）
+- 活库文件：636（另有归档区 349 个不参与分类；第三方工具包跳过 0 个）
+- **A-保留**：329（51.7%）　**B-待评审**：175（27.5%）　**C-归档候选**：132（20.8%）
 
 ## 2. 域×维度分类矩阵（C 占比 / 平均得分）
 
@@ -45,10 +31,9 @@
 | 2.操作系统 | 2.1 知识梳理 | 6 | 17% | 13.2 |
 | 2.操作系统 | 2.2 批判分析 | 4 | 25% | 12.0 |
 | 2.操作系统 | 2.3 形式化结构 | 4 | 25% | 12.5 |
-| 2.操作系统 | 2.4 形式化证明 | 2 | 50% | 14.0 |
+| 2.操作系统 | 2.4 形式化证明 | 5 | 20% | 16.6 |
 | 2.操作系统 | 2.5 多表征 | 4 | 25% | 11.8 |
 | 2.操作系统 | 2.6 形式语义 | 6 | 17% | 13.2 |
-| 2.操作系统 | 2.7 形式证明 | 5 | 20% | 14.6 |
 | 2.操作系统 | 2.8 系统运行时语义 | 4 | 50% | 10.5 |
 | 3.物联网嵌入式系统 | (根) | 1 | 100% | 6.0 |
 | 3.物联网嵌入式系统 | 03-embedded-linux | 5 | 20% | 28.8 |
@@ -92,12 +77,12 @@
 | 6.P2P系统 | 6.3 形式化结构 | 1 | 100% | 3.0 |
 | 6.P2P系统 | 6.4 形式化证明 | 2 | 50% | 13.5 |
 | 6.P2P系统 | 6.5 多表征 | 1 | 100% | 3.0 |
-| 6.P2P系统 | 6.6 形式语义 | 5 | 20% | 14.2 |
+| 6.P2P系统 | 6.6 形式语义 | 5 | 80% | 7.8 |
 | 6.P2P系统 | 6.7 系统运行时语义 | 2 | 50% | 9.5 |
 | 7.容器与微服务 | (根) | 1 | 0% | 33.0 |
 | 7.容器与微服务 | 07-container-microservices | 3 | 67% | 9.3 |
 | 7.容器与微服务 | 7.0 国际标准映射 | 8 | 0% | 30.5 |
-| 7.容器与微服务 | 7.1 知识梳理 | 21 | 10% | 19.2 |
+| 7.容器与微服务 | 7.1 知识梳理 | 21 | 14% | 18.5 |
 | 7.容器与微服务 | 7.2 批判性分析 | 3 | 0% | 19.7 |
 | 7.容器与微服务 | 7.3 形式化结构 | 6 | 0% | 27.8 |
 | 7.容器与微服务 | 7.4 形式化证明 | 8 | 0% | 19.5 |
@@ -119,7 +104,7 @@
 | API文档标准.md | (根) | 1 | 0% | 33.0 |
 | Analysis | (根) | 4 | 25% | 13.2 |
 | README.md | (根) | 1 | 0% | 16.0 |
-| docs | (根) | 3 | 33% | 20.7 |
+| docs | (根) | 6 | 67% | 13.7 |
 | docs | Refactor | 7 | 100% | 1.7 |
 | docs | navigation | 5 | 80% | 4.8 |
 | research | (根) | 14 | 57% | 8.4 |
@@ -155,23 +140,23 @@
 | docs/navigation/technology-roadmap.md | 437 | 0 | 占位符x1 |
 | research/2025-project-completion-report.md | 424 | 0 | - |
 | docs/Refactor/持续执行进度报告.md | 360 | 0 | - |
-| 1.系统理论/README.md | 331 | 0 | 重复目录 |
+| 1.系统理论/README.md | 332 | 0 | 重复目录 |
 | docs/Refactor/项目导航索引.md | 287 | 0 | - |
 | 7.容器与微服务/07-container-microservices/02-microservices/README.md | 278 | 0 | - |
 | 7.容器与微服务/07-container-microservices/01-container-technology/README.md | 267 | 0 | - |
-| 5.集群系统/05-cluster-systems/01-cluster-concepts/README.md | 265 | 0 | - |
+| 5.集群系统/05-cluster-systems/01-cluster-concepts/README.md | 266 | 0 | - |
+| 3.物联网嵌入式系统/03-iot-embedded/02-internet-of-things/README.md | 257 | 0 | - |
+| 4.分布式系统/04-distributed-systems/01-distributed-concepts/README.md | 257 | 0 | - |
 | 6.P2P系统/06-p2p-systems/01-p2p-concepts/README.md | 257 | 0 | - |
-| 3.物联网嵌入式系统/03-iot-embedded/02-internet-of-things/README.md | 256 | 0 | - |
-| 4.分布式系统/04-distributed-systems/01-distributed-concepts/README.md | 256 | 0 | - |
+| 3.物联网嵌入式系统/03-iot-embedded/01-embedded-systems/README.md | 253 | 0 | - |
 | 1.系统理论/01-system-theory/07-performance/README.md | 252 | 0 | - |
-| 3.物联网嵌入式系统/03-iot-embedded/01-embedded-systems/README.md | 252 | 0 | - |
 | 1.系统理论/01-system-theory/08-evolution-maintenance/README.md | 251 | 0 | - |
 | 1.系统理论/01-system-theory/05-integration/README.md | 250 | 0 | - |
-| 2.操作系统/02-operating-systems/02-memory-management/README.md | 237 | 0 | - |
+| 2.操作系统/02-operating-systems/02-memory-management/README.md | 238 | 0 | - |
 | 1.系统理论/01-system-theory/04-modeling-simulation/README.md | 219 | 0 | - |
-| docs/Refactor/README.md | 209 | 0 | - |
-| 2.操作系统/02-operating-systems/01-process-management/README.md | 180 | 0 | - |
-| 2.操作系统/02-operating-systems/03-file-systems/README.md | 180 | 0 | - |
+| docs/Refactor/README.md | 210 | 0 | - |
+| 2.操作系统/02-operating-systems/01-process-management/README.md | 181 | 0 | - |
+| 2.操作系统/02-operating-systems/03-file-systems/README.md | 181 | 0 | - |
 | 1.系统理论/01-system-theory/03-control-optimization/01-control-theory/README.md | 170 | 0 | - |
 | 1.系统理论/01-system-theory/06-security-reliability/README.md | 160 | 0 | - |
 | 1.系统理论/01-system-theory/03-control-optimization/README.md | 115 | 0 | - |
